@@ -1,0 +1,8 @@
+project Default is
+    for Source_Dirs use (".");
+    for Object_Dir use "obj";
+    for Main use ("main.adb");
+    package Prove is
+      for Proof_Dir use "proof";
+    end Prove;
+end Default;
