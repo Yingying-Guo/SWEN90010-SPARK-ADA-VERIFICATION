@@ -243,7 +243,7 @@ package ada_main is
    pragma Export (C, u00102, "system__val_lliB");
    u00103 : constant Version_32 := 16#6435fd0b#;
    pragma Export (C, u00103, "system__val_lliS");
-   u00104 : constant Version_32 := 16#8acb29af#;
+   u00104 : constant Version_32 := 16#427d6b0a#;
    pragma Export (C, u00104, "lz77B");
    u00105 : constant Version_32 := 16#82fb8201#;
    pragma Export (C, u00105, "lz77S");

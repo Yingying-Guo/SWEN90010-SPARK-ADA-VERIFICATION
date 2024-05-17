@@ -212,10 +212,10 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /Users/winwin/Documents/GitHub/HISEA3/obj/lz77.o
-   --   /Users/winwin/Documents/GitHub/HISEA3/obj/main.o
-   --   -L/Users/winwin/Documents/GitHub/HISEA3/obj/
-   --   -L/Users/winwin/Documents/GitHub/HISEA3/obj/
+   --   /Users/winwin/Documents/GitHub/SWEN90010-SPARK-ADA-VERIFICATION/obj/lz77.o
+   --   /Users/winwin/Documents/GitHub/SWEN90010-SPARK-ADA-VERIFICATION/obj/main.o
+   --   -L/Users/winwin/Documents/GitHub/SWEN90010-SPARK-ADA-VERIFICATION/obj/
+   --   -L/Users/winwin/Documents/GitHub/SWEN90010-SPARK-ADA-VERIFICATION/obj/
    --   -L/users/winwin/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
    --   -static
    --   -lgnat

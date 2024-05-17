@@ -67,7 +67,7 @@
   <proof prover="0"><result status="timeout"/></proof>
   <proof prover="1"><result status="highfailure"/></proof>
   <proof prover="2" timelimit="1"><result status="timeout" steps="30245"/></proof>
-  <proof prover="3"><result status="timeout" steps="38977"/></proof>
+  <proof prover="3"><result status="timeout" steps="41850"/></proof>
   </goal>
   <goal name="VC def.22" expl="precondition" proved="true">
   <proof prover="2"><result status="valid" steps="17"/></proof>

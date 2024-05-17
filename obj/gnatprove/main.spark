@@ -215,11 +215,11 @@
             "CVC4": {
               "result": "Timeout",
               "steps": 30245,
-              "time": 1
+              "time": 0
             },
             "CVC4_CE": {
               "result": "Timeout",
-              "steps": 38977,
+              "steps": 41850,
               "time": 1
             },
             "Z3": {
@@ -230,7 +230,7 @@
             "altergo": {
               "result": "Timeout",
               "steps": -1,
-              "time": 1
+              "time": 0
             }
           },
           "transformations": {
@@ -442,14 +442,14 @@
     }
   ],
   "timings": {
-    "marking": 1.36540001258254E-02,
-    "globals (basic)": 1.46289998665452E-02,
-    "globals/properties (advanced)": 1.60039998590946E-02,
-    "flow analysis": 4.49200011789799E-02,
-    "codepeer results": 1.49999996210681E-05,
-    "init_why_sections": 1.10200000926852E-03,
-    "translation of standard": 1.31940003484488E-02,
-    "translation of compilation unit": 1.16013996303082E-01,
-    "proof": 4.64585208892822E+00
+    "marking": 8.62300023436546E-03,
+    "globals (basic)": 1.25599997118115E-02,
+    "globals/properties (advanced)": 1.37539999559522E-02,
+    "flow analysis": 3.33180017769337E-02,
+    "codepeer results": 9.00000031833770E-06,
+    "init_why_sections": 5.86999987717718E-04,
+    "translation of standard": 8.57799965888262E-03,
+    "translation of compilation unit": 8.87250006198883E-02,
+    "proof": 2.08515691757202E+00
   }
 }

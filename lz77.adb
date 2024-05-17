@@ -36,52 +36,49 @@ package body LZ77 with SPARK_Mode is
       Put("Next_C: "); Put(T.Next_C); New_Line;
    end Put;
 
+   
    procedure Decode(Input : in Token_Array; Output : in out Byte_Array;
                  Output_Length : out Natural; Error : out Boolean)
-is
-   Temp_Output_Length : Natural := 0;
-begin
-   Error := False;
-   for I in Input'Range loop
-      pragma Loop_Invariant
-        (Temp_Output_Length <= Output'Last - Output'First and
-         not Error);
+   is
+      k : Natural := 0;  -- Tracks the number of bytes processed
+   begin
+      Output_Length := 0;
+      Error := False;
 
-      -- Check for out-of-bounds access on decoding:
-      if Input(I).Offset > Temp_Output_Length then
-         -- Error as required index does not exist in output
-         Error := True;
-         Output_Length := 0;
-         return;  -- Exit on detection of error
-      end if;
+      for I in Input'Range loop
+         -- pragma Loop_Invariant(k < Output'Last);
 
-      -- Ensure there is enough space to append decoded data and Next_C
-      if Output'Last < Output'First + Temp_Output_Length + Input(I).Length then
-         Error := True;
-         Output_Length := 0;
-         return;  -- Exit if no space to append decoded data
-      end if;
+         -- Check for current token's feasibility
+         if (Input(I).offset > k) or else (k + Input(I).length > Output'Last) then
+            Error := True;
+            Output_Length := 0;
+            return;
+         end if;
+      
+         -- Byte-by-byte copying based on the current token
+         for J in 0 .. Input(I).length - 1 loop
+            if k - Input(I).offset + J + 1 <= 0 or else k + J + 1 > Output'Last then
+               Error := True;
+               Output_Length := 0;
+               return;
+            end if;
+            Output(k + J + 1) := Output(k - Input(I).offset + J + 1);
+         end loop;
 
-      -- Decode by copying data from Output based on Offset and Length
-      for J in 1 .. Input(I).Length loop
-         Output(Output'First + Temp_Output_Length + J) :=
-            Output(Output'First + Temp_Output_Length - Input(I).Offset + J);
+         -- Adding the next byte while checking for bounds
+         if k + Input(I).length + 1 > Output'Last then
+            Error := True;
+            Output_Length := 0;
+            return;
+         end if;
+
+         Output(k + Input(I).length + 1) := Input(I).next_c;
+         k := k + Input(I).length + 1;  -- Update k to reflect the new length
       end loop;
-      Temp_Output_Length := Temp_Output_Length + Input(I).Length;
 
-      -- Check space for Next_C
-      if Output'Last < Output'First + Temp_Output_Length then
-         Error := True;
-         Output_Length := 0;
-         return;  -- Exit if no space to append Next_C
-      else
-         Output(Output'First + Temp_Output_Length + 1) := Input(I).Next_C;
-         Temp_Output_Length := Temp_Output_Length + 1;  -- Increment output length after appending
-      end if;
-   end loop;
-   
-   Output_Length := Temp_Output_Length;  -- Set final output length
-   end Decode;
+      Output_Length := k;  -- Set the output length after successful processing
+end Decode;
+
    
    function Is_Valid(Input : in Token_Array) return Boolean is
    begin

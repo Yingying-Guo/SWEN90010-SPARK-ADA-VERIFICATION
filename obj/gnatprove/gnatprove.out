@@ -8,12 +8,12 @@ Data Dependencies                 .         .          .          .             
 Flow Dependencies                 .         .          .          .                       .           .          .
 Initialization                    5         5          .          .                       .           .          .
 Non-Aliasing                      .         .          .          .                       .           .          .
-Run-time Checks                  47         .          .          .               43 (CVC4)           .          4
-Assertions                        3         .          .          .    2 (CVC4 50%, Z3 50%)           .          1
+Run-time Checks                  52         .          .          .               48 (CVC4)           .          4
+Assertions                        5         .          .          .    3 (CVC4 60%, Z3 40%)           .          2
 Functional Contracts             31         .          .          .               28 (CVC4)           .          3
 LSP Verification                  .         .          .          .                       .           .          .
 ------------------------------------------------------------------------------------------------------------------
-Total                            86    5 (6%)          .          .                73 (85%)           .     8 (9%)
+Total                            93    5 (5%)          .          .                79 (85%)           .    9 (10%)
 
 
 max steps used for successful proof: 1
@@ -23,7 +23,7 @@ in unit big_integers, 1 subprograms and packages out of 1 analyzed
   Big_Integers at big_integers.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
 in unit lz77, 8 subprograms and packages out of 8 analyzed
   LZ77 at lz77.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  LZ77.Decode at lz77.ads:95 flow analyzed (0 errors, 0 checks and 1 warnings) and not proved, 11 checks out of 16 proved
+  LZ77.Decode at lz77.ads:95 flow analyzed (0 errors, 0 checks and 1 warnings) and not proved, 17 checks out of 23 proved
   LZ77.Decode_Fast at lz77.ads:114 flow analyzed (0 errors, 0 checks and 2 warnings) and not proved, 3 checks out of 4 proved
   LZ77.Decoded_Length at lz77.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
   LZ77.Is_Valid at lz77.ads:101 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 0 checks out of 1 proved
