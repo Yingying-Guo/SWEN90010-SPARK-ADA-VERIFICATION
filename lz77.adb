@@ -1,10 +1,10 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 
--- Submission authored by:
--- <INSERT YOUR NAMES HERE>
+-- Submission authored by: 
+-- Yingying Guo, Wenwen Yan
 
--- This file requires Proof Level to be set to: <INSERT HERE>
+-- This file requires Proof Level to be set to: <at least 1>
 
 package body LZ77 with SPARK_Mode is
 
@@ -36,7 +36,18 @@ package body LZ77 with SPARK_Mode is
       Put("Next_C: "); Put(T.Next_C); New_Line;
    end Put;
 
-   
+   -- 'Input' array: compressed data
+   -- 'Output' array: uncompressed data. 
+   --  When successful,  
+   --     'Output_Length' indicates the length of the decompressed data
+   --     'Error' should be set to False
+   -- When an error occurs, 
+   --     'Output_Length' should be set to 0
+   --     'Error' should be set to True  
+
+   -- Token (o, l, c):
+   --     the bytes bk+1,. . . , bk+1+(l−1) are identical to the bytes bk+1−o,. . . , bk+1−o+(l−1), 
+   --     byte bk+1+l is c 
    procedure Decode(Input : in Token_Array; Output : in out Byte_Array;
                  Output_Length : out Natural; Error : out Boolean)
    is

@@ -1,34 +1,34 @@
 Summary of SPARK analysis
 =========================
 
-------------------------------------------------------------------------------------------------------------------
-SPARK Analysis results        Total      Flow   Interval   CodePeer                 Provers   Justified   Unproved
-------------------------------------------------------------------------------------------------------------------
-Data Dependencies                 .         .          .          .                       .           .          .
-Flow Dependencies                 .         .          .          .                       .           .          .
-Initialization                    5         5          .          .                       .           .          .
-Non-Aliasing                      .         .          .          .                       .           .          .
-Run-time Checks                  52         .          .          .               48 (CVC4)           .          4
-Assertions                        5         .          .          .    3 (CVC4 60%, Z3 40%)           .          2
-Functional Contracts             31         .          .          .               28 (CVC4)           .          3
-LSP Verification                  .         .          .          .                       .           .          .
-------------------------------------------------------------------------------------------------------------------
-Total                            93    5 (5%)          .          .                79 (85%)           .    9 (10%)
+------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow   Interval   CodePeer   Provers   Justified   Unproved
+------------------------------------------------------------------------------------------------------
+Data Dependencies                 .           .          .          .         .           .          .
+Flow Dependencies                 .           .          .          .         .           .          .
+Initialization                    5           5          .          .         .           .          .
+Non-Aliasing                      .           .          .          .         .           .          .
+Run-time Checks                   .           .          .          .         .           .          .
+Assertions                        .           .          .          .         .           .          .
+Functional Contracts              .           .          .          .         .           .          .
+LSP Verification                  .           .          .          .         .           .          .
+------------------------------------------------------------------------------------------------------
+Total                             5    5 (100%)          .          .         .           .          .
 
 
-max steps used for successful proof: 1
+max steps used for successful proof: 0
 
 Analyzed 3 units
 in unit big_integers, 1 subprograms and packages out of 1 analyzed
-  Big_Integers at big_integers.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Big_Integers at big_integers.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings)
 in unit lz77, 8 subprograms and packages out of 8 analyzed
-  LZ77 at lz77.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  LZ77.Decode at lz77.ads:95 flow analyzed (0 errors, 0 checks and 1 warnings) and not proved, 17 checks out of 23 proved
-  LZ77.Decode_Fast at lz77.ads:114 flow analyzed (0 errors, 0 checks and 2 warnings) and not proved, 3 checks out of 4 proved
-  LZ77.Decoded_Length at lz77.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
-  LZ77.Is_Valid at lz77.ads:101 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 0 checks out of 1 proved
-  LZ77.Length_Acc at lz77.ads:41 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (39 checks)
-  LZ77.Put at lz77.ads:87 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  LZ77.Valid at lz77.ads:65 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (13 checks)
+  LZ77 at lz77.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings)
+  LZ77.Decode at lz77.ads:95 flow analyzed (0 errors, 0 checks and 1 warnings)
+  LZ77.Decode_Fast at lz77.ads:114 flow analyzed (0 errors, 0 checks and 2 warnings)
+  LZ77.Decoded_Length at lz77.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings)
+  LZ77.Is_Valid at lz77.ads:101 flow analyzed (0 errors, 0 checks and 0 warnings)
+  LZ77.Length_Acc at lz77.ads:41 flow analyzed (0 errors, 0 checks and 0 warnings)
+  LZ77.Put at lz77.ads:87 flow analyzed (0 errors, 0 checks and 0 warnings)
+  LZ77.Valid at lz77.ads:65 flow analyzed (0 errors, 0 checks and 0 warnings)
 in unit main, 1 subprograms and packages out of 1 analyzed
-  Main at main.adb:6 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 5 checks out of 6 proved
+  Main at main.adb:6 flow analyzed (0 errors, 0 checks and 0 warnings)

@@ -1,18 +1,20 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-/Users/winwin/Documents/GitHub/SWEN90010-SPARK-ADA-VERIFICATION/default.gpr
-20240515031252
+F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr
+20240515042024
 [BOUND OBJECT FILES]
-/Users/winwin/Documents/GitHub/SWEN90010-SPARK-ADA-VERIFICATION/obj/lz77.o
-/Users/winwin/Documents/GitHub/SWEN90010-SPARK-ADA-VERIFICATION/obj/main.o
+F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\obj\lz77.o
+F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--L/Users/winwin/Documents/GitHub/SWEN90010-SPARK-ADA-VERIFICATION/obj/
--L/Users/winwin/Documents/GitHub/SWEN90010-SPARK-ADA-VERIFICATION/obj/
--L/users/winwin/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
+-LF:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\obj\
+-LF:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\obj\
+-LE:/apps/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
 -static
-/users/winwin/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnat.a
+-static-libgcc
+E:/apps/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000
