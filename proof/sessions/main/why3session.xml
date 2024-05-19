@@ -4,7 +4,7 @@
 <why3session shape_version="6">
 <prover id="0" name="altergo" version="1.30-gnatprove" timelimit="1" steplimit="0" memlimit="1000"/>
 <prover id="1" name="Z3" version="4.5.1-gnatprove" timelimit="1" steplimit="0" memlimit="1000"/>
-<prover id="2" name="CVC4" version="1.6-gnatprove" timelimit="5" steplimit="0" memlimit="1000"/>
+<prover id="2" name="CVC4" version="1.6-gnatprove" timelimit="1" steplimit="0" memlimit="1000"/>
 <prover id="3" name="CVC4_CE" version="1.6-gnatprove" timelimit="1" steplimit="0" memlimit="1000"/>
 <file>
 <path name=".."/>
@@ -20,7 +20,7 @@
   </goal>
   <goal name="VC def.1" expl="postcondition">
   </goal>
-  <goal name="VC def.2" expl="postcondition">
+  <goal name="VC def.2" expl="precondition">
   </goal>
   <goal name="VC def.3" expl="precondition">
   </goal>
@@ -28,16 +28,16 @@
   </goal>
   <goal name="VC def.5" expl="precondition">
   </goal>
-  <goal name="VC def.6" expl="precondition">
-  </goal>
-  <goal name="VC def.7" expl="precondition" proved="true">
+  <goal name="VC def.6" expl="precondition" proved="true">
   <proof prover="2"><result status="valid" steps="16"/></proof>
   </goal>
-  <goal name="VC def.8" expl="assertion" proved="true">
+  <goal name="VC def.7" expl="assertion" proved="true">
   <proof prover="2"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="VC def.9" expl="assertion" proved="true">
+  <goal name="VC def.8" expl="assertion" proved="true">
   <proof prover="2"><result status="valid" steps="21"/></proof>
+  </goal>
+  <goal name="VC def.9" expl="precondition">
   </goal>
   <goal name="VC def.10" expl="precondition">
   </goal>
@@ -53,7 +53,7 @@
   <proof prover="2"><result status="valid" steps="14"/></proof>
   </goal>
   <goal name="VC def.16" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" steps="4004"/></proof>
+  <proof prover="2"><result status="valid" steps="2308"/></proof>
   </goal>
   <goal name="VC def.17" expl="precondition">
   </goal>
@@ -61,28 +61,28 @@
   </goal>
   <goal name="VC def.19" expl="precondition">
   </goal>
-  <goal name="VC def.20" expl="postcondition">
+  <goal name="VC def.20" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" steps="2375"/></proof>
+  </goal>
+  <goal name="VC def.21" expl="assertion" proved="true">
+  <proof prover="2"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.22" expl="assertion" proved="true">
+  <proof prover="2"><result status="valid" steps="2410"/></proof>
+  </goal>
+  <goal name="VC def.23" expl="precondition">
+  </goal>
+  <goal name="VC def.24" expl="precondition">
+  </goal>
+  <goal name="VC def.25" expl="postcondition">
+  </goal>
+  <goal name="VC def.0" expl="postcondition">
   </goal>
   <goal name="VC def.21" expl="assertion">
   <proof prover="0"><result status="timeout"/></proof>
   <proof prover="1"><result status="highfailure"/></proof>
-  <proof prover="2" timelimit="1"><result status="timeout" steps="30245"/></proof>
-  <proof prover="3"><result status="timeout" steps="41850"/></proof>
-  </goal>
-  <goal name="VC def.22" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" steps="17"/></proof>
-  </goal>
-  <goal name="VC def.23" expl="assertion" proved="true">
-  <proof prover="2"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.24" expl="assertion" proved="true">
-  <proof prover="2"><result status="valid" steps="21"/></proof>
-  </goal>
-  <goal name="VC def.25" expl="precondition">
-  </goal>
-  <goal name="VC def.26" expl="precondition">
-  </goal>
-  <goal name="VC def.27" expl="postcondition">
+  <proof prover="2"><result status="timeout" steps="30245"/></proof>
+  <proof prover="3"><result status="unknown" steps="59748"/></proof>
   </goal>
  </transf>
  </goal>

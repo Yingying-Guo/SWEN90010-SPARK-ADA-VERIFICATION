@@ -39,7 +39,7 @@ is
   -- given some compressed data, this specifies how to compute the length of
   -- the uncompressed data, producing an array where the ith entry in the array
   -- specifies the length of the uncompressed data after the ith token has
-  -- been decoded, i.e. producing an array of partial sums.
+  -- been decoded, i.e. producing an array of partial sums.j
   -- Naturally, the length only gets (strictly) larger as each token is
   -- decoded.
   function Length_Acc (Input : in Token_Array) return Partial_Length with
@@ -50,7 +50,10 @@ is
     and then
     (for all I in Input'Range =>
       Length_Acc'Result (I) =
-      (if I = Input'First then Zero else Length_Acc'Result (I - 1)) +
+      (if I = Input'First 
+        then Zero 
+        else Length_Acc'Result (I - 1)
+      ) +
        To_Big_Integer (Input (I).Length) + To_Big_Integer (One)
       and then
       (for all J in Input'First .. I - 1 =>
@@ -80,7 +83,11 @@ is
      (for all I in Input'First .. Upto =>
        In_Range
         (Arg  => Length_Acc (Input) (I), Low => To_Big_Integer (One),
-         High => To_Big_Integer (Integer'Last)) and
+         High =>
+          To_Big_Integer
+           (Integer'
+             Last)) and -- Length_Acc(Input)(I) = k = k'old + Input(I).length + 1
+
        To_Big_Integer (Input (I).Offset) <=
         (if I = Input'First then Zero else Length_Acc (Input) (I - 1)) and
        (if Input (I).Offset = 0 then Input (I).Length = 0))));
