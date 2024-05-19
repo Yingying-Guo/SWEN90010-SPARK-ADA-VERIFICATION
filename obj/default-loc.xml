@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_file>
+  <Project >
     <file_marker column=" 20" line=" 17" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\main.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 50" line=" 132" >
+    <file_marker current="true" column=" 7" line=" 132" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
