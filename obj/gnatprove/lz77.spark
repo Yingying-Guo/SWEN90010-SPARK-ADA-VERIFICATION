@@ -83,36 +83,57 @@
   ],
   "flow": [
     {
-      "file": "lz77.adb",
-      "line": 70,
-      "col": 7,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
+      "file": "lz77.ads",
+      "line": 131,
+      "col": 41,
+      "rule": "INOUT_ONLY_READ",
+      "severity": "warning",
       "entity": {
-        "name": "LZ77.Decode",
+        "name": "LZ77.Decode_Fast",
         "sloc": [
           {
             "file": "lz77.ads",
-            "line": 108
+            "line": 130
           }
         ]
       },
       "check_tree": {
       },
+      "msg_id": 0,
       "how_proved": "flow"
     },
     {
-      "file": "lz77.adb",
-      "line": 71,
-      "col": 7,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
+      "file": "lz77.ads",
+      "line": 131,
+      "col": 41,
+      "rule": "UNUSED",
+      "severity": "warning",
       "entity": {
-        "name": "LZ77.Decode",
+        "name": "LZ77.Decode_Fast",
         "sloc": [
           {
             "file": "lz77.ads",
-            "line": 108
+            "line": 130
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 1,
+      "how_proved": "flow"
+    },
+    {
+      "file": "lz77.ads",
+      "line": 132,
+      "col": 5,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode_Fast",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 130
           }
         ]
       },
@@ -124,6 +145,25 @@
       "file": "lz77.ads",
       "line": 110,
       "col": 5,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "lz77.adb",
+      "line": 70,
+      "col": 7,
       "rule": "UNINITIALIZED",
       "severity": "info",
       "entity": {
@@ -159,17 +199,17 @@
       "how_proved": "flow"
     },
     {
-      "file": "lz77.ads",
-      "line": 132,
-      "col": 5,
+      "file": "lz77.adb",
+      "line": 71,
+      "col": 7,
       "rule": "UNINITIALIZED",
       "severity": "info",
       "entity": {
-        "name": "LZ77.Decode_Fast",
+        "name": "LZ77.Decode",
         "sloc": [
           {
             "file": "lz77.ads",
-            "line": 130
+            "line": 108
           }
         ]
       },
@@ -397,7 +437,7 @@
     {
       "file": "lz77.adb",
       "line": 30,
-      "col": 12,
+      "col": 14,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -424,7 +464,7 @@
       ],
       "check_file": "lz77.adb",
       "check_line": 30,
-      "check_col": 12,
+      "check_col": 14,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -477,6 +517,46 @@
     {
       "file": "lz77.adb",
       "line": 30,
+      "col": 54,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Length_Acc",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 45
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 30,
+      "check_col": 54,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 30,
       "col": 52,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -505,46 +585,6 @@
       "check_file": "lz77.adb",
       "check_line": 30,
       "check_col": 52,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 30,
-      "col": 50,
-      "rule": "VC_PRECONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Length_Acc",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 45
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 30,
-      "check_col": 50,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -3115,7 +3155,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 115,
+              "steps": 123,
               "time": 0
             }
           },
@@ -3206,7 +3246,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 24,
+              "steps": 28,
               "time": 0
             }
           },
@@ -3246,7 +3286,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 29,
+              "steps": 33,
               "time": 0
             }
           },
@@ -3428,8 +3468,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 196,
-      "col": 78,
+      "line": 225,
+      "col": 40,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -3455,8 +3495,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 78,
+      "check_line": 225,
+      "check_col": 40,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -3468,390 +3508,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 196,
-      "col": 82,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "medium",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 51337,
-              "time": 6.90000000000000E-01
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 85400,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 82,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 2, Next_C => 'NUL'), 2 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 2, Length => 2, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "1",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "3",
-              "kind": "variable"
-            }
-          ],
-          "188": [
-            {
-              "name": "J",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "196": [
-            {
-              "name": "Output'First",
-              "value": "2147483646",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "3",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 2, Next_C => 'NUL'), 2 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 2, Length => 2, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "2147483646",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 0,
-      "how_proved": "prover"
-    },
-    {
-      "file": "lz77.adb",
-      "line": 196,
-      "col": 86,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "medium",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "CVC4_CE": {
-              "result": "Timeout",
-              "steps": 46842,
-              "time": 1
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 95584,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 86,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1, Next_C => 'NUL'), 2 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 1, Length => 1, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "1",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "2",
-              "kind": "variable"
-            }
-          ],
-          "188": [
-            {
-              "name": "J",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "196": [
-            {
-              "name": "Output'First",
-              "value": "2147483646",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "2",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1, Next_C => 'NUL'), 2 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 1, Length => 1, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "2147483646",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 1,
-      "how_proved": "prover"
-    },
-    {
-      "file": "lz77.adb",
-      "line": 196,
-      "col": 90,
+      "line": 225,
+      "col": 44,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -3868,7 +3526,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 167,
+              "steps": 168,
               "time": 0
             }
           },
@@ -3877,8 +3535,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 90,
+      "check_line": 225,
+      "check_col": 44,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -3890,461 +3548,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 196,
-      "col": 109,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "medium",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 4043,
-              "time": 0
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 435837,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 109,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 2, Next_C => 'NUL'), others => (Offset => 2, Length => 2, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "3",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "3",
-              "kind": "variable"
-            }
-          ],
-          "188": [
-            {
-              "name": "J",
-              "value": "1",
-              "kind": "variable"
-            }
-          ],
-          "196": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 2, Next_C => 'NUL'), others => (Offset => 2, Length => 2, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "J",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "2147483644",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "3",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 2, Next_C => 'NUL'), others => (Offset => 2, Length => 2, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "2147483644",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 2,
-      "how_proved": "prover"
-    },
-    {
-      "file": "lz77.adb",
-      "line": 196,
-      "col": 109,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "medium",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 10810,
-              "time": 1.30000000000000E-01
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 457892,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 1019055,
-              "time": 1.30000000000000E-01
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 109,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "4",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 2, Next_C => 'NUL'), others => (Offset => 2, Length => 2, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "3",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "3",
-              "kind": "variable"
-            }
-          ],
-          "188": [
-            {
-              "name": "J",
-              "value": "1",
-              "kind": "variable"
-            }
-          ],
-          "196": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 2, Next_C => 'NUL'), others => (Offset => 2, Length => 2, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "J",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "4",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "3",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 2, Next_C => 'NUL'), others => (Offset => 2, Length => 2, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "4",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 3,
-      "how_proved": "prover"
-    },
-    {
-      "file": "lz77.adb",
-      "line": 196,
-      "col": 37,
+      "line": 225,
+      "col": 58,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -4361,7 +3566,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 5,
+              "steps": 65,
               "time": 0
             }
           },
@@ -4370,8 +3575,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 37,
+      "check_line": 225,
+      "check_col": 58,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4383,8 +3588,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 196,
-      "col": 41,
+      "line": 225,
+      "col": 77,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -4401,7 +3606,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 14,
+              "steps": 27,
               "time": 0
             }
           },
@@ -4410,8 +3615,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 41,
+      "check_line": 225,
+      "check_col": 77,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4423,626 +3628,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 196,
-      "col": 45,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 14,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 45,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 196,
-      "col": 49,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "medium",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 40638,
-              "time": 5.80000000000000E-01
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 464102,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 49,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), 2 => (Offset => 1, Length => 1073741823, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "1",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "1073741825",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "1073741824",
-              "kind": "variable"
-            }
-          ],
-          "188": [
-            {
-              "name": "J",
-              "value": "1073741822",
-              "kind": "variable"
-            },
-            {
-              "name": "Output",
-              "value": "(Positive'Last => 'NUL', others => 'NUL')",
-              "kind": "variable"
-            }
-          ],
-          "196": [
-            {
-              "name": "J",
-              "value": "1073741822",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "1073741824",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), 2 => (Offset => 1, Length => 1073741823, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 4,
-      "how_proved": "prover"
-    },
-    {
-      "file": "lz77.adb",
-      "line": 196,
-      "col": 49,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "medium",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 68778,
-              "time": 5.50000000000000E-01
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 455226,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 21,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 49,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "4",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), 2 => (Offset => 1, Length => 1, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "1",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "3",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "4",
-              "kind": "variable"
-            }
-          ],
-          "188": [
-            {
-              "name": "J",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "Output",
-              "value": "(4 => 'NUL', others => 'NUL')",
-              "kind": "variable"
-            }
-          ],
-          "196": [
-            {
-              "name": "J",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "4",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "4",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), 2 => (Offset => 1, Length => 1, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "4",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 5,
-      "how_proved": "prover"
-    },
-    {
-      "file": "lz77.adb",
-      "line": 200,
-      "col": 37,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 14,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 200,
-      "check_col": 37,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 200,
-      "col": 41,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 183,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 200,
-      "check_col": 41,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 200,
-      "col": 45,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 43,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 200,
-      "check_col": 45,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 200,
-      "col": 64,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 22,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 200,
-      "check_col": 64,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 200,
-      "col": 64,
+      "line": 225,
+      "col": 77,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -5070,7 +3657,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 135,
+              "steps": 59,
               "time": 0
             }
           },
@@ -5079,8 +3666,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 200,
-      "check_col": 64,
+      "check_line": 225,
+      "check_col": 77,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5092,8 +3679,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 201,
-      "col": 33,
+      "line": 226,
+      "col": 36,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -5119,8 +3706,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 201,
-      "check_col": 33,
+      "check_line": 226,
+      "check_col": 36,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5132,8 +3719,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 201,
-      "col": 52,
+      "line": 226,
+      "col": 55,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -5159,8 +3746,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 201,
-      "check_col": 52,
+      "check_line": 226,
+      "check_col": 55,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5172,8 +3759,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 199,
-      "col": 19,
+      "line": 221,
+      "col": 42,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -5190,8 +3777,8 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 14,
-              "time": 0
+              "steps": 159,
+              "time": 1.10000000000000E-01
             }
           },
           "transformations": {
@@ -5199,324 +3786,21 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 199,
-      "check_col": 19,
+      "check_line": 221,
+      "check_col": 42,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 1,
           "max_steps": 1,
-          "max_time": 0.00000000000000E+00
+          "max_time": 1.09999999403954E-01
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 199,
-      "col": 38,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 14,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 199,
-      "check_col": 38,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 199,
-      "col": 66,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 62,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 199,
-      "check_col": 66,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 199,
-      "col": 85,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "medium",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "CVC4_CE": {
-              "result": "Timeout",
-              "steps": 24445,
-              "time": 1
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 201814,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 199,
-      "check_col": 85,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1073741823, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "1073741824",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "Output",
-              "value": "(others => 'NUL')",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "1073741824",
-              "kind": "variable"
-            }
-          ],
-          "188": [
-            {
-              "name": "J",
-              "value": "1073741822",
-              "kind": "variable"
-            },
-            {
-              "name": "Output",
-              "value": "(Positive'Last => 'NUL', others => 'NUL')",
-              "kind": "variable"
-            }
-          ],
-          "196": [
-            {
-              "name": "Output",
-              "value": "(Positive'Last => 'NUL', others => 'NUL')",
-              "kind": "variable"
-            }
-          ],
-          "199": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1073741823, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "1073741824",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1073741823, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 6,
-      "how_proved": "prover"
-    },
-    {
-      "file": "lz77.adb",
-      "line": 199,
-      "col": 99,
+      "line": 222,
+      "col": 34,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -5542,8 +3826,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 199,
-      "check_col": 99,
+      "check_line": 222,
+      "check_col": 34,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5555,8 +3839,88 @@
     },
     {
       "file": "lz77.adb",
-      "line": 162,
-      "col": 62,
+      "line": 222,
+      "col": 42,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 179,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 222,
+      "check_col": 42,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 222,
+      "col": 60,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 204,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 222,
+      "check_col": 60,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 168,
+      "col": 64,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -5593,8 +3957,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 162,
-      "check_col": 62,
+      "check_line": 168,
+      "check_col": 64,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5606,8 +3970,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 162,
-      "col": 85,
+      "line": 168,
+      "col": 87,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -5624,13 +3988,403 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 21,
+              "steps": 5,
               "time": 0
             }
           },
           "transformations": {
           }
         },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 168,
+      "check_col": 87,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 168,
+      "col": 53,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 2.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 168,
+      "check_col": 53,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 1.99999995529652E-02
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 166,
+      "col": 52,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 2.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 166,
+      "check_col": 52,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 1.99999995529652E-02
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 166,
+      "col": 75,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 166,
+      "check_col": 75,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 166,
+      "col": 84,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 166,
+      "check_col": 84,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 166,
+      "col": 82,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 166,
+      "check_col": 82,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 172,
+      "col": 64,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 172,
+      "check_col": 64,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 172,
+      "col": 83,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
         {
           "proof_attempts": {
             "CVC4": {
@@ -5652,6 +4406,68 @@
           },
           "transformations": {
           }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 172,
+      "check_col": 83,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 172,
+      "col": 83,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 8.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 6.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
         },
         {
           "proof_attempts": {
@@ -5666,21 +4482,21 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 162,
-      "check_col": 85,
+      "check_line": 172,
+      "check_col": 83,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 4,
           "max_steps": 1,
-          "max_time": 0.00000000000000E+00
+          "max_time": 7.99999982118607E-02
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 162,
-      "col": 51,
+      "line": 172,
+      "col": 53,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -5697,7 +4513,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 21,
+              "steps": 321,
               "time": 0
             }
           },
@@ -5717,8 +4533,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 162,
-      "check_col": 51,
+      "check_line": 172,
+      "check_col": 53,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5730,8 +4546,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 163,
-      "col": 62,
+      "line": 170,
+      "col": 53,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -5768,8 +4584,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 163,
-      "check_col": 62,
+      "check_line": 170,
+      "check_col": 53,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5781,8 +4597,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 163,
-      "col": 81,
+      "line": 170,
+      "col": 72,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -5799,7 +4615,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 28,
+              "steps": 27,
               "time": 0
             }
           },
@@ -5819,8 +4635,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 163,
-      "check_col": 81,
+      "check_line": 170,
+      "check_col": 72,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5832,8 +4648,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 163,
-      "col": 81,
+      "line": 170,
+      "col": 72,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -5846,141 +4662,6 @@
         ]
       },
       "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 21,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 21,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 163,
-      "check_col": 81,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 4,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 163,
-      "col": 51,
-      "rule": "VC_PRECONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 225,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 163,
-      "check_col": 51,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 168,
-      "col": 55,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 108
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 21,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
         {
           "proof_attempts": {
             "CVC4": {
@@ -5996,8 +4677,19 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 5,
+              "steps": 21,
               "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 6.00000000000000E-02
             }
           },
           "transformations": {
@@ -6016,8 +4708,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 168,
-      "check_col": 55,
+      "check_line": 170,
+      "check_col": 72,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -6029,10 +4721,10 @@
     },
     {
       "file": "lz77.adb",
-      "line": 168,
-      "col": 64,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "medium",
+      "line": 170,
+      "col": 78,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
       "entity": {
         "name": "LZ77.Decode",
         "sloc": [
@@ -6046,19 +4738,184 @@
         {
           "proof_attempts": {
             "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 508526,
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 170,
+      "check_col": 78,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 170,
+      "col": 76,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 170,
+      "check_col": 76,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 181,
+      "col": 58,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 181,
+      "check_col": 58,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 181,
+      "col": 67,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 21,
               "time": 1.10000000000000E-01
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
             }
           },
           "transformations": {
@@ -6067,24 +4924,9 @@
         {
           "proof_attempts": {
             "CVC4": {
-              "result": "Unknown (unknown)",
-              "steps": 231,
+              "result": "Valid",
+              "steps": 13,
               "time": 0
-            },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 346,
-              "time": 0
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 57564,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
             }
           },
           "transformations": {
@@ -6092,152 +4934,220 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 168,
-      "check_col": 64,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => Natural'Last, Next_C => 'NUL'), 2 => (Offset => 0, Length => Natural'Last-2, Next_C => 'NUL'), others => (Offset => Natural'Last, Length => Natural'Last, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "Natural'Last-1",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            }
-          ],
-          "168": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => Natural'Last, Next_C => 'NUL'), 2 => (Offset => 0, Length => Natural'Last-2, Next_C => 'NUL'), others => (Offset => Natural'Last, Length => Natural'Last, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "2",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => Natural'Last, Next_C => 'NUL'), 2 => (Offset => 0, Length => Natural'Last-2, Next_C => 'NUL'), others => (Offset => Natural'Last, Length => Natural'Last, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ]
+      "check_line": 181,
+      "check_col": 67,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 1.09999999403954E-01
         }
-      },
-      "msg_id": 7,
-      "how_proved": "prover"
+      }
     },
     {
       "file": "lz77.adb",
-      "line": 165,
-      "col": 57,
+      "line": 179,
+      "col": 56,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 179,
+      "check_col": 56,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 180,
+      "col": 56,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 180,
+      "check_col": 56,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 180,
+      "col": 76,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 180,
+      "check_col": 76,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 180,
+      "col": 88,
       "rule": "VC_OVERFLOW_CHECK",
-      "severity": "medium",
+      "severity": "info",
       "entity": {
         "name": "LZ77.Decode",
         "sloc": [
@@ -6251,24 +5161,60 @@
         {
           "proof_attempts": {
             "CVC4": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
-            },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 66518,
-              "time": 6.30000000000000E-01
-            },
-            "Z3": {
-              "result": "Timeout",
-              "steps": 4125280,
-              "time": 1
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
+              "result": "Valid",
+              "steps": 108,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 180,
+      "check_col": 88,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 183,
+      "col": 111,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
             }
           },
           "transformations": {
@@ -6287,195 +5233,23 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 165,
-      "check_col": 57,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1, Next_C => 'NUL'), 2 => (Offset => 0, Length => Natural'Last-2, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "Natural'Last-1",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "Output",
-              "value": "(others => 'NUL')",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "2",
-              "kind": "variable"
-            }
-          ],
-          "165": [
-            {
-              "name": "Last_Length",
-              "value": "2",
-              "kind": "variable"
-            }
-          ],
-          "188": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "J",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "Output",
-              "value": "(3 => 'NUL', others => 'NUL')",
-              "kind": "variable"
-            }
-          ],
-          "196": [
-            {
-              "name": "Output",
-              "value": "(others => 'NUL')",
-              "kind": "variable"
-            }
-          ],
-          "201": [
-            {
-              "name": "k",
-              "value": "2",
-              "kind": "variable"
-            }
-          ],
-          "202": [
-            {
-              "name": "Last_Length",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "2",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1, Next_C => 'NUL'), 2 => (Offset => 0, Length => Natural'Last-2, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "2147483647",
-              "kind": "variable"
-            }
-          ]
+      "check_line": 183,
+      "check_col": 111,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
         }
-      },
-      "msg_id": 8,
-      "how_proved": "prover"
+      }
     },
     {
       "file": "lz77.adb",
-      "line": 165,
-      "col": 42,
-      "rule": "VC_LOOP_INVARIANT_INIT",
-      "severity": "medium",
+      "line": 183,
+      "col": 131,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
       "entity": {
         "name": "LZ77.Decode",
         "sloc": [
@@ -6489,24 +5263,9 @@
         {
           "proof_attempts": {
             "CVC4": {
-              "result": "Unknown (unknown)",
-              "steps": 198,
+              "result": "Valid",
+              "steps": 21,
               "time": 0
-            },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 312,
-              "time": 0
-            },
-            "Z3": {
-              "result": "Unknown (unknown)",
-              "steps": 59031,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 1
             }
           },
           "transformations": {
@@ -6516,7 +5275,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 5,
+              "steps": 21,
               "time": 0
             }
           },
@@ -6547,159 +5306,122 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 154,
-      "check_col": 36,
-      "cntexmp": {
-        "lz77.adb": {
-          "69": [
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "74": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "77": [
-            {
-              "name": "Output'Last",
-              "value": "2",
-              "kind": "variable"
-            }
-          ],
-          "83": [
-            {
-              "name": "Input",
-              "value": "(others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            }
-          ],
-          "87": [
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "89": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            },
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Temp_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "106": [
-            {
-              "name": "Temp_Length",
-              "value": "1",
-              "kind": "variable"
-            }
-          ],
-          "133": [
-            {
-              "name": "Error",
-              "value": "False",
-              "kind": "variable"
-            }
-          ],
-          "145": [
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "151": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            }
-          ],
-          "165": [
-            {
-              "name": "I",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input",
-              "value": "(others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "0",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "2",
-              "kind": "variable"
-            }
-          ]
+      "check_line": 183,
+      "check_col": 131,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
         }
-      },
-      "msg_id": 9,
-      "how_proved": "prover"
+      }
     },
     {
       "file": "lz77.adb",
-      "line": 157,
+      "line": 183,
+      "col": 123,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 247,
+              "time": 1.10000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 119,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 183,
+      "check_col": 123,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 1.09999999403954E-01
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 183,
+      "col": 44,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 279,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 70,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 183,
+      "check_col": 44,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 175,
       "col": 42,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "medium",
@@ -6720,10 +5442,15 @@
               "steps": -1,
               "time": 1
             },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 119925,
+              "time": 4.50000000000000E-01
+            },
             "Z3": {
               "result": "Unknown (unknown)",
-              "steps": 2920833,
-              "time": 5.60000000000000E-01
+              "steps": 1926367,
+              "time": 0
             },
             "altergo": {
               "result": "Timeout",
@@ -6741,20 +5468,316 @@
               "steps": -1,
               "time": 1
             },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 21773,
-              "time": 7.30000000000000E-01
-            },
             "Z3": {
-              "result": "Timeout",
-              "steps": 5618219,
-              "time": 1
+              "result": "Unknown (unknown)",
+              "steps": 4049719,
+              "time": 2.20000000000000E-01
             },
             "altergo": {
               "result": "Timeout",
               "steps": -1,
               "time": 1
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 14,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 157,
+      "check_col": 36,
+      "cntexmp": {
+        "a-tiinio.ads": {
+          "48": [
+            {
+              "name": "Default_Width",
+              "value": "0",
+              "kind": "variable"
+            }
+          ],
+          "49": [
+            {
+              "name": "Default_Base",
+              "value": "Number_Base'First",
+              "kind": "variable"
+            }
+          ]
+        },
+        "lz77.adb": {
+          "69": [
+            {
+              "name": "k",
+              "value": "0",
+              "kind": "variable"
+            }
+          ],
+          "74": [
+            {
+              "name": "Error",
+              "value": "False",
+              "kind": "variable"
+            }
+          ],
+          "77": [
+            {
+              "name": "Output'Last",
+              "value": "3",
+              "kind": "variable"
+            }
+          ],
+          "83": [
+            {
+              "name": "Input",
+              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), 2 => (Offset => 1, Length => 0, Next_C => 'NUL'), 3 => (Offset => 0, Length => 1, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
+              "kind": "variable"
+            }
+          ],
+          "87": [
+            {
+              "name": "Temp_Length",
+              "value": "0",
+              "kind": "variable"
+            }
+          ],
+          "89": [
+            {
+              "name": "Error",
+              "value": "False",
+              "kind": "variable"
+            },
+            {
+              "name": "I",
+              "value": "3",
+              "kind": "variable"
+            },
+            {
+              "name": "Temp_Length",
+              "value": "0",
+              "kind": "variable"
+            }
+          ],
+          "106": [
+            {
+              "name": "Temp_Length",
+              "value": "2",
+              "kind": "variable"
+            }
+          ],
+          "133": [
+            {
+              "name": "Error",
+              "value": "False",
+              "kind": "variable"
+            }
+          ],
+          "145": [
+            {
+              "name": "Last_Length",
+              "value": "0",
+              "kind": "variable"
+            }
+          ],
+          "154": [
+            {
+              "name": "Error",
+              "value": "False",
+              "kind": "variable"
+            },
+            {
+              "name": "I",
+              "value": "3",
+              "kind": "variable"
+            },
+            {
+              "name": "Last_Length",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Output",
+              "value": "(others => 'NUL')",
+              "kind": "variable"
+            },
+            {
+              "name": "k",
+              "value": "1",
+              "kind": "variable"
+            }
+          ],
+          "175": [
+            {
+              "name": "I",
+              "value": "3",
+              "kind": "variable"
+            },
+            {
+              "name": "Input",
+              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), 2 => (Offset => 1, Length => 0, Next_C => 'NUL'), 3 => (Offset => 0, Length => 1, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
+              "kind": "variable"
+            },
+            {
+              "name": "Input'First",
+              "value": "1",
+              "kind": "variable"
+            },
+            {
+              "name": "Input'Last",
+              "value": "3",
+              "kind": "variable"
+            },
+            {
+              "name": "Last_Length",
+              "value": "1",
+              "kind": "variable"
+            },
+            {
+              "name": "Output'First",
+              "value": "1",
+              "kind": "variable"
+            },
+            {
+              "name": "Output'Last",
+              "value": "3",
+              "kind": "variable"
+            },
+            {
+              "name": "k",
+              "value": "2",
+              "kind": "variable"
+            }
+          ],
+          "221": [
+            {
+              "name": "I",
+              "value": "2",
+              "kind": "variable"
+            }
+          ],
+          "224": [
+            {
+              "name": "Last_Length",
+              "value": "1",
+              "kind": "variable"
+            }
+          ],
+          "225": [
+            {
+              "name": "Output",
+              "value": "(2 => 'NUL', others => 'NUL')",
+              "kind": "variable"
+            }
+          ],
+          "226": [
+            {
+              "name": "k",
+              "value": "2",
+              "kind": "variable"
+            }
+          ]
+        },
+        "lz77.ads": {
+          "109": [
+            {
+              "name": "Input",
+              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), 2 => (Offset => 1, Length => 0, Next_C => 'NUL'), 3 => (Offset => 0, Length => 1, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
+              "kind": "variable"
+            },
+            {
+              "name": "Input'First",
+              "value": "1",
+              "kind": "variable"
+            },
+            {
+              "name": "Input'Last",
+              "value": "3",
+              "kind": "variable"
+            },
+            {
+              "name": "Output'First",
+              "value": "1",
+              "kind": "variable"
+            },
+            {
+              "name": "Output'Last",
+              "value": "3",
+              "kind": "variable"
+            }
+          ]
+        }
+      },
+      "msg_id": 2,
+      "how_proved": "prover"
+    },
+    {
+      "file": "lz77.adb",
+      "line": 175,
+      "col": 42,
+      "rule": "VC_LOOP_INVARIANT_INIT",
+      "severity": "medium",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 108
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 233,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 402,
+              "time": 0
+            },
+            "Z3": {
+              "result": "Unknown (unknown)",
+              "steps": 103715,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 1
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
             }
           },
           "transformations": {
@@ -6784,9 +5807,25 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 154,
+      "check_line": 157,
       "check_col": 36,
       "cntexmp": {
+        "a-tiinio.ads": {
+          "48": [
+            {
+              "name": "Default_Width",
+              "value": "0",
+              "kind": "variable"
+            }
+          ],
+          "49": [
+            {
+              "name": "Default_Base",
+              "value": "Number_Base'First",
+              "kind": "variable"
+            }
+          ]
+        },
         "lz77.adb": {
           "69": [
             {
@@ -6805,14 +5844,14 @@
           "77": [
             {
               "name": "Output'Last",
-              "value": "4",
+              "value": "2",
               "kind": "variable"
             }
           ],
           "83": [
             {
               "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1, Next_C => 'NUL'), 2 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
+              "value": "(others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
               "kind": "variable"
             }
           ],
@@ -6831,7 +5870,7 @@
             },
             {
               "name": "I",
-              "value": "2",
+              "value": "1",
               "kind": "variable"
             },
             {
@@ -6861,37 +5900,22 @@
               "kind": "variable"
             }
           ],
-          "151": [
+          "154": [
             {
               "name": "I",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "Output",
-              "value": "(others => 'NUL')",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "2",
+              "value": "1",
               "kind": "variable"
             }
           ],
-          "157": [
+          "175": [
             {
               "name": "I",
-              "value": "2",
+              "value": "1",
               "kind": "variable"
             },
             {
               "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1, Next_C => 'NUL'), 2 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
+              "value": "(others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
               "kind": "variable"
             },
             {
@@ -6901,74 +5925,12 @@
             },
             {
               "name": "Input'Last",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "Last_Length",
-              "value": "2",
-              "kind": "variable"
-            }
-          ],
-          "188": [
-            {
-              "name": "I",
               "value": "1",
               "kind": "variable"
             },
             {
-              "name": "J",
+              "name": "Last_Length",
               "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "Output",
-              "value": "(3 => 'NUL', others => 'NUL')",
-              "kind": "variable"
-            }
-          ],
-          "196": [
-            {
-              "name": "Output",
-              "value": "(3 => 'NUL', others => 'NUL')",
-              "kind": "variable"
-            }
-          ],
-          "201": [
-            {
-              "name": "k",
-              "value": "2",
-              "kind": "variable"
-            }
-          ],
-          "202": [
-            {
-              "name": "Last_Length",
-              "value": "2",
-              "kind": "variable"
-            },
-            {
-              "name": "k",
-              "value": "2",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "109": [
-            {
-              "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 1, Next_C => 'NUL'), 2 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "2",
               "kind": "variable"
             },
             {
@@ -6978,18 +5940,52 @@
             },
             {
               "name": "Output'Last",
-              "value": "4",
+              "value": "2",
+              "kind": "variable"
+            },
+            {
+              "name": "k",
+              "value": "0",
+              "kind": "variable"
+            }
+          ]
+        },
+        "lz77.ads": {
+          "109": [
+            {
+              "name": "Input",
+              "value": "(others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
+              "kind": "variable"
+            },
+            {
+              "name": "Input'First",
+              "value": "1",
+              "kind": "variable"
+            },
+            {
+              "name": "Input'Last",
+              "value": "1",
+              "kind": "variable"
+            },
+            {
+              "name": "Output'First",
+              "value": "1",
+              "kind": "variable"
+            },
+            {
+              "name": "Output'Last",
+              "value": "2",
               "kind": "variable"
             }
           ]
         }
       },
-      "msg_id": 10,
+      "msg_id": 3,
       "how_proved": "prover"
     },
     {
       "file": "lz77.adb",
-      "line": 219,
+      "line": 255,
       "col": 22,
       "rule": "VC_ASSERT",
       "severity": "info",
@@ -7018,7 +6014,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 5,
+              "steps": 14,
               "time": 0
             }
           },
@@ -7027,7 +6023,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 219,
+      "check_line": 255,
       "check_col": 22,
       "how_proved": "prover",
       "stats": {
@@ -7070,7 +6066,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 14,
-              "time": 0
+              "time": 1.10000000000000E-01
             }
           },
           "transformations": {
@@ -7085,7 +6081,7 @@
         "CVC4": {
           "count": 2,
           "max_steps": 1,
-          "max_time": 0.00000000000000E+00
+          "max_time": 1.09999999403954E-01
         }
       }
     },
@@ -7148,7 +6144,7 @@
       "check_col": 5,
       "cntexmp": {
         "lz77.adb": {
-          "227": [
+          "264": [
             {
               "name": "Is_Valid'Result",
               "value": "False",
@@ -7193,119 +6189,7 @@
           ]
         }
       },
-      "msg_id": 11,
-      "how_proved": "prover"
-    },
-    {
-      "file": "lz77.adb",
-      "line": 238,
-      "col": 21,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "medium",
-      "entity": {
-        "name": "LZ77.Decode_Fast",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 130
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Unknown ()",
-              "steps": 336,
-              "time": 0
-            },
-            "CVC4_CE": {
-              "result": "Unknown (unknown)",
-              "steps": 295,
-              "time": 0
-            },
-            "Z3": {
-              "result": "Unknown ()",
-              "steps": 42615,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 238,
-      "check_col": 21,
-      "cntexmp": {
-        "lz77.adb": {
-          "236": [
-            {
-              "name": "Output_Length",
-              "value": "0",
-              "kind": "variable"
-            }
-          ],
-          "238": [
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "0",
-              "kind": "variable"
-            }
-          ]
-        },
-        "lz77.ads": {
-          "131": [
-            {
-              "name": "Input",
-              "value": "(others => (Offset => 0, Length => 0, Next_C => 'X'))",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Input'Last",
-              "value": "0",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'First",
-              "value": "1",
-              "kind": "variable"
-            },
-            {
-              "name": "Output'Last",
-              "value": "0",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 12,
+      "msg_id": 4,
       "how_proved": "prover"
     },
     {
@@ -7328,7 +6212,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 181,
+              "steps": 221,
               "time": 0
             }
           },
@@ -7453,12 +6337,12 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 6295,
-              "time": 1.30000000000000E-01
+              "steps": 6266,
+              "time": 1.40000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
-              "steps": 145254,
+              "steps": 99161,
               "time": 0
             },
             "altergo": {
@@ -7476,7 +6360,7 @@
       "check_col": 12,
       "cntexmp": {
         "lz77.adb": {
-          "236": [
+          "273": [
             {
               "name": "Output_Length",
               "value": "0",
@@ -7488,7 +6372,7 @@
           "131": [
             {
               "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'X'), others => (Offset => 0, Length => 0, Next_C => 'X'))",
+              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
               "kind": "variable"
             },
             {
@@ -7515,7 +6399,7 @@
           "136": [
             {
               "name": "Input",
-              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'X'), others => (Offset => 0, Length => 0, Next_C => 'X'))",
+              "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
               "kind": "variable"
             },
             {
@@ -7536,7 +6420,7 @@
           ]
         }
       },
-      "msg_id": 13,
+      "msg_id": 5,
       "how_proved": "prover"
     }
   ],
@@ -7544,13 +6428,17 @@
     {
       "assumptions": [
         {
-          "predicate": "CLAIM_POST",
+          "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "LZ77.Length_Acc",
+            "name": "Ada.Integer_Text_IO.Put",
             "sloc": [
               {
-                "file": "lz77.ads",
-                "line": 45
+                "file": "a-tiinio.ads",
+                "line": 80
+              },
+              {
+                "file": "a-inteio.ads",
+                "line": 18
               }
             ]
           }
@@ -7558,11 +6446,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "Big_Integers.In_Range",
+            "name": "Ada.Text_IO.New_Line",
             "sloc": [
               {
-                "file": "big_integers.ads",
-                "line": 23
+                "file": "a-textio.ads",
+                "line": 264
               }
             ]
           }
@@ -7570,11 +6458,35 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "Big_Integers.Ole",
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 465
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.Put_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 508
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Big_Integers.Ogt",
             "sloc": [
               {
                 "file": "big_integers.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -7591,322 +6503,6 @@
             ]
           }
         },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "LZ77.Length_Acc",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 45
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Big_Integers.In_Range",
-            "sloc": [
-              {
-                "file": "big_integers.ads",
-                "line": 23
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Big_Integers.Ole",
-            "sloc": [
-              {
-                "file": "big_integers.ads",
-                "line": 12
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Big_Integers.To_Big_Integer",
-            "sloc": [
-              {
-                "file": "big_integers.ads",
-                "line": 16
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "LZ77.Length_Acc",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 45
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "LZ77.Valid",
-          "sloc": [
-            {
-              "file": "lz77.ads",
-              "line": 74
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Integer_Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-tiinio.ads",
-                "line": 80
-              },
-              {
-                "file": "a-inteio.ads",
-                "line": 18
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Text_IO.New_Line",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 264
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 392
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 465
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "LZ77.Put",
-          "sloc": [
-            {
-              "file": "lz77.ads",
-              "line": 100
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_POST",
-          "arg": {
-            "name": "Ada.Integer_Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-tiinio.ads",
-                "line": 80
-              },
-              {
-                "file": "a-inteio.ads",
-                "line": 18
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_POST",
-          "arg": {
-            "name": "Ada.Text_IO.New_Line",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 264
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_POST",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 392
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_POST",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 465
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Integer_Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-tiinio.ads",
-                "line": 80
-              },
-              {
-                "file": "a-inteio.ads",
-                "line": 18
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Text_IO.New_Line",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 264
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 392
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 465
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Ada.Integer_Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-tiinio.ads",
-                "line": 80
-              },
-              {
-                "file": "a-inteio.ads",
-                "line": 18
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Ada.Text_IO.New_Line",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 264
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 392
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 465
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "LZ77.Put",
-          "sloc": [
-            {
-              "file": "lz77.ads",
-              "line": 100
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
@@ -8282,58 +6878,6 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "Big_Integers.To_Integer",
-            "sloc": [
-              {
-                "file": "big_integers.ads",
-                "line": 28
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "LZ77.Decoded_Length",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 63
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "LZ77.Valid",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 74
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "LZ77.Decode_Fast",
-          "sloc": [
-            {
-              "file": "lz77.ads",
-              "line": 130
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
             "name": "LZ77.Length_Acc",
             "sloc": [
               {
@@ -8472,17 +7016,381 @@
           ]
         }
       }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "LZ77.Length_Acc",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 45
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Big_Integers.In_Range",
+            "sloc": [
+              {
+                "file": "big_integers.ads",
+                "line": 23
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Big_Integers.Ole",
+            "sloc": [
+              {
+                "file": "big_integers.ads",
+                "line": 12
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Big_Integers.To_Big_Integer",
+            "sloc": [
+              {
+                "file": "big_integers.ads",
+                "line": 16
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "LZ77.Length_Acc",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 45
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Big_Integers.In_Range",
+            "sloc": [
+              {
+                "file": "big_integers.ads",
+                "line": 23
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Big_Integers.Ole",
+            "sloc": [
+              {
+                "file": "big_integers.ads",
+                "line": 12
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Big_Integers.To_Big_Integer",
+            "sloc": [
+              {
+                "file": "big_integers.ads",
+                "line": 16
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "LZ77.Length_Acc",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 45
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "LZ77.Valid",
+          "sloc": [
+            {
+              "file": "lz77.ads",
+              "line": 74
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Integer_Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-tiinio.ads",
+                "line": 80
+              },
+              {
+                "file": "a-inteio.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.New_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 264
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 392
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 465
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "LZ77.Put",
+          "sloc": [
+            {
+              "file": "lz77.ads",
+              "line": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Ada.Integer_Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-tiinio.ads",
+                "line": 80
+              },
+              {
+                "file": "a-inteio.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Ada.Text_IO.New_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 264
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 392
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 465
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Integer_Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-tiinio.ads",
+                "line": 80
+              },
+              {
+                "file": "a-inteio.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.New_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 264
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 392
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 465
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Ada.Integer_Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-tiinio.ads",
+                "line": 80
+              },
+              {
+                "file": "a-inteio.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Ada.Text_IO.New_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 264
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 392
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 465
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "LZ77.Put",
+          "sloc": [
+            {
+              "file": "lz77.ads",
+              "line": 100
+            }
+          ]
+        }
+      }
     }
   ],
   "timings": {
-    "marking": 1.14439998287708E-03,
-    "globals (basic)": 1.29142003133893E-02,
-    "globals/properties (advanced)": 1.60608999431133E-02,
-    "flow analysis": 1.67239997535944E-02,
-    "codepeer results": 4.69999986307812E-06,
-    "init_why_sections": 2.93599994620308E-04,
-    "translation of standard": 2.07319995388389E-03,
-    "translation of compilation unit": 4.68490011990070E-02,
-    "proof": 1.84744987487793E+01
+    "marking": 1.10790005419403E-03,
+    "globals (basic)": 1.32261998951435E-02,
+    "globals/properties (advanced)": 1.60482004284859E-02,
+    "flow analysis": 2.32666004449129E-02,
+    "codepeer results": 4.60000001112348E-06,
+    "init_why_sections": 3.70599998859689E-04,
+    "translation of standard": 1.81529996916652E-03,
+    "translation of compilation unit": 5.82690015435219E-02,
+    "proof": 1.69082679748535E+01
   }
 }

@@ -27,7 +27,7 @@ is
                   Result (I) > Result (J))));
          Result (Index) :=
            (if Index = Input'First then Zero else Result (Index - 1)) +
-           To_Big_Integer (Input (Index).Length) + To_Big_Integer (One);
+             To_Big_Integer (Input (Index).Length) + To_Big_Integer (One);
       end loop;
       return Result;
    end Length_Acc;
@@ -145,6 +145,9 @@ is
          Last_Length := 0;
          pragma Assert (Last_Length = 0);
          pragma Assert (Input'Length > 0);
+         
+         
+         
       -------------------------------------------------loop--------------------------------------------
            -- If Input is not empty, then the each token in Input Array must be valid
          -- {if Error then k=0 else ((Input'Length > 0) and (k = Last_Length + (if (I < Input'First and I > Input'Last) then 0 else Input(I).Length+1)) and (Last_Length = (if I <= Input'First then 0 else (if I > Input'Last then Length_Acc(Input)(Input'Last) else (Length_Acc(Input)(I-1)))}
@@ -159,14 +162,26 @@ is
                                           then 0 
                                           else 
                                             (if I > Input'Last 
-                                             then To_Integer(Length_Acc(Input)(Input'Last))
-                                             else To_Integer(Length_Acc(Input)(I-1))
+                                             then 
+                                               (if Length_Acc(Input)(Input'Last) > To_Big_Integer(Integer'Last)
+                                               then 0 
+                                               else To_Integer(Length_Acc(Input)(Input'Last)))
+                                             else 
+                                                (if Length_Acc(Input)(I-1) > To_Big_Integer(Integer'Last)
+                                               then 0 
+                                               else To_Integer(Length_Acc(Input)(I-1)))
+    
                                             )))
-                                     and (k=Last_Length + 
+                                     and (k= 
                                        (if (I < Input'First and I > Input'Last)
                                           then 0 
-                                          else (Input(I).Length+1)
-                                         ))));
+                                          else 
+                                            (if (Input(I).Length <= (Natural'Last - 1) 
+                                             and Input(I).Length <= (Output'Length - 1 - Last_Length)) 
+                                             then (Input(I).Length+1) 
+                                             else 0)
+                                         ) + (if (Last_Length <= (Natural'Last - 1) and Last_Length <= (Output'Length - 1 - Input(I).Length)) then Last_Length else 0)
+                                      )));
 --              pragma Loop_Invariant (k = 
 --                                     (if (Error or Input'Length <= 0) then 0 else 
 --                                      
@@ -179,30 +194,51 @@ is
 --                                          )
 --                                       
 --                                    ); 
- 
-            -- Byte-by-byte copying based on the current token
-            -- Token (o, l, c):
-            --     the bytes bk+1,. . . , bk+1+(l−1) are identical to the bytes bk+1−o,. . . , bk+1−o+(l−1),
-            --           the bytes bk+1,. . . , bk+l are identical to the bytes bk+1−o,. . . , bk+l−o,
-            --     byte bk+1+l is c
-            for J in 0 .. Input (I).Length - 1 loop
---                 pragma Loop_Invariant (if J < 0
---                                        then (Output(Output'First - 1 + k) = Output(Output'First - 1 + k)) 
---                                        else 
---                                          (for all Q in 0..J-1 => 
---                                             (Output (Output'First - 1 + k + 1 + Q) = Output (Output'First - 1 + k + 1 - Input (I).Offset + Q))
---                                          )
---                                       );
-               Output (Output'First - 1 + k + 1 + J) := Output (Output'First - 1 + k + 1 - Input (I).Offset + J);
-            end loop;
-
-            if (k + Input (I).Length + 1) <= Natural'Last and (k + Input (I).Length + 1) <= Output'Length and not Error then
-               Output (Output'First - 1 + k + Input (I).Length + 1) := Input (I).Next_C;
-               k := Last_Length + Input (I).Length + 1;  -- Update k to reflect the new length
-               Last_Length := k;                                          
-            else
+            if Error then 
                k := 0;
+            else
+               if I <= Input'First then
+                  k := 0;
+               end if;
+        
+               -- Byte-by-byte copying based on the current token
+               -- Token (o, l, c):
+               --     the bytes bk+1,. . . , bk+1+(l−1) are identical to the bytes bk+1−o,. . . , bk+1−o+(l−1),
+               --           the bytes bk+1,. . . , bk+l are identical to the bytes bk+1−o,. . . , bk+l−o,
+               --     byte bk+1+l is c
+               --              for J in 0 .. Input (I).Length - 1 loop
+               --  --                 pragma Loop_Invariant (if J < 0
+               --  --                                        then (Output(Output'First - 1 + k) = Output(Output'First - 1 + k)) 
+               --  --                                        else 
+               --  --                                          (for all Q in 0..J-1 => 
+               --  --                                             (Output (Output'First - 1 + k + 1 + Q) = Output (Output'First - 1 + k + 1 - Input (I).Offset + Q))
+               --  --                                          )
+               --  --                                       );
+               --                 Output (Output'First - 1 + k + 1 + J) := Output (Output'First - 1 + k + 1 - Input (I).Offset + J);
+               --              end loop;
+
+               if k <= (Natural'Last - 1) and Input(I).Length <= (Natural'Last - 1) 
+                 and k <=  (Natural'Last - Input(I).Length - 1)  --Check the Additive not overflow
+                 and k <= (Output'Length - Input(I).Length - 1)
+               then
+                  Last_Length := k;
+                  Output (Output'First - 1 + Last_Length + Input (I).Length + 1) := Input (I).Next_C;
+                  k := Last_Length + Input (I).Length + 1;  -- Update k to reflect the new length
+               else
+                  k := 0;
+                  Error         := True;
+               end if;
             end if;
+            Put_Line("In the loop, all parameters' value are:   (k)        (I)   (Input(I).Length)    (Last_Length)");
+            Put("                                 ");
+            Put(k);
+            Put("");
+            Put(I);
+            Put("  ");
+            Put(Input(I).Length);
+            Put("       ");
+            Put(Last_Length);
+            New_Line;
             -- {if Error then k=0 else ((Input'Length > 0) and (k = Last_Length + (if (I < Input'First and I > Input'Last) then 0 else Input(I).Length+1)) and (Last_Length = (if I <= Input'First then 0 else (if I > Input'Last then Length_Acc(Input)(Input'Last) else (Length_Acc(Input)(I-1)))}   
          end loop;
          -- {not Error} and (I > Input'Last or I < Input'First) and {if Error then k=0 else ((Input'Length > 0) and (k = Last_Length + (if (I < Input'First and I > Input'Last) then 0 else Input(I).Length+1)) and (Last_Length = (if I <= Input'First then 0 else (if I > Input'Last then Length_Acc(Input)(Input'Last) else (Length_Acc(Input)(I-1)))}
@@ -217,6 +253,7 @@ is
       end if;
       -- {if Error then Output_Length=0 else (Length_Acc(Input)(Input'Last) = Length_Acc(Input)(Input'Last))}
       pragma Assert (if Error then Output_Length = 0 else True);
+      
    end Decode;
 
    -- 'Input' array: compressed data
@@ -235,7 +272,7 @@ is
       -- IMPLEMENT THIS
       Output_Length         := 0;
       
-      Output (Output'First) := 'X'; -- for debugging
+--        Output (Output'First) := 'X'; -- for debugging
    end Decode_Fast;
 
 end LZ77;
