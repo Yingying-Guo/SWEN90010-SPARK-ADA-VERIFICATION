@@ -5,7 +5,7 @@
       "sloc": [
         {
           "file": "main.adb",
-          "line": 6
+          "line": 7
         }
       ],
       "spark": "all"
@@ -14,7 +14,7 @@
   "flow": [
     {
       "file": "main.adb",
-      "line": 12,
+      "line": 20,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -23,7 +23,7 @@
         "sloc": [
           {
             "file": "main.adb",
-            "line": 6
+            "line": 7
           }
         ]
       },
@@ -33,7 +33,7 @@
     },
     {
       "file": "main.adb",
-      "line": 10,
+      "line": 17,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -42,7 +42,7 @@
         "sloc": [
           {
             "file": "main.adb",
-            "line": 6
+            "line": 7
           }
         ]
       },
@@ -54,7 +54,7 @@
   "proof": [
     {
       "file": "main.adb",
-      "line": 18,
+      "line": 33,
       "col": 42,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -63,7 +63,7 @@
         "sloc": [
           {
             "file": "main.adb",
-            "line": 6
+            "line": 7
           }
         ]
       },
@@ -81,7 +81,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 18,
+      "check_line": 33,
       "check_col": 42,
       "how_proved": "prover",
       "stats": {
@@ -94,8 +94,8 @@
     },
     {
       "file": "main.adb",
-      "line": 19,
-      "col": 26,
+      "line": 34,
+      "col": 29,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -103,7 +103,7 @@
         "sloc": [
           {
             "file": "main.adb",
-            "line": 6
+            "line": 7
           }
         ]
       },
@@ -132,8 +132,8 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 19,
-      "check_col": 26,
+      "check_line": 34,
+      "check_col": 29,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -145,7 +145,7 @@
     },
     {
       "file": "main.adb",
-      "line": 28,
+      "line": 46,
       "col": 7,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -154,7 +154,7 @@
         "sloc": [
           {
             "file": "main.adb",
-            "line": 6
+            "line": 7
           }
         ]
       },
@@ -163,7 +163,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 4004,
+              "steps": 1555,
               "time": 0
             }
           },
@@ -183,7 +183,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 28,
+      "check_line": 46,
       "check_col": 7,
       "how_proved": "prover",
       "stats": {
@@ -196,56 +196,7 @@
     },
     {
       "file": "main.adb",
-      "line": 30,
-      "col": 22,
-      "rule": "VC_ASSERT",
-      "severity": "medium",
-      "entity": {
-        "name": "Main",
-        "sloc": [
-          {
-            "file": "main.adb",
-            "line": 6
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Timeout",
-              "steps": 30245,
-              "time": 0
-            },
-            "CVC4_CE": {
-              "result": "Timeout",
-              "steps": 41850,
-              "time": 1
-            },
-            "Z3": {
-              "result": "HighFailure",
-              "steps": -1,
-              "time": 0
-            },
-            "altergo": {
-              "result": "Timeout",
-              "steps": -1,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "main.adb",
-      "check_line": 30,
-      "check_col": 22,
-      "msg_id": 0,
-      "how_proved": "prover"
-    },
-    {
-      "file": "main.adb",
-      "line": 31,
+      "line": 51,
       "col": 39,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -254,7 +205,7 @@
         "sloc": [
           {
             "file": "main.adb",
-            "line": 6
+            "line": 7
           }
         ]
       },
@@ -263,7 +214,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 17,
+              "steps": 1603,
               "time": 0
             }
           },
@@ -272,7 +223,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 31,
+      "check_line": 51,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -285,8 +236,8 @@
     },
     {
       "file": "main.adb",
-      "line": 32,
-      "col": 24,
+      "line": 52,
+      "col": 26,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -294,7 +245,7 @@
         "sloc": [
           {
             "file": "main.adb",
-            "line": 6
+            "line": 7
           }
         ]
       },
@@ -303,7 +254,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 21,
+              "steps": 1633,
               "time": 0
             }
           },
@@ -323,8 +274,8 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 32,
-      "check_col": 24,
+      "check_line": 52,
+      "check_col": 26,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -434,7 +385,287 @@
           "sloc": [
             {
               "file": "main.adb",
-              "line": 6
+              "line": 7
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Ada.Integer_Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-tiinio.ads",
+                "line": 80
+              },
+              {
+                "file": "a-inteio.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Ada.Text_IO.New_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 264
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 392
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 465
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "LZ77.Decode",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 95
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "LZ77.Decode_Fast",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 114
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "LZ77.Is_Valid",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 101
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Integer_Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-tiinio.ads",
+                "line": 80
+              },
+              {
+                "file": "a-inteio.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.New_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 264
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 392
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 465
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "LZ77.Decode",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 95
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "LZ77.Decode_Fast",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 114
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "LZ77.Is_Valid",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 101
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Ada.Integer_Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-tiinio.ads",
+                "line": 80
+              },
+              {
+                "file": "a-inteio.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Ada.Text_IO.New_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 264
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 392
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Ada.Text_IO.Put",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 465
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "LZ77.Decode",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 95
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "LZ77.Decode_Fast",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 114
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "LZ77.Is_Valid",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 101
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main",
+          "sloc": [
+            {
+              "file": "main.adb",
+              "line": 7
             }
           ]
         }
@@ -442,14 +673,14 @@
     }
   ],
   "timings": {
-    "marking": 8.62300023436546E-03,
-    "globals (basic)": 1.25599997118115E-02,
-    "globals/properties (advanced)": 1.37539999559522E-02,
-    "flow analysis": 3.33180017769337E-02,
-    "codepeer results": 9.00000031833770E-06,
-    "init_why_sections": 5.86999987717718E-04,
-    "translation of standard": 8.57799965888262E-03,
-    "translation of compilation unit": 8.87250006198883E-02,
-    "proof": 2.08515691757202E+00
+    "marking": 8.91699979547411E-04,
+    "globals (basic)": 1.31543995812535E-02,
+    "globals/properties (advanced)": 1.95429995656013E-02,
+    "flow analysis": 1.31766004487872E-02,
+    "codepeer results": 4.30000000051223E-06,
+    "init_why_sections": 3.38000012561679E-04,
+    "translation of standard": 1.64320005569607E-03,
+    "translation of compilation unit": 3.42778004705906E-02,
+    "proof": 4.84377205371857E-01
   }
 }

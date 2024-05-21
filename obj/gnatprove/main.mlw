@@ -209,15 +209,15 @@ module Standard__long_integer
  use        "int".Int
 
  type long_integer =
-  < range -9223372036854775808 9223372036854775807 >
+  < range -2147483648 2147483647 >
  
  val constant first 
    : int
-  ensures { result =  (( -9223372036854775808) : int) }
+  ensures { result =  (( -2147483648) : int) }
  
  val constant last 
    : int
-  ensures { result =  (9223372036854775807 : int) }
+  ensures { result =  (2147483647 : int) }
  
  predicate in_range 
    (x : int) =
@@ -1924,14 +1924,14 @@ module Ada__text_io__count__rep
 
 end
 
-(* Module for axiomatizing type "any_priority" defined at system.ads:124, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "any_priority" defined at system.ads:100, created in Gnat2Why.Types.Translate_Type *)
 module System__any_priority
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        "int".Int
 
  type any_priority =
-  < range 0 63 >
+  < range 0 31 >
  
  val constant first 
    : int
@@ -1939,7 +1939,7 @@ module System__any_priority
  
  val constant last 
    : int
-  ensures { result =  (63 : int) }
+  ensures { result =  (31 : int) }
  
  predicate in_range 
    (x : int) =
@@ -1971,7 +1971,7 @@ module System__any_priority
 
 end
 
-(* Module defining to_rep/of_rep for type "any_priority" defined at system.ads:124, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "any_priority" defined at system.ads:100, created in Gnat2Why.Types.Translate_Type *)
 module System__any_priority__rep
  use        System__any_priority as System__any_priority
  use        "_gnatprove_standard".Main
@@ -1992,14 +1992,14 @@ module System__any_priority__rep
 
 end
 
-(* Module for axiomatizing type "priority" defined at system.ads:125, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "priority" defined at system.ads:101, created in Gnat2Why.Types.Translate_Type *)
 module System__priority
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        "int".Int
 
  type priority =
-  < range 0 62 >
+  < range 0 30 >
  
  val constant first 
    : int
@@ -2007,7 +2007,7 @@ module System__priority
  
  val constant last 
    : int
-  ensures { result =  (62 : int) }
+  ensures { result =  (30 : int) }
  
  predicate in_range 
    (x : int) =
@@ -2039,7 +2039,7 @@ module System__priority
 
 end
 
-(* Module defining to_rep/of_rep for type "priority" defined at system.ads:125, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "priority" defined at system.ads:101, created in Gnat2Why.Types.Translate_Type *)
 module System__priority__rep
  use        System__priority as System__priority
  use        "_gnatprove_standard".Main
@@ -2060,12 +2060,12 @@ module System__priority__rep
 
 end
 
-(* Module for defining the constant "default_priority" defined at system.ads:129, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "default_priority" defined at system.ads:104, created in Gnat2Why.Decls.Translate_Constant *)
 module System__default_priority
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant default_priority [#"system.ads" 129 0 0][@model_trace:9519] [@name:Default_Priority] 
+ val constant default_priority [#"system.ads" 104 0 0][@model_trace:9516] [@name:Default_Priority] 
    : int
 
  
@@ -2075,22 +2075,22 @@ module System__default_priority
 
 end
 
-(* Module for axiomatizing type "interrupt_priority" defined at system.ads:126, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "interrupt_priority" defined at system.ads:102, created in Gnat2Why.Types.Translate_Type *)
 module System__interrupt_priority
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        "int".Int
 
  type interrupt_priority =
-  < range 63 63 >
+  < range 31 31 >
  
  val constant first 
    : int
-  ensures { result =  (63 : int) }
+  ensures { result =  (31 : int) }
  
  val constant last 
    : int
-  ensures { result =  (63 : int) }
+  ensures { result =  (31 : int) }
  
  predicate in_range 
    (x : int) =
@@ -2122,7 +2122,7 @@ module System__interrupt_priority
 
 end
 
-(* Module defining to_rep/of_rep for type "interrupt_priority" defined at system.ads:126, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "interrupt_priority" defined at system.ads:102, created in Gnat2Why.Types.Translate_Type *)
 module System__interrupt_priority__rep
  use        System__interrupt_priority as System__interrupt_priority
  use        "_gnatprove_standard".Main
@@ -2153,9 +2153,9 @@ module Lz77__token__rep
  use        Standard__character__rep as Standard__character__rep
 
  type __split_fields =
-  { rec__lz77__token__offset [@model_trace:.2582] [@name:Offset] : Standard__natural.natural; rec__lz77__token__length [@model_trace:.2592] [@name:Length] : Standard__natural.natural; rec__lz77__token__next_c [@model_trace:.2602] [@name:Next_C] : Standard__character.character }
+  { rec__lz77__token__offset [@model_trace:.2585] [@name:Offset] : Standard__natural.natural; rec__lz77__token__length [@model_trace:.2595] [@name:Length] : Standard__natural.natural; rec__lz77__token__next_c [@model_trace:.2605] [@name:Next_C] : Standard__character.character }
  
- function __split_fields_rec__lz77__token__offset__projection [@model_trace:.2582] [@name:Offset] 
+ function __split_fields_rec__lz77__token__offset__projection [@model_trace:.2585] [@name:Offset] 
    (a : __split_fields) : Standard__natural.natural =
   a.rec__lz77__token__offset
  
@@ -2163,7 +2163,7 @@ module Lz77__token__rep
  
  meta "inline:no" function __split_fields_rec__lz77__token__offset__projection
  
- function __split_fields_rec__lz77__token__length__projection [@model_trace:.2592] [@name:Length] 
+ function __split_fields_rec__lz77__token__length__projection [@model_trace:.2595] [@name:Length] 
    (a : __split_fields) : Standard__natural.natural =
   a.rec__lz77__token__length
  
@@ -2171,7 +2171,7 @@ module Lz77__token__rep
  
  meta "inline:no" function __split_fields_rec__lz77__token__length__projection
  
- function __split_fields_rec__lz77__token__next_c__projection [@model_trace:.2602] [@name:Next_C] 
+ function __split_fields_rec__lz77__token__next_c__projection [@model_trace:.2605] [@name:Next_C] 
    (a : __split_fields) : Standard__character.character =
   a.rec__lz77__token__next_c
  
@@ -2516,7 +2516,7 @@ module Lz77__token_array
 
 end
 
-(* Module for axiomatizing type "TTt1SP1" defined at main.adb:8, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "TTt1SP1" defined at main.adb:13, created in Gnat2Why.Types.Translate_Type *)
 module Main__TTt1SP1
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -2563,7 +2563,7 @@ module Main__TTt1SP1
 
 end
 
-(* Module defining to_rep/of_rep for type "TTt1SP1" defined at main.adb:8, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "TTt1SP1" defined at main.adb:13, created in Gnat2Why.Types.Translate_Type *)
 module Main__TTt1SP1__rep
  use        Main__TTt1SP1 as Main__TTt1SP1
  use        "_gnatprove_standard".Main
@@ -2584,7 +2584,7 @@ module Main__TTt1SP1__rep
 
 end
 
-(* Module for axiomatizing type "Tt1S" defined at main.adb:8, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "Tt1S" defined at main.adb:13, created in Gnat2Why.Types.Translate_Type *)
 module Main__Tt1S
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -2612,22 +2612,22 @@ module Main__Tt1S
 
 end
 
-(* Module for axiomatizing type "T1b" defined at main.adb:8, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T1b" defined at main.adb:14, created in Gnat2Why.Types.Translate_Type *)
 module Main__T1b
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        "int".Int
 
  type t1b =
-  < range 2 3 >
+  < range 1 2 >
  
  val constant first 
    : int
-  ensures { result =  (2 : int) }
+  ensures { result =  (1 : int) }
  
  val constant last 
    : int
-  ensures { result =  (3 : int) }
+  ensures { result =  (2 : int) }
  
  predicate in_range 
    (x : int) =
@@ -2659,7 +2659,7 @@ module Main__T1b
 
 end
 
-(* Module defining to_rep/of_rep for type "T1b" defined at main.adb:8, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "T1b" defined at main.adb:14, created in Gnat2Why.Types.Translate_Type *)
 module Main__T1b__rep
  use        Main__T1b as Main__T1b
  use        "_gnatprove_standard".Main
@@ -2680,7 +2680,7 @@ module Main__T1b__rep
 
 end
 
-(* Module for axiomatizing type "T2b" defined at main.adb:8, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T2b" defined at main.adb:14, created in Gnat2Why.Types.Translate_Type *)
 module Main__T2b
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -2693,11 +2693,11 @@ module Main__T2b
  
  val constant first 
    : int
-  ensures { result =  (2 : int) }
+  ensures { result =  (1 : int) }
  
  val constant last 
    : int
-  ensures { result =  (3 : int) }
+  ensures { result =  (2 : int) }
  
  clone export "ada__model".Constr_Array with axiom .,
  type map = Array__Int__Lz77__token.map, 
@@ -2769,7 +2769,7 @@ module Lz77__byte_array
 
 end
 
-(* Module for axiomatizing type "TTbSP1" defined at main.adb:11, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "TTbSP1" defined at main.adb:18, created in Gnat2Why.Types.Translate_Type *)
 module Main__TTbSP1
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -2816,7 +2816,7 @@ module Main__TTbSP1
 
 end
 
-(* Module defining to_rep/of_rep for type "TTbSP1" defined at main.adb:11, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "TTbSP1" defined at main.adb:18, created in Gnat2Why.Types.Translate_Type *)
 module Main__TTbSP1__rep
  use        Main__TTbSP1 as Main__TTbSP1
  use        "_gnatprove_standard".Main
@@ -2837,7 +2837,7 @@ module Main__TTbSP1__rep
 
 end
 
-(* Module for axiomatizing type "TbS" defined at main.adb:11, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "TbS" defined at main.adb:18, created in Gnat2Why.Types.Translate_Type *)
 module Main__TbS
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -2865,7 +2865,7 @@ module Main__TbS
 
 end
 
-(* Module for axiomatizing type "T3b" defined at main.adb:11, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T3b" defined at main.adb:19, created in Gnat2Why.Types.Translate_Type *)
 module Main__T3b
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -2912,7 +2912,7 @@ module Main__T3b
 
 end
 
-(* Module defining to_rep/of_rep for type "T3b" defined at main.adb:11, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "T3b" defined at main.adb:19, created in Gnat2Why.Types.Translate_Type *)
 module Main__T3b__rep
  use        Main__T3b as Main__T3b
  use        "_gnatprove_standard".Main
@@ -2933,7 +2933,7 @@ module Main__T3b__rep
 
 end
 
-(* Module for axiomatizing type "T4b" defined at main.adb:11, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T4b" defined at main.adb:19, created in Gnat2Why.Types.Translate_Type *)
 module Main__T4b
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -2967,7 +2967,7 @@ module Lz77__decode__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 95 0 0][@model_projected] [@name:Input] [@model_trace:3005] 
+ val constant input [#"lz77.ads" 95 0 0][@model_projected] [@name:Input] [@model_trace:3008] 
    : Lz77__token_array.token_array
 
  
@@ -2985,7 +2985,7 @@ module Lz77__decode__input___axiom
 
 end
 
-(* Module for axiomatizing type "T5b" defined at main.adb:16, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T5b" defined at main.adb:28, created in Gnat2Why.Types.Translate_Type *)
 module Main__T5b
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -3019,7 +3019,7 @@ module Ada__text_io__put__4__item
  use        "int".Int
  use        Standard__string as Standard__string
 
- val constant item [#"a-textio.ads" 465 0 0][@name:Item] [@model_projected] [@model_trace:7748] 
+ val constant item [#"a-textio.ads" 465 0 0][@name:Item] [@model_trace:7751] [@model_projected] 
    : Standard__string.string
 
  
@@ -3246,7 +3246,7 @@ module Ada__integer_text_io__put__2__item
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant item [#"a-tiinio.ads" 81 0 0][@name:Item] [@model_trace:21234] 
+ val constant item [#"a-tiinio.ads" 81 0 0][@name:Item] [@model_trace:21461] 
    : int
 
  
@@ -3269,7 +3269,7 @@ module Ada__integer_text_io__put__2__width
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant width [#"a-tiinio.ads" 82 0 0][@model_trace:21243] [@name:Width] 
+ val constant width [#"a-tiinio.ads" 82 0 0][@model_trace:21470] [@name:Width] 
    : int
 
  
@@ -3292,7 +3292,7 @@ module Ada__integer_text_io__put__2__base
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant base [#"a-tiinio.ads" 83 0 0][@name:Base] [@model_trace:21253] 
+ val constant base [#"a-tiinio.ads" 83 0 0][@name:Base] [@model_trace:21480] 
    : int
 
  
@@ -3383,7 +3383,7 @@ module Ada__text_io__new_line__2__spacing
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant spacing [#"a-textio.ads" 264 0 0][@name:Spacing] [@model_trace:6200] 
+ val constant spacing [#"a-textio.ads" 264 0 0][@name:Spacing] [@model_trace:6203] 
    : int
 
  
@@ -3401,12 +3401,12 @@ module Ada__text_io__new_line__2__spacing___axiom
 
 end
 
-(* Module for defining the constant "R6b" defined at main.adb:18, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "R6b" defined at main.adb:33, created in Gnat2Why.Decls.Translate_Constant *)
 module Main__L_1__R6b
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant r6b [#"main.adb" 18 0 0]
+ val constant r6b [#"main.adb" 33 0 0]
    : int
 
  
@@ -3416,7 +3416,7 @@ module Main__L_1__R6b
 
 end
 
-(* Module for axiomatizing type "T7b" defined at main.adb:18, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T7b" defined at main.adb:33, created in Gnat2Why.Types.Translate_Type *)
 module Main__L_1__T7b
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -3463,7 +3463,7 @@ module Ada__text_io__put__2__item
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant item [#"a-textio.ads" 392 0 0][@name:Item] [@model_trace:7255] 
+ val constant item [#"a-textio.ads" 392 0 0][@name:Item] [@model_trace:7258] 
    : int
 
  
@@ -3481,7 +3481,7 @@ module Ada__text_io__put__2__item___axiom
 
 end
 
-(* Module for axiomatizing type "T8b" defined at main.adb:23, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T8b" defined at main.adb:38, created in Gnat2Why.Types.Translate_Type *)
 module Main__T8b
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -3509,13 +3509,41 @@ module Main__T8b
 
 end
 
+(* Module for axiomatizing type "T9b" defined at main.adb:42, created in Gnat2Why.Types.Translate_Type *)
+module Main__T9b
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__character as Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+
+ type component_type =
+  Standard__character.character
+ 
+ val constant first 
+   : int
+  ensures { result =  (1 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (15 : int) }
+ 
+ clone export "ada__model".Constr_Array with axiom .,
+ type map = Array__Int__Standard__character.map, 
+ function array_bool_eq = Array__Int__Standard__character.bool_eq, 
+ function first = first, 
+ function last = last, 
+ type index_rep_type = int
+
+end
+
 (* Module for defining the constant "input" defined at lz77.ads:101, created in Gnat2Why.Decls.Translate_Constant *)
 module Lz77__is_valid__input
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 101 0 0][@model_projected] [@name:Input] [@model_trace:3060] 
+ val constant input [#"lz77.ads" 101 0 0][@model_trace:3063] [@model_projected] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -3539,7 +3567,7 @@ module Lz77__valid__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 65 0 0][@model_projected] [@name:Input] [@model_trace:2841] 
+ val constant input [#"lz77.ads" 65 0 0][@model_projected] [@name:Input] [@model_trace:2844] 
    : Lz77__token_array.token_array
 
  
@@ -3562,7 +3590,7 @@ module Lz77__valid__upto
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant upto [#"lz77.ads" 65 0 0][@model_trace:2850] [@name:Upto] 
+ val constant upto [#"lz77.ads" 65 0 0][@model_trace:2853] [@name:Upto] 
    : int
 
  
@@ -3623,488 +3651,488 @@ module Lz77__valid__L17s__T18s
 end
 
 
-(* Module for axiomatizing the record theory associated to type "big_integer" defined at big_integers.ads:7, created in Why.Gen.Records.Create_Rep_Record_Theory_If_Needed *)
-module Big_integers__big_integer__rep
- use "_gnatprove_standard".Main
- use "int".Int
-
- type __main_type = int
- 
- function __main_eq 
-   (a : __main_type) (b : __main_type) : bool = a = b
- 
- type __rep = int
- 
- function to_base 
-   (a : __rep) : __rep =
-  a
- 
- function of_base 
-   (a : __rep) : __rep =
-  a
- 
- function bool_eq 
-   (a : __rep) (b : __rep) : bool = a = b
-
-end
-
-(* Module for axiomatizing type "big_integer" defined at big_integers.ads:7, created in Gnat2Why.Types.Translate_Type *)
-module Big_integers__big_integer
- use Big_integers__big_integer__rep
- use "_gnatprove_standard".Main
- use "int".Int
-
- type big_integer =
-  __rep
- 
- function value__size 
-   : int
- 
- function object__size 
-   : int
- 
- function alignment 
-   : int
- 
- axiom value__size_axiom :
-  ((value__size ) >= 0)
- 
- axiom object__size_axiom :
-  ((object__size ) >= 0)
- 
- axiom alignment_axiom :
-  ((alignment ) >= 0)
- 
- function user_eq 
-   (a : big_integer) (b : big_integer) : bool
- 
- function dummy 
-   : big_integer
- 
- type big_integer__ref =
-  { mutable big_integer__content : big_integer }
- 
- function big_integer__ref_big_integer__content__projection 
-   (a : big_integer__ref) : big_integer =
-  a.big_integer__content
- 
- meta "model_projection" function big_integer__ref_big_integer__content__projection
- 
- meta "inline:no" function big_integer__ref_big_integer__content__projection
- 
- val big_integer__havoc 
-   (x : big_integer__ref) : unit
-  writes {x}
-
- predicate dynamic_invariant [@inline]
-   (temp___expr_158 : big_integer) (temp___is_init_154 : bool) (temp___skip_constant_155 : bool) (temp___do_toplevel_156 : bool) (temp___do_typ_inv_157 : bool)  =
-  true
- 
- predicate default_initial_assumption [@inline] 
-   (temp___expr_159 : big_integer) (temp___skip_top_level_160 : bool)  =
-  true
-
-end
-
-
-(* Module for defining the constant "zero" defined at big_integers.ads:9, created in Gnat2Why.Decls.Translate_Constant *)
-module Big_integers__zero
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- val constant zero [#"big_integers.ads" 8 0 0]
-   : Big_integers__big_integer.big_integer
-   ensures { result = 0 }
-
- 
- val constant attr__ATTRIBUTE_ADDRESS 
-   : int
-
-end
-
-(* Module for possibly declaring a logic function for "Oeq" defined at big_integers.ads:11, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Oeq
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- function oeq__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l = r
- 
- predicate oeq__function_guard 
-   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
-
- val oeq 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
-  requires {  true }
-  ensures {  ( ( (result = (oeq__logic l r)) /\ (oeq__function_guard result l r) )/\true ) }
-
-end
-
-(* Module for possibly declaring a logic function for "Olt" defined at big_integers.ads:12, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Olt
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- function olt__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l < r
- 
- predicate olt__function_guard 
-   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
-
- val olt 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
-  requires {  true }
-  ensures {  ( ( (result = (olt__logic l r)) /\ (olt__function_guard result l r) )/\true ) }
-
-end
-
-(* Module for possibly declaring a logic function for "Ole" defined at big_integers.ads:13, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Ole
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- function ole__logic
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l <= r
- 
- predicate ole__function_guard 
-   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
-
- val ole 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
-  requires {  true }
-  ensures {  ( ( (result = (ole__logic l r)) /\ (ole__function_guard result l r) )/\true ) }
-
-end
-
-(* Module for possibly declaring a logic function for "Ogt" defined at big_integers.ads:14, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Ogt
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- function ogt__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l > r
- 
- predicate ogt__function_guard 
-   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
-
- val ogt 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
-  requires {  true }
-  ensures {  ( ( (result = (ogt__logic l r)) /\ (ogt__function_guard result l r) )/\true ) }
-  
-end
-
-(* Module for possibly declaring a logic function for "Oge" defined at big_integers.ads:15, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Oge
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- function oge__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l >= r
- 
- predicate oge__function_guard 
-   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
-
- val oge 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
-  requires {  true }
-  ensures {  ( ( (result = (oge__logic l r)) /\ (oge__function_guard result l r) )/\true ) }
-
-end
-
-(* Module for possibly declaring a logic function for "to_big_integer" defined at big_integers.ads:17, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__to_big_integer
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
-
- function to_big_integer__logic
-   (arg : int) : Big_integers__big_integer.big_integer = arg
- 
- predicate to_big_integer__function_guard 
-   (result : Big_integers__big_integer.big_integer) (arg : int) = true
-
- val to_big_integer 
-   (arg : int) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (to_big_integer__logic arg)) /\ (to_big_integer__function_guard result arg) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-  
-end
-
-module Big_integers__to_big_integer__2
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
-
- function to_big_integer__2__logic 
-   (arg : int) : Big_integers__big_integer.big_integer = arg
- 
- predicate to_big_integer__2__function_guard 
-   (result : Big_integers__big_integer.big_integer) (arg : int) 
-
- val to_big_integer__2 
-   (arg : int) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (to_big_integer__2__logic arg)) /\ (to_big_integer__2__function_guard result arg) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
- 
-end
-
-(* Module for possibly declaring a logic function for "in_range" defined at big_integers.ads:25, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__in_range
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
- 
- function in_range__logic
-   (arg : Big_integers__big_integer.big_integer) (low : Big_integers__big_integer.big_integer) (high : Big_integers__big_integer.big_integer) : bool = low <= arg /\ arg <= high
- 
- predicate in_range__function_guard 
-   (result : bool) (arg : Big_integers__big_integer.big_integer) (low : Big_integers__big_integer.big_integer) (high : Big_integers__big_integer.big_integer) = true
-
- val in_range 
-   (arg : Big_integers__big_integer.big_integer) (low : Big_integers__big_integer.big_integer) (high : Big_integers__big_integer.big_integer) : bool
-  requires {  true }
-(*  ensures {  ( ( (result = (in_range__logic arg low high)) /\ (in_range__function_guard result arg low high) )/\( (result = True) <-> ( ((epsilon temp___result_178 : bool.
-   ( (temp___result_178 = (Big_integers__Ole.ole low arg)) /\ (Big_integers__Ole.ole__function_guard temp___result_178 low arg) )) = True) /\ ((epsilon temp___result_179 : bool.
-   ( (temp___result_179 = (Big_integers__Ole.ole arg high)) /\ (Big_integers__Ole.ole__function_guard temp___result_179 arg high) )) = True) ) ) ) } *)
-   ensures { result = (in_range__logic arg low high) /\ (in_range__function_guard result arg low high) }
-end
-
-(* Module for possibly declaring a logic function for "to_integer" defined at big_integers.ads:28, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__to_integer
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use Big_integers__to_big_integer
- use Big_integers__in_range
- use "int".Int
-
- function to_integer__logic 
-   (arg : Big_integers__big_integer.big_integer) : int = arg
- 
- predicate to_integer__function_guard 
-   (result : int) (arg : Big_integers__big_integer.big_integer) = true
-
- val to_integer 
-   (arg : Big_integers__big_integer.big_integer) : int
-   requires { in_range__logic arg (to_big_integer__logic (-2147483648)) (to_big_integer__logic 2147483647)}
-  ensures {  ( ( (result = (to_integer__logic arg)) /\ (to_integer__function_guard result arg) ) ) }
-
-end
-
-(* Module for possibly declaring a logic function for "Osubtract" defined at big_integers.ads:39, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Osubtract
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- function osubtract__logic 
-   (l : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = -l
- 
- predicate osubtract__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) 
-
- val osubtract 
-   (l : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (osubtract__logic l)) /\ (osubtract__function_guard result l) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
- 
-end
-
-(* Module for possibly declaring a logic function for "Oabs" defined at big_integers.ads:40, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Oabs
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Abs
- 
- function oabs__logic 
-   (l : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = abs l
- 
- predicate oabs__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer)
-
- val oabs 
-   (l : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (oabs__logic l)) /\ (oabs__function_guard result l) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-
-end
-
-(* Module for possibly declaring a logic function for "Oadd" defined at big_integers.ads:11, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Oadd__2
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- function oadd__2__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = l + r
- 
- predicate oadd__2__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
-
- val oadd__2 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (oadd__2__logic l r)) /\ (oadd__2__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-
-end
-
-(* Module for possibly declaring a logic function for "Osubtract__2" defined at big_integers.ads:42, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Osubtract__2
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- function osubtract__2__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = l - r
- 
- predicate osubtract__2__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
-
- val osubtract__2 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (osubtract__2__logic l r)) /\ (osubtract__2__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-
-end
-
-(* Module for possibly declaring a logic function for "Omultiply" defined at big_integers.ads:43, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Omultiply
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
-
- function omultiply__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = l * r
- 
- predicate omultiply__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) 
-
- val omultiply 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (omultiply__logic l r)) /\ (omultiply__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-  
-end
-
-(* Module for possibly declaring a logic function for "Odivide" defined at big_integers.ads:44, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Odivide
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".EuclideanDivision
-
- function odivide__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = div l r
- 
- predicate odivide__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
-
- val odivide 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires { r <> 0 }
-  ensures {  ( ( (result = (odivide__logic l r)) /\ (odivide__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-
-end
-
-(* Module for possibly declaring a logic function for "Omod" defined at big_integers.ads:45, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Omod
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".EuclideanDivision
- use "int".Int
- 
- function omod__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = if r > 0 then mod l r else mod l r + r
- 
- predicate omod__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
-
- val omod 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires { r <> 0 }
-  ensures {  ( ( (result = (omod__logic l r)) /\ (omod__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-
-end
-
-(* Module for possibly declaring a logic function for "Orem" defined at big_integers.ads:46, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Orem
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Int
- use "int".EuclideanDivision
-
- function orem__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = mod l r
- 
- predicate orem__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) 
-
- val orem 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires { r <> 0 }
-  ensures {  ( ( (result = (orem__logic l r)) /\ (orem__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-  
-end
-
-(* Module for possibly declaring a logic function for "Oexpon" defined at big_integers.ads:47, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__Oexpon
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".Power
-
- function oexpon__logic 
-   (l : Big_integers__big_integer.big_integer) (r : int) : Big_integers__big_integer.big_integer = power l r
- 
- predicate oexpon__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : int) 
-
- val oexpon 
-   (l : Big_integers__big_integer.big_integer) (r : int) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (oexpon__logic l r)) /\ (oexpon__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-  
-end
-
-(* Module for possibly declaring a logic function for "min" defined at big_integers.ads:49, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__min
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".MinMax
-
- function min__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = min l r
- 
- predicate min__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
-
- val min 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (min__logic l r)) /\ (min__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-
-end
-
-(* Module for possibly declaring a logic function for "max" defined at big_integers.ads:50, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Big_integers__max
- use "_gnatprove_standard".Main
- use Big_integers__big_integer
- use "int".MinMax
-
- function max__logic 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = max l r
- 
- predicate max__function_guard 
-   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
-
- val max 
-   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
-  requires {  true }
-  ensures {  ( ( (result = (max__logic l r)) /\ (max__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
-
-end
+(* Module for axiomatizing the record theory associated to type "big_integer" defined at big_integers.ads:7, created in Why.Gen.Records.Create_Rep_Record_Theory_If_Needed *)
+module Big_integers__big_integer__rep
+ use "_gnatprove_standard".Main
+ use "int".Int
+
+ type __main_type = int
+ 
+ function __main_eq 
+   (a : __main_type) (b : __main_type) : bool = a = b
+ 
+ type __rep = int
+ 
+ function to_base 
+   (a : __rep) : __rep =
+  a
+ 
+ function of_base 
+   (a : __rep) : __rep =
+  a
+ 
+ function bool_eq 
+   (a : __rep) (b : __rep) : bool = a = b
+
+end
+
+(* Module for axiomatizing type "big_integer" defined at big_integers.ads:7, created in Gnat2Why.Types.Translate_Type *)
+module Big_integers__big_integer
+ use Big_integers__big_integer__rep
+ use "_gnatprove_standard".Main
+ use "int".Int
+
+ type big_integer =
+  __rep
+ 
+ function value__size 
+   : int
+ 
+ function object__size 
+   : int
+ 
+ function alignment 
+   : int
+ 
+ axiom value__size_axiom :
+  ((value__size ) >= 0)
+ 
+ axiom object__size_axiom :
+  ((object__size ) >= 0)
+ 
+ axiom alignment_axiom :
+  ((alignment ) >= 0)
+ 
+ function user_eq 
+   (a : big_integer) (b : big_integer) : bool
+ 
+ function dummy 
+   : big_integer
+ 
+ type big_integer__ref =
+  { mutable big_integer__content : big_integer }
+ 
+ function big_integer__ref_big_integer__content__projection 
+   (a : big_integer__ref) : big_integer =
+  a.big_integer__content
+ 
+ meta "model_projection" function big_integer__ref_big_integer__content__projection
+ 
+ meta "inline:no" function big_integer__ref_big_integer__content__projection
+ 
+ val big_integer__havoc 
+   (x : big_integer__ref) : unit
+  writes {x}
+
+ predicate dynamic_invariant [@inline]
+   (temp___expr_158 : big_integer) (temp___is_init_154 : bool) (temp___skip_constant_155 : bool) (temp___do_toplevel_156 : bool) (temp___do_typ_inv_157 : bool)  =
+  true
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_159 : big_integer) (temp___skip_top_level_160 : bool)  =
+  true
+
+end
+
+
+(* Module for defining the constant "zero" defined at big_integers.ads:9, created in Gnat2Why.Decls.Translate_Constant *)
+module Big_integers__zero
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ val constant zero [#"big_integers.ads" 8 0 0]
+   : Big_integers__big_integer.big_integer
+   ensures { result = 0 }
+
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module for possibly declaring a logic function for "Oeq" defined at big_integers.ads:11, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Oeq
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ function oeq__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l = r
+ 
+ predicate oeq__function_guard 
+   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
+
+ val oeq 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
+  requires {  true }
+  ensures {  ( ( (result = (oeq__logic l r)) /\ (oeq__function_guard result l r) )/\true ) }
+
+end
+
+(* Module for possibly declaring a logic function for "Olt" defined at big_integers.ads:12, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Olt
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ function olt__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l < r
+ 
+ predicate olt__function_guard 
+   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
+
+ val olt 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
+  requires {  true }
+  ensures {  ( ( (result = (olt__logic l r)) /\ (olt__function_guard result l r) )/\true ) }
+
+end
+
+(* Module for possibly declaring a logic function for "Ole" defined at big_integers.ads:13, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Ole
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ function ole__logic
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l <= r
+ 
+ predicate ole__function_guard 
+   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
+
+ val ole 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
+  requires {  true }
+  ensures {  ( ( (result = (ole__logic l r)) /\ (ole__function_guard result l r) )/\true ) }
+
+end
+
+(* Module for possibly declaring a logic function for "Ogt" defined at big_integers.ads:14, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Ogt
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ function ogt__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l > r
+ 
+ predicate ogt__function_guard 
+   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
+
+ val ogt 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
+  requires {  true }
+  ensures {  ( ( (result = (ogt__logic l r)) /\ (ogt__function_guard result l r) )/\true ) }
+  
+end
+
+(* Module for possibly declaring a logic function for "Oge" defined at big_integers.ads:15, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Oge
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ function oge__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool = l >= r
+ 
+ predicate oge__function_guard 
+   (result : bool) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
+
+ val oge 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : bool
+  requires {  true }
+  ensures {  ( ( (result = (oge__logic l r)) /\ (oge__function_guard result l r) )/\true ) }
+
+end
+
+(* Module for possibly declaring a logic function for "to_big_integer" defined at big_integers.ads:17, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__to_big_integer
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+
+ function to_big_integer__logic
+   (arg : int) : Big_integers__big_integer.big_integer = arg
+ 
+ predicate to_big_integer__function_guard 
+   (result : Big_integers__big_integer.big_integer) (arg : int) = true
+
+ val to_big_integer 
+   (arg : int) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (to_big_integer__logic arg)) /\ (to_big_integer__function_guard result arg) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+  
+end
+
+module Big_integers__to_big_integer__2
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+
+ function to_big_integer__2__logic 
+   (arg : int) : Big_integers__big_integer.big_integer = arg
+ 
+ predicate to_big_integer__2__function_guard 
+   (result : Big_integers__big_integer.big_integer) (arg : int) 
+
+ val to_big_integer__2 
+   (arg : int) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (to_big_integer__2__logic arg)) /\ (to_big_integer__2__function_guard result arg) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+ 
+end
+
+(* Module for possibly declaring a logic function for "in_range" defined at big_integers.ads:25, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__in_range
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+ 
+ function in_range__logic
+   (arg : Big_integers__big_integer.big_integer) (low : Big_integers__big_integer.big_integer) (high : Big_integers__big_integer.big_integer) : bool = low <= arg /\ arg <= high
+ 
+ predicate in_range__function_guard 
+   (result : bool) (arg : Big_integers__big_integer.big_integer) (low : Big_integers__big_integer.big_integer) (high : Big_integers__big_integer.big_integer) = true
+
+ val in_range 
+   (arg : Big_integers__big_integer.big_integer) (low : Big_integers__big_integer.big_integer) (high : Big_integers__big_integer.big_integer) : bool
+  requires {  true }
+(*  ensures {  ( ( (result = (in_range__logic arg low high)) /\ (in_range__function_guard result arg low high) )/\( (result = True) <-> ( ((epsilon temp___result_178 : bool.
+   ( (temp___result_178 = (Big_integers__Ole.ole low arg)) /\ (Big_integers__Ole.ole__function_guard temp___result_178 low arg) )) = True) /\ ((epsilon temp___result_179 : bool.
+   ( (temp___result_179 = (Big_integers__Ole.ole arg high)) /\ (Big_integers__Ole.ole__function_guard temp___result_179 arg high) )) = True) ) ) ) } *)
+   ensures { result = (in_range__logic arg low high) /\ (in_range__function_guard result arg low high) }
+end
+
+(* Module for possibly declaring a logic function for "to_integer" defined at big_integers.ads:28, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__to_integer
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use Big_integers__to_big_integer
+ use Big_integers__in_range
+ use "int".Int
+
+ function to_integer__logic 
+   (arg : Big_integers__big_integer.big_integer) : int = arg
+ 
+ predicate to_integer__function_guard 
+   (result : int) (arg : Big_integers__big_integer.big_integer) = true
+
+ val to_integer 
+   (arg : Big_integers__big_integer.big_integer) : int
+   requires { in_range__logic arg (to_big_integer__logic (-2147483648)) (to_big_integer__logic 2147483647)}
+  ensures {  ( ( (result = (to_integer__logic arg)) /\ (to_integer__function_guard result arg) ) ) }
+
+end
+
+(* Module for possibly declaring a logic function for "Osubtract" defined at big_integers.ads:39, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Osubtract
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ function osubtract__logic 
+   (l : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = -l
+ 
+ predicate osubtract__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) 
+
+ val osubtract 
+   (l : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (osubtract__logic l)) /\ (osubtract__function_guard result l) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+ 
+end
+
+(* Module for possibly declaring a logic function for "Oabs" defined at big_integers.ads:40, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Oabs
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Abs
+ 
+ function oabs__logic 
+   (l : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = abs l
+ 
+ predicate oabs__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer)
+
+ val oabs 
+   (l : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (oabs__logic l)) /\ (oabs__function_guard result l) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+
+end
+
+(* Module for possibly declaring a logic function for "Oadd" defined at big_integers.ads:11, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Oadd__2
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ function oadd__2__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = l + r
+ 
+ predicate oadd__2__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) = true
+
+ val oadd__2 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (oadd__2__logic l r)) /\ (oadd__2__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+
+end
+
+(* Module for possibly declaring a logic function for "Osubtract__2" defined at big_integers.ads:42, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Osubtract__2
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ function osubtract__2__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = l - r
+ 
+ predicate osubtract__2__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
+
+ val osubtract__2 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (osubtract__2__logic l r)) /\ (osubtract__2__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+
+end
+
+(* Module for possibly declaring a logic function for "Omultiply" defined at big_integers.ads:43, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Omultiply
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+
+ function omultiply__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = l * r
+ 
+ predicate omultiply__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) 
+
+ val omultiply 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (omultiply__logic l r)) /\ (omultiply__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+  
+end
+
+(* Module for possibly declaring a logic function for "Odivide" defined at big_integers.ads:44, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Odivide
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".EuclideanDivision
+
+ function odivide__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = div l r
+ 
+ predicate odivide__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
+
+ val odivide 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires { r <> 0 }
+  ensures {  ( ( (result = (odivide__logic l r)) /\ (odivide__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+
+end
+
+(* Module for possibly declaring a logic function for "Omod" defined at big_integers.ads:45, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Omod
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".EuclideanDivision
+ use "int".Int
+ 
+ function omod__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = if r > 0 then mod l r else mod l r + r
+ 
+ predicate omod__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
+
+ val omod 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires { r <> 0 }
+  ensures {  ( ( (result = (omod__logic l r)) /\ (omod__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+
+end
+
+(* Module for possibly declaring a logic function for "Orem" defined at big_integers.ads:46, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Orem
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Int
+ use "int".EuclideanDivision
+
+ function orem__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = mod l r
+ 
+ predicate orem__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) 
+
+ val orem 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires { r <> 0 }
+  ensures {  ( ( (result = (orem__logic l r)) /\ (orem__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+  
+end
+
+(* Module for possibly declaring a logic function for "Oexpon" defined at big_integers.ads:47, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__Oexpon
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".Power
+
+ function oexpon__logic 
+   (l : Big_integers__big_integer.big_integer) (r : int) : Big_integers__big_integer.big_integer = power l r
+ 
+ predicate oexpon__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : int) 
+
+ val oexpon 
+   (l : Big_integers__big_integer.big_integer) (r : int) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (oexpon__logic l r)) /\ (oexpon__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+  
+end
+
+(* Module for possibly declaring a logic function for "min" defined at big_integers.ads:49, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__min
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".MinMax
+
+ function min__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = min l r
+ 
+ predicate min__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
+
+ val min 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (min__logic l r)) /\ (min__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+
+end
+
+(* Module for possibly declaring a logic function for "max" defined at big_integers.ads:50, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Big_integers__max
+ use "_gnatprove_standard".Main
+ use Big_integers__big_integer
+ use "int".MinMax
+
+ function max__logic 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer = max l r
+ 
+ predicate max__function_guard 
+   (result : Big_integers__big_integer.big_integer) (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer)
+
+ val max 
+   (l : Big_integers__big_integer.big_integer) (r : Big_integers__big_integer.big_integer) : Big_integers__big_integer.big_integer
+  requires {  true }
+  ensures {  ( ( (result = (max__logic l r)) /\ (max__function_guard result l r) )/\(Big_integers__big_integer.dynamic_invariant result True False True True) ) }
+
+end
 
 
 (* Module for axiomatizing the array theory associated to type "partial_length" defined at lz77.ads:31, created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
@@ -4245,7 +4273,7 @@ module Lz77__length_acc__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 41 0 0][@model_projected] [@model_trace:2662] [@name:Input] 
+ val constant input [#"lz77.ads" 41 0 0][@model_projected] [@model_trace:2665] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -4310,7 +4338,7 @@ module Lz77__one
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant one [#"lz77.ads" 33 0 0][@name:One] [@model_trace:2642] 
+ val constant one [#"lz77.ads" 33 0 0][@model_trace:2645] [@name:One] 
    : int
 
  
@@ -4411,7 +4439,7 @@ module Lz77__decode_fast__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 114 0 0][@model_trace:3100] [@model_projected] [@name:Input] 
+ val constant input [#"lz77.ads" 114 0 0][@model_trace:3103] [@model_projected] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -4435,7 +4463,7 @@ module Lz77__decoded_length__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 54 0 0][@model_trace:2785] [@model_projected] [@name:Input] 
+ val constant input [#"lz77.ads" 54 0 0][@model_projected] [@model_trace:2788] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -4468,8 +4496,8 @@ module Lz77__decoded_length
 
 end
 
-(* Module for axiomatizing type "T9b" defined at main.adb:29, created in Gnat2Why.Types.Translate_Type *)
-module Main__T9b
+(* Module for axiomatizing type "T10b" defined at main.adb:47, created in Gnat2Why.Types.Translate_Type *)
+module Main__T10b
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        "int".Int
@@ -4496,12 +4524,12 @@ module Main__T9b
 
 end
 
-(* Module for defining the constant "R10b" defined at main.adb:31, created in Gnat2Why.Decls.Translate_Constant *)
-module Main__L_2__R10b
+(* Module for defining the constant "R11b" defined at main.adb:51, created in Gnat2Why.Decls.Translate_Constant *)
+module Main__L_2__R11b
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant r10b [#"main.adb" 31 0 0]
+ val constant r11b [#"main.adb" 51 0 0]
    : int
 
  
@@ -4511,15 +4539,15 @@ module Main__L_2__R10b
 
 end
 
-(* Module for axiomatizing type "T11b" defined at main.adb:31, created in Gnat2Why.Types.Translate_Type *)
-module Main__L_2__T11b
+(* Module for axiomatizing type "T12b" defined at main.adb:51, created in Gnat2Why.Types.Translate_Type *)
+module Main__L_2__T12b
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        "int".Int
  use        Standard__integer as Standard__integer
  use        Standard__integer__rep as Standard__integer__rep
 
- type t11b =
+ type t12b =
   Standard__integer.integer
  
  predicate dynamic_property 
@@ -4530,35 +4558,35 @@ module Main__L_2__T11b
   ensures { result <-> dynamic_property (first_int : int) (last_int : int) (x : int) }
  
  clone export "ada__model".Dynamic_Discrete with axiom .,
- type t = t11b, 
+ type t = t12b, 
  type rep_type = int, 
  function base_to_rep = Standard__integer__rep.to_rep, 
  function base_of_rep = Standard__integer__rep.of_rep, 
  predicate dynamic_property = dynamic_property
  
- type t11b__ref =
-  { mutable t11b__content : t11b }
+ type t12b__ref =
+  { mutable t12b__content : t12b }
  
- function t11b__ref_t11b__content__projection 
-   (a : t11b__ref) : t11b =
-  a.t11b__content
+ function t12b__ref_t12b__content__projection 
+   (a : t12b__ref) : t12b =
+  a.t12b__content
  
- meta "model_projection" function t11b__ref_t11b__content__projection
+ meta "model_projection" function t12b__ref_t12b__content__projection
  
- meta "inline:no" function t11b__ref_t11b__content__projection
+ meta "inline:no" function t12b__ref_t12b__content__projection
  
- val t11b__havoc 
-   (x : t11b__ref) : unit
+ val t12b__havoc 
+   (x : t12b__ref) : unit
   writes {x}
 
 end
-(* Module for defining a ref holding the value of variable "t1" defined at main.adb:8, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "t1" defined at main.adb:13, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__t1
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
 
- val t1 [#"main.adb" 8 0 0][@model_trace:2328] [@model_projected] [@name:T1]  : Array__Int__Lz77__token.map__ref 
+ val t1 [#"main.adb" 13 0 0][@model_trace:2328] [@model_projected] [@name:T1]  : Array__Int__Lz77__token.map__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4566,7 +4594,7 @@ module Main__t1
 
 end
 
-(* Module giving an empty axiom for the entity "t1" defined at main.adb:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "t1" defined at main.adb:13, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__t1___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -4574,12 +4602,12 @@ module Main__t1___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "error" defined at main.adb:10, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "error" defined at main.adb:17, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__error
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val error [#"main.adb" 10 0 0][@model_trace:2367] [@model_projected] [@name:Error]  : bool__ref 
+ val error [#"main.adb" 17 0 0][@model_projected] [@name:Error] [@model_trace:2373]  : bool__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4587,7 +4615,7 @@ module Main__error
 
 end
 
-(* Module giving an empty axiom for the entity "error" defined at main.adb:10, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "error" defined at main.adb:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__error___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -4595,13 +4623,13 @@ module Main__error___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "b" defined at main.adb:11, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "b" defined at main.adb:18, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__b
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
- val b [#"main.adb" 11 0 0][@model_projected] [@name:B] [@model_trace:2376]  : Array__Int__Standard__character.map__ref 
+ val b [#"main.adb" 18 0 0][@model_projected] [@model_trace:2382] [@name:B]  : Array__Int__Standard__character.map__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4609,7 +4637,7 @@ module Main__b
 
 end
 
-(* Module giving an empty axiom for the entity "b" defined at main.adb:11, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "b" defined at main.adb:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -4617,12 +4645,12 @@ module Main__b___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "blen" defined at main.adb:12, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "blen" defined at main.adb:20, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__blen
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val blen [#"main.adb" 12 0 0][@name:BLen] [@model_trace:2394] [@model_projected]  : int__ref 
+ val blen [#"main.adb" 20 0 0][@name:BLen] [@model_trace:2400] [@model_projected]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4630,7 +4658,7 @@ module Main__blen
 
 end
 
-(* Module giving an empty axiom for the entity "blen" defined at main.adb:12, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "blen" defined at main.adb:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__blen___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -4645,13 +4673,13 @@ module Lz77__decode__output
  use        Standard__integer as Standard__integer
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
- val output [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3014]  : Array__Int__Standard__character.map__ref 
+ val output [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3017]  : Array__Int__Standard__character.map__ref 
  
- val constant output__first [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3014'First] 
+ val constant output__first [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3017'First] 
    : Standard__integer.integer
 
  
- val constant output__last [#"lz77.ads" 95 0 0][@name:Output] [@model_trace:3014'Last] [@model_projected] 
+ val constant output__last [#"lz77.ads" 95 0 0][@name:Output] [@model_trace:3017'Last] [@model_projected] 
    : Standard__integer.integer
 
  
@@ -4674,7 +4702,7 @@ module Lz77__decode__output_length
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val output_length [#"lz77.ads" 96 0 0][@model_trace:3023] [@name:Output_Length] [@model_projected]  : int__ref 
+ val output_length [#"lz77.ads" 96 0 0][@name:Output_Length] [@model_trace:3026] [@model_projected]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4695,7 +4723,7 @@ module Lz77__decode__error
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val error [#"lz77.ads" 96 0 0][@model_projected] [@name:Error] [@model_trace:3032]  : bool__ref 
+ val error [#"lz77.ads" 96 0 0][@model_projected] [@name:Error] [@model_trace:3035]  : bool__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4716,7 +4744,7 @@ module Ada__integer_text_io__default_width
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val default_width [#"a-tiinio.ads" 48 0 0][@model_trace:21005] [@model_projected] [@name:Default_Width]  : int__ref 
+ val default_width [#"a-tiinio.ads" 48 0 0][@model_trace:21232] [@model_projected] [@name:Default_Width]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4737,7 +4765,7 @@ module Ada__integer_text_io__default_base
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val default_base [#"a-tiinio.ads" 49 0 0][@model_trace:21016] [@name:Default_Base] [@model_projected]  : int__ref 
+ val default_base [#"a-tiinio.ads" 49 0 0][@model_trace:21243] [@name:Default_Base] [@model_projected]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4753,12 +4781,12 @@ module Ada__integer_text_io__default_base___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "index" defined at main.adb:18, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "index" defined at main.adb:33, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__L_1__index
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val index [#"main.adb" 18 0 0][@model_projected] [@name:Index] [@model_trace:2429]  : int__ref 
+ val index [#"main.adb" 33 0 0][@model_projected] [@model_trace:2435] [@name:Index]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4766,7 +4794,7 @@ module Main__L_1__index
 
 end
 
-(* Module giving an empty axiom for the entity "index" defined at main.adb:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "index" defined at main.adb:33, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__L_1__index___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -4781,13 +4809,13 @@ module Lz77__decode_fast__output
  use        Standard__integer as Standard__integer
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
- val output [#"lz77.ads" 114 0 0][@name:Output] [@model_trace:3109] [@model_projected]  : Array__Int__Standard__character.map__ref 
+ val output [#"lz77.ads" 114 0 0][@name:Output] [@model_projected] [@model_trace:3112]  : Array__Int__Standard__character.map__ref 
  
- val constant output__first [#"lz77.ads" 114 0 0][@name:Output] [@model_projected] [@model_trace:3109'First] 
+ val constant output__first [#"lz77.ads" 114 0 0][@model_trace:3112'First] [@name:Output] [@model_projected] 
    : Standard__integer.integer
 
  
- val constant output__last [#"lz77.ads" 114 0 0][@name:Output] [@model_projected] [@model_trace:3109'Last] 
+ val constant output__last [#"lz77.ads" 114 0 0][@name:Output] [@model_trace:3112'Last] [@model_projected] 
    : Standard__integer.integer
 
  
@@ -4810,7 +4838,7 @@ module Lz77__decode_fast__output_length
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val output_length [#"lz77.ads" 115 0 0][@model_trace:3118] [@name:Output_Length] [@model_projected]  : int__ref 
+ val output_length [#"lz77.ads" 115 0 0][@name:Output_Length] [@model_projected] [@model_trace:3121]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4826,12 +4854,12 @@ module Lz77__decode_fast__output_length___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "index" defined at main.adb:31, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "index" defined at main.adb:51, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__L_2__index
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val index [#"main.adb" 31 0 0][@model_projected] [@model_trace:2490] [@name:Index]  : int__ref 
+ val index [#"main.adb" 51 0 0][@model_projected] [@name:Index] [@model_trace:2493]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4839,7 +4867,7 @@ module Main__L_2__index
 
 end
 
-(* Module giving an empty axiom for the entity "index" defined at main.adb:31, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "index" defined at main.adb:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__L_2__index___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5448,7 +5476,7 @@ module Ada__text_io__page_length__2
 
 end
 
-(* Module for possibly declaring a logic function for "main" defined at main.adb:6, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "main" defined at main.adb:7, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5488,7 +5516,7 @@ module Ada__text_io__new_line__2
 
 end
 
-(* Module for defining the loop exit exception for the loop "L_1" defined at main.adb:18, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+(* Module for defining the loop exit exception for the loop "L_1" defined at main.adb:33, created in Gnat2Why.Decls.Translate_Loop_Entity *)
 module Main__L_1
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5497,7 +5525,7 @@ module Main__L_1
 
 end
 
-(* Module giving an empty axiom for the entity "L_1" defined at main.adb:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "L_1" defined at main.adb:33, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__L_1___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5521,7 +5549,7 @@ module Lz77__decode_fast
 
 end
 
-(* Module for defining the loop exit exception for the loop "L_2" defined at main.adb:31, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+(* Module for defining the loop exit exception for the loop "L_2" defined at main.adb:51, created in Gnat2Why.Decls.Translate_Loop_Entity *)
 module Main__L_2
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5530,7 +5558,7 @@ module Main__L_2
 
 end
 
-(* Module giving an empty axiom for the entity "L_2" defined at main.adb:31, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "L_2" defined at main.adb:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__L_2___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5570,7 +5598,7 @@ module Ada__text_io__count___axiom
 
 end
 
-(* Module giving axioms for type "any_priority" defined at system.ads:124, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "any_priority" defined at system.ads:100, created in Gnat2Why.Types.Generate_Type_Completion *)
 module System__any_priority___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5594,7 +5622,7 @@ module System__any_priority___axiom
 
 end
 
-(* Module giving axioms for type "priority" defined at system.ads:125, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "priority" defined at system.ads:101, created in Gnat2Why.Types.Generate_Type_Completion *)
 module System__priority___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5618,7 +5646,7 @@ module System__priority___axiom
 
 end
 
-(* Module giving axioms for type "interrupt_priority" defined at system.ads:126, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "interrupt_priority" defined at system.ads:102, created in Gnat2Why.Types.Generate_Type_Completion *)
 module System__interrupt_priority___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5682,7 +5710,7 @@ module Lz77__token_array___axiom
 
 end
 
-(* Module giving axioms for type "TTt1SP1" defined at main.adb:8, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "TTt1SP1" defined at main.adb:13, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__TTt1SP1___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5690,7 +5718,7 @@ module Main__TTt1SP1___axiom
 
 end
 
-(* Module giving axioms for type "Tt1S" defined at main.adb:8, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "Tt1S" defined at main.adb:13, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__Tt1S___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5713,7 +5741,7 @@ module Main__Tt1S___axiom
 
 end
 
-(* Module giving axioms for type "T1b" defined at main.adb:8, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T1b" defined at main.adb:14, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__T1b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5721,7 +5749,7 @@ module Main__T1b___axiom
 
 end
 
-(* Module giving axioms for type "T2b" defined at main.adb:8, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T2b" defined at main.adb:14, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__T2b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5747,7 +5775,7 @@ module Lz77__byte_array___axiom
 
 end
 
-(* Module giving axioms for type "TTbSP1" defined at main.adb:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "TTbSP1" defined at main.adb:18, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__TTbSP1___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5755,7 +5783,7 @@ module Main__TTbSP1___axiom
 
 end
 
-(* Module giving axioms for type "TbS" defined at main.adb:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "TbS" defined at main.adb:18, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__TbS___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5778,7 +5806,7 @@ module Main__TbS___axiom
 
 end
 
-(* Module giving axioms for type "T3b" defined at main.adb:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T3b" defined at main.adb:19, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__T3b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5786,7 +5814,7 @@ module Main__T3b___axiom
 
 end
 
-(* Module giving axioms for type "T4b" defined at main.adb:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T4b" defined at main.adb:19, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__T4b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5794,7 +5822,7 @@ module Main__T4b___axiom
 
 end
 
-(* Module giving axioms for type "T5b" defined at main.adb:16, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T5b" defined at main.adb:28, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__T5b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5898,7 +5926,7 @@ module Ada__text_io__positive_count___axiom
 
 end
 
-(* Module giving axioms for type "T7b" defined at main.adb:18, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T7b" defined at main.adb:33, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__L_1__T7b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5906,8 +5934,16 @@ module Main__L_1__T7b___axiom
 
 end
 
-(* Module giving axioms for type "T8b" defined at main.adb:23, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T8b" defined at main.adb:38, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Main__T8b___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "T9b" defined at main.adb:42, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Main__T9b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
@@ -5956,23 +5992,23 @@ module Lz77__length_acc__L9s__L11s__T12s___axiom
 
 end
 
-(* Module giving axioms for type "T9b" defined at main.adb:29, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Main__T9b___axiom
+(* Module giving axioms for type "T10b" defined at main.adb:47, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Main__T10b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
 
 end
 
-(* Module giving axioms for type "T11b" defined at main.adb:31, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Main__L_2__T11b___axiom
+(* Module giving axioms for type "T12b" defined at main.adb:51, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Main__L_2__T12b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
 
 end
 
-(* Module for declaring an abstract function for the aggregate at main.adb:8, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
+(* Module for declaring an abstract function for the aggregate at main.adb:14, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
 module Main__t1__aggregate_def
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -5984,19 +6020,19 @@ module Main__t1__aggregate_def
 
 end
 
-(* Module for declaring an abstract function for the aggregate at main.adb:11, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
+(* Module for declaring an abstract function for the aggregate at main.adb:19, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
 module Main__b__aggregate_def
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
  val function main__b__aggregate_def 
-   (temp___313 : int) : Array__Int__Standard__character.map
+   (temp___312 : int) : Array__Int__Standard__character.map
 
 end
 
-(* Module for defining a value for string literal  defined at main.adb:16, created in Gnat2Why.Expr.Transform_String_Literal *)
-module Temp___String_Literal_316
+(* Module for defining a value for string literal  defined at main.adb:28, created in Gnat2Why.Expr.Transform_String_Literal *)
+module Temp___String_Literal_315
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        "int".Int
@@ -6005,16 +6041,35 @@ module Temp___String_Literal_316
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
- val function temp___String_Literal_316 
+ val function temp___String_Literal_315 
    (__void_param : unit) : Array__Int__Standard__character.map
  
- axiom temp___String_Literal_316__def_axiom :
-  (forall __void_param   : unit [(temp___String_Literal_316 __void_param)].
-   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (1 : int))) = (78 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (2 : int))) = (111 : int)) )/\( ( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (3 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (4 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (5 : int))) = (114 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (6 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (7 : int))) = (114 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (8 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (9 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (10 : int))) = (114 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (11 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (12 : int))) = (112 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (13 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (14 : int))) = (114 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (15 : int))) = (116 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (16 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (17 : int))) = (100 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (18 : int))) = (46 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (19 : int))) = (32 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (20 : int))) = (71 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (21 : int))) = (111 : int)) ) ) ) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (22 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (23 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (24 : int))) = (116 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (25 : int))) = (104 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (26 : int))) = (105 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (27 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (28 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (29 : int))) = (109 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (30 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (31 : int))) = (110 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (32 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (33 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (34 : int))) = (98 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (35 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (36 : int))) = (116 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (37 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (38 : int))) = (115 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (39 : int))) = (58 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_316 __void_param) (40 : int))) = (32 : int)) ) ) ) ) ) ))
+ axiom temp___String_Literal_315__def_axiom :
+  (forall __void_param   : unit [(temp___String_Literal_315 __void_param)].
+   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (1 : int))) = (78 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (2 : int))) = (111 : int)) )/\( ( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (3 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (4 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (5 : int))) = (114 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (6 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (7 : int))) = (111 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (8 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (9 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (10 : int))) = (114 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (11 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (12 : int))) = (112 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (13 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (14 : int))) = (114 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (15 : int))) = (116 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (16 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (17 : int))) = (100 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (18 : int))) = (46 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (19 : int))) = (32 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (20 : int))) = (71 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (21 : int))) = (111 : int)) ) ) ) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (22 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (23 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (24 : int))) = (116 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (25 : int))) = (104 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (26 : int))) = (105 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (27 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (28 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (29 : int))) = (109 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (30 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (31 : int))) = (110 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (32 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (33 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (34 : int))) = (98 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (35 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (36 : int))) = (116 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (37 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (38 : int))) = (115 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (39 : int))) = (58 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_315 __void_param) (40 : int))) = (32 : int)) ) ) ) ) ) ))
 
 end
 
-(* Module for defining a value for string literal  defined at main.adb:23, created in Gnat2Why.Expr.Transform_String_Literal *)
+(* Module for defining a value for string literal  defined at main.adb:38, created in Gnat2Why.Expr.Transform_String_Literal *)
+module Temp___String_Literal_318
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__character as Standard__character
+ use        Standard__character__rep as Standard__character__rep
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+
+ val function temp___String_Literal_318 
+   (__void_param : unit) : Array__Int__Standard__character.map
+ 
+ axiom temp___String_Literal_318__def_axiom :
+  (forall __void_param   : unit [(temp___String_Literal_318 __void_param)].
+   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (1 : int))) = (73 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (2 : int))) = (110 : int)) )/\( ( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (3 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (4 : int))) = (105 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (5 : int))) = (99 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (6 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (7 : int))) = (116 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (8 : int))) = (101 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (9 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (10 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (11 : int))) = (100 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (12 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (13 : int))) = (99 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (14 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (15 : int))) = (109 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (16 : int))) = (112 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (17 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (18 : int))) = (101 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (19 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (20 : int))) = (115 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (21 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (22 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (23 : int))) = (32 : int)) ) ) ) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (24 : int))) = (108 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (25 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (26 : int))) = (110 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (27 : int))) = (103 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (28 : int))) = (116 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (29 : int))) = (104 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (30 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (31 : int))) = (109 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (32 : int))) = (117 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (33 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (34 : int))) = (116 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (35 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (36 : int))) = (98 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (37 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (38 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (39 : int))) = (119 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (40 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (41 : int))) = (111 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (42 : int))) = (110 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (43 : int))) = (103 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_318 __void_param) (44 : int))) = (33 : int)) ) ) ) ) ) ))
+
+end
+
+(* Module for defining a value for string literal  defined at main.adb:42, created in Gnat2Why.Expr.Transform_String_Literal *)
 module Temp___String_Literal_319
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6029,11 +6084,11 @@ module Temp___String_Literal_319
  
  axiom temp___String_Literal_319__def_axiom :
   (forall __void_param   : unit [(temp___String_Literal_319 __void_param)].
-   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (1 : int))) = (73 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (2 : int))) = (110 : int)) )/\( ( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (3 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (4 : int))) = (105 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (5 : int))) = (99 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (6 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (7 : int))) = (116 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (8 : int))) = (101 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (9 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (10 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (11 : int))) = (100 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (12 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (13 : int))) = (99 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (14 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (15 : int))) = (109 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (16 : int))) = (112 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (17 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (18 : int))) = (101 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (19 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (20 : int))) = (115 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (21 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (22 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (23 : int))) = (32 : int)) ) ) ) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (24 : int))) = (108 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (25 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (26 : int))) = (110 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (27 : int))) = (103 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (28 : int))) = (116 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (29 : int))) = (104 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (30 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (31 : int))) = (109 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (32 : int))) = (117 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (33 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (34 : int))) = (116 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (35 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (36 : int))) = (98 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (37 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (38 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (39 : int))) = (119 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (40 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (41 : int))) = (111 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (42 : int))) = (110 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (43 : int))) = (103 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (44 : int))) = (33 : int)) ) ) ) ) ) ))
+   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (1 : int))) = (69 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (2 : int))) = (114 : int)) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (3 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (4 : int))) = (111 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (5 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (6 : int))) = (32 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (7 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (8 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (9 : int))) = (112 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (10 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (11 : int))) = (114 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (12 : int))) = (116 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (13 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (14 : int))) = (100 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_319 __void_param) (15 : int))) = (46 : int)) ) ) ) ))
 
 end
 
-(* Module for defining a value for string literal  defined at main.adb:29, created in Gnat2Why.Expr.Transform_String_Literal *)
+(* Module for defining a value for string literal  defined at main.adb:47, created in Gnat2Why.Expr.Transform_String_Literal *)
 module Temp___String_Literal_321
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6051,7 +6106,7 @@ module Temp___String_Literal_321
    ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (1 : int))) = (71 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (2 : int))) = (111 : int)) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (3 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (4 : int))) = (32 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (5 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (6 : int))) = (104 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (7 : int))) = (105 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (8 : int))) = (115 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (9 : int))) = (32 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (10 : int))) = (109 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (11 : int))) = (97 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (12 : int))) = (110 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (13 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (14 : int))) = (58 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_321 __void_param) (15 : int))) = (32 : int)) ) ) ) ))
 
 end
-(* Module for defining the value of constant "default_priority" defined at system.ads:129, created in Gnat2Why.Decls.Translate_Constant_Value *)
+(* Module for defining the value of constant "default_priority" defined at system.ads:104, created in Gnat2Why.Decls.Translate_Constant_Value *)
 module System__default_priority___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6059,11 +6114,11 @@ module System__default_priority___axiom
  use        System__default_priority as System__default_priority
 
  axiom default_priority__def_axiom :
-  ((System__default_priority.default_priority ) = (31 : int))
+  ((System__default_priority.default_priority ) = (15 : int))
 
 end
 
-(* Module for defining the value of constant "R6b" defined at main.adb:18, created in Gnat2Why.Decls.Translate_Constant_Value *)
+(* Module for defining the value of constant "R6b" defined at main.adb:33, created in Gnat2Why.Decls.Translate_Constant_Value *)
 module Main__L_1__R6b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6083,8 +6138,8 @@ module Lz77__one___axiom
 
 end
 
-(* Module for defining the value of constant "R10b" defined at main.adb:31, created in Gnat2Why.Decls.Translate_Constant_Value *)
-module Main__L_2__R10b___axiom
+(* Module for defining the value of constant "R11b" defined at main.adb:51, created in Gnat2Why.Decls.Translate_Constant_Value *)
+module Main__L_2__R11b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
@@ -6163,7 +6218,7 @@ module Ada__text_io__page_length__2___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "main" defined at main.adb:6, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "main" defined at main.adb:7, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6188,7 +6243,7 @@ module Main___axiom
    (__void_param : unit) : unit
   requires {  true }
   ensures {  true }
-  reads {Ada__integer_text_io__default_width.default_width, Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err, Ada__integer_text_io__default_base.default_base}
+  reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err, Ada__integer_text_io__default_width.default_width, Ada__integer_text_io__default_base.default_base}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
 end
@@ -6203,18 +6258,35 @@ module Lz77__decode___axiom
  use        Standard__positive as Standard__positive
  use        Standard__integer__rep as Standard__integer__rep
  use        Lz77__token_array as Lz77__token_array
+ use        Ada__integer_text_io__default_width as Ada__integer_text_io__default_width
+ use        Ada__integer_text_io__default_base as Ada__integer_text_io__default_base
  use        Lz77__byte_array as Lz77__byte_array
  use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Ada__text_io__standard_in as Ada__text_io__standard_in
+ use        Ada__text_io__file_system as Ada__text_io__file_system
+ use        Ada__text_io__standard_out as Ada__text_io__standard_out
+ use        Ada__text_io__standard_err as Ada__text_io__standard_err
+ use        Ada__text_io__current_in as Ada__text_io__current_in
+ use        Ada__text_io__current_out as Ada__text_io__current_out
+ use        Ada__text_io__current_err as Ada__text_io__current_err
+ use        Ada__text_io__standard_in as Ada__text_io__standard_in
+ use        Ada__text_io__file_system as Ada__text_io__file_system
+ use        Ada__text_io__standard_out as Ada__text_io__standard_out
+ use        Ada__text_io__standard_err as Ada__text_io__standard_err
+ use        Ada__text_io__current_in as Ada__text_io__current_in
+ use        Ada__text_io__current_out as Ada__text_io__current_out
+ use        Ada__text_io__current_err as Ada__text_io__current_err
 
  val decode 
    (input : Lz77__token_array.token_array) (output : Array__Int__Standard__character.map__ref) (output__first : Standard__integer.integer) (output__last : Standard__integer.integer) (output_length : int__ref) (error : bool__ref) : unit
   requires {  true }
   ensures {  ( (if ((error.bool__content = True)) then (
-   ( [@GP_Pretty_Ada:3050] (output_length.int__content = (0 : int)) )) else (
-   ( [@GP_Pretty_Ada:3051] true ))) /\ ( (if (True) then (
+   ( [@GP_Pretty_Ada:3053] (output_length.int__content = (0 : int)) )) else (
+   ( [@GP_Pretty_Ada:3054] true ))) /\ ( (if (True) then (
    true) else (
    (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)))) /\ (Standard__natural___axiom.dynamic_invariant output_length.int__content True True True True) ) ) }
-  writes {output, output_length, error}
+  reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err, Ada__integer_text_io__default_width.default_width, Ada__integer_text_io__default_base.default_base}
+  writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err, output, output_length, error}
 
 end
 
@@ -6272,7 +6344,7 @@ module Ada__text_io__put__4___axiom
  val put__4 
    (item : Standard__string.string) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:7767] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7773] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:7770] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7776] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -6331,7 +6403,7 @@ module Ada__integer_text_io__put__2___axiom
  val put__2 
    (item : int) (width : int) (base : int) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:21211] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:21215] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:21438] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:21442] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -6390,7 +6462,7 @@ module Ada__text_io__new_line__2___axiom
  val new_line__2 
    (spacing : int) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:6220] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:6226] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:6223] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:6229] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -6449,7 +6521,7 @@ module Ada__text_io__put__2___axiom
  val put__2 
    (item : int) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:7274] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7280] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:7277] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7283] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -6489,22 +6561,22 @@ module Lz77__length_acc___axiom
 
  val length_acc 
    (input : Lz77__token_array.token_array) : Lz77__partial_length.partial_length
-  requires {  ( [@GP_Pretty_Ada:14696] ((Lz77__token_array.length input) > (0 : int)) ) }
-  ensures {  ( ( (result = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard result input) )/\( (Lz77__partial_length___axiom.dynamic_invariant result True False True True) /\ ( ( ( [@GP_Pretty_Ada:2693] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:2703] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@name:I] [@model_trace:2708]  : int.
-   ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:2723] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
+  requires {  ( [@GP_Pretty_Ada:14835] ((Lz77__token_array.length input) > (0 : int)) ) }
+  ensures {  ( ( (result = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard result input) )/\( (Lz77__partial_length___axiom.dynamic_invariant result True False True True) /\ ( ( ( [@GP_Pretty_Ada:2696] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:2706] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@model_trace:2711] [@name:I]  : int.
+   ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:2726] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
     Big_integers__zero.zero) else (
-    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:2752] [@name:J]  : int.
-    ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:2773] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) ) ) }
+    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:2755] [@name:J]  : int.
+    ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:2776] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) ) ) }
  
  axiom length_acc__post_axiom :
   (forall input   : Lz77__token_array.token_array [(Lz77__length_acc.length_acc input)].
-   ( ( (Lz77__token_array___axiom.dynamic_invariant input True True True True) /\ ( [@GP_Pretty_Ada:14696] ((Lz77__token_array.length input) > (0 : int)) ) ) -> (let result = (Lz77__length_acc.length_acc input) in (
+   ( ( (Lz77__token_array___axiom.dynamic_invariant input True True True True) /\ ( [@GP_Pretty_Ada:14835] ((Lz77__token_array.length input) > (0 : int)) ) ) -> (let result = (Lz77__length_acc.length_acc input) in (
     (if ((Lz77__length_acc.length_acc__function_guard result input)) then (
-     ( ( ( ( ( [@GP_Pretty_Ada:2693] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:2703] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@name:I] [@model_trace:2708]  : int.
-      ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:2723] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
+     ( ( ( ( ( [@GP_Pretty_Ada:2696] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:2706] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@model_trace:2711] [@name:I]  : int.
+      ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:2726] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
        Big_integers__zero.zero) else (
-       (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:2752] [@name:J]  : int.
-       ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:2773] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) /\ (Lz77__partial_length___axiom.dynamic_invariant result True False True True) )/\true )) else true)))
+       (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:2755] [@name:J]  : int.
+       ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:2776] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) /\ (Lz77__partial_length___axiom.dynamic_invariant result True False True True) )/\true )) else true)))
     ))
 
 end
@@ -6544,7 +6616,7 @@ module Lz77__valid___axiom
  val valid 
    (input : Lz77__token_array.token_array) (upto : int) : bool
   requires {  true }
-  ensures {  ( ( (result = (Lz77__valid.valid input upto)) /\ (Lz77__valid.valid__function_guard result input upto) )/\( (result = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:2907] [@name:I]  : int.
+  ensures {  ( ( (result = (Lz77__valid.valid input upto)) /\ (Lz77__valid.valid__function_guard result input upto) )/\( (result = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:2910] [@name:I]  : int.
    ( ( ((Lz77__token_array.first input) <= i) /\ (i <= upto) ) -> ( ( ((Big_integers__in_range.in_range__logic (let temp___279 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_278 : Lz77__partial_length.partial_length.
     ( (temp___result_278 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_278 input) )) in (
     (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___279) i)))
@@ -6570,7 +6642,7 @@ module Lz77__valid___axiom
   (forall upto   : int [(Lz77__valid.valid input upto)].
    ( (let result = (Lz77__valid.valid input upto) in (
     (Lz77__valid.valid__function_guard result input upto)))
-    -> ( ((Lz77__valid.valid input upto) = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:2907] [@name:I]  : int.
+    -> ( ((Lz77__valid.valid input upto) = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:2910] [@name:I]  : int.
     ( ( ((Lz77__token_array.first input) <= i) /\ (i <= upto) ) -> ( ( ((Big_integers__in_range.in_range__logic (let temp___285 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_284 : Lz77__partial_length.partial_length.
      ( (temp___result_284 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_284 input) )) in (
      (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___285) i)))
@@ -6598,9 +6670,9 @@ module Lz77__is_valid___axiom
    (input : Lz77__token_array.token_array) : bool
   requires {  true }
   ensures {  ( ( (result = (Lz77__is_valid.is_valid input)) /\ (Lz77__is_valid.is_valid__function_guard result input) )/\(if ((result = True)) then (
-   ( [@GP_Pretty_Ada:3084] ((epsilon temp___result_288 : bool.
+   ( [@GP_Pretty_Ada:3087] ((epsilon temp___result_288 : bool.
     ( (temp___result_288 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_288 input (Lz77__token_array.last input)) )) = True) )) else (
-   ( [@GP_Pretty_Ada:3085] not ( ((epsilon temp___result_289 : bool.
+   ( [@GP_Pretty_Ada:3088] not ( ((epsilon temp___result_289 : bool.
     ( (temp___result_289 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_289 input (Lz77__token_array.last input)) )) = True) ) ))) ) }
  
  axiom is_valid__post_axiom :
@@ -6608,9 +6680,9 @@ module Lz77__is_valid___axiom
    ( (Lz77__token_array___axiom.dynamic_invariant input True True True True) -> (let result = (Lz77__is_valid.is_valid input) in (
     (if ((Lz77__is_valid.is_valid__function_guard result input)) then (
      ( ( (if ((result = True)) then (
-      ( [@GP_Pretty_Ada:3084] ((epsilon temp___result_291 : bool.
+      ( [@GP_Pretty_Ada:3087] ((epsilon temp___result_291 : bool.
        ( (temp___result_291 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_291 input (Lz77__token_array.last input)) )) = True) )) else (
-      ( [@GP_Pretty_Ada:3085] not ( ((epsilon temp___result_292 : bool.
+      ( [@GP_Pretty_Ada:3088] not ( ((epsilon temp___result_292 : bool.
        ( (temp___result_292 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_292 input (Lz77__token_array.last input)) )) = True) ) ))) /\ true )/\true )) else true)))
     ))
 
@@ -6683,10 +6755,10 @@ module Lz77__decode_fast___axiom
 
  val decode_fast 
    (input : Lz77__token_array.token_array) (output : Array__Int__Standard__character.map__ref) (output__first : Standard__integer.integer) (output__last : Standard__integer.integer) (output_length : int__ref) : unit
-  requires {  ( ( [@GP_Pretty_Ada:3138] ((epsilon temp___result_300 : bool.
-   ( (temp___result_300 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_300 input (Lz77__token_array.last input)) )) = True) ) /\ ( [@GP_Pretty_Ada:3144] ((Integer.length (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_301 : Big_integers__big_integer.big_integer.
+  requires {  ( ( [@GP_Pretty_Ada:3141] ((epsilon temp___result_300 : bool.
+   ( (temp___result_300 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_300 input (Lz77__token_array.last input)) )) = True) ) /\ ( [@GP_Pretty_Ada:3147] ((Integer.length (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_301 : Big_integers__big_integer.big_integer.
    ( (temp___result_301 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_301 input) )))) ) ) }
-  ensures {  ( ( [@GP_Pretty_Ada:15268] (output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_302 : Big_integers__big_integer.big_integer.
+  ensures {  ( ( [@GP_Pretty_Ada:15407] (output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_302 : Big_integers__big_integer.big_integer.
    ( (temp___result_302 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_302 input) )))) ) /\ ( (if (True) then (
    true) else (
    (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)))) /\ (Standard__natural___axiom.dynamic_invariant output_length.int__content True True True True) ) ) }
@@ -6694,7 +6766,7 @@ module Lz77__decode_fast___axiom
 
 end
 
-(* Module for defining the value of the aggregate at main.adb:8, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
+(* Module for defining the value of the aggregate at main.adb:14, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
 module Main__t1__aggregate_def___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6709,12 +6781,12 @@ module Main__t1__aggregate_def___axiom
   (forall temp___308   temp___309   : Lz77__token.token.
    (let temp___307 [@mlw:proxy_symbol] [@introduced] = (Main__t1__aggregate_def.main__t1__aggregate_def temp___308 temp___309) in (
     (if (( (Lz77__token___axiom.dynamic_invariant temp___308 True True True True) /\ (Lz77__token___axiom.dynamic_invariant temp___309 True True True True) )) then (
-     ( ((Array__Int__Lz77__token.get temp___307 (2 : int)) = temp___308) /\ ((Array__Int__Lz77__token.get temp___307 (3 : int)) = temp___309) )) else true)))
+     ( ((Array__Int__Lz77__token.get temp___307 (1 : int)) = temp___308) /\ ((Array__Int__Lz77__token.get temp___307 (2 : int)) = temp___309) )) else true)))
   )
 
 end
 
-(* Module for defining the value of the aggregate at main.adb:11, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
+(* Module for defining the value of the aggregate at main.adb:19, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
 module Main__b__aggregate_def___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6726,16 +6798,16 @@ module Main__b__aggregate_def___axiom
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
  axiom def_axiom :
-  (forall temp___313   : int.
-   (let temp___312 [@mlw:proxy_symbol] [@introduced] = (Main__b__aggregate_def.main__b__aggregate_def temp___313) in (
-    (if ((Standard__character___axiom.dynamic_invariant temp___313 True True True True)) then (
-     (forall temp___314   : int.
-      ((Standard__character__rep.to_rep (Array__Int__Standard__character.get temp___312 temp___314)) = temp___313))) else true)))
+  (forall temp___312   : int.
+   (let temp___311 [@mlw:proxy_symbol] [@introduced] = (Main__b__aggregate_def.main__b__aggregate_def temp___312) in (
+    (if ((Standard__character___axiom.dynamic_invariant temp___312 True True True True)) then (
+     (forall temp___313   : int.
+      ((Standard__character__rep.to_rep (Array__Int__Standard__character.get temp___311 temp___313)) = temp___312))) else true)))
   )
 
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "main" defined at main.adb:6, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "main" defined at main.adb:7, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__subprogram_def
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6769,13 +6841,11 @@ module Main__subprogram_def
  use        Ada__text_io__put__2___axiom as Ada__text_io__put__2___axiom
  use        Lz77__is_valid___axiom as Lz77__is_valid___axiom
  use        Lz77__decode_fast___axiom as Lz77__decode_fast___axiom
- use        Main__L_2__R10b as Main__L_2__R10b
+ use        Main__L_2__R11b as Main__L_2__R11b
  use        Main__L_2__index as Main__L_2__index
  use        Lz77__token as Lz77__token
- use        Array__Int__Lz77__token as Array__Int__Lz77__token
  use        Main__TTt1SP1 as Main__TTt1SP1
  use        Main__Tt1S___axiom as Main__Tt1S___axiom
- use        Main__T1b as Main__T1b
  use        Lz77__byte_array as Lz77__byte_array
  use        Main__TTbSP1 as Main__TTbSP1
  use        Main__TbS___axiom as Main__TbS___axiom
@@ -6793,7 +6863,10 @@ module Main__subprogram_def
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
- use        Temp___String_Literal_316 as Temp___String_Literal_316
+ use        Temp___String_Literal_315 as Temp___String_Literal_315
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Temp___String_Literal_318 as Temp___String_Literal_318
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Temp___String_Literal_319 as Temp___String_Literal_319
@@ -6846,199 +6919,194 @@ module Main__subprogram_def
  use        Ada__integer_text_io__put__2___axiom as Ada__integer_text_io__put__2___axiom
  use        Main__Tt1S___axiom as Main__Tt1S___axiom
  use        Main__TTt1SP1___axiom as Main__TTt1SP1___axiom
- use        Main__T1b___axiom as Main__T1b___axiom
  use        Main__TbS___axiom as Main__TbS___axiom
  use        Main__TTbSP1___axiom as Main__TTbSP1___axiom
  use        Main__L_1__R6b___axiom as Main__L_1__R6b___axiom
- use        Main__L_2__R10b___axiom as Main__L_2__R10b___axiom
+ use        Main__L_2__R11b___axiom as Main__L_2__R11b___axiom
 
- let def [#"main.adb" 6 0 0][@GP_Subp:main.adb:6] 
+ let def [#"main.adb" 7 0 0][@GP_Subp:main.adb:7] 
    (__void_param : unit)
-  requires { [#"main.adb" 6 0 0] true }
+  requires { [#"main.adb" 7 0 0] true }
    = [@vc:divergent]
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.adb:6 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.adb:7 *)
   ;
-  [#"main.adb" 6 0 0] assume { [#"main.adb" 6 0 0] (Ada__text_io__field___axiom.dynamic_invariant Ada__integer_text_io__default_width.default_width.int__content True False True True) };
-  [#"main.adb" 6 0 0] assume { [#"main.adb" 6 0 0] (Ada__text_io__number_base___axiom.dynamic_invariant Ada__integer_text_io__default_base.default_base.int__content True False True True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.adb:6 *)
+  [#"main.adb" 7 0 0] assume { [#"main.adb" 7 0 0] (Ada__text_io__field___axiom.dynamic_invariant Ada__integer_text_io__default_width.default_width.int__content True False True True) };
+  [#"main.adb" 7 0 0] assume { [#"main.adb" 7 0 0] (Ada__text_io__number_base___axiom.dynamic_invariant Ada__integer_text_io__default_base.default_base.int__content True False True True) };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.adb:7 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.adb:6 *)
+  () (* Check for RTE in the Pre of the subprogram main.adb:7 *)
   ;
-  [#"main.adb" 6 0 0] begin ensures {true} let _ = (let _ = True in (
+  [#"main.adb" 7 0 0] begin ensures {true} let _ = (let _ = True in (
    ()))
    in () end ;
-  () (* Assume Pre of the subprogram main.adb:6 *)
+  () (* Assume Pre of the subprogram main.adb:7 *)
   ;
-  [#"main.adb" 6 0 0] try
+  [#"main.adb" 7 0 0] try
    ( ();
-   ([#"main.adb" 6 0 0] ());
    ([#"main.adb" 8 0 0] ());
-   ([#"main.adb" 8 0 0] ( [#"main.adb" 8 0 0] (Main__t1.t1.Array__Int__Lz77__token.map__content <- ( (let temp___311 [@mlw:proxy_symbol] [@introduced] = ( [#"main.adb" 8 0 0] begin ensures {true} let _ = (let _ = ((0 : int) = (3 : int)) in (
+   ([#"main.adb" 13 0 0] ());
+   ([#"main.adb" 13 0 0] ( [#"main.adb" 13 0 0] (Main__t1.t1.Array__Int__Lz77__token.map__content <- ( ( [#"main.adb" 13 0 0] begin ensures {true} let _ = (let _ = ((0 : int) = (2 : int)) in (
     ()))
     in () end ;
-   [#"main.adb" 8 0 0] begin ensures {true} let _ = (let _ = ((0 : int) = (2 : int)) in (
+   [#"main.adb" 13 0 0] begin ensures {true} let _ = (let _ = ((0 : int) = (1 : int)) in (
     ()))
     in () end ;
-   (Main__t1__aggregate_def.main__t1__aggregate_def({ Lz77__token.__split_fields = { Lz77__token.rec__lz77__token__offset = ( 0 : Standard__natural.natural ); Lz77__token.rec__lz77__token__length = ( 0 : Standard__natural.natural ); Lz77__token.rec__lz77__token__next_c = (Standard__character__rep.of_rep((65 : int))) } }) ({ Lz77__token.__split_fields = { Lz77__token.rec__lz77__token__offset = ( 1 : Standard__natural.natural ); Lz77__token.rec__lz77__token__length = ( 2 : Standard__natural.natural ); Lz77__token.rec__lz77__token__next_c = (Standard__character__rep.of_rep((66 : int))) } })) ) in (
-    (Array__Int__Lz77__token.slide(temp___311) (Main__T1b.first) (Main__TTt1SP1.first))))
-    ));
-   [#"main.adb" 8 0 0] assume { [#"main.adb" 8 0 0] (Main__Tt1S___axiom.dynamic_invariant Main__t1.t1.Array__Int__Lz77__token.map__content True False True True) } ));
-   ([#"main.adb" 10 0 0] ());
-   ([#"main.adb" 11 0 0] ());
-   ([#"main.adb" 11 0 0] ( [#"main.adb" 11 0 0] (Main__b.b.Array__Int__Standard__character.map__content <- ( (Main__b__aggregate_def.main__b__aggregate_def((88 : int))) ));
-   [#"main.adb" 11 0 0] assume { [#"main.adb" 11 0 0] (Main__TbS___axiom.dynamic_invariant Main__b.b.Array__Int__Standard__character.map__content True False True True) } ));
-   ([#"main.adb" 12 0 0] ( [#"main.adb" 12 0 0] assume { [#"main.adb" 12 0 0] (Standard__natural___axiom.default_initial_assumption Main__blen.blen.int__content False) };
-   [#"main.adb" 12 0 0] assume { [#"main.adb" 12 0 0] (Standard__natural___axiom.dynamic_invariant Main__blen.blen.int__content False False True True) } ));
+   (Main__t1__aggregate_def.main__t1__aggregate_def({ Lz77__token.__split_fields = { Lz77__token.rec__lz77__token__offset = ( 0 : Standard__natural.natural ); Lz77__token.rec__lz77__token__length = ( 0 : Standard__natural.natural ); Lz77__token.rec__lz77__token__next_c = (Standard__character__rep.of_rep((65 : int))) } }) ({ Lz77__token.__split_fields = { Lz77__token.rec__lz77__token__offset = ( 1 : Standard__natural.natural ); Lz77__token.rec__lz77__token__length = ( 2 : Standard__natural.natural ); Lz77__token.rec__lz77__token__next_c = (Standard__character__rep.of_rep((66 : int))) } })) ) ));
+   [#"main.adb" 13 0 0] assume { [#"main.adb" 13 0 0] (Main__Tt1S___axiom.dynamic_invariant Main__t1.t1.Array__Int__Lz77__token.map__content True False True True) } ));
+   ([#"main.adb" 17 0 0] ());
    ([#"main.adb" 18 0 0] ());
-   ([#"main.adb" 31 0 0] ());
+   ([#"main.adb" 18 0 0] ( [#"main.adb" 18 0 0] (Main__b.b.Array__Int__Standard__character.map__content <- ( (Main__b__aggregate_def.main__b__aggregate_def((88 : int))) ));
+   [#"main.adb" 18 0 0] assume { [#"main.adb" 18 0 0] (Main__TbS___axiom.dynamic_invariant Main__b.b.Array__Int__Standard__character.map__content True False True True) } ));
+   ([#"main.adb" 20 0 0] ( [#"main.adb" 20 0 0] assume { [#"main.adb" 20 0 0] (Standard__natural___axiom.default_initial_assumption Main__blen.blen.int__content False) };
+   [#"main.adb" 20 0 0] assume { [#"main.adb" 20 0 0] (Standard__natural___axiom.dynamic_invariant Main__blen.blen.int__content False False True True) } ));
+   ([#"main.adb" 33 0 0] ());
+   ([#"main.adb" 51 0 0] ());
    ();
-   ( [@GP_Sloc:main.adb:14:11] ([#"main.adb" 14 0 0] ()) );
-   ( [@GP_Sloc:main.adb:14:14] ([#"main.adb" 14 0 0] ()) );
-   ( [@GP_Sloc:main.adb:14:16] ([#"main.adb" 14 0 0] ()) );
-   ( [@GP_Sloc:main.adb:14:21] ([#"main.adb" 14 0 0] ()) );
-   ( [@GP_Sloc:main.adb:14:4] ([#"main.adb" 14 0 0] ()) );
-   ( [@GP_Sloc:main.adb:14:4] ([#"main.adb" 14 0 0] (let lz77__decode__output__compl = Main__b.b.Array__Int__Standard__character.map__content in (
-    [#"main.adb" 14 0 0] let lz77__decode__output = { Array__Int__Standard__character.map__content = lz77__decode__output__compl } in 
+   ( [@GP_Sloc:main.adb:26:12] ([#"main.adb" 26 0 0] ()) );
+   ( [@GP_Sloc:main.adb:26:16] ([#"main.adb" 26 0 0] ()) );
+   ( [@GP_Sloc:main.adb:26:19] ([#"main.adb" 26 0 0] ()) );
+   ( [@GP_Sloc:main.adb:26:25] ([#"main.adb" 26 0 0] ()) );
+   ( [@GP_Sloc:main.adb:26:4] ([#"main.adb" 26 0 0] ()) );
+   ( [@GP_Sloc:main.adb:26:4] ([#"main.adb" 26 0 0] (let lz77__decode__output__compl = Main__b.b.Array__Int__Standard__character.map__content in (
+    [#"main.adb" 26 0 0] let lz77__decode__output = { Array__Int__Standard__character.map__content = lz77__decode__output__compl } in 
      ( (Lz77__decode___axiom.decode((Lz77__token_array.of_array(Main__t1.t1.Array__Int__Lz77__token.map__content) (Main__TTt1SP1.first) (Main__TTt1SP1.last))) (lz77__decode__output) ((Standard__integer__rep.of_rep(Main__TTbSP1.first))) ((Standard__integer__rep.of_rep(Main__TTbSP1.last))) (Main__blen.blen) (Main__error.error));
-     [#"main.adb" 14 0 0] (Main__b.b.Array__Int__Standard__character.map__content <- ( (let temp___315 [@mlw:proxy_symbol] [@introduced] = (Lz77__byte_array.of_array(lz77__decode__output.Array__Int__Standard__character.map__content) (Main__TTbSP1.first) (Main__TTbSP1.last)) in (
-      (Array__Int__Standard__character.slide (Lz77__byte_array.to_array temp___315) (Lz77__byte_array.first temp___315) Main__TTbSP1.first)))
+     [#"main.adb" 26 0 0] (Main__b.b.Array__Int__Standard__character.map__content <- ( (let temp___314 [@mlw:proxy_symbol] [@introduced] = (Lz77__byte_array.of_array(lz77__decode__output.Array__Int__Standard__character.map__content) (Main__TTbSP1.first) (Main__TTbSP1.last)) in (
+      (Array__Int__Standard__character.slide (Lz77__byte_array.to_array temp___314) (Lz77__byte_array.first temp___314) Main__TTbSP1.first)))
       )) )))
    ) );
-   ( [@GP_Sloc:main.adb:15:11] ([#"main.adb" 15 0 0] ()) );
-   ( [@GP_Sloc:main.adb:15:4] ([#"main.adb" 15 0 0] (if (( ([#"main.adb" 15 0 0] [#"main.adb" 15 0 0] (([@branch_id=2410] Main.spark__branch).bool__content <- ( not ( Main__error.error.bool__content ) )));
-   ( [@branch_id=2410] Main.spark__branch ).bool__content )) then (
+   ( [@GP_Sloc:main.adb:27:11] ([#"main.adb" 27 0 0] ()) );
+   ( [@GP_Sloc:main.adb:27:4] ([#"main.adb" 27 0 0] (if (( ([#"main.adb" 27 0 0] [#"main.adb" 27 0 0] (([@branch_id=2416] Main.spark__branch).bool__content <- ( not ( Main__error.error.bool__content ) )));
+   ( [@branch_id=2416] Main.spark__branch ).bool__content )) then (
     ( ();
-    ( [@GP_Sloc:main.adb:16:7] ([#"main.adb" 16 0 0] ()) );
-    ( [@GP_Sloc:main.adb:16:7] ([#"main.adb" 16 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_316.temp___String_Literal_316(()))) ((1 : int)) ((40 : int))))) )) );
-    ( [@GP_Sloc:main.adb:16:60] ([#"main.adb" 16 0 0] ()) );
-    ( [@GP_Sloc:main.adb:16:56] ([#"main.adb" 16 0 0] ()) );
-    ( [@GP_Sloc:main.adb:16:56] ([#"main.adb" 16 0 0] ( (Ada__integer_text_io__put__2___axiom.put__2(Main__blen.blen.int__content) (Ada__integer_text_io__default_width.default_width.int__content) (Ada__integer_text_io__default_base.default_base.int__content)) )) );
-    ( [@GP_Sloc:main.adb:16:67] ([#"main.adb" 16 0 0] ()) );
-    ( [@GP_Sloc:main.adb:16:67] ([#"main.adb" 16 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) );
-    ( [@GP_Sloc:main.adb:17:10] ([#"main.adb" 17 0 0] ()) );
-    ( [@GP_Sloc:main.adb:17:18] ([#"main.adb" 17 0 0] ()) );
-    ( [@GP_Sloc:main.adb:17:7] ([#"main.adb" 17 0 0] (if (( ([#"main.adb" 17 0 0] [#"main.adb" 17 0 0] (([@branch_id=2421] Main.spark__branch).bool__content <- ( (Main__blen.blen.int__content <= (100 : int)) )));
-    ( [@branch_id=2421] Main.spark__branch ).bool__content )) then (
+    ( [@GP_Sloc:main.adb:28:7] ([#"main.adb" 28 0 0] ()) );
+    ( [@GP_Sloc:main.adb:28:7] ([#"main.adb" 28 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_315.temp___String_Literal_315(()))) ((1 : int)) ((40 : int))))) )) );
+    ( [@GP_Sloc:main.adb:29:12] ([#"main.adb" 29 0 0] ()) );
+    ( [@GP_Sloc:main.adb:29:7] ([#"main.adb" 29 0 0] ()) );
+    ( [@GP_Sloc:main.adb:29:7] ([#"main.adb" 29 0 0] ( (Ada__integer_text_io__put__2___axiom.put__2(Main__blen.blen.int__content) (Ada__integer_text_io__default_width.default_width.int__content) (Ada__integer_text_io__default_base.default_base.int__content)) )) );
+    ( [@GP_Sloc:main.adb:30:7] ([#"main.adb" 30 0 0] ()) );
+    ( [@GP_Sloc:main.adb:30:7] ([#"main.adb" 30 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) );
+    ( [@GP_Sloc:main.adb:32:10] ([#"main.adb" 32 0 0] ()) );
+    ( [@GP_Sloc:main.adb:32:18] ([#"main.adb" 32 0 0] ()) );
+    ( [@GP_Sloc:main.adb:32:7] ([#"main.adb" 32 0 0] (if (( ([#"main.adb" 32 0 0] [#"main.adb" 32 0 0] (([@branch_id=2427] Main.spark__branch).bool__content <- ( (Main__blen.blen.int__content <= (100 : int)) )));
+    ( [@branch_id=2427] Main.spark__branch ).bool__content )) then (
      ( ();
-     ( [@GP_Sloc:main.adb:18:23] ([#"main.adb" 18 0 0] ()) );
-     ( [@GP_Sloc:main.adb:18:34] ([#"main.adb" 18 0 0] ()) );
-     ( [@GP_Sloc:main.adb:18:44] ([#"main.adb" 18 0 0] ()) );
-     ( [@GP_Sloc:main.adb:18:49] ([#"main.adb" 18 0 0] ([#"main.adb" 18 0 0] ( (let main__L_1__R6b__assume = (([#"main.adb" 18 0 0] ( [@GP_Sloc:main.adb:18:42] [@vc:annotation] [@comment:         for Index in B'First .. B'First + BLen - 1 loop                                          ^ main.adb:18:42:VC_OVERFLOW_CHECK] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Shape:if__if__R6b_decl__sub__add] [@GP_Id:0] (Standard__integer.range_check_(((1 : int) + Main__blen.blen.int__content))) )) - (1 : int)) in (
+     ( [@GP_Sloc:main.adb:33:23] ([#"main.adb" 33 0 0] ()) );
+     ( [@GP_Sloc:main.adb:33:34] ([#"main.adb" 33 0 0] ()) );
+     ( [@GP_Sloc:main.adb:33:44] ([#"main.adb" 33 0 0] ()) );
+     ( [@GP_Sloc:main.adb:33:49] ([#"main.adb" 33 0 0] ([#"main.adb" 33 0 0] ( (let main__L_1__R6b__assume = (([#"main.adb" 33 0 0] ( [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Sloc:main.adb:33:42] [@GP_Shape:if__if__R6b_decl__sub__add] [@comment:         for Index in B'First .. B'First + BLen - 1 loop                                          ^ main.adb:33:42:VC_OVERFLOW_CHECK] [@GP_Id:0] (Standard__integer.range_check_(((1 : int) + Main__blen.blen.int__content))) )) - (1 : int)) in (
        assume {  (main__L_1__R6b__assume = Main__L_1__R6b.r6b) }))
      ;
       assume {  (Standard__integer___axiom.dynamic_invariant Main__L_1__R6b.r6b True False True True) } ))) );
-     ( [@GP_Sloc:main.adb:18:53] ([#"main.adb" 18 0 0] (let temp___317 [@mlw:proxy_symbol] [@introduced] = (1 : int) in (
-     (let temp___318 [@mlw:proxy_symbol] [@introduced] = Main__L_1__R6b.r6b in (
-      ( [#"main.adb" 18 0 0] (Main__L_1__index.index.int__content <- ( temp___317 ));
-      () (* Translation of an Ada loop from main.adb:18 *)
+     ( [@GP_Sloc:main.adb:33:53] ([#"main.adb" 33 0 0] (let temp___316 [@mlw:proxy_symbol] [@introduced] = (1 : int) in (
+     (let temp___317 [@mlw:proxy_symbol] [@introduced] = Main__L_1__R6b.r6b in (
+      ( [#"main.adb" 33 0 0] (Main__L_1__index.index.int__content <- ( temp___316 ));
+      () (* Translation of an Ada loop from main.adb:33 *)
       ;
-      (if ((Boolean.andb((temp___317 <= Main__L_1__index.index.int__content)) ((Main__L_1__index.index.int__content <= temp___318)))) then (
-       [#"main.adb" 18 0 0] try
-        ( () (* First unroling of the loop statements appearing before the loop invariant of loop main.adb:18 *)
+      (if ((Boolean.andb((temp___316 <= Main__L_1__index.index.int__content)) ((Main__L_1__index.index.int__content <= temp___317)))) then (
+       [#"main.adb" 33 0 0] try
+        ( () (* First unroling of the loop statements appearing before the loop invariant of loop main.adb:33 *)
         ;
-        () (* While loop translating the Ada loop from main.adb:18 *)
+        () (* While loop translating the Ada loop from main.adb:33 *)
         ;
-        [#"main.adb" 18 0 0] while True do
-         ( () (* Assume implicit invariants from the loop main.adb:18 *)
+        [#"main.adb" 33 0 0] while True do
+         ( () (* Assume implicit invariants from the loop main.adb:33 *)
          ;
-         [#"main.adb" 18 0 0] assume { [#"main.adb" 18 0 0] ( ((1 : int) <= Main__L_1__index.index.int__content) /\ (Main__L_1__index.index.int__content <= Main__L_1__R6b.r6b) ) };
-         () (* Check for absence of RTE in the invariant of loop main.adb:18 *)
+         [#"main.adb" 33 0 0] assume { [#"main.adb" 33 0 0] ( ((1 : int) <= Main__L_1__index.index.int__content) /\ (Main__L_1__index.index.int__content <= Main__L_1__R6b.r6b) ) };
+         () (* Check for absence of RTE in the invariant of loop main.adb:33 *)
          ;
-         () (* Loop statements appearing after the loop invariant of loop main.adb:18 *)
+         () (* Loop statements appearing after the loop invariant of loop main.adb:33 *)
          ;
          ();
-         ( [@GP_Sloc:main.adb:19:12] ([#"main.adb" 19 0 0] ()) );
-         ( [@GP_Sloc:main.adb:19:12] ([#"main.adb" 19 0 0] ( (Ada__text_io__put__2___axiom.put__2((Standard__character__rep.to_rep((Array__Int__Standard__character.get(Main__b.b.Array__Int__Standard__character.map__content) (( [#"main.adb" 19 0 0] assert { [#"main.adb" 19 0 0] ([#"main.adb" 19 0 0] ( [@GP_Shape:if__if__L_1_while__call_put__2__ixdcomp] [@GP_Sloc:main.adb:19:26] [@vc:annotation] [@comment:           Put(Item => B(Index));                          ^ main.adb:19:26:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:1] ( (Main__TTbSP1.first <= Main__L_1__index.index.int__content) /\ (Main__L_1__index.index.int__content <= Main__TTbSP1.last) ) )) };
+         ( [@GP_Sloc:main.adb:34:13] ([#"main.adb" 34 0 0] ()) );
+         ( [@GP_Sloc:main.adb:34:13] ([#"main.adb" 34 0 0] ( (Ada__text_io__put__2___axiom.put__2((Standard__character__rep.to_rep((Array__Int__Standard__character.get(Main__b.b.Array__Int__Standard__character.map__content) (( [#"main.adb" 34 0 0] assert { [#"main.adb" 34 0 0] ([#"main.adb" 34 0 0] ( [@GP_Shape:if__if__L_1_while__call_put__2__ixdcomp] [@vc:annotation] [@GP_Sloc:main.adb:34:29] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:1] [@comment:            Put (Item => B (Index)); -- print the output array                             ^ main.adb:34:29:VC_INDEX_CHECK] ( (Main__TTbSP1.first <= Main__L_1__index.index.int__content) /\ (Main__L_1__index.index.int__content <= Main__TTbSP1.last) ) )) };
          Main__L_1__index.index.int__content ))))))) )) );
-         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop main.adb:18 *)
+         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop main.adb:33 *)
          ;
-         (if ((Main__L_1__index.index.int__content = temp___318)) then (
+         (if ((Main__L_1__index.index.int__content = temp___317)) then (
            raise Main__L_1.L_1));
-         ([#"main.adb" 18 0 0] [#"main.adb" 18 0 0] (Main__L_1__index.index.int__content <- ( (Main__L_1__index.index.int__content + (1 : int)) ))) )
+         ([#"main.adb" 33 0 0] [#"main.adb" 33 0 0] (Main__L_1__index.index.int__content <- ( (Main__L_1__index.index.int__content + (1 : int)) ))) )
         done )
        with
         Main__L_1.L_1 -> ()
        end)) )))
      ))
      ) );
-     ( [@GP_Sloc:main.adb:21:10] ([#"main.adb" 21 0 0] ()) );
-     ( [@GP_Sloc:main.adb:21:10] ([#"main.adb" 21 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) ) )) else (
+     ( [@GP_Sloc:main.adb:36:10] ([#"main.adb" 36 0 0] ()) );
+     ( [@GP_Sloc:main.adb:36:10] ([#"main.adb" 36 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) ) )) else (
      ( ();
-     ( [@GP_Sloc:main.adb:23:9] ([#"main.adb" 23 0 0] ()) );
-     ( [@GP_Sloc:main.adb:23:9] ([#"main.adb" 23 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_319.temp___String_Literal_319(()))) ((1 : int)) ((44 : int))))) )) );
-     ( [@GP_Sloc:main.adb:23:62] ([#"main.adb" 23 0 0] ()) );
-     ( [@GP_Sloc:main.adb:23:62] ([#"main.adb" 23 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) ) )))) ) )) else (
-    ()))) );
-   ( [@GP_Sloc:main.adb:27:16] ([#"main.adb" 27 0 0] ()) );
-   ( [@GP_Sloc:main.adb:27:7] ([#"main.adb" 27 0 0] ()) );
-   ( [@GP_Sloc:main.adb:27:4] ([#"main.adb" 27 0 0] (if (( ([#"main.adb" 27 0 0] [#"main.adb" 27 0 0] (([@branch_id=2465] Main.spark__branch).bool__content <- ( (Lz77__is_valid___axiom.is_valid((Lz77__token_array.of_array(Main__t1.t1.Array__Int__Lz77__token.map__content) (Main__TTt1SP1.first) (Main__TTt1SP1.last)))) )));
-   ( [@branch_id=2465] Main.spark__branch ).bool__content )) then (
+     ( [@GP_Sloc:main.adb:38:10] ([#"main.adb" 38 0 0] ()) );
+     ( [@GP_Sloc:main.adb:38:10] ([#"main.adb" 38 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_318.temp___String_Literal_318(()))) ((1 : int)) ((44 : int))))) )) );
+     ( [@GP_Sloc:main.adb:39:10] ([#"main.adb" 39 0 0] ()) );
+     ( [@GP_Sloc:main.adb:39:10] ([#"main.adb" 39 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) ) )))) ) )) else (
     ( ();
-    ( [@GP_Sloc:main.adb:28:19] ([#"main.adb" 28 0 0] ()) );
-    ( [@GP_Sloc:main.adb:28:22] ([#"main.adb" 28 0 0] ()) );
-    ( [@GP_Sloc:main.adb:28:24] ([#"main.adb" 28 0 0] ()) );
-    ( [@GP_Sloc:main.adb:28:7] ([#"main.adb" 28 0 0] ()) );
-    ( [@GP_Sloc:main.adb:28:7] ([#"main.adb" 28 0 0] (let lz77__decode_fast__output__compl = Main__b.b.Array__Int__Standard__character.map__content in (
-     [#"main.adb" 28 0 0] let lz77__decode_fast__output = { Array__Int__Standard__character.map__content = lz77__decode_fast__output__compl } in 
-      ( ([#"main.adb" 28 0 0] ( [@GP_Shape:if__call_decode_fast] [@GP_Reason:VC_PRECONDITION] [@vc:annotation] [@comment:      Decode_Fast(T1,B,BLen);       ^ main.adb:28:7:VC_PRECONDITION] [@GP_Sloc:main.adb:28:7] [@GP_Id:2] (Lz77__decode_fast___axiom.decode_fast((Lz77__token_array.of_array(Main__t1.t1.Array__Int__Lz77__token.map__content) (Main__TTt1SP1.first) (Main__TTt1SP1.last))) (lz77__decode_fast__output) ((Standard__integer__rep.of_rep(Main__TTbSP1.first))) ((Standard__integer__rep.of_rep(Main__TTbSP1.last))) (Main__blen.blen)) ));
+    ( [@GP_Sloc:main.adb:42:7] ([#"main.adb" 42 0 0] ()) );
+    ( [@GP_Sloc:main.adb:42:7] ([#"main.adb" 42 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_319.temp___String_Literal_319(()))) ((1 : int)) ((15 : int))))) )) ) )))) );
+   ( [@GP_Sloc:main.adb:45:17] ([#"main.adb" 45 0 0] ()) );
+   ( [@GP_Sloc:main.adb:45:7] ([#"main.adb" 45 0 0] ()) );
+   ( [@GP_Sloc:main.adb:45:4] ([#"main.adb" 45 0 0] (if (( ([#"main.adb" 45 0 0] [#"main.adb" 45 0 0] (([@branch_id=2474] Main.spark__branch).bool__content <- ( (Lz77__is_valid___axiom.is_valid((Lz77__token_array.of_array(Main__t1.t1.Array__Int__Lz77__token.map__content) (Main__TTt1SP1.first) (Main__TTt1SP1.last)))) )));
+   ( [@branch_id=2474] Main.spark__branch ).bool__content )) then (
+    ( ();
+    ( [@GP_Sloc:main.adb:46:20] ([#"main.adb" 46 0 0] ()) );
+    ( [@GP_Sloc:main.adb:46:24] ([#"main.adb" 46 0 0] ()) );
+    ( [@GP_Sloc:main.adb:46:27] ([#"main.adb" 46 0 0] ()) );
+    ( [@GP_Sloc:main.adb:46:7] ([#"main.adb" 46 0 0] ()) );
+    ( [@GP_Sloc:main.adb:46:7] ([#"main.adb" 46 0 0] (let lz77__decode_fast__output__compl = Main__b.b.Array__Int__Standard__character.map__content in (
+     [#"main.adb" 46 0 0] let lz77__decode_fast__output = { Array__Int__Standard__character.map__content = lz77__decode_fast__output__compl } in 
+      ( ([#"main.adb" 46 0 0] ( [@GP_Shape:if__call_decode_fast] [@GP_Reason:VC_PRECONDITION] [@vc:annotation] [@GP_Sloc:main.adb:46:7] [@GP_Id:2] [@comment:      Decode_Fast (T1, B, BLen);       ^ main.adb:46:7:VC_PRECONDITION] (Lz77__decode_fast___axiom.decode_fast((Lz77__token_array.of_array(Main__t1.t1.Array__Int__Lz77__token.map__content) (Main__TTt1SP1.first) (Main__TTt1SP1.last))) (lz77__decode_fast__output) ((Standard__integer__rep.of_rep(Main__TTbSP1.first))) ((Standard__integer__rep.of_rep(Main__TTbSP1.last))) (Main__blen.blen)) ));
        (Main__b.b.Array__Int__Standard__character.map__content <- ( (let temp___320 [@mlw:proxy_symbol] [@introduced] = (Lz77__byte_array.of_array(lz77__decode_fast__output.Array__Int__Standard__character.map__content) (Main__TTbSP1.first) (Main__TTbSP1.last)) in (
        (Array__Int__Standard__character.slide (Lz77__byte_array.to_array temp___320) (Lz77__byte_array.first temp___320) Main__TTbSP1.first)))
        )) )))
     ) );
-    ( [@GP_Sloc:main.adb:29:7] ([#"main.adb" 29 0 0] ()) );
-    ( [@GP_Sloc:main.adb:29:7] ([#"main.adb" 29 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_321.temp___String_Literal_321(()))) ((1 : int)) ((15 : int))))) )) );
-    ( [@GP_Sloc:main.adb:29:35] ([#"main.adb" 29 0 0] ()) );
-    ( [@GP_Sloc:main.adb:29:31] ([#"main.adb" 29 0 0] ()) );
-    ( [@GP_Sloc:main.adb:29:31] ([#"main.adb" 29 0 0] ( (Ada__integer_text_io__put__2___axiom.put__2(Main__blen.blen.int__content) (Ada__integer_text_io__default_width.default_width.int__content) (Ada__integer_text_io__default_base.default_base.int__content)) )) );
-    ( [@GP_Sloc:main.adb:29:42] ([#"main.adb" 29 0 0] ()) );
-    ( [@GP_Sloc:main.adb:29:42] ([#"main.adb" 29 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) );
-    ( [@GP_Sloc:main.adb:30:7] ([#"main.adb" 30 0 0] ( [#"main.adb" 30 0 0] begin ensures {true} let _ = (let _ = (Main__blen.blen.int__content = (5 : int)) in (
-     ()))
-     in () end ;
-    [#"main.adb" 30 0 0] assert { [#"main.adb" 30 0 0] ([#"main.adb" 30 0 0] ( [@GP_Shape:if__pragargs__cmp] [@comment:      pragma Assert (BLen = 5);                      ^ main.adb:30:22:VC_ASSERT] [@vc:annotation] [@GP_Reason:VC_ASSERT] [@GP_Sloc:main.adb:30:22] [@GP_Id:3] ( [@GP_Pretty_Ada:2487] [@GP_Sloc:main.adb:30:22] (Main__blen.blen.int__content = (5 : int)) ) )) } )) );
-    ( [@GP_Sloc:main.adb:31:20] ([#"main.adb" 31 0 0] ()) );
-    ( [@GP_Sloc:main.adb:31:31] ([#"main.adb" 31 0 0] ()) );
-    ( [@GP_Sloc:main.adb:31:41] ([#"main.adb" 31 0 0] ()) );
-    ( [@GP_Sloc:main.adb:31:46] ([#"main.adb" 31 0 0] ([#"main.adb" 31 0 0] ( (let main__L_2__R10b__assume = (([#"main.adb" 31 0 0] ( [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:      for Index in B'First .. B'First + BLen - 1 loop                                       ^ main.adb:31:39:VC_OVERFLOW_CHECK] [@GP_Id:4] [@GP_Shape:if__R10b_decl__sub__add] [@GP_Sloc:main.adb:31:39] (Standard__integer.range_check_(((1 : int) + Main__blen.blen.int__content))) )) - (1 : int)) in (
-      assume {  (main__L_2__R10b__assume = Main__L_2__R10b.r10b) }))
+    ( [@GP_Sloc:main.adb:47:7] ([#"main.adb" 47 0 0] ()) );
+    ( [@GP_Sloc:main.adb:47:7] ([#"main.adb" 47 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_321.temp___String_Literal_321(()))) ((1 : int)) ((15 : int))))) )) );
+    ( [@GP_Sloc:main.adb:48:12] ([#"main.adb" 48 0 0] ()) );
+    ( [@GP_Sloc:main.adb:48:7] ([#"main.adb" 48 0 0] ()) );
+    ( [@GP_Sloc:main.adb:48:7] ([#"main.adb" 48 0 0] ( (Ada__integer_text_io__put__2___axiom.put__2(Main__blen.blen.int__content) (Ada__integer_text_io__default_width.default_width.int__content) (Ada__integer_text_io__default_base.default_base.int__content)) )) );
+    ( [@GP_Sloc:main.adb:49:7] ([#"main.adb" 49 0 0] ()) );
+    ( [@GP_Sloc:main.adb:49:7] ([#"main.adb" 49 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) );
+    ( [@GP_Sloc:main.adb:51:20] ([#"main.adb" 51 0 0] ()) );
+    ( [@GP_Sloc:main.adb:51:31] ([#"main.adb" 51 0 0] ()) );
+    ( [@GP_Sloc:main.adb:51:41] ([#"main.adb" 51 0 0] ()) );
+    ( [@GP_Sloc:main.adb:51:46] ([#"main.adb" 51 0 0] ([#"main.adb" 51 0 0] ( (let main__L_2__R11b__assume = (([#"main.adb" 51 0 0] ( [@comment:      for Index in B'First .. B'First + BLen - 1 loop                                       ^ main.adb:51:39:VC_OVERFLOW_CHECK] [@GP_Sloc:main.adb:51:39] [@GP_Shape:if__R11b_decl__sub__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:3] (Standard__integer.range_check_(((1 : int) + Main__blen.blen.int__content))) )) - (1 : int)) in (
+      assume {  (main__L_2__R11b__assume = Main__L_2__R11b.r11b) }))
     ;
-     assume {  (Standard__integer___axiom.dynamic_invariant Main__L_2__R10b.r10b True False True True) } ))) );
-    ( [@GP_Sloc:main.adb:31:50] ([#"main.adb" 31 0 0] (let temp___322 [@mlw:proxy_symbol] [@introduced] = (1 : int) in (
-    (let temp___323 [@mlw:proxy_symbol] [@introduced] = Main__L_2__R10b.r10b in (
-     ( [#"main.adb" 31 0 0] (Main__L_2__index.index.int__content <- ( temp___322 ));
-     () (* Translation of an Ada loop from main.adb:31 *)
+     assume {  (Standard__integer___axiom.dynamic_invariant Main__L_2__R11b.r11b True False True True) } ))) );
+    ( [@GP_Sloc:main.adb:51:50] ([#"main.adb" 51 0 0] (let temp___322 [@mlw:proxy_symbol] [@introduced] = (1 : int) in (
+    (let temp___323 [@mlw:proxy_symbol] [@introduced] = Main__L_2__R11b.r11b in (
+     ( [#"main.adb" 51 0 0] (Main__L_2__index.index.int__content <- ( temp___322 ));
+     () (* Translation of an Ada loop from main.adb:51 *)
      ;
      (if ((Boolean.andb((temp___322 <= Main__L_2__index.index.int__content)) ((Main__L_2__index.index.int__content <= temp___323)))) then (
-      [#"main.adb" 31 0 0] try
-       ( () (* First unroling of the loop statements appearing before the loop invariant of loop main.adb:31 *)
+      [#"main.adb" 51 0 0] try
+       ( () (* First unroling of the loop statements appearing before the loop invariant of loop main.adb:51 *)
        ;
-       () (* While loop translating the Ada loop from main.adb:31 *)
+       () (* While loop translating the Ada loop from main.adb:51 *)
        ;
-       [#"main.adb" 31 0 0] while True do
-        ( () (* Assume implicit invariants from the loop main.adb:31 *)
+       [#"main.adb" 51 0 0] while True do
+        ( () (* Assume implicit invariants from the loop main.adb:51 *)
         ;
-        [#"main.adb" 31 0 0] assume { [#"main.adb" 31 0 0] ( ((1 : int) <= Main__L_2__index.index.int__content) /\ (Main__L_2__index.index.int__content <= Main__L_2__R10b.r10b) ) };
-        () (* Check for absence of RTE in the invariant of loop main.adb:31 *)
+        [#"main.adb" 51 0 0] assume { [#"main.adb" 51 0 0] ( ((1 : int) <= Main__L_2__index.index.int__content) /\ (Main__L_2__index.index.int__content <= Main__L_2__R11b.r11b) ) };
+        () (* Check for absence of RTE in the invariant of loop main.adb:51 *)
         ;
-        () (* Loop statements appearing after the loop invariant of loop main.adb:31 *)
+        () (* Loop statements appearing after the loop invariant of loop main.adb:51 *)
         ;
         ();
-        ( [@GP_Sloc:main.adb:32:10] ([#"main.adb" 32 0 0] ()) );
-        ( [@GP_Sloc:main.adb:32:10] ([#"main.adb" 32 0 0] ( (Ada__text_io__put__2___axiom.put__2((Standard__character__rep.to_rep((Array__Int__Standard__character.get(Main__b.b.Array__Int__Standard__character.map__content) (( [#"main.adb" 32 0 0] assert { [#"main.adb" 32 0 0] ([#"main.adb" 32 0 0] ( [@vc:annotation] [@comment:         Put(Item => B(Index));                        ^ main.adb:32:24:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Sloc:main.adb:32:24] [@GP_Shape:if__L_2_while__call_put__2__ixdcomp] [@GP_Id:5] ( (Main__TTbSP1.first <= Main__L_2__index.index.int__content) /\ (Main__L_2__index.index.int__content <= Main__TTbSP1.last) ) )) };
+        ( [@GP_Sloc:main.adb:52:10] ([#"main.adb" 52 0 0] ()) );
+        ( [@GP_Sloc:main.adb:52:10] ([#"main.adb" 52 0 0] ( (Ada__text_io__put__2___axiom.put__2((Standard__character__rep.to_rep((Array__Int__Standard__character.get(Main__b.b.Array__Int__Standard__character.map__content) (( [#"main.adb" 52 0 0] assert { [#"main.adb" 52 0 0] ([#"main.adb" 52 0 0] ( [@vc:annotation] [@comment:         Put (Item => B (Index));                          ^ main.adb:52:26:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Sloc:main.adb:52:26] [@GP_Id:4] [@GP_Shape:if__L_2_while__call_put__2__ixdcomp] ( (Main__TTbSP1.first <= Main__L_2__index.index.int__content) /\ (Main__L_2__index.index.int__content <= Main__TTbSP1.last) ) )) };
         Main__L_2__index.index.int__content ))))))) )) );
-        () (* Check for the exit condition and loop statements appearing before the loop invariant of loop main.adb:31 *)
+        () (* Check for the exit condition and loop statements appearing before the loop invariant of loop main.adb:51 *)
         ;
         (if ((Main__L_2__index.index.int__content = temp___323)) then (
           raise Main__L_2.L_2));
-        ([#"main.adb" 31 0 0] [#"main.adb" 31 0 0] (Main__L_2__index.index.int__content <- ( (Main__L_2__index.index.int__content + (1 : int)) ))) )
+        ([#"main.adb" 51 0 0] [#"main.adb" 51 0 0] (Main__L_2__index.index.int__content <- ( (Main__L_2__index.index.int__content + (1 : int)) ))) )
        done )
       with
        Main__L_2.L_2 -> ()
       end)) )))
     ))
     ) );
-    ( [@GP_Sloc:main.adb:34:7] ([#"main.adb" 34 0 0] ()) );
-    ( [@GP_Sloc:main.adb:34:7] ([#"main.adb" 34 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) ) )) else (
+    ( [@GP_Sloc:main.adb:54:7] ([#"main.adb" 54 0 0] ()) );
+    ( [@GP_Sloc:main.adb:54:7] ([#"main.adb" 54 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) ) )) else (
     ()))) );
     raise Return__exc )
   with
