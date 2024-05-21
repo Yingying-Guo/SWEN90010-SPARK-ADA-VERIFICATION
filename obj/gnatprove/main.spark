@@ -14,7 +14,7 @@
   "flow": [
     {
       "file": "main.adb",
-      "line": 19,
+      "line": 20,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -33,7 +33,7 @@
     },
     {
       "file": "main.adb",
-      "line": 16,
+      "line": 17,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -54,7 +54,7 @@
   "proof": [
     {
       "file": "main.adb",
-      "line": 32,
+      "line": 33,
       "col": 42,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -81,7 +81,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 32,
+      "check_line": 33,
       "check_col": 42,
       "how_proved": "prover",
       "stats": {
@@ -94,7 +94,7 @@
     },
     {
       "file": "main.adb",
-      "line": 33,
+      "line": 34,
       "col": 29,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -132,7 +132,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 33,
+      "check_line": 34,
       "check_col": 29,
       "how_proved": "prover",
       "stats": {
@@ -145,7 +145,7 @@
     },
     {
       "file": "main.adb",
-      "line": 45,
+      "line": 46,
       "col": 7,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -163,8 +163,8 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 4902,
-              "time": 1.60000000000000E-01
+              "steps": 1555,
+              "time": 0
             }
           },
           "transformations": {
@@ -183,20 +183,20 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 45,
+      "check_line": 46,
       "check_col": 7,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 2,
           "max_steps": 1,
-          "max_time": 1.59999996423721E-01
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "main.adb",
-      "line": 50,
+      "line": 51,
       "col": 39,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -214,8 +214,8 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 5017,
-              "time": 1.60000000000000E-01
+              "steps": 1603,
+              "time": 0
             }
           },
           "transformations": {
@@ -223,20 +223,20 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 50,
+      "check_line": 51,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 1,
           "max_steps": 1,
-          "max_time": 1.59999996423721E-01
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "main.adb",
-      "line": 51,
+      "line": 52,
       "col": 26,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -254,8 +254,8 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 5080,
-              "time": 1.40000000000000E-01
+              "steps": 1633,
+              "time": 0
             }
           },
           "transformations": {
@@ -274,14 +274,14 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 51,
+      "check_line": 52,
       "check_col": 26,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 2,
           "max_steps": 1,
-          "max_time": 1.40000000596046E-01
+          "max_time": 0.00000000000000E+00
         }
       }
     }
@@ -348,7 +348,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 108
+                "line": 95
               }
             ]
           }
@@ -360,7 +360,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 130
+                "line": 114
               }
             ]
           }
@@ -372,7 +372,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 115
+                "line": 101
               }
             ]
           }
@@ -452,7 +452,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 108
+                "line": 95
               }
             ]
           }
@@ -464,7 +464,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 130
+                "line": 114
               }
             ]
           }
@@ -476,7 +476,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 115
+                "line": 101
               }
             ]
           }
@@ -540,7 +540,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 108
+                "line": 95
               }
             ]
           }
@@ -552,7 +552,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 130
+                "line": 114
               }
             ]
           }
@@ -564,7 +564,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 115
+                "line": 101
               }
             ]
           }
@@ -628,7 +628,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 108
+                "line": 95
               }
             ]
           }
@@ -640,7 +640,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 130
+                "line": 114
               }
             ]
           }
@@ -652,7 +652,7 @@
             "sloc": [
               {
                 "file": "lz77.ads",
-                "line": 115
+                "line": 101
               }
             ]
           }
@@ -673,14 +673,14 @@
     }
   ],
   "timings": {
-    "marking": 9.64600010775030E-04,
-    "globals (basic)": 1.36125003919005E-02,
-    "globals/properties (advanced)": 1.64288002997637E-02,
-    "flow analysis": 1.26408003270626E-02,
-    "codepeer results": 4.69999986307812E-06,
-    "init_why_sections": 3.11899988446385E-04,
-    "translation of standard": 1.63600000087172E-03,
-    "translation of compilation unit": 3.42467986047268E-02,
-    "proof": 8.92018496990204E-01
+    "marking": 8.91699979547411E-04,
+    "globals (basic)": 1.31543995812535E-02,
+    "globals/properties (advanced)": 1.95429995656013E-02,
+    "flow analysis": 1.31766004487872E-02,
+    "codepeer results": 4.30000000051223E-06,
+    "init_why_sections": 3.38000012561679E-04,
+    "translation of standard": 1.64320005569607E-03,
+    "translation of compilation unit": 3.42778004705906E-02,
+    "proof": 4.84377205371857E-01
   }
 }

@@ -8,10 +8,11 @@ procedure Main with
   SPARK_Mode
 is
    -- a trivial token sequence that encodes the string "AAAB"
-     T1    : Token_Array (1 .. 3)  :=
-       (2 => (Offset => 0, Length => 0, Next_C => 'A'),
-        3 => (Offset => 0, Length => 0, Next_C => 'B'),
-        4 => (Offset => 0, Length => 0, Next_C => 'C'));
+   --    T1    : Token_Array  (1..1):=
+   --      (others => (Offset => 0, Length => 0, Next_C => 'A'));
+   T1 : Token_Array (1 .. 2) :=
+     (1 => (Offset => 0, Length => 0, Next_C => Character'Val (65)),
+      2 => (Offset => 1, Length => 2, Next_C => Character'Val (66)));
 --     T1    : Token_Array (1 .. 1)  := (2 => (Offset => 0, Length => 0, Next_C => Character'Val(0)));
    Error : Boolean;
    B     : Byte_Array (1 .. 100) :=
