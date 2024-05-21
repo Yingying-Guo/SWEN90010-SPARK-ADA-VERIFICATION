@@ -67,218 +67,188 @@ is
       -- Tracks the number of bytes processed and Store the length of decompressed temperary output array
       -- Character'First represents ASCII NUL character
       k       : Natural := 0;  
---        Last_Length : Natural;
-      Temp_Length : Natural;
       One_c: constant Natural := 1;
    begin
       -- {True}
       Error         := False;
-      
-      -- Check for empty Input or empty Output(Output array's buffer range)
-      if Input'Length > 0 and Input'Length <= Natural'Last  and Input'Last <= Natural'Last and Input'First <= Natural'Last
-        and Output'Length > 0 and Output'Length <= Natural'Last  and Output'Last <= Natural'Last and Output'First <= Natural'Last
+      -- {Not Error and True}   
+      -- Check for empty Input or empty Output (Output array's buffer range) and Check their indexes not cause overflow
+      if Input'Length > 0 and Input'Length <= Natural'Last 
+         and Input'Last <= Natural'Last and Input'First <= Natural'Last
+         and Output'Length > 0 and Output'Length <= Natural'Last  
+         and Output'Last <= Natural'Last and Output'First <= Natural'Last
       then
-         -- Check for k that indicate the last element index of decompressed array and represent the length of the decompressed temperary output array
-         -- At the begining, k should be 0
-         -- The first token's offset should be 0
-         if k = 0 
-           and Input'First <= Input'Last and Input (Input'First).Offset = 0 
-           and Output'First <= Output'Last
-         then
-            Temp_Length := 0;
-
-            for I in Input'Range loop 
-               if not Error 
-                 and Input (I).Offset >= 0 and Input (I).Offset <= Natural'Last and Input (I).Offset <= Temp_Length 
-               then 
-                  if Input (I).Offset > 0 and Input(I).Length <= 0
-                  then
-                     Error         := True;
-                  end if;
-               else
-                  Error         := True;
-               end if;
-               
---             Check after decompressing each token in Input array length and Input (I).Length and after decompassing current token's length not causing Natural Overflow               
-               if not Error 
-                 and Input(I).Length >= 0 and Input(I).Length <= Natural'Last 
-                 and Temp_Length >= 0 and Temp_Length <= Natural'Last
-                 and Temp_Length <= (Natural'Last - Input(I).Length) 
-                 and Temp_Length <= (Natural'Last - Input(I).Length - 1)
-                  ----------------------------------------------------------------------------here check Output'index
-               then
-                  Temp_Length := Temp_Length + Input(I).Length + 1;
-                  --                Check after decompressing each token, the index not out of the output array's bound 
-                  -- Check after decompressed each taken the index to access the Output Array would not cause the Natural Overflow
-                  if Temp_Length <= Output'Length and Output'First <= (Natural'Last - Temp_Length) 
-                   and Output'First <= (Output'Last - Temp_Length)
-                  then 
-                     null;
-                  else 
-                     Error         := True;
-                  end if;
-               else
-                  Error         := True;
-                  k := 0;
-                  Output_Length := k;
-                  return;
-               end if;
-            end loop;
-            null;
-         else 
-            Error         := True;
-         end if;
+         null;
       else
          Error         := True;
       end if;
-      
-      
+
+      -- {(if Error then True else True)=>(True)}
       if Error then
-         -- {Error} and {True}
-         -- {Error} and {0=0}
+         -- {Error} and {if Error then True else True}
+         -- {Error} and {if Error then 0=0 else True}
          k := 0;
-         -- {Error} and {k=0}
+         -- {Error} and {if Error then k=0 else True}
          Output_Length := k;
          return;
-         -- {Error} and {Output_Length=0}
-         -- {Error} and {if Error then Output_Length=0 else (Output_Length = Length_Acc(Input)(Input'Last) and Output_Length = k and k = Length_Acc(Input)(Input'Last))}
+         -- {Error} and {if Error then Output_Length=0 else True}
       else
-         pragma Assert (not Error);
-         
       -------------------------------------------------loop--------------------------------------------
-           -- If Input is not empty, then the each token in Input Array must be valid
-         -- {if Error then k=0 else ((Input'Length > 0) and (k = Last_Length + (if (I < Input'First and I > Input'Last) then 0 else Input(I).Length+1)) and (Last_Length = (if I <= Input'First then 0 else (if I > Input'Last then Length_Acc(Input)(Input'Last) else (Length_Acc(Input)(I-1)))}
+      -- If Input is not empty, then the each token in Input Array must be valid
+         -- {I = Input'First and (if Error then k=0 else "True")}
          for I in Input'First..Input'Last loop
-            -- {I <= Input'Last and I >= Input'First} and {if Error then k=0 else ((Input'Length > 0) and (k = Last_Length + (if (I < Input'First and I > Input'Last) then 0 else Input(I).Length+1)) and (Last_Length = (if I <= Input'First then 0 else (if I > Input'Last then Length_Acc(Input)(Input'Last) else (Length_Acc(Input)(I-1)))}
+            -- {I > Input'First and I <= Input'Last and (if Error then k=0 else "True")}
             -- Length_Acc(Input)(I) : Big_Integer
-            pragma Loop_Invariant (if Error then k=0);
---              (I >= Input'First and I <= Input'Last and
---              not Error and 
---              (if Length_Acc(Input)(I) > To_Big_Integer(Natural'Last) then k=0
---                                        else k=To_Integer(Length_Acc(Input)(I))));
-
-            --  pragma Loop_Invariant (if (Error or Input'Length <= 0 or I < Input'First)
-            --                         then k=0 
-            --                         else (Input'Length > 0 and 
-            --                             (if I > Input'Last 
-            --                             then 
-            --                               (if Length_Acc(Input)(Input'Last) > To_Big_Integer(Natural'Last) then k=0 
-            --                                   else k=To_Integer(Length_Acc(Input)(Input'Last))) 
-            --                           else (if Length_Acc(Input)(I) > To_Big_Integer(Natural'Last) then k=0
-            --                            else k=To_Integer(Length_Acc(Input)(I)))                                                                  
-            --                          )));
+            pragma Loop_Invariant (if Error then k=0 else True);
             
-            if Error then 
-               k := 0;
-               Output_Length := k;
-               return;
-            else
-               if I <= Input'First then
-                  k := 0;
-               end if;
-        
-               if k <= (Natural'Last - 1) and Input(I).Length <= (Natural'Last - 1) 
+            if Error 
+              or not (k <= (Natural'Last - 1) and Input(I).Length <= (Natural'Last - 1) 
                  and k <=  (Natural'Last - Input(I).Length - 1)  --Check the Additive not overflow
                  and k <= (Output'Length - Input(I).Length - 1)
                  and not (Input(I).Offset > 0 and Input(I).Length <= 0)
-                 and Input(I).Offset >= 0
-                 and Input(I).Offset <= Natural'Last
                  and Input(I).Offset <= k
-                 and Output'First <= (Natural'Last - Input(I).Length - k)
+                 and Output'First <= (Natural'Last - Input(I).Length - k - 1)
                  and Output'Last <= Natural'Last
-                 and Input(I).Length <= Output'Length 
-               then
-                  if Output'First <= (Natural'Last - k + Input (I).Offset - Input(I).Length) 
-                 and Output'First <= (Output'Last - k + Input (I).Offset - Input(I).Length) and Output'First <= (Output'Last - Input(I).Length - k) then
-                     --  Byte-by-byte copying based on the current token
-                     --  Token (o, l, c):
-                     --  the bytes bk+1,. . . , bk+1+(l−1) are identical to the bytes bk+1−o,. . . , bk+1−o+(l−1),
-                     --  the bytes bk+1,. . . , bk+l are identical to the bytes bk+1−o,. . . , bk+l−o,
-                     --  byte bk+1+l is c
-                     for J in 0 .. Input (I).Length - 1 loop
+                 and Input(I).Length <= Output'Length) 
+            then 
+               k := 0;
+               Output_Length := k;
+               Error := True;
+               -- {Error and (if Error then Output_Length=0 else True)}
+               return;
+            else
+               
+               if Output'First <= (Natural'Last - k + Input (I).Offset - Input(I).Length) 
+               and Output'First <= (Output'Last - k + Input (I).Offset - Input(I).Length) and Output'First <= (Output'Last - Input(I).Length - k) then
+                  --  Byte-by-byte copying based on the current token
+                  --  Token (o, l, c):
+                  --  the bytes bk+1,. . . , bk+1+(l−1) are identical to the bytes bk+1−o,. . . , bk+1−o+(l−1),
+                  --  the bytes bk+1,. . . , bk+l are identical to the bytes bk+1−o,. . . , bk+l−o,
+                  --  byte bk+1+l is c
+                  for J in 0 .. Input (I).Length - 1 loop
+--                       pragma Loop_Invariant (if Error then k=0 else (k = k + Input (I).Length + 1) and (J < Input(I).Length and Output (Output'First + k + J) = Output (Output'First + k - Input(I).Offset + J)) or (J = Input(I).Length and Output(Output'First - 1 + k + J + 1) = Input(I).Next_C));
 --                          pragma Loop_Invariant 
 --                             (if J >= 0 and J <= Input (I).Length - 1 and not Error   
 --                              then Output (Output'First - 1 + k + 1 + J) = Output (Output'First - 1 + k + 1 - Input (I).Offset + J));
-                            
-               --                 pragma Loop_Invariant (if J < 0
-               --                                        then (Output(Output'First - 1 + k) = Output(Output'First - 1 + k)) 
-               --                                          (for all Q in 0..J-1 => 
-               --                                         else 
-               --                                            (Output (Output'First - 1 + k + 1 + Q) = Output (Output'First - 1 + k + 1 - Input (I).Offset + Q))
-               --                                          )
-               --                                       );
-                        if J >= 0 then
-                           if J <= Natural'Last and J <= Output'Length 
-                             and Input(I).Offset <= Natural'Last 
-                             and Output'First <= (Natural'Last - k + Input (I).Offset - J) 
-                             and Output'First <= (Output'Last - k + Input (I).Offset - J) then
-                              Output (Output'First - 1 + k + 1 + J) := Output (Output'First - 1 + k + 1 - Input (I).Offset + J);
-                           else 
-                              Error         := True;
-                              k := 0;
-                              Output_Length := k;
-                              return;
-                           end if;
-                        end if;
-                     end loop;
-                     Output (Output'First - 1 + k + Input (I).Length + 1) := Input (I).Next_C;
---                   Last_Length := k;
---                    k := Last_Length + Input (I).Length + 1;  -- Update k to reflect the new length
-                     k := k + Input (I).Length + 1;
---                    pragma Assert(if I > Input'First then To_Big_Integer(Last_Length) = Length_Acc(Input)(I-1) else Last_Length = 0);
-                  else
-                     k := 0;
-                     Error         := True;
-                  end if;
+
+                     if J <= Output'Length 
+                        and Output'First <= (Natural'Last - k + Input (I).Offset - J) 
+                        and Output'First <= (Output'Last - k + Input (I).Offset - J) 
+                     then
+                        -- Only here in the loop where Error = False
+                        Output (Output'First - 1 + k + 1 + J) := Output (Output'First - 1 + k + 1 - Input (I).Offset + J);
+                     else 
+                        Error         := True;
+                        k := 0;
+                        Output_Length := k;
+                        return;
+                     end if;
+                  end loop;
+                  -- here in the loop should be Error = False
+                  Output (Output'First - 1 + k + Input (I).Length + 1) := Input (I).Next_C;
+                  k := k + Input (I).Length + 1;
+                  -- {not Error and J = Input(I).Length and (if Error then k=0 else True)}
                else
                   k := 0;
+                  Output_Length := k;
                   Error         := True;
+                  return;
+                  -- {Error and I > Input'First and I <= Input'Last and (if Error then k=0 else "True")}
                end if;
             end if;
-            Put_Line("In the loop, all parameters' value are:   (k)        (I)   (Input(I).Length)    (Length_Acc(Input)(I))");
-            Put("                                 ");
-            Put(k);
-            Put("");
-            Put(I);
-            Put("  ");
-            Put(Input(I).Length);
-            Put("       ");
---              Put(To_Integer(Length_Acc(Input)(I)));
-            New_Line;
-            -- {if Error then k=0 else ((Input'Length > 0) and (k = Last_Length + (if (I < Input'First and I > Input'Last) then 0 else Input(I).Length+1)) and (Last_Length = (if I <= Input'First then 0 else (if I > Input'Last then Length_Acc(Input)(Input'Last) else (Length_Acc(Input)(I-1)))}   
+            -- {if Error then k=0 else True}
          end loop;
-         -- {not Error} and (I > Input'Last or I < Input'First) and {if Error then k=0 else ((Input'Length > 0) and (k = Last_Length + (if (I < Input'First and I > Input'Last) then 0 else Input(I).Length+1)) and (Last_Length = (if I <= Input'First then 0 else (if I > Input'Last then Length_Acc(Input)(Input'Last) else (Length_Acc(Input)(I-1)))}
-         
-         -- {not Error} and (I > Input'Last or I < Input'First) and {if Error then k=0 else ((Input'Length > 0) and (k = Last_Length + (if (I < Input'First and I > Input'Last) then 0 else Input(I).Length+1)) and (k = (if I < Input'First then 0+0 else (if I > Input'Last then Length_Acc(Input)(Input'Last)+0 else (Length_Acc(Input)(I-1)+Input(I).Length+1))))}
-         -- {not Error} and {if Error then k=0 else ((Input'Length > 0) and (k = (if I < Input'First then 0 else (if I > Input'Last then Length_Acc(Input)(Input'Last) else (Length_Acc(Input)(I-1)+Input(I).Length+1)))))}
-        
-         -- {not Error} and {if Error then k=0 else ((Input'Length > 0) and (k = Length_Acc(Input)(Input'Last)))}
-         -- {not Error} and {if Error then k=0 else ((Input'Length > 0) and (k = Length_Acc(Input)(Input'Last) and k = k and k = Length_Acc(Input)(Input'Last)))}
+         -- {not Error and I = (Input'Last + 1) and (if Error then k=0 else "True")}
+         -- {not Error and (if Error then k=0 else True)}
          Output_Length := k; 
-         -- {not Error} and {if Error then Output_Length=0 else (Input'Length > 0 and Output_Length = Length_Acc(Input)(Input'Last) and Output_Length = k and k = Length_Acc(Input)(Input'Last))}
+         -- {not Error and (if Error then Output_Length=0 else True)}
       end if;
-      -- {if Error then Output_Length=0 else (Length_Acc(Input)(Input'Last) = Length_Acc(Input)(Input'Last))}
-      pragma Assert (if Error then Output_Length = 0 else True);
-      
+      -- {if Error then Output_Length=0 else True}
    end Decode;
 
-   -- 'Input' array: compressed data
-   --  return： True or False
-   function Is_Valid (Input : in Token_Array) return Boolean is
-   begin
-      -- IMPLEMENT THIS
-      return False;
-   end Is_Valid;
 
+   --  function Valid(Input : in Token_Array; Upto : in Integer) return Boolean is
+   --    (
+   --     Upto <= Input'Last and then
+   --     (Input'Length = 0 or else
+   --       (for all I in Input'First .. Upto =>
+   --             In_Range(Arg => Length_Acc(Input)(I),
+   --                      Low => To_Big_Integer(One),
+   --                      High => To_Big_Integer(Integer'Last)) and
+   --          To_Big_Integer(Input(I).Offset) <=
+   --        (if I = Input'First then Zero else Length_Acc(Input)(I-1)) and
+   --        (if Input(I).Offset = 0 then Input(I).Length = 0)
+   --       )
+   --    ));
+
+   -- 'Input' array: compressed data
+   -- return True or False
+   -- Post => (Valid(Input, Input'Last));
+   function Is_Valid (Input : in Token_Array) return Boolean is
+      k : Natural := 0;
+      Last_Length : Natural := 0;
+      Error : Boolean := False;
+   begin
+      if (Input'Length > 0 and Input'Length <= Natural'Last 
+         and Input'Last <= Natural'Last and Input'First <= Natural'Last) then
+         k := 0;
+         return False;
+      else
+      -------------------------------------------------loop--------------------------------------------
+      -- If Input is not empty, then the each token in Input Array must be valid
+         for I in Input'First..Input'Last loop
+            -- Length_Acc(Input)(I) : Big_Integer
+            pragma Loop_Invariant (if Error then k=0 else True);
+            
+            if Error 
+              or not (k <= (Natural'Last - 1) and Input(I).Length <= (Natural'Last - 1) 
+                 and k <=  (Natural'Last - Input(I).Length - 1)  --Check the Additive not overflow
+                 and not (Input(I).Offset > 0 and Input(I).Length <= 0)
+                 and not (Input(I).Offset = 0 and Input(I).Length /= 0)
+                 and Input(I).Offset <= k) 
+            then 
+               k := 0;
+               Error := True;
+               return False;
+            else 
+               Last_Length := k;
+               k := Last_Length + Input (I).Length + 1;
+               if not (k >= 1 and k <= Natural'Last and k > Last_Length) then 
+                  k := 0;
+                  Error := True;
+                  return False;
+               end if;
+            end if;
+
+         end loop;
+
+         pragma Assert(Valid(Input, Input'Last));
+         return True;
+      end if;
+   end Is_Valid;
+   
+   
+--     Pre => Valid(Input,Input'Last) and then Output'Length >= To_Integer(Decoded_Length(Input)),
+--     Post => Output_Length = To_Integer(Decoded_Length(Input));
    procedure Decode_Fast
      (Input         : in     Token_Array; Output : in out Byte_Array;
       Output_Length :    out Natural)
    is
+      k : Natural := 0;
    begin
-      -- IMPLEMENT THIS
-      Output_Length         := 0;
-      
---        Output (Output'First) := 'X'; -- for debugging
+      Output_Length := 0;
+--        if Input'Length = 0 then 
+--           Output_Length         := 0;
+--        else
+--           for I in Input'First..Input'Last loop
+--              for J in 0 .. Input (I).Length - 1 loop
+--                 Output (1 - 1 + Output'First + k + J) := Output (1 - 1 + Output'First + k + J - Input (I).Offset);
+--              end loop;
+--              k := Output_Length;
+--              Output (Output'First - 1 + k + Input (I).Length + 1) := Input (I).Next_C; 
+--              Output_Length := Output_Length + Input (I).Length + 1;
+--           end loop;
+--        end if;
    end Decode_Fast;
 
 end LZ77;

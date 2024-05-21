@@ -2065,7 +2065,7 @@ module System__default_priority
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant default_priority [#"system.ads" 104 0 0][@model_trace:9516] [@name:Default_Priority] 
+ val constant default_priority [#"system.ads" 104 0 0][@name:Default_Priority] [@model_trace:9522] 
    : int
 
  
@@ -2153,9 +2153,9 @@ module Lz77__token__rep
  use        Standard__character__rep as Standard__character__rep
 
  type __split_fields =
-  { rec__lz77__token__offset [@model_trace:.2585] [@name:Offset] : Standard__natural.natural; rec__lz77__token__length [@model_trace:.2595] [@name:Length] : Standard__natural.natural; rec__lz77__token__next_c [@model_trace:.2605] [@name:Next_C] : Standard__character.character }
+  { rec__lz77__token__offset [@model_trace:.2591] [@name:Offset] : Standard__natural.natural; rec__lz77__token__length [@model_trace:.2601] [@name:Length] : Standard__natural.natural; rec__lz77__token__next_c [@name:Next_C] [@model_trace:.2611] : Standard__character.character }
  
- function __split_fields_rec__lz77__token__offset__projection [@model_trace:.2585] [@name:Offset] 
+ function __split_fields_rec__lz77__token__offset__projection [@model_trace:.2591] [@name:Offset] 
    (a : __split_fields) : Standard__natural.natural =
   a.rec__lz77__token__offset
  
@@ -2163,7 +2163,7 @@ module Lz77__token__rep
  
  meta "inline:no" function __split_fields_rec__lz77__token__offset__projection
  
- function __split_fields_rec__lz77__token__length__projection [@model_trace:.2595] [@name:Length] 
+ function __split_fields_rec__lz77__token__length__projection [@model_trace:.2601] [@name:Length] 
    (a : __split_fields) : Standard__natural.natural =
   a.rec__lz77__token__length
  
@@ -2171,7 +2171,7 @@ module Lz77__token__rep
  
  meta "inline:no" function __split_fields_rec__lz77__token__length__projection
  
- function __split_fields_rec__lz77__token__next_c__projection [@model_trace:.2605] [@name:Next_C] 
+ function __split_fields_rec__lz77__token__next_c__projection [@name:Next_C] [@model_trace:.2611] 
    (a : __split_fields) : Standard__character.character =
   a.rec__lz77__token__next_c
  
@@ -2967,7 +2967,7 @@ module Lz77__decode__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 95 0 0][@model_projected] [@name:Input] [@model_trace:3008] 
+ val constant input [#"lz77.ads" 95 0 0][@model_projected] [@name:Input] [@model_trace:3014] 
    : Lz77__token_array.token_array
 
  
@@ -3019,7 +3019,7 @@ module Ada__text_io__put__4__item
  use        "int".Int
  use        Standard__string as Standard__string
 
- val constant item [#"a-textio.ads" 465 0 0][@name:Item] [@model_trace:7751] [@model_projected] 
+ val constant item [#"a-textio.ads" 465 0 0][@name:Item] [@model_trace:7757] [@model_projected] 
    : Standard__string.string
 
  
@@ -3246,7 +3246,7 @@ module Ada__integer_text_io__put__2__item
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant item [#"a-tiinio.ads" 81 0 0][@name:Item] [@model_trace:21461] 
+ val constant item [#"a-tiinio.ads" 81 0 0][@name:Item] [@model_trace:21467] 
    : int
 
  
@@ -3269,7 +3269,7 @@ module Ada__integer_text_io__put__2__width
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant width [#"a-tiinio.ads" 82 0 0][@model_trace:21470] [@name:Width] 
+ val constant width [#"a-tiinio.ads" 82 0 0][@model_trace:21476] [@name:Width] 
    : int
 
  
@@ -3292,7 +3292,7 @@ module Ada__integer_text_io__put__2__base
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant base [#"a-tiinio.ads" 83 0 0][@name:Base] [@model_trace:21480] 
+ val constant base [#"a-tiinio.ads" 83 0 0][@name:Base] [@model_trace:21486] 
    : int
 
  
@@ -3383,7 +3383,7 @@ module Ada__text_io__new_line__2__spacing
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant spacing [#"a-textio.ads" 264 0 0][@name:Spacing] [@model_trace:6203] 
+ val constant spacing [#"a-textio.ads" 264 0 0][@model_trace:6209] [@name:Spacing] 
    : int
 
  
@@ -3463,7 +3463,7 @@ module Ada__text_io__put__2__item
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant item [#"a-textio.ads" 392 0 0][@name:Item] [@model_trace:7258] 
+ val constant item [#"a-textio.ads" 392 0 0][@name:Item] [@model_trace:7264] 
    : int
 
  
@@ -3543,7 +3543,7 @@ module Lz77__is_valid__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 101 0 0][@model_trace:3063] [@model_projected] [@name:Input] 
+ val constant input [#"lz77.ads" 101 0 0][@model_trace:3069] [@model_projected] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -3567,7 +3567,7 @@ module Lz77__valid__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 65 0 0][@model_projected] [@name:Input] [@model_trace:2844] 
+ val constant input [#"lz77.ads" 65 0 0][@model_projected] [@name:Input] [@model_trace:2850] 
    : Lz77__token_array.token_array
 
  
@@ -3590,7 +3590,7 @@ module Lz77__valid__upto
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant upto [#"lz77.ads" 65 0 0][@model_trace:2853] [@name:Upto] 
+ val constant upto [#"lz77.ads" 65 0 0][@model_trace:2859] [@name:Upto] 
    : int
 
  
@@ -4273,7 +4273,7 @@ module Lz77__length_acc__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 41 0 0][@model_projected] [@model_trace:2665] [@name:Input] 
+ val constant input [#"lz77.ads" 41 0 0][@model_trace:2671] [@model_projected] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -4338,7 +4338,7 @@ module Lz77__one
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant one [#"lz77.ads" 33 0 0][@model_trace:2645] [@name:One] 
+ val constant one [#"lz77.ads" 33 0 0][@name:One] [@model_trace:2651] 
    : int
 
  
@@ -4439,7 +4439,7 @@ module Lz77__decode_fast__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 114 0 0][@model_trace:3103] [@model_projected] [@name:Input] 
+ val constant input [#"lz77.ads" 114 0 0][@model_trace:3109] [@model_projected] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -4463,7 +4463,7 @@ module Lz77__decoded_length__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 54 0 0][@model_projected] [@model_trace:2788] [@name:Input] 
+ val constant input [#"lz77.ads" 54 0 0][@model_trace:2794] [@model_projected] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -4673,13 +4673,13 @@ module Lz77__decode__output
  use        Standard__integer as Standard__integer
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
- val output [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3017]  : Array__Int__Standard__character.map__ref 
+ val output [#"lz77.ads" 95 0 0][@name:Output] [@model_trace:3023] [@model_projected]  : Array__Int__Standard__character.map__ref 
  
- val constant output__first [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3017'First] 
+ val constant output__first [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3023'First] 
    : Standard__integer.integer
 
  
- val constant output__last [#"lz77.ads" 95 0 0][@name:Output] [@model_trace:3017'Last] [@model_projected] 
+ val constant output__last [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3023'Last] 
    : Standard__integer.integer
 
  
@@ -4702,7 +4702,7 @@ module Lz77__decode__output_length
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val output_length [#"lz77.ads" 96 0 0][@name:Output_Length] [@model_trace:3026] [@model_projected]  : int__ref 
+ val output_length [#"lz77.ads" 96 0 0][@name:Output_Length] [@model_projected] [@model_trace:3032]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4723,7 +4723,7 @@ module Lz77__decode__error
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val error [#"lz77.ads" 96 0 0][@model_projected] [@name:Error] [@model_trace:3035]  : bool__ref 
+ val error [#"lz77.ads" 96 0 0][@model_projected] [@name:Error] [@model_trace:3041]  : bool__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4744,7 +4744,7 @@ module Ada__integer_text_io__default_width
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val default_width [#"a-tiinio.ads" 48 0 0][@model_trace:21232] [@model_projected] [@name:Default_Width]  : int__ref 
+ val default_width [#"a-tiinio.ads" 48 0 0][@model_projected] [@model_trace:21238] [@name:Default_Width]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4765,7 +4765,7 @@ module Ada__integer_text_io__default_base
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val default_base [#"a-tiinio.ads" 49 0 0][@model_trace:21243] [@name:Default_Base] [@model_projected]  : int__ref 
+ val default_base [#"a-tiinio.ads" 49 0 0][@name:Default_Base] [@model_trace:21249] [@model_projected]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4809,13 +4809,13 @@ module Lz77__decode_fast__output
  use        Standard__integer as Standard__integer
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
- val output [#"lz77.ads" 114 0 0][@name:Output] [@model_projected] [@model_trace:3112]  : Array__Int__Standard__character.map__ref 
+ val output [#"lz77.ads" 114 0 0][@model_trace:3118] [@name:Output] [@model_projected]  : Array__Int__Standard__character.map__ref 
  
- val constant output__first [#"lz77.ads" 114 0 0][@model_trace:3112'First] [@name:Output] [@model_projected] 
+ val constant output__first [#"lz77.ads" 114 0 0][@name:Output] [@model_trace:3118'First] [@model_projected] 
    : Standard__integer.integer
 
  
- val constant output__last [#"lz77.ads" 114 0 0][@name:Output] [@model_trace:3112'Last] [@model_projected] 
+ val constant output__last [#"lz77.ads" 114 0 0][@name:Output] [@model_trace:3118'Last] [@model_projected] 
    : Standard__integer.integer
 
  
@@ -4838,7 +4838,7 @@ module Lz77__decode_fast__output_length
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val output_length [#"lz77.ads" 115 0 0][@name:Output_Length] [@model_projected] [@model_trace:3121]  : int__ref 
+ val output_length [#"lz77.ads" 115 0 0][@name:Output_Length] [@model_projected] [@model_trace:3127]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4859,7 +4859,7 @@ module Main__L_2__index
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val index [#"main.adb" 51 0 0][@model_projected] [@name:Index] [@model_trace:2493]  : int__ref 
+ val index [#"main.adb" 51 0 0][@model_projected] [@name:Index] [@model_trace:2499]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -6258,35 +6258,18 @@ module Lz77__decode___axiom
  use        Standard__positive as Standard__positive
  use        Standard__integer__rep as Standard__integer__rep
  use        Lz77__token_array as Lz77__token_array
- use        Ada__integer_text_io__default_width as Ada__integer_text_io__default_width
- use        Ada__integer_text_io__default_base as Ada__integer_text_io__default_base
  use        Lz77__byte_array as Lz77__byte_array
  use        Array__Int__Standard__character as Array__Int__Standard__character
- use        Ada__text_io__standard_in as Ada__text_io__standard_in
- use        Ada__text_io__file_system as Ada__text_io__file_system
- use        Ada__text_io__standard_out as Ada__text_io__standard_out
- use        Ada__text_io__standard_err as Ada__text_io__standard_err
- use        Ada__text_io__current_in as Ada__text_io__current_in
- use        Ada__text_io__current_out as Ada__text_io__current_out
- use        Ada__text_io__current_err as Ada__text_io__current_err
- use        Ada__text_io__standard_in as Ada__text_io__standard_in
- use        Ada__text_io__file_system as Ada__text_io__file_system
- use        Ada__text_io__standard_out as Ada__text_io__standard_out
- use        Ada__text_io__standard_err as Ada__text_io__standard_err
- use        Ada__text_io__current_in as Ada__text_io__current_in
- use        Ada__text_io__current_out as Ada__text_io__current_out
- use        Ada__text_io__current_err as Ada__text_io__current_err
 
  val decode 
    (input : Lz77__token_array.token_array) (output : Array__Int__Standard__character.map__ref) (output__first : Standard__integer.integer) (output__last : Standard__integer.integer) (output_length : int__ref) (error : bool__ref) : unit
   requires {  true }
   ensures {  ( (if ((error.bool__content = True)) then (
-   ( [@GP_Pretty_Ada:3053] (output_length.int__content = (0 : int)) )) else (
-   ( [@GP_Pretty_Ada:3054] true ))) /\ ( (if (True) then (
+   ( [@GP_Pretty_Ada:3059] (output_length.int__content = (0 : int)) )) else (
+   ( [@GP_Pretty_Ada:3060] true ))) /\ ( (if (True) then (
    true) else (
    (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)))) /\ (Standard__natural___axiom.dynamic_invariant output_length.int__content True True True True) ) ) }
-  reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err, Ada__integer_text_io__default_width.default_width, Ada__integer_text_io__default_base.default_base}
-  writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err, output, output_length, error}
+  writes {output, output_length, error}
 
 end
 
@@ -6344,7 +6327,7 @@ module Ada__text_io__put__4___axiom
  val put__4 
    (item : Standard__string.string) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:7770] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7776] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:7776] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7782] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -6403,7 +6386,7 @@ module Ada__integer_text_io__put__2___axiom
  val put__2 
    (item : int) (width : int) (base : int) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:21438] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:21442] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:21444] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:21448] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -6462,7 +6445,7 @@ module Ada__text_io__new_line__2___axiom
  val new_line__2 
    (spacing : int) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:6223] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:6229] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:6229] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:6235] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -6521,7 +6504,7 @@ module Ada__text_io__put__2___axiom
  val put__2 
    (item : int) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:7277] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7283] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:7283] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7289] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -6561,22 +6544,22 @@ module Lz77__length_acc___axiom
 
  val length_acc 
    (input : Lz77__token_array.token_array) : Lz77__partial_length.partial_length
-  requires {  ( [@GP_Pretty_Ada:14835] ((Lz77__token_array.length input) > (0 : int)) ) }
-  ensures {  ( ( (result = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard result input) )/\( (Lz77__partial_length___axiom.dynamic_invariant result True False True True) /\ ( ( ( [@GP_Pretty_Ada:2696] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:2706] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@model_trace:2711] [@name:I]  : int.
-   ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:2726] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
+  requires {  ( [@GP_Pretty_Ada:14841] ((Lz77__token_array.length input) > (0 : int)) ) }
+  ensures {  ( ( (result = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard result input) )/\( (Lz77__partial_length___axiom.dynamic_invariant result True False True True) /\ ( ( ( [@GP_Pretty_Ada:2702] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:2712] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@model_trace:2717] [@name:I]  : int.
+   ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:2732] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
     Big_integers__zero.zero) else (
-    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:2755] [@name:J]  : int.
-    ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:2776] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) ) ) }
+    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@name:J] [@model_trace:2761]  : int.
+    ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:2782] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) ) ) }
  
  axiom length_acc__post_axiom :
   (forall input   : Lz77__token_array.token_array [(Lz77__length_acc.length_acc input)].
-   ( ( (Lz77__token_array___axiom.dynamic_invariant input True True True True) /\ ( [@GP_Pretty_Ada:14835] ((Lz77__token_array.length input) > (0 : int)) ) ) -> (let result = (Lz77__length_acc.length_acc input) in (
+   ( ( (Lz77__token_array___axiom.dynamic_invariant input True True True True) /\ ( [@GP_Pretty_Ada:14841] ((Lz77__token_array.length input) > (0 : int)) ) ) -> (let result = (Lz77__length_acc.length_acc input) in (
     (if ((Lz77__length_acc.length_acc__function_guard result input)) then (
-     ( ( ( ( ( [@GP_Pretty_Ada:2696] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:2706] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@model_trace:2711] [@name:I]  : int.
-      ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:2726] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
+     ( ( ( ( ( [@GP_Pretty_Ada:2702] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:2712] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@model_trace:2717] [@name:I]  : int.
+      ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:2732] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
        Big_integers__zero.zero) else (
-       (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:2755] [@name:J]  : int.
-       ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:2776] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) /\ (Lz77__partial_length___axiom.dynamic_invariant result True False True True) )/\true )) else true)))
+       (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@name:J] [@model_trace:2761]  : int.
+       ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:2782] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) /\ (Lz77__partial_length___axiom.dynamic_invariant result True False True True) )/\true )) else true)))
     ))
 
 end
@@ -6616,7 +6599,7 @@ module Lz77__valid___axiom
  val valid 
    (input : Lz77__token_array.token_array) (upto : int) : bool
   requires {  true }
-  ensures {  ( ( (result = (Lz77__valid.valid input upto)) /\ (Lz77__valid.valid__function_guard result input upto) )/\( (result = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:2910] [@name:I]  : int.
+  ensures {  ( ( (result = (Lz77__valid.valid input upto)) /\ (Lz77__valid.valid__function_guard result input upto) )/\( (result = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:2916] [@name:I]  : int.
    ( ( ((Lz77__token_array.first input) <= i) /\ (i <= upto) ) -> ( ( ((Big_integers__in_range.in_range__logic (let temp___279 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_278 : Lz77__partial_length.partial_length.
     ( (temp___result_278 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_278 input) )) in (
     (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___279) i)))
@@ -6642,7 +6625,7 @@ module Lz77__valid___axiom
   (forall upto   : int [(Lz77__valid.valid input upto)].
    ( (let result = (Lz77__valid.valid input upto) in (
     (Lz77__valid.valid__function_guard result input upto)))
-    -> ( ((Lz77__valid.valid input upto) = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:2910] [@name:I]  : int.
+    -> ( ((Lz77__valid.valid input upto) = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:2916] [@name:I]  : int.
     ( ( ((Lz77__token_array.first input) <= i) /\ (i <= upto) ) -> ( ( ((Big_integers__in_range.in_range__logic (let temp___285 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_284 : Lz77__partial_length.partial_length.
      ( (temp___result_284 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_284 input) )) in (
      (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___285) i)))
@@ -6670,9 +6653,9 @@ module Lz77__is_valid___axiom
    (input : Lz77__token_array.token_array) : bool
   requires {  true }
   ensures {  ( ( (result = (Lz77__is_valid.is_valid input)) /\ (Lz77__is_valid.is_valid__function_guard result input) )/\(if ((result = True)) then (
-   ( [@GP_Pretty_Ada:3087] ((epsilon temp___result_288 : bool.
+   ( [@GP_Pretty_Ada:3093] ((epsilon temp___result_288 : bool.
     ( (temp___result_288 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_288 input (Lz77__token_array.last input)) )) = True) )) else (
-   ( [@GP_Pretty_Ada:3088] not ( ((epsilon temp___result_289 : bool.
+   ( [@GP_Pretty_Ada:3094] not ( ((epsilon temp___result_289 : bool.
     ( (temp___result_289 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_289 input (Lz77__token_array.last input)) )) = True) ) ))) ) }
  
  axiom is_valid__post_axiom :
@@ -6680,9 +6663,9 @@ module Lz77__is_valid___axiom
    ( (Lz77__token_array___axiom.dynamic_invariant input True True True True) -> (let result = (Lz77__is_valid.is_valid input) in (
     (if ((Lz77__is_valid.is_valid__function_guard result input)) then (
      ( ( (if ((result = True)) then (
-      ( [@GP_Pretty_Ada:3087] ((epsilon temp___result_291 : bool.
+      ( [@GP_Pretty_Ada:3093] ((epsilon temp___result_291 : bool.
        ( (temp___result_291 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_291 input (Lz77__token_array.last input)) )) = True) )) else (
-      ( [@GP_Pretty_Ada:3088] not ( ((epsilon temp___result_292 : bool.
+      ( [@GP_Pretty_Ada:3094] not ( ((epsilon temp___result_292 : bool.
        ( (temp___result_292 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_292 input (Lz77__token_array.last input)) )) = True) ) ))) /\ true )/\true )) else true)))
     ))
 
@@ -6755,10 +6738,10 @@ module Lz77__decode_fast___axiom
 
  val decode_fast 
    (input : Lz77__token_array.token_array) (output : Array__Int__Standard__character.map__ref) (output__first : Standard__integer.integer) (output__last : Standard__integer.integer) (output_length : int__ref) : unit
-  requires {  ( ( [@GP_Pretty_Ada:3141] ((epsilon temp___result_300 : bool.
-   ( (temp___result_300 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_300 input (Lz77__token_array.last input)) )) = True) ) /\ ( [@GP_Pretty_Ada:3147] ((Integer.length (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_301 : Big_integers__big_integer.big_integer.
+  requires {  ( ( [@GP_Pretty_Ada:3147] ((epsilon temp___result_300 : bool.
+   ( (temp___result_300 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_300 input (Lz77__token_array.last input)) )) = True) ) /\ ( [@GP_Pretty_Ada:3153] ((Integer.length (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_301 : Big_integers__big_integer.big_integer.
    ( (temp___result_301 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_301 input) )))) ) ) }
-  ensures {  ( ( [@GP_Pretty_Ada:15407] (output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_302 : Big_integers__big_integer.big_integer.
+  ensures {  ( ( [@GP_Pretty_Ada:15413] (output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_302 : Big_integers__big_integer.big_integer.
    ( (temp___result_302 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_302 input) )))) ) /\ ( (if (True) then (
    true) else (
    (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)))) /\ (Standard__natural___axiom.dynamic_invariant output_length.int__content True True True True) ) ) }
@@ -7064,10 +7047,14 @@ module Main__subprogram_def
     ( [@GP_Sloc:main.adb:48:7] ([#"main.adb" 48 0 0] ( (Ada__integer_text_io__put__2___axiom.put__2(Main__blen.blen.int__content) (Ada__integer_text_io__default_width.default_width.int__content) (Ada__integer_text_io__default_base.default_base.int__content)) )) );
     ( [@GP_Sloc:main.adb:49:7] ([#"main.adb" 49 0 0] ()) );
     ( [@GP_Sloc:main.adb:49:7] ([#"main.adb" 49 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) );
+    ( [@GP_Sloc:main.adb:50:7] ([#"main.adb" 50 0 0] ( [#"main.adb" 50 0 0] begin ensures {true} let _ = (let _ = (Main__blen.blen.int__content = (4 : int)) in (
+     ()))
+     in () end ;
+    [#"main.adb" 50 0 0] assert { [#"main.adb" 50 0 0] ([#"main.adb" 50 0 0] ( [@GP_Shape:if__pragargs__cmp] [@vc:annotation] [@GP_Reason:VC_ASSERT] [@comment:      pragma Assert (BLen = 4);                      ^ main.adb:50:22:VC_ASSERT] [@GP_Id:3] [@GP_Sloc:main.adb:50:22] ( [@GP_Pretty_Ada:2496] [@GP_Sloc:main.adb:50:22] (Main__blen.blen.int__content = (4 : int)) ) )) } )) );
     ( [@GP_Sloc:main.adb:51:20] ([#"main.adb" 51 0 0] ()) );
     ( [@GP_Sloc:main.adb:51:31] ([#"main.adb" 51 0 0] ()) );
     ( [@GP_Sloc:main.adb:51:41] ([#"main.adb" 51 0 0] ()) );
-    ( [@GP_Sloc:main.adb:51:46] ([#"main.adb" 51 0 0] ([#"main.adb" 51 0 0] ( (let main__L_2__R11b__assume = (([#"main.adb" 51 0 0] ( [@comment:      for Index in B'First .. B'First + BLen - 1 loop                                       ^ main.adb:51:39:VC_OVERFLOW_CHECK] [@GP_Sloc:main.adb:51:39] [@GP_Shape:if__R11b_decl__sub__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:3] (Standard__integer.range_check_(((1 : int) + Main__blen.blen.int__content))) )) - (1 : int)) in (
+    ( [@GP_Sloc:main.adb:51:46] ([#"main.adb" 51 0 0] ([#"main.adb" 51 0 0] ( (let main__L_2__R11b__assume = (([#"main.adb" 51 0 0] ( [@comment:      for Index in B'First .. B'First + BLen - 1 loop                                       ^ main.adb:51:39:VC_OVERFLOW_CHECK] [@GP_Sloc:main.adb:51:39] [@GP_Shape:if__R11b_decl__sub__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:4] (Standard__integer.range_check_(((1 : int) + Main__blen.blen.int__content))) )) - (1 : int)) in (
       assume {  (main__L_2__R11b__assume = Main__L_2__R11b.r11b) }))
     ;
      assume {  (Standard__integer___axiom.dynamic_invariant Main__L_2__R11b.r11b True False True True) } ))) );
@@ -7092,7 +7079,7 @@ module Main__subprogram_def
         ;
         ();
         ( [@GP_Sloc:main.adb:52:10] ([#"main.adb" 52 0 0] ()) );
-        ( [@GP_Sloc:main.adb:52:10] ([#"main.adb" 52 0 0] ( (Ada__text_io__put__2___axiom.put__2((Standard__character__rep.to_rep((Array__Int__Standard__character.get(Main__b.b.Array__Int__Standard__character.map__content) (( [#"main.adb" 52 0 0] assert { [#"main.adb" 52 0 0] ([#"main.adb" 52 0 0] ( [@vc:annotation] [@comment:         Put (Item => B (Index));                          ^ main.adb:52:26:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Sloc:main.adb:52:26] [@GP_Id:4] [@GP_Shape:if__L_2_while__call_put__2__ixdcomp] ( (Main__TTbSP1.first <= Main__L_2__index.index.int__content) /\ (Main__L_2__index.index.int__content <= Main__TTbSP1.last) ) )) };
+        ( [@GP_Sloc:main.adb:52:10] ([#"main.adb" 52 0 0] ( (Ada__text_io__put__2___axiom.put__2((Standard__character__rep.to_rep((Array__Int__Standard__character.get(Main__b.b.Array__Int__Standard__character.map__content) (( [#"main.adb" 52 0 0] assert { [#"main.adb" 52 0 0] ([#"main.adb" 52 0 0] ( [@vc:annotation] [@comment:         Put (Item => B (Index));                          ^ main.adb:52:26:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Sloc:main.adb:52:26] [@GP_Shape:if__L_2_while__call_put__2__ixdcomp] [@GP_Id:5] ( (Main__TTbSP1.first <= Main__L_2__index.index.int__content) /\ (Main__L_2__index.index.int__content <= Main__TTbSP1.last) ) )) };
         Main__L_2__index.index.int__content ))))))) )) );
         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop main.adb:51 *)
         ;
