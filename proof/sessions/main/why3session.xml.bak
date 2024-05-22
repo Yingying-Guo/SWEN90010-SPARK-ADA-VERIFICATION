@@ -17,14 +17,14 @@
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
   <goal name="VC def.0" expl="postcondition">
-  </goal>
-  <goal name="VC def.1" expl="postcondition">
-  </goal>
-  <goal name="VC def.2" expl="postcondition">
   <proof prover="0" obsolete="true"><result status="timeout"/></proof>
   <proof prover="1" obsolete="true"><result status="highfailure"/></proof>
   <proof prover="2" obsolete="true"><result status="timeout" steps="30245"/></proof>
   <proof prover="3" obsolete="true"><result status="unknown" steps="59748"/></proof>
+  </goal>
+  <goal name="VC def.1" expl="postcondition">
+  </goal>
+  <goal name="VC def.2" expl="postcondition">
   </goal>
   <goal name="VC def.3" expl="precondition">
   </goal>
@@ -59,7 +59,7 @@
   <proof prover="2"><result status="valid" steps="14"/></proof>
   </goal>
   <goal name="VC def.17" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" steps="1573"/></proof>
+  <proof prover="2"><result status="valid" steps="1564"/></proof>
   </goal>
   <goal name="VC def.18" expl="precondition">
   </goal>
@@ -70,7 +70,7 @@
   <goal name="VC def.21" expl="postcondition">
   </goal>
   <goal name="VC def.22" expl="assertion" proved="true">
-  <proof prover="2"><result status="valid" steps="1604"/></proof>
+  <proof prover="2"><result status="valid" steps="1595"/></proof>
   </goal>
   <goal name="VC def.23" expl="precondition" proved="true">
   <proof prover="2"><result status="valid" steps="17"/></proof>

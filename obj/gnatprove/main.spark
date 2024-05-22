@@ -163,7 +163,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 1573,
+              "steps": 1564,
               "time": 0
             }
           },
@@ -214,7 +214,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 1604,
+              "steps": 1595,
               "time": 0
             }
           },
@@ -713,14 +713,14 @@
     }
   ],
   "timings": {
-    "marking": 9.48600005358458E-04,
-    "globals (basic)": 1.30537003278732E-02,
-    "globals/properties (advanced)": 1.63206998258829E-02,
-    "flow analysis": 1.26454997807741E-02,
-    "codepeer results": 4.09999984185561E-06,
-    "init_why_sections": 3.03700013319030E-04,
-    "translation of standard": 1.66599999647588E-03,
-    "translation of compilation unit": 3.31394001841545E-02,
-    "proof": 4.89718288183212E-01
+    "marking": 9.01499995961785E-04,
+    "globals (basic)": 1.41756003722548E-02,
+    "globals/properties (advanced)": 1.63350999355316E-02,
+    "flow analysis": 1.28058996051550E-02,
+    "codepeer results": 4.80000016978011E-06,
+    "init_why_sections": 3.35599994286895E-04,
+    "translation of standard": 1.62200001068413E-03,
+    "translation of compilation unit": 3.48771996796131E-02,
+    "proof": 4.71634805202484E-01
   }
 }
