@@ -1859,9 +1859,9 @@ module Lz77__token__rep
  use        Standard__character__rep as Standard__character__rep
 
  type __split_fields =
-  { rec__lz77__token__offset [@name:Offset] [@model_trace:.3513] : Standard__natural.natural; rec__lz77__token__length [@model_trace:.3523] [@name:Length] : Standard__natural.natural; rec__lz77__token__next_c [@model_trace:.3533] [@name:Next_C] : Standard__character.character }
+  { rec__lz77__token__offset [@name:Offset] [@model_trace:.3446] : Standard__natural.natural; rec__lz77__token__length [@model_trace:.3456] [@name:Length] : Standard__natural.natural; rec__lz77__token__next_c [@model_trace:.3466] [@name:Next_C] : Standard__character.character }
  
- function __split_fields_rec__lz77__token__offset__projection [@name:Offset] [@model_trace:.3513] 
+ function __split_fields_rec__lz77__token__offset__projection [@name:Offset] [@model_trace:.3446] 
    (a : __split_fields) : Standard__natural.natural =
   a.rec__lz77__token__offset
  
@@ -1869,7 +1869,7 @@ module Lz77__token__rep
  
  meta "inline:no" function __split_fields_rec__lz77__token__offset__projection
  
- function __split_fields_rec__lz77__token__length__projection [@model_trace:.3523] [@name:Length] 
+ function __split_fields_rec__lz77__token__length__projection [@model_trace:.3456] [@name:Length] 
    (a : __split_fields) : Standard__natural.natural =
   a.rec__lz77__token__length
  
@@ -1877,7 +1877,7 @@ module Lz77__token__rep
  
  meta "inline:no" function __split_fields_rec__lz77__token__length__projection
  
- function __split_fields_rec__lz77__token__next_c__projection [@model_trace:.3533] [@name:Next_C] 
+ function __split_fields_rec__lz77__token__next_c__projection [@model_trace:.3466] [@name:Next_C] 
    (a : __split_fields) : Standard__character.character =
   a.rec__lz77__token__next_c
  
@@ -2844,7 +2844,7 @@ module Lz77__one
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant one [#"lz77.ads" 33 0 0][@model_trace:3573] [@name:One] 
+ val constant one [#"lz77.ads" 33 0 0][@model_trace:3506] [@name:One] 
    : int
 
  
@@ -2860,7 +2860,7 @@ module Lz77__length_acc__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 41 0 0][@model_projected] [@name:Input] [@model_trace:3593] 
+ val constant input [#"lz77.ads" 41 0 0][@model_projected] [@name:Input] [@model_trace:3526] 
    : Lz77__token_array.token_array
 
  
@@ -2983,7 +2983,7 @@ module Lz77__decoded_length__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 54 0 0][@model_projected] [@name:Input] [@model_trace:3716] 
+ val constant input [#"lz77.ads" 54 0 0][@model_projected] [@model_trace:3649] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -3022,7 +3022,7 @@ module Lz77__valid__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 65 0 0][@model_projected] [@name:Input] [@model_trace:3772] 
+ val constant input [#"lz77.ads" 65 0 0][@model_projected] [@name:Input] [@model_trace:3705] 
    : Lz77__token_array.token_array
 
  
@@ -3045,7 +3045,7 @@ module Lz77__valid__upto
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant upto [#"lz77.ads" 65 0 0][@model_trace:3781] [@name:Upto] 
+ val constant upto [#"lz77.ads" 65 0 0][@model_trace:3714] [@name:Upto] 
    : int
 
  
@@ -3125,7 +3125,7 @@ module Lz77__put__t
  use        "int".Int
  use        Lz77__token as Lz77__token
 
- val constant t [#"lz77.ads" 87 0 0][@model_projected] [@model_trace:3918] [@name:T] 
+ val constant t [#"lz77.ads" 87 0 0][@model_projected] [@name:T] [@model_trace:3851] 
    : Lz77__token.token
 
  
@@ -3149,7 +3149,7 @@ module Lz77__decode__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 95 0 0][@model_trace:3936] [@model_projected] [@name:Input] 
+ val constant input [#"lz77.ads" 95 0 0][@model_projected] [@name:Input] [@model_trace:3869] 
    : Lz77__token_array.token_array
 
  
@@ -3173,7 +3173,7 @@ module Lz77__is_valid__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 101 0 0][@model_trace:3991] [@model_projected] [@name:Input] 
+ val constant input [#"lz77.ads" 101 0 0][@model_trace:3924] [@model_projected] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -3211,7 +3211,7 @@ module Lz77__decode_fast__input
  use        "int".Int
  use        Lz77__token_array as Lz77__token_array
 
- val constant input [#"lz77.ads" 114 0 0][@model_projected] [@model_trace:4031] [@name:Input] 
+ val constant input [#"lz77.ads" 114 0 0][@model_trace:3964] [@model_projected] [@name:Input] 
    : Lz77__token_array.token_array
 
  
@@ -3897,7 +3897,7 @@ module Ada__text_io__put__4__item
  use        "int".Int
  use        Standard__string as Standard__string
 
- val constant item [#"a-textio.ads" 465 0 0][@name:Item] [@model_projected] [@model_trace:8679] 
+ val constant item [#"a-textio.ads" 465 0 0][@name:Item] [@model_trace:8612] [@model_projected] 
    : Standard__string.string
 
  
@@ -4124,7 +4124,7 @@ module Ada__integer_text_io__put__2__item
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant item [#"a-tiinio.ads" 81 0 0][@name:Item] [@model_trace:21307] 
+ val constant item [#"a-tiinio.ads" 81 0 0][@model_trace:21240] [@name:Item] 
    : int
 
  
@@ -4147,7 +4147,7 @@ module Ada__integer_text_io__put__2__width
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant width [#"a-tiinio.ads" 82 0 0][@model_trace:21316] [@name:Width] 
+ val constant width [#"a-tiinio.ads" 82 0 0][@model_trace:21249] [@name:Width] 
    : int
 
  
@@ -4170,7 +4170,7 @@ module Ada__integer_text_io__put__2__base
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant base [#"a-tiinio.ads" 83 0 0][@model_trace:21326] [@name:Base] 
+ val constant base [#"a-tiinio.ads" 83 0 0][@name:Base] [@model_trace:21259] 
    : int
 
  
@@ -4261,7 +4261,7 @@ module Ada__text_io__new_line__2__spacing
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant spacing [#"a-textio.ads" 264 0 0][@name:Spacing] [@model_trace:7131] 
+ val constant spacing [#"a-textio.ads" 264 0 0][@name:Spacing] [@model_trace:7064] 
    : int
 
  
@@ -4340,7 +4340,7 @@ module Ada__text_io__put__2__item
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant item [#"a-textio.ads" 392 0 0][@name:Item] [@model_trace:8186] 
+ val constant item [#"a-textio.ads" 392 0 0][@model_trace:8119] [@name:Item] 
    : int
 
  
@@ -4803,13 +4803,13 @@ module Lz77__decode__output
  use        Standard__integer as Standard__integer
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
- val output [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3945]  : Array__Int__Standard__character.map__ref 
+ val output [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3878]  : Array__Int__Standard__character.map__ref 
  
- val constant output__first [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3945'First] 
+ val constant output__first [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3878'First] 
    : Standard__integer.integer
 
  
- val constant output__last [#"lz77.ads" 95 0 0][@name:Output] [@model_projected] [@model_trace:3945'Last] 
+ val constant output__last [#"lz77.ads" 95 0 0][@name:Output] [@model_trace:3878'Last] [@model_projected] 
    : Standard__integer.integer
 
  
@@ -4832,7 +4832,7 @@ module Lz77__decode__output_length
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val output_length [#"lz77.ads" 96 0 0][@name:Output_Length] [@model_projected] [@model_trace:3954]  : int__ref 
+ val output_length [#"lz77.ads" 96 0 0][@model_trace:3887] [@name:Output_Length] [@model_projected]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4853,7 +4853,7 @@ module Lz77__decode__error
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val error [#"lz77.ads" 96 0 0][@model_trace:3963] [@model_projected] [@name:Error]  : bool__ref 
+ val error [#"lz77.ads" 96 0 0][@model_projected] [@name:Error] [@model_trace:3896]  : bool__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4876,13 +4876,13 @@ module Lz77__decode_fast__output
  use        Standard__integer as Standard__integer
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
- val output [#"lz77.ads" 114 0 0][@model_trace:4040] [@name:Output] [@model_projected]  : Array__Int__Standard__character.map__ref 
+ val output [#"lz77.ads" 114 0 0][@name:Output] [@model_projected] [@model_trace:3973]  : Array__Int__Standard__character.map__ref 
  
- val constant output__first [#"lz77.ads" 114 0 0][@name:Output] [@model_projected] [@model_trace:4040'First] 
+ val constant output__first [#"lz77.ads" 114 0 0][@model_trace:3973'First] [@name:Output] [@model_projected] 
    : Standard__integer.integer
 
  
- val constant output__last [#"lz77.ads" 114 0 0][@name:Output] [@model_trace:4040'Last] [@model_projected] 
+ val constant output__last [#"lz77.ads" 114 0 0][@name:Output] [@model_projected] [@model_trace:3973'Last] 
    : Standard__integer.integer
 
  
@@ -4905,7 +4905,7 @@ module Lz77__decode_fast__output_length
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val output_length [#"lz77.ads" 115 0 0][@name:Output_Length] [@model_trace:4049] [@model_projected]  : int__ref 
+ val output_length [#"lz77.ads" 115 0 0][@name:Output_Length] [@model_projected] [@model_trace:3982]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4978,7 +4978,7 @@ module Ada__integer_text_io__default_width
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val default_width [#"a-tiinio.ads" 48 0 0][@model_projected] [@model_trace:21078] [@name:Default_Width]  : int__ref 
+ val default_width [#"a-tiinio.ads" 48 0 0][@model_trace:21011] [@model_projected] [@name:Default_Width]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -4999,7 +4999,7 @@ module Ada__integer_text_io__default_base
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val default_base [#"a-tiinio.ads" 49 0 0][@model_trace:21089] [@name:Default_Base] [@model_projected]  : int__ref 
+ val default_base [#"a-tiinio.ads" 49 0 0][@name:Default_Base] [@model_projected] [@model_trace:21022]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -5146,7 +5146,7 @@ module Lz77__decode_fast__k
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val k [#"lz77.adb" 212 0 0][@model_trace:3292] [@name:k] [@model_projected]  : int__ref 
+ val k [#"lz77.adb" 212 0 0][@model_trace:3268] [@name:k] [@model_projected]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -5167,7 +5167,7 @@ module Lz77__decode_fast__L_5__i
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val i [#"lz77.adb" 218 0 0][@model_projected] [@name:I] [@model_trace:3317]  : int__ref 
+ val i [#"lz77.adb" 218 0 0][@model_trace:3293] [@model_projected] [@name:I]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -5188,7 +5188,7 @@ module Lz77__decode_fast__L_6__j
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val j [#"lz77.adb" 219 0 0][@model_trace:3336] [@model_projected] [@name:J]  : int__ref 
+ val j [#"lz77.adb" 219 0 0][@model_projected] [@name:J] [@model_trace:3312]  : int__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -6667,22 +6667,22 @@ module Lz77__length_acc___axiom
 
  val length_acc 
    (input : Lz77__token_array.token_array) : Lz77__partial_length.partial_length
-  requires {  ( [@GP_Pretty_Ada:22131] ((Lz77__token_array.length input) > (0 : int)) ) }
-  ensures {  ( ( (result = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard result input) )/\( (Lz77__partial_length___axiom.dynamic_invariant result True False True True) /\ ( ( ( [@GP_Pretty_Ada:3624] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:3634] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@name:I] [@model_trace:3639]  : int.
-   ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:3654] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
+  requires {  ( [@GP_Pretty_Ada:22064] ((Lz77__token_array.length input) > (0 : int)) ) }
+  ensures {  ( ( (result = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard result input) )/\( (Lz77__partial_length___axiom.dynamic_invariant result True False True True) /\ ( ( ( [@GP_Pretty_Ada:3557] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:3567] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@model_trace:3572] [@name:I]  : int.
+   ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:3587] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
     Big_integers__zero.zero) else (
-    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:3683] [@name:J]  : int.
-    ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:3704] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) ) ) }
+    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:3616] [@name:J]  : int.
+    ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:3637] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) ) ) }
  
  axiom length_acc__post_axiom :
   (forall input   : Lz77__token_array.token_array [(Lz77__length_acc.length_acc input)].
-   ( ( (Lz77__token_array___axiom.dynamic_invariant input True True True True) /\ ( [@GP_Pretty_Ada:22131] ((Lz77__token_array.length input) > (0 : int)) ) ) -> (let result = (Lz77__length_acc.length_acc input) in (
+   ( ( (Lz77__token_array___axiom.dynamic_invariant input True True True True) /\ ( [@GP_Pretty_Ada:22064] ((Lz77__token_array.length input) > (0 : int)) ) ) -> (let result = (Lz77__length_acc.length_acc input) in (
     (if ((Lz77__length_acc.length_acc__function_guard result input)) then (
-     ( ( ( ( ( [@GP_Pretty_Ada:3624] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:3634] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@name:I] [@model_trace:3639]  : int.
-      ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:3654] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
+     ( ( ( ( ( [@GP_Pretty_Ada:3557] ((Lz77__partial_length.length result) = (Lz77__token_array.length input)) ) /\ ( [@GP_Pretty_Ada:3567] ((Lz77__partial_length.first result) = (Lz77__token_array.first input)) ) ) /\ (forall i   [@model_trace:3572] [@name:I]  : int.
+      ( ( ((Lz77__token_array.first input) <= i) /\ (i <= (Lz77__token_array.last input)) ) -> ( ( [@GP_Pretty_Ada:3587] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first input))) then (
        Big_integers__zero.zero) else (
-       (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:3683] [@name:J]  : int.
-       ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:3704] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) /\ (Lz77__partial_length___axiom.dynamic_invariant result True False True True) )/\true )) else true)))
+       (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:3616] [@name:J]  : int.
+       ( ( ((Lz77__token_array.first input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:3637] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array result) j)) = True) ) )) ) )) ) /\ (Lz77__partial_length___axiom.dynamic_invariant result True False True True) )/\true )) else true)))
     ))
 
 end
@@ -6769,7 +6769,7 @@ module Lz77__valid___axiom
  val valid 
    (input : Lz77__token_array.token_array) (upto : int) : bool
   requires {  true }
-  ensures {  ( ( (result = (Lz77__valid.valid input upto)) /\ (Lz77__valid.valid__function_guard result input upto) )/\( (result = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:3838] [@name:I]  : int.
+  ensures {  ( ( (result = (Lz77__valid.valid input upto)) /\ (Lz77__valid.valid__function_guard result input upto) )/\( (result = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@name:I] [@model_trace:3771]  : int.
    ( ( ((Lz77__token_array.first input) <= i) /\ (i <= upto) ) -> ( ( ((Big_integers__in_range.in_range__logic (let temp___201 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_200 : Lz77__partial_length.partial_length.
     ( (temp___result_200 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_200 input) )) in (
     (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___201) i)))
@@ -6795,7 +6795,7 @@ module Lz77__valid___axiom
   (forall upto   : int [(Lz77__valid.valid input upto)].
    ( (let result = (Lz77__valid.valid input upto) in (
     (Lz77__valid.valid__function_guard result input upto)))
-    -> ( ((Lz77__valid.valid input upto) = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@model_trace:3838] [@name:I]  : int.
+    -> ( ((Lz77__valid.valid input upto) = True) <-> ( (upto <= (Lz77__token_array.last input)) /\ ( ((Lz77__token_array.length input) = (0 : int)) \/ (forall i   [@name:I] [@model_trace:3771]  : int.
     ( ( ((Lz77__token_array.first input) <= i) /\ (i <= upto) ) -> ( ( ((Big_integers__in_range.in_range__logic (let temp___207 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_206 : Lz77__partial_length.partial_length.
      ( (temp___result_206 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_206 input) )) in (
      (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___207) i)))
@@ -6836,7 +6836,7 @@ module Lz77__put___axiom
    (t : Lz77__token.token) : unit
   requires {  true }
   ensures {  true }
-  reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err, Ada__integer_text_io__default_width.default_width, Ada__integer_text_io__default_base.default_base}
+  reads {Ada__integer_text_io__default_width.default_width, Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err, Ada__integer_text_io__default_base.default_base}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
 end
@@ -6858,8 +6858,8 @@ module Lz77__decode___axiom
    (input : Lz77__token_array.token_array) (output : Array__Int__Standard__character.map__ref) (output__first : Standard__integer.integer) (output__last : Standard__integer.integer) (output_length : int__ref) (error : bool__ref) : unit
   requires {  true }
   ensures {  ( (if ((error.bool__content = True)) then (
-   ( [@GP_Pretty_Ada:3981] (output_length.int__content = (0 : int)) )) else (
-   ( [@GP_Pretty_Ada:3982] true ))) /\ ( (if (True) then (
+   ( [@GP_Pretty_Ada:3914] (output_length.int__content = (0 : int)) )) else (
+   ( [@GP_Pretty_Ada:3915] true ))) /\ ( (if (True) then (
    true) else (
    (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)))) /\ (Standard__natural___axiom.dynamic_invariant output_length.int__content True True True True) ) ) }
   writes {output, output_length, error}
@@ -6878,9 +6878,9 @@ module Lz77__is_valid___axiom
    (input : Lz77__token_array.token_array) : bool
   requires {  true }
   ensures {  ( ( (result = (Lz77__is_valid.is_valid input)) /\ (Lz77__is_valid.is_valid__function_guard result input) )/\(if ((result = True)) then (
-   ( [@GP_Pretty_Ada:4015] ((epsilon temp___result_214 : bool.
+   ( [@GP_Pretty_Ada:3948] ((epsilon temp___result_214 : bool.
     ( (temp___result_214 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_214 input (Lz77__token_array.last input)) )) = True) )) else (
-   ( [@GP_Pretty_Ada:4016] not ( ((epsilon temp___result_215 : bool.
+   ( [@GP_Pretty_Ada:3949] not ( ((epsilon temp___result_215 : bool.
     ( (temp___result_215 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_215 input (Lz77__token_array.last input)) )) = True) ) ))) ) }
 
 end
@@ -6905,10 +6905,10 @@ module Lz77__decode_fast___axiom
 
  val decode_fast 
    (input : Lz77__token_array.token_array) (output : Array__Int__Standard__character.map__ref) (output__first : Standard__integer.integer) (output__last : Standard__integer.integer) (output_length : int__ref) : unit
-  requires {  ( ( [@GP_Pretty_Ada:4069] ((epsilon temp___result_217 : bool.
-   ( (temp___result_217 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_217 input (Lz77__token_array.last input)) )) = True) ) /\ ( [@GP_Pretty_Ada:4075] ((Integer.length (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_218 : Big_integers__big_integer.big_integer.
+  requires {  ( ( [@GP_Pretty_Ada:4002] ((epsilon temp___result_217 : bool.
+   ( (temp___result_217 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_217 input (Lz77__token_array.last input)) )) = True) ) /\ ( [@GP_Pretty_Ada:4008] ((Integer.length (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_218 : Big_integers__big_integer.big_integer.
    ( (temp___result_218 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_218 input) )))) ) ) }
-  ensures {  ( ( [@GP_Pretty_Ada:22703] (output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_219 : Big_integers__big_integer.big_integer.
+  ensures {  ( ( [@GP_Pretty_Ada:22636] (output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_219 : Big_integers__big_integer.big_integer.
    ( (temp___result_219 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_219 input) )))) ) /\ ( (if (True) then (
    true) else (
    (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)))) /\ (Standard__natural___axiom.dynamic_invariant output_length.int__content True True True True) ) ) }
@@ -7042,7 +7042,7 @@ module Ada__text_io__put__4___axiom
  val put__4 
    (item : Standard__string.string) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:8698] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:8704] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:8631] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:8637] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -7101,7 +7101,7 @@ module Ada__integer_text_io__put__2___axiom
  val put__2 
    (item : int) (width : int) (base : int) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:21284] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:21288] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:21217] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:21221] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -7160,7 +7160,7 @@ module Ada__text_io__new_line__2___axiom
  val new_line__2 
    (spacing : int) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:7151] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7157] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:7084] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:7090] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -7219,7 +7219,7 @@ module Ada__text_io__put__2___axiom
  val put__2 
    (item : int) : unit
   requires {  true }
-  ensures {  ( ( [@GP_Pretty_Ada:8205] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:8211] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:8138] ((old (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__line_length__2.line_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) /\ ( [@GP_Pretty_Ada:8144] ((old (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content) ) = (Ada__text_io__page_length__2.page_length__2 Ada__text_io__standard_in.standard_in.Main.__private__content Ada__text_io__file_system.file_system.Main.__private__content Ada__text_io__standard_out.standard_out.Main.__private__content Ada__text_io__standard_err.standard_err.Main.__private__content Ada__text_io__current_in.current_in.Main.__private__content Ada__text_io__current_out.current_out.Main.__private__content Ada__text_io__current_err.current_err.Main.__private__content)) ) ) }
   reads {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
   writes {Ada__text_io__standard_in.standard_in, Ada__text_io__file_system.file_system, Ada__text_io__standard_out.standard_out, Ada__text_io__standard_err.standard_err, Ada__text_io__current_in.current_in, Ada__text_io__current_out.current_out, Ada__text_io__current_err.current_err}
 
@@ -7307,7 +7307,7 @@ module Lz77__package_def
   ([#"lz77.adb" 152 0 0] ());
   ([#"lz77.adb" 208 0 0] ());
   ();
-  ( [@GP_Sloc:lz77.adb:229:1] ([#"lz77.adb" 229 0 0] ()) ) )
+  ( [@GP_Sloc:lz77.adb:230:1] ([#"lz77.adb" 230 0 0] ()) ) )
 end
 
 (* Module for defining the value of the aggregate at lz77.adb:14, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
@@ -7410,16 +7410,16 @@ module Lz77__length_acc__subprogram_def
  use        Lz77__length_acc__T3b___axiom as Lz77__length_acc__T3b___axiom
  use        Lz77__length_acc__L_1__T4b___axiom as Lz77__length_acc__L_1__T4b___axiom
 
- val lz77__length_acc__result [@name:Length_Acc] [@model_projected] [@model_trace:3586@result]  : Lz77__partial_length.partial_length__ref 
+ val lz77__length_acc__result [@model_trace:3519@result] [@name:Length_Acc] [@model_projected]  : Lz77__partial_length.partial_length__ref 
  
  let def [#"lz77.ads" 41 0 0][@GP_Subp:lz77.ads:41] 
    (__void_param : unit)
   requires { [#"lz77.ads" 41 0 0] true }
-  ensures { [#"lz77.ads" 41 0 0] ([#"lz77.ads" 44 0 0] ( [@comment:     Post => Length_Acc'Result'Length = Input'Length and then              ^ lz77.ads:44:14:VC_POSTCONDITION] [@GP_Sloc:lz77.ads:44:14] [@GP_Reason:VC_POSTCONDITION] [@GP_Id:37] [@GP_Shape:pragargs__andthen] [@model_vc_post] ( ( ( [@GP_Sloc:lz77.ads:44:14] [@GP_Pretty_Ada:3624] ((Lz77__partial_length.length lz77__length_acc__result.Lz77__partial_length.partial_length__content) = (Lz77__token_array.length Lz77__length_acc__input.input)) ) /\ ( [@GP_Sloc:lz77.ads:45:6] [@GP_Pretty_Ada:3634] ((Lz77__partial_length.first lz77__length_acc__result.Lz77__partial_length.partial_length__content) = (Lz77__token_array.first Lz77__length_acc__input.input)) ) ) /\ (forall i [#"lz77.ads" 44 0 0]  [@name:I] [@model_trace:3639]  : int.
-   ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= i) /\ (i <= (Lz77__token_array.last Lz77__length_acc__input.input)) ) -> ( ( [@GP_Pretty_Ada:3654] [@GP_Sloc:lz77.ads:47:9] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first Lz77__length_acc__input.input))) then (
+  ensures { [#"lz77.ads" 41 0 0] ([#"lz77.ads" 44 0 0] ( [@comment:     Post => Length_Acc'Result'Length = Input'Length and then              ^ lz77.ads:44:14:VC_POSTCONDITION] [@GP_Sloc:lz77.ads:44:14] [@GP_Reason:VC_POSTCONDITION] [@GP_Id:37] [@GP_Shape:pragargs__andthen] [@model_vc_post] ( ( ( [@GP_Sloc:lz77.ads:44:14] [@GP_Pretty_Ada:3557] ((Lz77__partial_length.length lz77__length_acc__result.Lz77__partial_length.partial_length__content) = (Lz77__token_array.length Lz77__length_acc__input.input)) ) /\ ( [@GP_Pretty_Ada:3567] [@GP_Sloc:lz77.ads:45:6] ((Lz77__partial_length.first lz77__length_acc__result.Lz77__partial_length.partial_length__content) = (Lz77__token_array.first Lz77__length_acc__input.input)) ) ) /\ (forall i [#"lz77.ads" 44 0 0]  [@model_trace:3572] [@name:I]  : int.
+   ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= i) /\ (i <= (Lz77__token_array.last Lz77__length_acc__input.input)) ) -> ( ( [@GP_Sloc:lz77.ads:47:9] [@GP_Pretty_Ada:3587] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first Lz77__length_acc__input.input))) then (
     Big_integers__zero.zero) else (
-    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__length_acc__input.input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j [#"lz77.ads" 44 0 0]  [@model_trace:3683] [@name:J]  : int.
-    ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Sloc:lz77.ads:51:16] [@GP_Pretty_Ada:3704] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) j)) = True) ) )) ) )) ) )) }
+    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__length_acc__input.input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j [#"lz77.ads" 44 0 0]  [@model_trace:3616] [@name:J]  : int.
+    ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Sloc:lz77.ads:51:16] [@GP_Pretty_Ada:3637] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) j)) = True) ) )) ) )) ) )) }
    = [@vc:divergent]
   (  assume {  (Big_integers__big_integer.dynamic_invariant Big_integers__zero.zero True False True True) };
   () (* Assume dynamic invariants of inputs of the subprogram lz77.ads:41 *)
@@ -7437,7 +7437,7 @@ module Lz77__length_acc__subprogram_def
    in () end ;
   () (* Assume Pre of the subprogram lz77.ads:41 *)
   ;
-   assume {  ( [@GP_Pretty_Ada:22131] ((Lz77__token_array.length Lz77__length_acc__input.input) > (0 : int)) ) };
+   assume {  ( [@GP_Pretty_Ada:22064] ((Lz77__token_array.length Lz77__length_acc__input.input) > (0 : int)) ) };
    try
    ( ();
    ([#"lz77.adb" 13 0 0] ());
@@ -7717,18 +7717,18 @@ module Lz77__length_acc__subprogram_def
        in () end ))))
     ;
      (val _f : bool
-    ensures { ( (result = True) <-> (forall j   [@model_trace:3683] [@name:J]  : int.
-     ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:3704] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) j)) = True) ) )) )} 
+    ensures { ( (result = True) <-> (forall j   [@model_trace:3616] [@name:J]  : int.
+     ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:3637] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) j)) = True) ) )) )} 
     in _f) ) ) in (
      ()))
      in () end ))))
   ;
    (val _f : bool
-  ensures { ( (result = True) <-> (forall i   [@name:I] [@model_trace:3639]  : int.
-   ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= i) /\ (i <= (Lz77__token_array.last Lz77__length_acc__input.input)) ) -> ( ( [@GP_Pretty_Ada:3654] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first Lz77__length_acc__input.input))) then (
+  ensures { ( (result = True) <-> (forall i   [@model_trace:3572] [@name:I]  : int.
+   ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= i) /\ (i <= (Lz77__token_array.last Lz77__length_acc__input.input)) ) -> ( ( [@GP_Pretty_Ada:3587] ((Big_integers__Oeq.oeq__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Big_integers__Oadd__2.oadd__2__logic (Big_integers__Oadd__2.oadd__2__logic (if ((i = (Lz77__token_array.first Lz77__length_acc__input.input))) then (
     Big_integers__zero.zero) else (
-    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__length_acc__input.input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:3683] [@name:J]  : int.
-    ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:3704] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) j)) = True) ) )) ) )) )} 
+    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) (i - (1 : int))))) (Big_integers__to_big_integer.to_big_integer__logic (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__length_acc__input.input) i).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))) (Big_integers__to_big_integer.to_big_integer__logic (1 : int)))) = True) ) /\ (forall j   [@model_trace:3616] [@name:J]  : int.
+    ( ( ((Lz77__token_array.first Lz77__length_acc__input.input) <= j) /\ (j <= (i - (1 : int))) ) -> ( [@GP_Pretty_Ada:3637] ((Big_integers__Ogt.ogt__logic (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) i) (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array lz77__length_acc__result.Lz77__partial_length.partial_length__content) j)) = True) ) )) ) )) )} 
   in _f) ) ) in (
    ()))
    in () end ;
@@ -7760,7 +7760,7 @@ module Lz77__decoded_length__subprogram_def
  use        Lz77__length_acc___axiom as Lz77__length_acc___axiom
  use        Lz77__decoded_length__input___axiom as Lz77__decoded_length__input___axiom
 
- val lz77__decoded_length__result [@model_projected] [@name:Decoded_Length] [@model_trace:3709@result]  : Big_integers__big_integer.big_integer__ref 
+ val lz77__decoded_length__result [@model_projected] [@name:Decoded_Length] [@model_trace:3642@result]  : Big_integers__big_integer.big_integer__ref 
  
  let def [#"lz77.ads" 54 0 0][@GP_Subp:lz77.ads:54] 
    (__void_param : unit)
@@ -7854,7 +7854,7 @@ module Lz77__valid__subprogram_def
  use        Lz77__valid__input___axiom as Lz77__valid__input___axiom
  use        Lz77__valid__upto___axiom as Lz77__valid__upto___axiom
 
- val lz77__valid__result [@name:Valid] [@model_projected] [@model_trace:3765@result]  : bool__ref 
+ val lz77__valid__result [@model_trace:3698@result] [@name:Valid] [@model_projected]  : bool__ref 
  
  let def [#"lz77.ads" 65 0 0][@GP_Subp:lz77.ads:65] 
    (__void_param : unit)
@@ -7911,7 +7911,7 @@ module Lz77__valid__subprogram_def
       in () end ))))
    ;
     (val _f : bool
-   ensures { ( (result = True) <-> (forall i   [@model_trace:3838] [@name:I]  : int.
+   ensures { ( (result = True) <-> (forall i   [@name:I] [@model_trace:3771]  : int.
     ( ( ((Lz77__token_array.first Lz77__valid__input.input) <= i) /\ (i <= Lz77__valid__upto.upto) ) -> ( ( ((Big_integers__in_range.in_range__logic (let temp___369 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_368 : Lz77__partial_length.partial_length.
      ( (temp___result_368 = (Lz77__length_acc.length_acc Lz77__valid__input.input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_368 Lz77__valid__input.input) )) in (
      (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___369) i)))
@@ -8100,8 +8100,8 @@ module Lz77__decode__subprogram_def
    (__void_param : unit)
   requires { [#"lz77.ads" 95 0 0] true }
   ensures { [#"lz77.ads" 95 0 0] ([#"lz77.ads" 97 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@GP_Id:89] [@comment:     with Post => (if Error then Output_Length = 0 else True);                   ^ lz77.ads:97:19:VC_POSTCONDITION] [@GP_Sloc:lz77.ads:97:19] [@model_vc_post] [@GP_Shape:pragargs__if] (if ((Lz77__decode__error.error.bool__content = True)) then (
-   ( [@GP_Pretty_Ada:3981] [@GP_Sloc:lz77.ads:97:34] (Lz77__decode__output_length.output_length.int__content = (0 : int)) )) else (
-   ( [@GP_Sloc:lz77.ads:97:57] [@GP_Pretty_Ada:3982] true ))) )) }
+   ( [@GP_Pretty_Ada:3914] [@GP_Sloc:lz77.ads:97:34] (Lz77__decode__output_length.output_length.int__content = (0 : int)) )) else (
+   ( [@GP_Sloc:lz77.ads:97:57] [@GP_Pretty_Ada:3915] true ))) )) }
    = [@vc:divergent]
   ( () (* Assume dynamic invariants of inputs of the subprogram lz77.ads:95 *)
   ;
@@ -8196,29 +8196,29 @@ module Lz77__decode__subprogram_def
         (let temp___390 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 88 0 0] (val _f : bool
         ensures {[#"lz77.adb" 88 0 0] (result = Lz77__decode__error.error.bool__content)} 
         in _f) in (
-         ( [#"lz77.adb" 88 0 0] begin ensures {true} let _ = (let _ = Lz77__decode__output_length.output_length.int__content in (
+         ( [#"lz77.adb" 88 0 0] begin ensures {true} let _ = (let _ = Lz77__decode__i.i.int__content in (
           ()))
           in () end ;
          (let temp___389 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 88 0 0] (val _f : int
-         ensures {[#"lz77.adb" 88 0 0] (result = Lz77__decode__output_length.output_length.int__content)} 
+         ensures {[#"lz77.adb" 88 0 0] (result = Lz77__decode__i.i.int__content)} 
          in _f) in (
-          ( [#"lz77.adb" 88 0 0] begin ensures {true} let _ = (let _ = Lz77__decode__output.output.Array__Int__Standard__character.map__content in (
+          ( [#"lz77.adb" 88 0 0] begin ensures {true} let _ = (let _ = Lz77__decode__output_length.output_length.int__content in (
            ()))
            in () end ;
-          (let temp___387 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 88 0 0] (val _f : Array__Int__Standard__character.map
-          ensures {[#"lz77.adb" 88 0 0] (result = Lz77__decode__output.output.Array__Int__Standard__character.map__content)} 
+          (let temp___388 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 88 0 0] (val _f : int
+          ensures {[#"lz77.adb" 88 0 0] (result = Lz77__decode__output_length.output_length.int__content)} 
           in _f) in (
-           ( [#"lz77.adb" 88 0 0] begin ensures {true} let _ = (let _ = Lz77__decode__i.i.int__content in (
+           ( [#"lz77.adb" 88 0 0] begin ensures {true} let _ = (let _ = Lz77__decode__j.j.int__content in (
             ()))
             in () end ;
-           (let temp___385 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 88 0 0] (val _f : int
-           ensures {[#"lz77.adb" 88 0 0] (result = Lz77__decode__i.i.int__content)} 
+           (let temp___387 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 88 0 0] (val _f : int
+           ensures {[#"lz77.adb" 88 0 0] (result = Lz77__decode__j.j.int__content)} 
            in _f) in (
-            ( [#"lz77.adb" 88 0 0] begin ensures {true} let _ = (let _ = Lz77__decode__j.j.int__content in (
+            ( [#"lz77.adb" 88 0 0] begin ensures {true} let _ = (let _ = Lz77__decode__output.output.Array__Int__Standard__character.map__content in (
              ()))
              in () end ;
-            (let temp___384 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 88 0 0] (val _f : int
-            ensures {[#"lz77.adb" 88 0 0] (result = Lz77__decode__j.j.int__content)} 
+            (let temp___385 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 88 0 0] (val _f : Array__Int__Standard__character.map
+            ensures {[#"lz77.adb" 88 0 0] (result = Lz77__decode__output.output.Array__Int__Standard__character.map__content)} 
             in _f) in (
              ( () (* First unroling of the loop statements appearing before the loop invariant of loop lz77.adb:88 *)
              ;
@@ -8248,13 +8248,13 @@ module Lz77__decode__subprogram_def
                }
               ( () (* Assume implicit invariants from the loop lz77.adb:88 *)
               ;
-               assume {  (Boolean.andb(( ( ( ( ( ( ( ( ( ( ( ( true /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__j.j.int__content True True True True) )/\true ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__i.i.int__content False True True True) )/\true ) /\ (if (True) then (
+               assume {  (Boolean.andb(( ( ( ( ( ( ( ( ( ( ( ( true /\ (if (True) then (
                true) else (
-               (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep Lz77__decode__output.output__first) (Standard__integer__rep.to_rep Lz77__decode__output.output__last)))) )/\(forall temp___388   : int.
-               (if (( ((Standard__integer__rep.to_rep Lz77__decode__output.output__first) <= temp___388) /\ (temp___388 <= (Standard__integer__rep.to_rep Lz77__decode__output.output__last)) )) then (
+               (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep Lz77__decode__output.output__first) (Standard__integer__rep.to_rep Lz77__decode__output.output__last)))) )/\(forall temp___386   : int.
+               (if (( ((Standard__integer__rep.to_rep Lz77__decode__output.output__first) <= temp___386) /\ (temp___386 <= (Standard__integer__rep.to_rep Lz77__decode__output.output__last)) )) then (
                 (if (( false /\ false )) then (
-                 ((Array__Int__Standard__character.get Lz77__decode__output.output.Array__Int__Standard__character.map__content temp___388) = (Array__Int__Standard__character.get temp___387 temp___388))) else (
-                 true))) else true)) ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__output_length.output_length.int__content False True True True) )/\true ) /\ true )/\true ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__k.k.int__content True True True True) )/\true )) (( (Lz77__decode__i.i.int__content >= (Lz77__token_array.first Lz77__decode__input.input)) /\ (Lz77__decode__i.i.int__content <= (Lz77__token_array.last Lz77__decode__input.input)) ))) };
+                 ((Array__Int__Standard__character.get Lz77__decode__output.output.Array__Int__Standard__character.map__content temp___386) = (Array__Int__Standard__character.get temp___385 temp___386))) else (
+                 true))) else true)) ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__j.j.int__content True True True True) )/\true ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__output_length.output_length.int__content False True True True) )/\true ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__i.i.int__content False True True True) )/\true ) /\ true )/\true ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__k.k.int__content True True True True) )/\true )) (( (Lz77__decode__i.i.int__content >= (Lz77__token_array.first Lz77__decode__input.input)) /\ (Lz77__decode__i.i.int__content <= (Lz77__token_array.last Lz77__decode__input.input)) ))) };
               () (* Check for absence of RTE in the invariant of loop lz77.adb:88 *)
               ;
               () (* Loop statements appearing after the loop invariant of loop lz77.adb:88 *)
@@ -8293,17 +8293,17 @@ module Lz77__decode__subprogram_def
                (if ((Boolean.andb((Lz77__decode__j.j.int__content >= (0 : int))) ((Lz77__decode__j.j.int__content <= ((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__decode__input.input))) (( [#"lz77.adb" 112 0 0] assert { [#"lz77.adb" 112 0 0] ([#"lz77.adb" 112 0 0] ( [@vc:annotation] [@GP_Shape:if__L_2_while__if__L_3_while__and__cmp__sub__selectcomp__ixdcomp] [@GP_Id:63] [@GP_Reason:VC_INDEX_CHECK] [@comment:                  while J >= 0 and J <= Input (I).Length - 1 loop                                                ^ lz77.adb:112:48:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:112:48] ( ((Lz77__token_array.first Lz77__decode__input.input) <= Lz77__decode__i.i.int__content) /\ (Lz77__decode__i.i.int__content <= (Lz77__token_array.last Lz77__decode__input.input)) ) )) };
                Lz77__decode__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) - (1 : int)))))) then (
                  try
-                 (  begin ensures {true} let _ = (let _ = Lz77__decode__output.output.Array__Int__Standard__character.map__content in (
+                 (  begin ensures {true} let _ = (let _ = Lz77__decode__j.j.int__content in (
                   ()))
                   in () end ;
-                 (let temp___381 [@mlw:proxy_symbol] [@introduced] =  (val _f : Array__Int__Standard__character.map
-                 ensures { (result = Lz77__decode__output.output.Array__Int__Standard__character.map__content)} 
+                 (let temp___382 [@mlw:proxy_symbol] [@introduced] =  (val _f : int
+                 ensures { (result = Lz77__decode__j.j.int__content)} 
                  in _f) in (
-                  (  begin ensures {true} let _ = (let _ = Lz77__decode__j.j.int__content in (
+                  (  begin ensures {true} let _ = (let _ = Lz77__decode__output.output.Array__Int__Standard__character.map__content in (
                    ()))
                    in () end ;
-                  (let temp___379 [@mlw:proxy_symbol] [@introduced] =  (val _f : int
-                  ensures { (result = Lz77__decode__j.j.int__content)} 
+                  (let temp___380 [@mlw:proxy_symbol] [@introduced] =  (val _f : Array__Int__Standard__character.map
+                  ensures { (result = Lz77__decode__output.output.Array__Int__Standard__character.map__content)} 
                   in _f) in (
                    ( () (* First unroling of the loop statements appearing before the loop invariant of loop lz77.adb:112 *)
                    ;
@@ -8312,9 +8312,9 @@ module Lz77__decode__subprogram_def
                     while True do
                     ( () (* Assume implicit invariants from the loop lz77.adb:112 *)
                     ;
-                     assume {  (Boolean.andb(( ( ( ( true /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__j.j.int__content True True True True) )/\true ) /\ (if (True) then (
+                     assume {  (Boolean.andb(( ( ( ( true /\ (if (True) then (
                      true) else (
-                     (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep Lz77__decode__output.output__first) (Standard__integer__rep.to_rep Lz77__decode__output.output__last)))) )/\true )) (( (Lz77__decode__j.j.int__content >= (0 : int)) /\ (Lz77__decode__j.j.int__content <= ((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__decode__input.input) Lz77__decode__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length) - (1 : int))) ))) };
+                     (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep Lz77__decode__output.output__first) (Standard__integer__rep.to_rep Lz77__decode__output.output__last)))) )/\true ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode__j.j.int__content True True True True) )/\true )) (( (Lz77__decode__j.j.int__content >= (0 : int)) /\ (Lz77__decode__j.j.int__content <= ((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__decode__input.input) Lz77__decode__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length) - (1 : int))) ))) };
                     () (* Check for absence of RTE in the invariant of loop lz77.adb:112 *)
                     ;
                     () (* Loop statements appearing after the loop invariant of loop lz77.adb:112 *)
@@ -8468,10 +8468,6 @@ module Lz77__is_valid__subprogram_def
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
- use        Array__Int__Lz77__token as Array__Int__Lz77__token
- use        Array__Int__Lz77__token as Array__Int__Lz77__token
- use        Array__Int__Lz77__token as Array__Int__Lz77__token
- use        Array__Int__Lz77__token as Array__Int__Lz77__token
  use        Standard__integer___axiom as Standard__integer___axiom
  use        Standard__natural___axiom as Standard__natural___axiom
  use        Standard__positive___axiom as Standard__positive___axiom
@@ -8488,15 +8484,15 @@ module Lz77__is_valid__subprogram_def
  use        Lz77__valid___axiom as Lz77__valid___axiom
  use        Lz77__is_valid__input___axiom as Lz77__is_valid__input___axiom
 
- val lz77__is_valid__result [@name:Is_Valid] [@model_projected] [@model_trace:3984@result]  : bool__ref 
+ val lz77__is_valid__result [@model_trace:3917@result] [@name:Is_Valid] [@model_projected]  : bool__ref 
  
  let def [#"lz77.ads" 101 0 0][@GP_Subp:lz77.ads:101] 
    (__void_param : unit)
   requires { [#"lz77.ads" 101 0 0] true }
-  ensures { [#"lz77.ads" 101 0 0] ([#"lz77.ads" 102 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@GP_Id:114] [@comment:     Post => (if Is_Valid'Result then Valid(Input,Input'Last) else not Valid(Input,Input'Last));              ^ lz77.ads:102:14:VC_POSTCONDITION] [@GP_Sloc:lz77.ads:102:14] [@model_vc_post] [@GP_Shape:pragargs__if] (if ((lz77__is_valid__result.bool__content = True)) then (
-   ( [@GP_Pretty_Ada:4015] [@GP_Sloc:lz77.ads:102:39] ((epsilon temp___result_402 : bool.
+  ensures { [#"lz77.ads" 101 0 0] ([#"lz77.ads" 102 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@GP_Id:111] [@comment:     Post => (if Is_Valid'Result then Valid(Input,Input'Last) else not Valid(Input,Input'Last));              ^ lz77.ads:102:14:VC_POSTCONDITION] [@GP_Sloc:lz77.ads:102:14] [@model_vc_post] [@GP_Shape:pragargs__if] (if ((lz77__is_valid__result.bool__content = True)) then (
+   ( [@GP_Sloc:lz77.ads:102:39] [@GP_Pretty_Ada:3948] ((epsilon temp___result_402 : bool.
     ( (temp___result_402 = (Lz77__valid.valid Lz77__is_valid__input.input (Lz77__token_array.last Lz77__is_valid__input.input))) /\ (Lz77__valid.valid__function_guard temp___result_402 Lz77__is_valid__input.input (Lz77__token_array.last Lz77__is_valid__input.input)) )) = True) )) else (
-   ( [@GP_Pretty_Ada:4016] [@GP_Sloc:lz77.ads:102:68] not ( ((epsilon temp___result_403 : bool.
+   ( [@GP_Sloc:lz77.ads:102:68] [@GP_Pretty_Ada:3949] not ( ((epsilon temp___result_403 : bool.
     ( (temp___result_403 = (Lz77__valid.valid Lz77__is_valid__input.input (Lz77__token_array.last Lz77__is_valid__input.input))) /\ (Lz77__valid.valid__function_guard temp___result_403 Lz77__is_valid__input.input (Lz77__token_array.last Lz77__is_valid__input.input)) )) = True) ) ))) )) }
    = [@vc:divergent]
   ( () (* Assume dynamic invariants of inputs of the subprogram lz77.ads:101 *)
@@ -8531,7 +8527,7 @@ module Lz77__is_valid__subprogram_def
     ( [@GP_Sloc:lz77.adb:158:12] ([#"lz77.adb" 158 0 0] ( [#"lz77.adb" 158 0 0] (lz77__is_valid__result.bool__content <- ( (Boolean.of_int((1 : int))) ));
     [#"lz77.adb" 158 0 0] raise Return__exc )) ) )) else (
     ( ();
-    ( [@GP_Sloc:lz77.adb:160:10] ([#"lz77.adb" 160 0 0] (if (( ([#"lz77.adb" 160 0 0] [#"lz77.adb" 160 0 0] (([@branch_id=2996] Main.spark__branch).bool__content <- ( not ( (Boolean.andb((Boolean.andb((([#"lz77.adb" 160 0 0] ( [@vc:annotation] [@GP_Id:113] [@GP_Shape:if__if__not__and__and__cmp__typeconv__length_ref] [@GP_Reason:VC_RANGE_CHECK] [@GP_Sloc:lz77.adb:160:23] [@comment:         if not (Input'Length <= (Natural'Last - 1)                       ^ lz77.adb:160:23:VC_RANGE_CHECK] (Standard__integer.range_check_(( [#"lz77.adb" 160 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
+    ( [@GP_Sloc:lz77.adb:160:10] ([#"lz77.adb" 160 0 0] (if (( ([#"lz77.adb" 160 0 0] [#"lz77.adb" 160 0 0] (([@branch_id=2996] Main.spark__branch).bool__content <- ( not ( (Boolean.andb((Boolean.andb((([#"lz77.adb" 160 0 0] ( [@GP_Id:110] [@vc:annotation] [@GP_Shape:if__if__not__and__and__cmp__typeconv__length_ref] [@GP_Reason:VC_RANGE_CHECK] [@GP_Sloc:lz77.adb:160:23] [@comment:         if not (Input'Length <= (Natural'Last - 1)                       ^ lz77.adb:160:23:VC_RANGE_CHECK] (Standard__integer.range_check_(( [#"lz77.adb" 160 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
      ()))
      in () end ;
     (Lz77__token_array.length(Lz77__is_valid__input.input)) ))) )) <= (2147483646 : int))) (((  begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
@@ -8588,30 +8584,28 @@ module Lz77__is_valid__subprogram_def
            ()))
            in () end ;
           (Lz77__token_array.length(Lz77__is_valid__input.input)) ) > (0 : int))) then (
-           (Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Lz77__is_valid__i.i.int__content >= ( [#"lz77.adb" 169 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
+           (Boolean.andb((Boolean.andb((Boolean.andb((Lz77__is_valid__i.i.int__content >= ( [#"lz77.adb" 169 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
             ()))
             in () end ;
-           (Lz77__token_array.first(Lz77__is_valid__input.input)) ))) ((Lz77__is_valid__i.i.int__content <= ([#"lz77.adb" 173 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__and__and__and__cmp__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:                     and I <= Input'Last + 1                                           ^ lz77.adb:173:42:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:173:42] [@GP_Id:100] (Standard__integer.range_check_((( [#"lz77.adb" 173 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
+           (Lz77__token_array.first(Lz77__is_valid__input.input)) ))) ((Lz77__is_valid__i.i.int__content <= ([#"lz77.adb" 173 0 0] ( [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:                     and I <= Input'Last + 1                                           ^ lz77.adb:173:42:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:173:42] [@GP_Id:100] [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__cmp__add] (Standard__integer.range_check_((( [#"lz77.adb" 173 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
             ()))
             in () end ;
-           (Lz77__token_array.last(Lz77__is_valid__input.input)) ) + (1 : int)))) )))))) ((Lz77__is_valid__k.k.int__content >= (1 : int))))) (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 175 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__and__cmp__selectcomp__ixdcomp] [@vc:annotation] [@comment:                     and Input(I).Offset <= Last_Length                                 ^ lz77.adb:175:32:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:175:32] [@GP_Id:101] [@GP_Reason:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
-           Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) <= Lz77__is_valid__last_length.last_length.int__content)))) ((Lz77__is_valid__last_length.last_length.int__content <= (([#"lz77.adb" 176 0 0] ( [@comment:                     and Last_Length <= (Natural'Last - Input(I).Length - 1)                                                       ^ lz77.adb:176:55:VC_OVERFLOW_CHECK] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__cmp__sub__sub] [@GP_Sloc:lz77.adb:176:55] [@GP_Id:103] (Standard__integer.range_check_(((2147483647 : int) - (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 176 0 0] assert { [#"lz77.adb" 176 0 0] ([#"lz77.adb" 176 0 0] ( [@GP_Sloc:lz77.adb:176:63] [@vc:annotation] [@GP_Id:102] [@GP_Reason:VC_INDEX_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__cmp__sub__sub__selectcomp__ixdcomp] [@comment:                     and Last_Length <= (Natural'Last - Input(I).Length - 1)                                                               ^ lz77.adb:176:63:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+           (Lz77__token_array.last(Lz77__is_valid__input.input)) ) + (1 : int)))) )))))) ((Lz77__is_valid__k.k.int__content >= (1 : int))))) ((if ((Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Lz77__is_valid__i.i.int__content <= (  begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
+            ()))
+            in () end ;
+           (Lz77__token_array.last(Lz77__is_valid__input.input)) ))) ((Lz77__is_valid__last_length.last_length.int__content <= (([#"lz77.adb" 176 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__and__and__and__cmp__sub__sub] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:                       and Last_Length <= (Natural'Last - Input(I).Length - 1)                                                         ^ lz77.adb:176:57:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:176:57] [@GP_Id:105] (Standard__integer.range_check_(((2147483647 : int) - (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 176 0 0] assert { [#"lz77.adb" 176 0 0] ([#"lz77.adb" 176 0 0] ( [@GP_Sloc:lz77.adb:176:65] [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__and__and__and__cmp__sub__sub__selectcomp__ixdcomp] [@GP_Id:104] [@GP_Reason:VC_INDEX_CHECK] [@comment:                       and Last_Length <= (Natural'Last - Input(I).Length - 1)                                                                 ^ lz77.adb:176:65:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
            Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) - (1 : int)))))) ((if ((Lz77__is_valid__i.i.int__content = (  begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
             ()))
             in () end ;
            (Lz77__token_array.first(Lz77__is_valid__input.input)) ))) then (
             (Lz77__is_valid__last_length.last_length.int__content = (0 : int))) else (
-            (Boolean.of_int((1 : int)))))))) ((if ((Boolean.andb((Lz77__is_valid__i.i.int__content <= (  begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
-            ()))
-            in () end ;
-           (Lz77__token_array.last(Lz77__is_valid__input.input)) ))) ((Boolean.orb(not ( (if (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 179 0 0] ( [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__if__cmp__selectcomp__ixdcomp] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:108] [@comment:                       and (not (if Input(I).Offset = 0 then Input(I).Length = 0)                                           ^ lz77.adb:179:43:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:179:43] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+            (Boolean.of_int((1 : int)))))))) (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 178 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__and__cmp__selectcomp__ixdcomp] [@vc:annotation] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:106] [@GP_Sloc:lz77.adb:178:34] [@comment:                       and Input(I).Offset <= Last_Length                                  ^ lz77.adb:178:34:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+           Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) <= Lz77__is_valid__last_length.last_length.int__content)))) ((if (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 179 0 0] ( [@GP_Sloc:lz77.adb:179:38] [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__if__cmp__selectcomp__ixdcomp] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:108] [@comment:                       and (if Input(I).Offset = 0 then Input(I).Length = 0))                                       ^ lz77.adb:179:38:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
            Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) = (0 : int))) then (
-            ((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 179 0 0] ( [@vc:annotation] [@GP_Sloc:lz77.adb:179:68] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__if__cmp__selectcomp__ixdcomp] [@comment:                       and (not (if Input(I).Offset = 0 then Input(I).Length = 0)                                                                    ^ lz77.adb:179:68:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:107] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+            ((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 179 0 0] ( [@vc:annotation] [@GP_Sloc:lz77.adb:179:63] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__if__cmp__selectcomp__ixdcomp] [@GP_Reason:VC_INDEX_CHECK] [@comment:                       and (if Input(I).Offset = 0 then Input(I).Length = 0))                                                                ^ lz77.adb:179:63:VC_INDEX_CHECK] [@GP_Id:107] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
             Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) = (0 : int))) else (
-            (Boolean.of_int((1 : int))))) )) (not ( (Boolean.andb(((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 180 0 0] ( [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__and__cmp__selectcomp__ixdcomp] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:109] [@comment:                       or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1)))                                       ^ lz77.adb:180:38:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:180:38] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
-           Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) <= Lz77__is_valid__last_length.last_length.int__content)) ((Lz77__is_valid__last_length.last_length.int__content <= (([#"lz77.adb" 180 0 0] ( [@GP_Sloc:lz77.adb:180:96] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__and__cmp__sub__sub] [@vc:annotation] [@GP_Id:111] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:                       or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1)))                                                                                                 ^ lz77.adb:180:96:VC_OVERFLOW_CHECK] (Standard__integer.range_check_(((2147483647 : int) - (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 180 0 0] assert { [#"lz77.adb" 180 0 0] ([#"lz77.adb" 180 0 0] ( [@GP_Id:110] [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__and__cmp__sub__sub__selectcomp__ixdcomp] [@GP_Sloc:lz77.adb:180:104] [@comment:                       or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1)))                                                                                                         ^ lz77.adb:180:104:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
-           Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) - (1 : int))))) )))))) then (
-            (Lz77__is_valid__k.k.int__content = ([#"lz77.adb" 181 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add] [@GP_Sloc:lz77.adb:181:64] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:106] [@comment:                       then k = Last_Length + Input (I).Length + 1))                                                                ^ lz77.adb:181:64:VC_OVERFLOW_CHECK] (Standard__integer.range_check_((([#"lz77.adb" 181 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:105] [@GP_Sloc:lz77.adb:181:45] [@comment:                       then k = Last_Length + Input (I).Length + 1))                                             ^ lz77.adb:181:45:VC_OVERFLOW_CHECK] (Standard__integer.range_check_((Lz77__is_valid__last_length.last_length.int__content + (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 181 0 0] assert { [#"lz77.adb" 181 0 0] ([#"lz77.adb" 181 0 0] ( [@comment:                       then k = Last_Length + Input (I).Length + 1))                                                      ^ lz77.adb:181:54:VC_INDEX_CHECK] [@vc:annotation] [@GP_Sloc:lz77.adb:181:54] [@GP_Id:104] [@GP_Reason:VC_INDEX_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add__add__selectcomp__ixdcomp] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+            (Boolean.of_int((1 : int)))))))) then (
+            (Lz77__is_valid__k.k.int__content = ([#"lz77.adb" 180 0 0] ( [@comment:                     then k = Last_Length + Input (I).Length + 1)                                                               ^ lz77.adb:180:62:VC_OVERFLOW_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:103] [@GP_Sloc:lz77.adb:180:62] (Standard__integer.range_check_((([#"lz77.adb" 180 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:180:43] [@comment:                     then k = Last_Length + Input (I).Length + 1)                                            ^ lz77.adb:180:43:VC_OVERFLOW_CHECK] [@GP_Id:102] (Standard__integer.range_check_((Lz77__is_valid__last_length.last_length.int__content + (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 180 0 0] assert { [#"lz77.adb" 180 0 0] ([#"lz77.adb" 180 0 0] ( [@GP_Sloc:lz77.adb:180:52] [@vc:annotation] [@GP_Id:101] [@GP_Reason:VC_INDEX_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add__add__selectcomp__ixdcomp] [@comment:                     then k = Last_Length + Input (I).Length + 1)                                                     ^ lz77.adb:180:52:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
             Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) + (1 : int)))) )))) else (
             (Boolean.of_int((1 : int)))))))) else (
            (Boolean.of_int((1 : int))))) in (
@@ -8621,15 +8615,15 @@ module Lz77__is_valid__subprogram_def
           ;
            while True do
            invariant { 
-            ([#"lz77.adb" 171 0 0] ( [@GP_Reason:VC_LOOP_INVARIANT] [@vc:annotation] [@GP_Id:112] [@GP_Shape:if__if__L_4_while__pragargs__if] [@comment:                 (if Input'Length > 0 then                    ^ lz77.adb:171:19:VC_LOOP_INVARIANT] [@GP_Sloc:lz77.adb:171:19] (if (((Lz77__token_array.length Lz77__is_valid__input.input) > (0 : int))) then (
-             ( ( ( ( ( ( ( [@GP_Pretty_Ada:3063] [@GP_Sloc:lz77.adb:172:22] (Lz77__is_valid__i.i.int__content >= (Lz77__token_array.first Lz77__is_valid__input.input)) ) /\ ( [@GP_Sloc:lz77.adb:173:26] [@GP_Pretty_Ada:3069] (Lz77__is_valid__i.i.int__content <= ((Lz77__token_array.last Lz77__is_valid__input.input) + (1 : int))) ) ) /\ ( [@GP_Sloc:lz77.adb:174:26] [@GP_Pretty_Ada:3077] (Lz77__is_valid__k.k.int__content >= (1 : int)) ) ) /\ ( [@GP_Pretty_Ada:3085] [@GP_Sloc:lz77.adb:175:26] ((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset) <= Lz77__is_valid__last_length.last_length.int__content) ) ) /\ ( [@GP_Sloc:lz77.adb:176:26] [@GP_Pretty_Ada:3088] (Lz77__is_valid__last_length.last_length.int__content <= (((2147483647 : int) - (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) - (1 : int))) ) ) /\ (if ((Lz77__is_valid__i.i.int__content = (Lz77__token_array.first Lz77__is_valid__input.input))) then (
-              ( [@GP_Pretty_Ada:3108] [@GP_Sloc:lz77.adb:177:51] (Lz77__is_valid__last_length.last_length.int__content = (0 : int)) )) else (
-              ( [@GP_Sloc:lz77.adb:177:27] [@GP_Pretty_Ada:23552] true ))) ) /\ (if (( (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) /\ ( not ( (if (((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset) = (0 : int))) then (
+            ([#"lz77.adb" 171 0 0] ( [@GP_Reason:VC_LOOP_INVARIANT] [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if] [@comment:                 (if Input'Length > 0 then                    ^ lz77.adb:171:19:VC_LOOP_INVARIANT] [@GP_Id:109] [@GP_Sloc:lz77.adb:171:19] (if (((Lz77__token_array.length Lz77__is_valid__input.input) > (0 : int))) then (
+             ( ( ( ( [@GP_Pretty_Ada:3063] [@GP_Sloc:lz77.adb:172:22] (Lz77__is_valid__i.i.int__content >= (Lz77__token_array.first Lz77__is_valid__input.input)) ) /\ ( [@GP_Sloc:lz77.adb:173:26] [@GP_Pretty_Ada:3069] (Lz77__is_valid__i.i.int__content <= ((Lz77__token_array.last Lz77__is_valid__input.input) + (1 : int))) ) ) /\ ( [@GP_Sloc:lz77.adb:174:26] [@GP_Pretty_Ada:3077] (Lz77__is_valid__k.k.int__content >= (1 : int)) ) ) /\ (if (( ( ( ( (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) /\ (Lz77__is_valid__last_length.last_length.int__content <= (((2147483647 : int) - (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) - (1 : int))) ) /\ (if ((Lz77__is_valid__i.i.int__content = (Lz77__token_array.first Lz77__is_valid__input.input))) then (
+              (Lz77__is_valid__last_length.last_length.int__content = (0 : int))) else (
+              true)) ) /\ ((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset) <= Lz77__is_valid__last_length.last_length.int__content) ) /\ (if (((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset) = (0 : int))) then (
               ((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length) = (0 : int))) else (
-              true)) ) \/ not ( ( ((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset) <= Lz77__is_valid__last_length.last_length.int__content) /\ (Lz77__is_valid__last_length.last_length.int__content <= (((2147483647 : int) - (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) - (1 : int))) ) ) ) )) then (
-              ( [@GP_Pretty_Ada:3158] [@GP_Sloc:lz77.adb:181:29] (Lz77__is_valid__k.k.int__content = ((Lz77__is_valid__last_length.last_length.int__content + (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) + (1 : int))) )) else (
-              ( [@GP_Pretty_Ada:23554] [@GP_Sloc:lz77.adb:178:27] true ))) )) else (
-             ( [@GP_Pretty_Ada:3168] [@GP_Sloc:lz77.adb:182:22] true ))) ))
+              true)) )) then (
+              ( [@GP_Sloc:lz77.adb:180:27] [@GP_Pretty_Ada:3134] (Lz77__is_valid__k.k.int__content = ((Lz77__is_valid__last_length.last_length.int__content + (Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__is_valid__input.input) Lz77__is_valid__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) + (1 : int))) )) else (
+              ( [@GP_Pretty_Ada:23485] [@GP_Sloc:lz77.adb:175:27] true ))) )) else (
+             ( [@GP_Pretty_Ada:3144] [@GP_Sloc:lz77.adb:182:22] true ))) ))
             }
            ( () (* Assume implicit invariants from the loop lz77.adb:169 *)
            ;
@@ -8640,11 +8634,11 @@ module Lz77__is_valid__subprogram_def
            ;
            ();
            ( [@GP_Sloc:lz77.adb:183:19] ([#"lz77.adb" 183 0 0] ()) );
-           ( [@GP_Sloc:lz77.adb:183:16] ([#"lz77.adb" 183 0 0] (if (( ([#"lz77.adb" 183 0 0] [#"lz77.adb" 183 0 0] (([@branch_id=3170] Main.spark__branch).bool__content <- ( (Lz77__is_valid__i.i.int__content = ( [#"lz77.adb" 183 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
+           ( [@GP_Sloc:lz77.adb:183:16] ([#"lz77.adb" 183 0 0] (if (( ([#"lz77.adb" 183 0 0] [#"lz77.adb" 183 0 0] (([@branch_id=3146] Main.spark__branch).bool__content <- ( (Lz77__is_valid__i.i.int__content = ( [#"lz77.adb" 183 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
             ()))
             in () end ;
            (Lz77__token_array.first(Lz77__is_valid__input.input)) )) )));
-           ( [@branch_id=3170] Main.spark__branch ).bool__content )) then (
+           ( [@branch_id=3146] Main.spark__branch ).bool__content )) then (
             ( ();
             ( [@GP_Sloc:lz77.adb:183:40] ([#"lz77.adb" 183 0 0] ()) );
             ( [@GP_Sloc:lz77.adb:183:51] ([#"lz77.adb" 183 0 0] [#"lz77.adb" 183 0 0] (Lz77__is_valid__last_length.last_length.int__content <- ( (0 : int) ))) ) )) else (
@@ -8657,14 +8651,14 @@ module Lz77__is_valid__subprogram_def
            ( [@GP_Sloc:lz77.adb:188:45] ([#"lz77.adb" 188 0 0] ()) );
            ( [@GP_Sloc:lz77.adb:188:61] ([#"lz77.adb" 188 0 0] ()) );
            ( [@GP_Sloc:lz77.adb:188:98] ([#"lz77.adb" 188 0 0] ()) );
-           ( [@GP_Sloc:lz77.adb:187:16] ([#"lz77.adb" 187 0 0] (if (( ([#"lz77.adb" 187 0 0] [#"lz77.adb" 187 0 0] (([@branch_id=3182] Main.spark__branch).bool__content <- ( (Boolean.orb(not ( (if (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 187 0 0] assert { [#"lz77.adb" 187 0 0] ([#"lz77.adb" 187 0 0] ( [@vc:annotation] [@comment:               if not (if Input(I).Offset = 0 then Input(I).Length = 0)                                 ^ lz77.adb:187:33:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:187:33] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:95] [@GP_Shape:if__if__L_4_while__if__or__not__if__cmp__selectcomp__ixdcomp] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+           ( [@GP_Sloc:lz77.adb:187:16] ([#"lz77.adb" 187 0 0] (if (( ([#"lz77.adb" 187 0 0] [#"lz77.adb" 187 0 0] (([@branch_id=3158] Main.spark__branch).bool__content <- ( (Boolean.orb(not ( (if (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 187 0 0] assert { [#"lz77.adb" 187 0 0] ([#"lz77.adb" 187 0 0] ( [@vc:annotation] [@comment:               if not (if Input(I).Offset = 0 then Input(I).Length = 0)                                 ^ lz77.adb:187:33:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:187:33] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:95] [@GP_Shape:if__if__L_4_while__if__or__not__if__cmp__selectcomp__ixdcomp] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
            Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) = (0 : int))) then (
             ((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 187 0 0] ( [@GP_Sloc:lz77.adb:187:58] [@comment:               if not (if Input(I).Offset = 0 then Input(I).Length = 0)                                                          ^ lz77.adb:187:58:VC_INDEX_CHECK] [@vc:annotation] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:94] [@GP_Shape:if__if__L_4_while__if__or__not__if__cmp__selectcomp__ixdcomp] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
             Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) = (0 : int))) else (
             (Boolean.of_int((1 : int))))) )) (not ( (Boolean.andb(((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 188 0 0] ( [@GP_Shape:if__if__L_4_while__if__or__not__and__cmp__selectcomp__ixdcomp] [@vc:annotation] [@comment:                 or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1))                                 ^ lz77.adb:188:32:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:188:32] [@GP_Id:96] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
            Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) <= Lz77__is_valid__last_length.last_length.int__content)) ((Lz77__is_valid__last_length.last_length.int__content <= (([#"lz77.adb" 188 0 0] ( [@GP_Sloc:lz77.adb:188:90] [@GP_Shape:if__if__L_4_while__if__or__not__and__cmp__sub__sub] [@vc:annotation] [@comment:                 or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1))                                                                                           ^ lz77.adb:188:90:VC_OVERFLOW_CHECK] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:98] (Standard__integer.range_check_(((2147483647 : int) - (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 188 0 0] assert { [#"lz77.adb" 188 0 0] ([#"lz77.adb" 188 0 0] ( [@GP_Sloc:lz77.adb:188:98] [@vc:annotation] [@comment:                 or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1))                                                                                                   ^ lz77.adb:188:98:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Shape:if__if__L_4_while__if__or__not__and__cmp__sub__sub__selectcomp__ixdcomp] [@GP_Id:97] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
            Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) - (1 : int))))) ))) )));
-           ( [@branch_id=3182] Main.spark__branch ).bool__content )) then (
+           ( [@branch_id=3158] Main.spark__branch ).bool__content )) then (
             ( ();
             ( [@GP_Sloc:lz77.adb:190:19] ([#"lz77.adb" 190 0 0] ( [#"lz77.adb" 190 0 0] (lz77__is_valid__result.bool__content <- ( (Boolean.of_int((0 : int))) ));
             [#"lz77.adb" 190 0 0] raise Return__exc )) ) )) else (
@@ -8677,8 +8671,8 @@ module Lz77__is_valid__subprogram_def
             ( [@GP_Sloc:lz77.adb:193:27] ([#"lz77.adb" 193 0 0] ()) );
             ( [@GP_Sloc:lz77.adb:193:41] ([#"lz77.adb" 193 0 0] ()) );
             ( [@GP_Sloc:lz77.adb:193:47] ([#"lz77.adb" 193 0 0] ()) );
-            ( [@GP_Sloc:lz77.adb:193:19] ([#"lz77.adb" 193 0 0] (if (( ([#"lz77.adb" 193 0 0] [#"lz77.adb" 193 0 0] (([@branch_id=3235] Main.spark__branch).bool__content <- ( not ( (Boolean.andb((Lz77__is_valid__last_length.last_length.int__content < Lz77__is_valid__k.k.int__content)) ((Lz77__is_valid__k.k.int__content >= (1 : int)))) ) )));
-            ( [@branch_id=3235] Main.spark__branch ).bool__content )) then (
+            ( [@GP_Sloc:lz77.adb:193:19] ([#"lz77.adb" 193 0 0] (if (( ([#"lz77.adb" 193 0 0] [#"lz77.adb" 193 0 0] (([@branch_id=3211] Main.spark__branch).bool__content <- ( not ( (Boolean.andb((Lz77__is_valid__last_length.last_length.int__content < Lz77__is_valid__k.k.int__content)) ((Lz77__is_valid__k.k.int__content >= (1 : int)))) ) )));
+            ( [@branch_id=3211] Main.spark__branch ).bool__content )) then (
              ( ();
              ( [@GP_Sloc:lz77.adb:194:24] ([#"lz77.adb" 194 0 0] ( [#"lz77.adb" 194 0 0] (lz77__is_valid__result.bool__content <- ( (Boolean.of_int((0 : int))) ));
              [#"lz77.adb" 194 0 0] raise Return__exc )) ) )) else (
@@ -8700,30 +8694,28 @@ module Lz77__is_valid__subprogram_def
             ()))
             in () end ;
            (Lz77__token_array.length(Lz77__is_valid__input.input)) ) > (0 : int))) then (
-            (Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Lz77__is_valid__i.i.int__content >= (  begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
+            (Boolean.andb((Boolean.andb((Boolean.andb((Lz77__is_valid__i.i.int__content >= (  begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
              ()))
              in () end ;
-            (Lz77__token_array.first(Lz77__is_valid__input.input)) ))) ((Lz77__is_valid__i.i.int__content <= ([#"lz77.adb" 173 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__and__and__and__cmp__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:                     and I <= Input'Last + 1                                           ^ lz77.adb:173:42:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:173:42] [@GP_Id:100] (Standard__integer.range_check_((( [#"lz77.adb" 173 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
+            (Lz77__token_array.first(Lz77__is_valid__input.input)) ))) ((Lz77__is_valid__i.i.int__content <= ([#"lz77.adb" 173 0 0] ( [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:                     and I <= Input'Last + 1                                           ^ lz77.adb:173:42:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:173:42] [@GP_Id:100] [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__cmp__add] (Standard__integer.range_check_((( [#"lz77.adb" 173 0 0] begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
              ()))
              in () end ;
-            (Lz77__token_array.last(Lz77__is_valid__input.input)) ) + (1 : int)))) )))))) ((Lz77__is_valid__k.k.int__content >= (1 : int))))) (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 175 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__and__cmp__selectcomp__ixdcomp] [@vc:annotation] [@comment:                     and Input(I).Offset <= Last_Length                                 ^ lz77.adb:175:32:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:175:32] [@GP_Id:101] [@GP_Reason:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
-            Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) <= Lz77__is_valid__last_length.last_length.int__content)))) ((Lz77__is_valid__last_length.last_length.int__content <= (([#"lz77.adb" 176 0 0] ( [@comment:                     and Last_Length <= (Natural'Last - Input(I).Length - 1)                                                       ^ lz77.adb:176:55:VC_OVERFLOW_CHECK] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__cmp__sub__sub] [@GP_Sloc:lz77.adb:176:55] [@GP_Id:103] (Standard__integer.range_check_(((2147483647 : int) - (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 176 0 0] assert { [#"lz77.adb" 176 0 0] ([#"lz77.adb" 176 0 0] ( [@GP_Sloc:lz77.adb:176:63] [@vc:annotation] [@GP_Id:102] [@GP_Reason:VC_INDEX_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__and__and__cmp__sub__sub__selectcomp__ixdcomp] [@comment:                     and Last_Length <= (Natural'Last - Input(I).Length - 1)                                                               ^ lz77.adb:176:63:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+            (Lz77__token_array.last(Lz77__is_valid__input.input)) ) + (1 : int)))) )))))) ((Lz77__is_valid__k.k.int__content >= (1 : int))))) ((if ((Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Lz77__is_valid__i.i.int__content <= (  begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
+             ()))
+             in () end ;
+            (Lz77__token_array.last(Lz77__is_valid__input.input)) ))) ((Lz77__is_valid__last_length.last_length.int__content <= (([#"lz77.adb" 176 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__and__and__and__cmp__sub__sub] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:                       and Last_Length <= (Natural'Last - Input(I).Length - 1)                                                         ^ lz77.adb:176:57:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:176:57] [@GP_Id:105] (Standard__integer.range_check_(((2147483647 : int) - (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 176 0 0] assert { [#"lz77.adb" 176 0 0] ([#"lz77.adb" 176 0 0] ( [@GP_Sloc:lz77.adb:176:65] [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__and__and__and__cmp__sub__sub__selectcomp__ixdcomp] [@GP_Id:104] [@GP_Reason:VC_INDEX_CHECK] [@comment:                       and Last_Length <= (Natural'Last - Input(I).Length - 1)                                                                 ^ lz77.adb:176:65:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
             Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) - (1 : int)))))) ((if ((Lz77__is_valid__i.i.int__content = (  begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
              ()))
              in () end ;
             (Lz77__token_array.first(Lz77__is_valid__input.input)) ))) then (
              (Lz77__is_valid__last_length.last_length.int__content = (0 : int))) else (
-             (Boolean.of_int((1 : int)))))))) ((if ((Boolean.andb((Lz77__is_valid__i.i.int__content <= (  begin ensures {true} let _ = (let _ = Lz77__is_valid__input.input in (
-             ()))
-             in () end ;
-            (Lz77__token_array.last(Lz77__is_valid__input.input)) ))) ((Boolean.orb(not ( (if (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 179 0 0] ( [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__if__cmp__selectcomp__ixdcomp] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:108] [@comment:                       and (not (if Input(I).Offset = 0 then Input(I).Length = 0)                                           ^ lz77.adb:179:43:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:179:43] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+             (Boolean.of_int((1 : int)))))))) (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 178 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__and__cmp__selectcomp__ixdcomp] [@vc:annotation] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:106] [@GP_Sloc:lz77.adb:178:34] [@comment:                       and Input(I).Offset <= Last_Length                                  ^ lz77.adb:178:34:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+            Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) <= Lz77__is_valid__last_length.last_length.int__content)))) ((if (((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 179 0 0] ( [@GP_Sloc:lz77.adb:179:38] [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__if__cmp__selectcomp__ixdcomp] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:108] [@comment:                       and (if Input(I).Offset = 0 then Input(I).Length = 0))                                       ^ lz77.adb:179:38:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
             Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) = (0 : int))) then (
-             ((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 179 0 0] ( [@vc:annotation] [@GP_Sloc:lz77.adb:179:68] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__if__cmp__selectcomp__ixdcomp] [@comment:                       and (not (if Input(I).Offset = 0 then Input(I).Length = 0)                                                                    ^ lz77.adb:179:68:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:107] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+             ((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 179 0 0] ( [@vc:annotation] [@GP_Sloc:lz77.adb:179:63] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__if__cmp__selectcomp__ixdcomp] [@GP_Reason:VC_INDEX_CHECK] [@comment:                       and (if Input(I).Offset = 0 then Input(I).Length = 0))                                                                ^ lz77.adb:179:63:VC_INDEX_CHECK] [@GP_Id:107] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
              Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) = (0 : int))) else (
-             (Boolean.of_int((1 : int))))) )) (not ( (Boolean.andb(((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) ((  assert {  ([#"lz77.adb" 180 0 0] ( [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__and__cmp__selectcomp__ixdcomp] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:109] [@comment:                       or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1)))                                       ^ lz77.adb:180:38:VC_INDEX_CHECK] [@GP_Sloc:lz77.adb:180:38] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
-            Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset)) <= Lz77__is_valid__last_length.last_length.int__content)) ((Lz77__is_valid__last_length.last_length.int__content <= (([#"lz77.adb" 180 0 0] ( [@GP_Sloc:lz77.adb:180:96] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__and__cmp__sub__sub] [@vc:annotation] [@GP_Id:111] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:                       or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1)))                                                                                                 ^ lz77.adb:180:96:VC_OVERFLOW_CHECK] (Standard__integer.range_check_(((2147483647 : int) - (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 180 0 0] assert { [#"lz77.adb" 180 0 0] ([#"lz77.adb" 180 0 0] ( [@GP_Id:110] [@vc:annotation] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__and__or__not__and__cmp__sub__sub__selectcomp__ixdcomp] [@GP_Sloc:lz77.adb:180:104] [@comment:                       or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1)))                                                                                                         ^ lz77.adb:180:104:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
-            Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) - (1 : int))))) )))))) then (
-             (Lz77__is_valid__k.k.int__content = ([#"lz77.adb" 181 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add] [@GP_Sloc:lz77.adb:181:64] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:106] [@comment:                       then k = Last_Length + Input (I).Length + 1))                                                                ^ lz77.adb:181:64:VC_OVERFLOW_CHECK] (Standard__integer.range_check_((([#"lz77.adb" 181 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:105] [@GP_Sloc:lz77.adb:181:45] [@comment:                       then k = Last_Length + Input (I).Length + 1))                                             ^ lz77.adb:181:45:VC_OVERFLOW_CHECK] (Standard__integer.range_check_((Lz77__is_valid__last_length.last_length.int__content + (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 181 0 0] assert { [#"lz77.adb" 181 0 0] ([#"lz77.adb" 181 0 0] ( [@comment:                       then k = Last_Length + Input (I).Length + 1))                                                      ^ lz77.adb:181:54:VC_INDEX_CHECK] [@vc:annotation] [@GP_Sloc:lz77.adb:181:54] [@GP_Id:104] [@GP_Reason:VC_INDEX_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add__add__selectcomp__ixdcomp] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
+             (Boolean.of_int((1 : int)))))))) then (
+             (Lz77__is_valid__k.k.int__content = ([#"lz77.adb" 180 0 0] ( [@comment:                     then k = Last_Length + Input (I).Length + 1)                                                               ^ lz77.adb:180:62:VC_OVERFLOW_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:103] [@GP_Sloc:lz77.adb:180:62] (Standard__integer.range_check_((([#"lz77.adb" 180 0 0] ( [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:180:43] [@comment:                     then k = Last_Length + Input (I).Length + 1)                                            ^ lz77.adb:180:43:VC_OVERFLOW_CHECK] [@GP_Id:102] (Standard__integer.range_check_((Lz77__is_valid__last_length.last_length.int__content + (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__is_valid__input.input))) (( [#"lz77.adb" 180 0 0] assert { [#"lz77.adb" 180 0 0] ([#"lz77.adb" 180 0 0] ( [@GP_Sloc:lz77.adb:180:52] [@vc:annotation] [@GP_Id:101] [@GP_Reason:VC_INDEX_CHECK] [@GP_Shape:if__if__L_4_while__pragargs__if__and__if__cmp__add__add__selectcomp__ixdcomp] [@comment:                     then k = Last_Length + Input (I).Length + 1)                                                     ^ lz77.adb:180:52:VC_INDEX_CHECK] ( ((Lz77__token_array.first Lz77__is_valid__input.input) <= Lz77__is_valid__i.i.int__content) /\ (Lz77__is_valid__i.i.int__content <= (Lz77__token_array.last Lz77__is_valid__input.input)) ) )) };
              Lz77__is_valid__i.i.int__content ))).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) + (1 : int)))) )))) else (
              (Boolean.of_int((1 : int)))))))) else (
             (Boolean.of_int((1 : int))))) in (
@@ -8771,9 +8763,6 @@ module Lz77__decode_fast__subprogram_def
  use        Standard__natural___axiom as Standard__natural___axiom
  use        Standard__natural__rep as Standard__natural__rep
  use        Standard__positive as Standard__positive
- use        Standard__character as Standard__character
- use        Standard__character__rep as Standard__character__rep
- use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Standard__integer__rep as Standard__integer__rep
  use        Lz77__token_array as Lz77__token_array
  use        Big_integers__big_integer as Big_integers__big_integer
@@ -8795,9 +8784,6 @@ module Lz77__decode_fast__subprogram_def
  use        Big_integers__to_integer as Big_integers__to_integer
  use        Lz77__decode_fast__L_5 as Lz77__decode_fast__L_5
  use        Lz77__decode_fast__L_6 as Lz77__decode_fast__L_6
- use        Array__Int__Lz77__token as Array__Int__Lz77__token
- use        Array__Int__Lz77__token as Array__Int__Lz77__token
- use        Array__Int__Lz77__token as Array__Int__Lz77__token
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
@@ -8825,8 +8811,8 @@ module Lz77__decode_fast__subprogram_def
  let def [#"lz77.ads" 114 0 0][@GP_Subp:lz77.ads:114] 
    (__void_param : unit)
   requires { [#"lz77.ads" 114 0 0] true }
-  ensures { [#"lz77.ads" 114 0 0] ([#"lz77.ads" 117 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@GP_Shape:pragargs__cmp] [@GP_Sloc:lz77.ads:117:14] [@comment:     Post => Output_Length = To_Integer(Decoded_Length(Input));              ^ lz77.ads:117:14:VC_POSTCONDITION] [@model_vc_post] [@GP_Id:130] ( [@GP_Sloc:lz77.ads:117:14] [@GP_Pretty_Ada:22703] (Lz77__decode_fast__output_length.output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_425 : Big_integers__big_integer.big_integer.
-   ( (temp___result_425 = (Lz77__decoded_length.decoded_length Lz77__decode_fast__input.input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_425 Lz77__decode_fast__input.input) )))) ) )) }
+  ensures { [#"lz77.ads" 114 0 0] ([#"lz77.ads" 117 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@GP_Shape:pragargs__cmp] [@GP_Id:117] [@GP_Sloc:lz77.ads:117:14] [@comment:     Post => Output_Length = To_Integer(Decoded_Length(Input));              ^ lz77.ads:117:14:VC_POSTCONDITION] [@model_vc_post] ( [@GP_Sloc:lz77.ads:117:14] [@GP_Pretty_Ada:22636] (Lz77__decode_fast__output_length.output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_416 : Big_integers__big_integer.big_integer.
+   ( (temp___result_416 = (Lz77__decoded_length.decoded_length Lz77__decode_fast__input.input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_416 Lz77__decode_fast__input.input) )))) ) )) }
    = [@vc:divergent]
   ( () (* Assume dynamic invariants of inputs of the subprogram lz77.ads:114 *)
   ;
@@ -8842,17 +8828,17 @@ module Lz77__decode_fast__subprogram_def
    begin ensures {true} let _ = (let _ = ( (Lz77__valid___axiom.valid(Lz77__decode_fast__input.input) ((  begin ensures {true} let _ = (let _ = Lz77__decode_fast__input.input in (
    ()))
    in () end ;
-  (Lz77__token_array.last(Lz77__decode_fast__input.input)) ))) && (([#"lz77.ads" 116 0 0] ( [@GP_Shape:pragargs__andthen__cmp__typeconv__length_ref] [@GP_Sloc:lz77.ads:116:52] [@GP_Id:128] [@comment:     Pre => Valid(Input,Input'Last) and then Output'Length >= To_Integer(Decoded_Length(Input)),                                                    ^ lz77.ads:116:52:VC_RANGE_CHECK] [@vc:annotation] [@GP_Reason:VC_RANGE_CHECK] (Standard__integer.range_check_(( [#"lz77.ads" 116 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content in (
+  (Lz77__token_array.last(Lz77__decode_fast__input.input)) ))) && (([#"lz77.ads" 116 0 0] ( [@GP_Shape:pragargs__andthen__cmp__typeconv__length_ref] [@GP_Sloc:lz77.ads:116:52] [@comment:     Pre => Valid(Input,Input'Last) and then Output'Length >= To_Integer(Decoded_Length(Input)),                                                    ^ lz77.ads:116:52:VC_RANGE_CHECK] [@vc:annotation] [@GP_Id:115] [@GP_Reason:VC_RANGE_CHECK] (Standard__integer.range_check_(( [#"lz77.ads" 116 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content in (
    ()))
    in () end ;
-  (Integer.length((Standard__integer__rep.to_rep(Lz77__decode_fast__output.output__first))) ((Standard__integer__rep.to_rep(Lz77__decode_fast__output.output__last)))) ))) )) >= ([#"lz77.ads" 116 0 0] ( [@GP_Reason:VC_PRECONDITION] [@GP_Shape:pragargs__andthen__cmp__call_to_integer] [@GP_Id:129] [@vc:annotation] [@comment:     Pre => Valid(Input,Input'Last) and then Output'Length >= To_Integer(Decoded_Length(Input)),                                                               ^ lz77.ads:116:63:VC_PRECONDITION] [@GP_Sloc:lz77.ads:116:63] (Big_integers__to_integer.to_integer((Lz77__decoded_length___axiom.decoded_length(Lz77__decode_fast__input.input)))) ))) ) in (
+  (Integer.length((Standard__integer__rep.to_rep(Lz77__decode_fast__output.output__first))) ((Standard__integer__rep.to_rep(Lz77__decode_fast__output.output__last)))) ))) )) >= ([#"lz77.ads" 116 0 0] ( [@GP_Reason:VC_PRECONDITION] [@GP_Shape:pragargs__andthen__cmp__call_to_integer] [@vc:annotation] [@GP_Id:116] [@comment:     Pre => Valid(Input,Input'Last) and then Output'Length >= To_Integer(Decoded_Length(Input)),                                                               ^ lz77.ads:116:63:VC_PRECONDITION] [@GP_Sloc:lz77.ads:116:63] (Big_integers__to_integer.to_integer((Lz77__decoded_length___axiom.decoded_length(Lz77__decode_fast__input.input)))) ))) ) in (
    ()))
    in () end ;
   () (* Assume Pre of the subprogram lz77.ads:114 *)
   ;
-   assume {  ( ( [@GP_Pretty_Ada:4069] ((epsilon temp___result_423 : bool.
-   ( (temp___result_423 = (Lz77__valid.valid Lz77__decode_fast__input.input (Lz77__token_array.last Lz77__decode_fast__input.input))) /\ (Lz77__valid.valid__function_guard temp___result_423 Lz77__decode_fast__input.input (Lz77__token_array.last Lz77__decode_fast__input.input)) )) = True) ) /\ ( [@GP_Pretty_Ada:4075] ((Integer.length (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__first) (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_424 : Big_integers__big_integer.big_integer.
-   ( (temp___result_424 = (Lz77__decoded_length.decoded_length Lz77__decode_fast__input.input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_424 Lz77__decode_fast__input.input) )))) ) ) };
+   assume {  ( ( [@GP_Pretty_Ada:4002] ((epsilon temp___result_414 : bool.
+   ( (temp___result_414 = (Lz77__valid.valid Lz77__decode_fast__input.input (Lz77__token_array.last Lz77__decode_fast__input.input))) /\ (Lz77__valid.valid__function_guard temp___result_414 Lz77__decode_fast__input.input (Lz77__token_array.last Lz77__decode_fast__input.input)) )) = True) ) /\ ( [@GP_Pretty_Ada:4008] ((Integer.length (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__first) (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_415 : Big_integers__big_integer.big_integer.
+   ( (temp___result_415 = (Lz77__decoded_length.decoded_length Lz77__decode_fast__input.input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_415 Lz77__decode_fast__input.input) )))) ) ) };
    try
    ( ();
    ([#"lz77.adb" 208 0 0] ());
@@ -8864,11 +8850,11 @@ module Lz77__decode_fast__subprogram_def
    ();
    ( [@GP_Sloc:lz77.adb:214:24] ([#"lz77.adb" 214 0 0] ()) );
    ( [@GP_Sloc:lz77.adb:214:21] ([#"lz77.adb" 214 0 0] [#"lz77.adb" 214 0 0] (Lz77__decode_fast__output_length.output_length.int__content <- ( Lz77__decode_fast__k.k.int__content ))) );
-   ( [@GP_Sloc:lz77.adb:215:7] ([#"lz77.adb" 215 0 0] (if (( ([#"lz77.adb" 215 0 0] [#"lz77.adb" 215 0 0] (([@branch_id=3306] Main.spark__branch).bool__content <- ( (( [#"lz77.adb" 215 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__input.input in (
+   ( [@GP_Sloc:lz77.adb:215:7] ([#"lz77.adb" 215 0 0] (if (( ([#"lz77.adb" 215 0 0] [#"lz77.adb" 215 0 0] (([@branch_id=3282] Main.spark__branch).bool__content <- ( (( [#"lz77.adb" 215 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__input.input in (
     ()))
     in () end ;
    (Lz77__token_array.length(Lz77__decode_fast__input.input)) ) = (0 : int)) )));
-   ( [@branch_id=3306] Main.spark__branch ).bool__content )) then (
+   ( [@branch_id=3282] Main.spark__branch ).bool__content )) then (
     ( ();
     ( [@GP_Sloc:lz77.adb:216:32] ([#"lz77.adb" 216 0 0] [#"lz77.adb" 216 0 0] (Lz77__decode_fast__output_length.output_length.int__content <- ( (0 : int) ))) ) )) else (
     ( ();
@@ -8885,116 +8871,72 @@ module Lz77__decode_fast__subprogram_def
      ;
      (if ((Boolean.andb((temp___404 <= Lz77__decode_fast__L_5__i.i.int__content)) ((Lz77__decode_fast__L_5__i.i.int__content <= temp___405)))) then (
       [#"lz77.adb" 218 0 0] try
-       ( [#"lz77.adb" 218 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__output_length.output_length.int__content in (
+       ( [#"lz77.adb" 218 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__k.k.int__content in (
         ()))
         in () end ;
-       (let temp___418 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 218 0 0] (val _f : int
-       ensures {[#"lz77.adb" 218 0 0] (result = Lz77__decode_fast__output_length.output_length.int__content)} 
+       (let temp___409 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 218 0 0] (val _f : int
+       ensures {[#"lz77.adb" 218 0 0] (result = Lz77__decode_fast__k.k.int__content)} 
        in _f) in (
-        ( [#"lz77.adb" 218 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content in (
+        ( [#"lz77.adb" 218 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__output_length.output_length.int__content in (
          ()))
          in () end ;
-        (let temp___416 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 218 0 0] (val _f : Array__Int__Standard__character.map
-        ensures {[#"lz77.adb" 218 0 0] (result = Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content)} 
+        (let temp___408 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 218 0 0] (val _f : int
+        ensures {[#"lz77.adb" 218 0 0] (result = Lz77__decode_fast__output_length.output_length.int__content)} 
         in _f) in (
-         ( [#"lz77.adb" 218 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__k.k.int__content in (
-          ()))
-          in () end ;
-         (let temp___414 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 218 0 0] (val _f : int
-         ensures {[#"lz77.adb" 218 0 0] (result = Lz77__decode_fast__k.k.int__content)} 
-         in _f) in (
-          ( () (* First unroling of the loop statements appearing before the loop invariant of loop lz77.adb:218 *)
+         ( () (* First unroling of the loop statements appearing before the loop invariant of loop lz77.adb:218 *)
+         ;
+         () (* While loop translating the Ada loop from lz77.adb:218 *)
+         ;
+         [#"lz77.adb" 218 0 0] while True do
+          ( () (* Assume implicit invariants from the loop lz77.adb:218 *)
           ;
-          () (* While loop translating the Ada loop from lz77.adb:218 *)
+          [#"lz77.adb" 218 0 0] assume { [#"lz77.adb" 218 0 0] (Boolean.andb(( ( ( ( true /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode_fast__output_length.output_length.int__content False True True True) )/\true ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode_fast__k.k.int__content True True True True) )/\true )) (( ((Lz77__token_array.first Lz77__decode_fast__input.input) <= Lz77__decode_fast__L_5__i.i.int__content) /\ (Lz77__decode_fast__L_5__i.i.int__content <= (Lz77__token_array.last Lz77__decode_fast__input.input)) ))) };
+          () (* Check for absence of RTE in the invariant of loop lz77.adb:218 *)
           ;
-          [#"lz77.adb" 218 0 0] while True do
-           ( () (* Assume implicit invariants from the loop lz77.adb:218 *)
+          () (* Loop statements appearing after the loop invariant of loop lz77.adb:218 *)
+          ;
+          ();
+          ( [@GP_Sloc:lz77.adb:219:48] ([#"lz77.adb" 219 0 0] (let temp___406 [@mlw:proxy_symbol] [@introduced] = (0 : int) in (
+          (let temp___407 [@mlw:proxy_symbol] [@introduced] = ((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__decode_fast__input.input))) (Lz77__decode_fast__L_5__i.i.int__content)).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) - (1 : int)) in (
+           ( [#"lz77.adb" 219 0 0] (Lz77__decode_fast__L_6__j.j.int__content <- ( temp___406 ));
+           () (* Translation of an Ada loop from lz77.adb:219 *)
            ;
-           [#"lz77.adb" 218 0 0] assume { [#"lz77.adb" 218 0 0] (Boolean.andb(( ( ( ( ( ( true /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode_fast__k.k.int__content True True True True) )/\true ) /\ (if (True) then (
-            true) else (
-            (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__first) (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__last)))) )/\(forall temp___417 [#"lz77.adb" 218 0 0]  : int.
-            (if (( ((Standard__integer__rep.to_rep Lz77__decode_fast__output.output__first) <= temp___417) /\ (temp___417 <= (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__last)) )) then (
-             (if (( false /\ false )) then (
-              ((Array__Int__Standard__character.get Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content temp___417) = (Array__Int__Standard__character.get temp___416 temp___417))) else (
-              true))) else true)) ) /\ (Standard__natural___axiom.dynamic_invariant Lz77__decode_fast__output_length.output_length.int__content False True True True) )/\true )) (( ((Lz77__token_array.first Lz77__decode_fast__input.input) <= Lz77__decode_fast__L_5__i.i.int__content) /\ (Lz77__decode_fast__L_5__i.i.int__content <= (Lz77__token_array.last Lz77__decode_fast__input.input)) ))) };
-           () (* Check for absence of RTE in the invariant of loop lz77.adb:218 *)
-           ;
-           () (* Loop statements appearing after the loop invariant of loop lz77.adb:218 *)
-           ;
-           ();
-           ( [@GP_Sloc:lz77.adb:219:48] ([#"lz77.adb" 219 0 0] (let temp___406 [@mlw:proxy_symbol] [@introduced] = (0 : int) in (
-           (let temp___407 [@mlw:proxy_symbol] [@introduced] = ((Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__decode_fast__input.input))) (Lz77__decode_fast__L_5__i.i.int__content)).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length)) - (1 : int)) in (
-            ( [#"lz77.adb" 219 0 0] (Lz77__decode_fast__L_6__j.j.int__content <- ( temp___406 ));
-            () (* Translation of an Ada loop from lz77.adb:219 *)
-            ;
-            (if ((Boolean.andb((temp___406 <= Lz77__decode_fast__L_6__j.j.int__content)) ((Lz77__decode_fast__L_6__j.j.int__content <= temp___407)))) then (
-             [#"lz77.adb" 219 0 0] try
-              ( [#"lz77.adb" 219 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content in (
-               ()))
-               in () end ;
-              (let temp___411 [@mlw:proxy_symbol] [@introduced] = [#"lz77.adb" 219 0 0] (val _f : Array__Int__Standard__character.map
-              ensures {[#"lz77.adb" 219 0 0] (result = Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content)} 
-              in _f) in (
-               ( () (* First unroling of the loop statements appearing before the loop invariant of loop lz77.adb:219 *)
-               ;
-               () (* While loop translating the Ada loop from lz77.adb:219 *)
-               ;
-               [#"lz77.adb" 219 0 0] while True do
-                ( () (* Assume implicit invariants from the loop lz77.adb:219 *)
-                ;
-                [#"lz77.adb" 219 0 0] assume { [#"lz77.adb" 219 0 0] (Boolean.andb(( ( true /\ (if (True) then (
-                 true) else (
-                 (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__first) (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__last)))) )/\true )) (( ((0 : int) <= Lz77__decode_fast__L_6__j.j.int__content) /\ (Lz77__decode_fast__L_6__j.j.int__content <= ((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__decode_fast__input.input) Lz77__decode_fast__L_5__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length) - (1 : int))) ))) };
-                () (* Check for absence of RTE in the invariant of loop lz77.adb:219 *)
-                ;
-                () (* Loop statements appearing after the loop invariant of loop lz77.adb:219 *)
-                ;
-                ();
-                ( [@GP_Sloc:lz77.adb:220:39] ([#"lz77.adb" 220 0 0] ()) );
-                ( [@GP_Sloc:lz77.adb:220:72] ([#"lz77.adb" 220 0 0] ()) );
-                ( [@GP_Sloc:lz77.adb:220:46] ([#"lz77.adb" 220 0 0] [#"lz77.adb" 220 0 0] (Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content <- ( (Array__Int__Standard__character.set(Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content) ((let temp___409 [@mlw:proxy_symbol] [@introduced] = ([#"lz77.adb" 220 0 0] ( [@GP_Id:120] [@vc:annotation] [@GP_Shape:if__L_5_while__L_6_while__output_assign__ixdcomp__add] [@GP_Sloc:lz77.adb:220:41] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:               Output (Output'First + k + J) := Output (Output'First + k + J - Input (I).Offset);                                         ^ lz77.adb:220:41:VC_OVERFLOW_CHECK] (Standard__integer.range_check_((([#"lz77.adb" 220 0 0] ( [@GP_Shape:if__L_5_while__L_6_while__output_assign__ixdcomp__add__add] [@comment:               Output (Output'First + k + J) := Output (Output'First + k + J - Input (I).Offset);                                     ^ lz77.adb:220:37:VC_OVERFLOW_CHECK] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:119] [@GP_Sloc:lz77.adb:220:37] (Standard__integer.range_check_(((Standard__integer__rep.to_rep(( [#"lz77.adb" 220 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content in (
-                 ()))
-                 in () end ;
-                Lz77__decode_fast__output.output__first ))) + Lz77__decode_fast__k.k.int__content))) )) + Lz77__decode_fast__L_6__j.j.int__content))) )) in (
-                 (  assert {  ([#"lz77.adb" 220 0 0] ( [@GP_Id:121] [@vc:annotation] [@GP_Shape:if__L_5_while__L_6_while__output_assign__ixdcomp__add] [@GP_Sloc:lz77.adb:220:41] [@GP_Reason:VC_INDEX_CHECK] [@comment:               Output (Output'First + k + J) := Output (Output'First + k + J - Input (I).Offset);                                         ^ lz77.adb:220:41:VC_INDEX_CHECK] ( ((Standard__integer__rep.to_rep Lz77__decode_fast__output.output__first) <= temp___409) /\ (temp___409 <= (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__last)) ) )) };
-                 temp___409 )))
-                ) ((Standard__character__rep.of_rep((Standard__character__rep.to_rep((Array__Int__Standard__character.get(Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content) ((let temp___408 [@mlw:proxy_symbol] [@introduced] = ([#"lz77.adb" 220 0 0] ( [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:117] [@comment:               Output (Output'First + k + J) := Output (Output'First + k + J - Input (I).Offset);                                                                              ^ lz77.adb:220:78:VC_OVERFLOW_CHECK] [@GP_Shape:if__L_5_while__L_6_while__output_assign__ixdcomp__sub] [@GP_Sloc:lz77.adb:220:78] (Standard__integer.range_check_((([#"lz77.adb" 220 0 0] ( [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:116] [@GP_Sloc:lz77.adb:220:74] [@comment:               Output (Output'First + k + J) := Output (Output'First + k + J - Input (I).Offset);                                                                          ^ lz77.adb:220:74:VC_OVERFLOW_CHECK] [@GP_Shape:if__L_5_while__L_6_while__output_assign__ixdcomp__sub__add] (Standard__integer.range_check_((([#"lz77.adb" 220 0 0] ( [@comment:               Output (Output'First + k + J) := Output (Output'First + k + J - Input (I).Offset);                                                                      ^ lz77.adb:220:70:VC_OVERFLOW_CHECK] [@GP_Shape:if__L_5_while__L_6_while__output_assign__ixdcomp__sub__add__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:115] [@GP_Sloc:lz77.adb:220:70] (Standard__integer.range_check_(((Standard__integer__rep.to_rep(( [#"lz77.adb" 220 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content in (
-                 ()))
-                 in () end ;
-                Lz77__decode_fast__output.output__first ))) + Lz77__decode_fast__k.k.int__content))) )) + Lz77__decode_fast__L_6__j.j.int__content))) )) - (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__decode_fast__input.input))) (Lz77__decode_fast__L_5__i.i.int__content)).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__offset))))) )) in (
-                 (  assert {  ([#"lz77.adb" 220 0 0] ( [@vc:annotation] [@GP_Id:118] [@GP_Shape:if__L_5_while__L_6_while__output_assign__ixdcomp__sub] [@GP_Sloc:lz77.adb:220:78] [@GP_Reason:VC_INDEX_CHECK] [@comment:               Output (Output'First + k + J) := Output (Output'First + k + J - Input (I).Offset);                                                                              ^ lz77.adb:220:78:VC_INDEX_CHECK] ( ((Standard__integer__rep.to_rep Lz77__decode_fast__output.output__first) <= temp___408) /\ (temp___408 <= (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__last)) ) )) };
-                 temp___408 )))
-                )))))))) ))) );
-                () (* Check for the exit condition and loop statements appearing before the loop invariant of loop lz77.adb:219 *)
-                ;
-                (if ((Lz77__decode_fast__L_6__j.j.int__content = temp___407)) then (
-                  raise Lz77__decode_fast__L_6.L_6));
-                ([#"lz77.adb" 219 0 0] [#"lz77.adb" 219 0 0] (Lz77__decode_fast__L_6__j.j.int__content <- ( (Lz77__decode_fast__L_6__j.j.int__content + (1 : int)) ))) )
-               done )))
-               )
-             with
-              Lz77__decode_fast__L_6.L_6 -> ()
-             end)) )))
-           ))
-           ) );
-           ( [@GP_Sloc:lz77.adb:222:13] ([#"lz77.adb" 222 0 0] ()) );
-           ( [@GP_Sloc:lz77.adb:222:15] ([#"lz77.adb" 222 0 0] [#"lz77.adb" 222 0 0] (Lz77__decode_fast__k.k.int__content <- ( Lz77__decode_fast__output_length.output_length.int__content ))) );
-           ( [@GP_Sloc:lz77.adb:223:36] ([#"lz77.adb" 223 0 0] ()) );
-           ( [@GP_Sloc:lz77.adb:223:58] ([#"lz77.adb" 223 0 0] [#"lz77.adb" 223 0 0] (Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content <- ( (Array__Int__Standard__character.set(Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content) ((let temp___413 [@mlw:proxy_symbol] [@introduced] = ([#"lz77.adb" 223 0 0] ( [@GP_Sloc:lz77.adb:223:38] [@GP_Id:123] [@vc:annotation] [@GP_Shape:if__L_5_while__output_assign__ixdcomp__add] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:            Output (Output'First + k + Input (I).Length) := Input (I).Next_C;                                       ^ lz77.adb:223:38:VC_OVERFLOW_CHECK] (Standard__integer.range_check_((([#"lz77.adb" 223 0 0] ( [@GP_Sloc:lz77.adb:223:34] [@GP_Shape:if__L_5_while__output_assign__ixdcomp__add__add] [@GP_Id:122] [@comment:            Output (Output'First + k + Input (I).Length) := Input (I).Next_C;                                   ^ lz77.adb:223:34:VC_OVERFLOW_CHECK] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] (Standard__integer.range_check_(((Standard__integer__rep.to_rep(( [#"lz77.adb" 223 0 0] begin ensures {true} let _ = (let _ = Lz77__decode_fast__output.output.Array__Int__Standard__character.map__content in (
-            ()))
-            in () end ;
-           Lz77__decode_fast__output.output__first ))) + Lz77__decode_fast__k.k.int__content))) )) + (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__decode_fast__input.input))) (Lz77__decode_fast__L_5__i.i.int__content)).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) in (
-            (  assert {  ([#"lz77.adb" 223 0 0] ( [@GP_Sloc:lz77.adb:223:38] [@comment:            Output (Output'First + k + Input (I).Length) := Input (I).Next_C;                                       ^ lz77.adb:223:38:VC_INDEX_CHECK] [@GP_Id:124] [@vc:annotation] [@GP_Shape:if__L_5_while__output_assign__ixdcomp__add] [@GP_Reason:VC_INDEX_CHECK] ( ((Standard__integer__rep.to_rep Lz77__decode_fast__output.output__first) <= temp___413) /\ (temp___413 <= (Standard__integer__rep.to_rep Lz77__decode_fast__output.output__last)) ) )) };
-            temp___413 )))
-           ) ((Standard__character__rep.of_rep((Standard__character__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__decode_fast__input.input))) (Lz77__decode_fast__L_5__i.i.int__content)).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__next_c)))))) ))) );
-           ( [@GP_Sloc:lz77.adb:224:27] ([#"lz77.adb" 224 0 0] [#"lz77.adb" 224 0 0] (Lz77__decode_fast__output_length.output_length.int__content <- ( ([#"lz77.adb" 224 0 0] ( [@GP_Id:126] [@vc:annotation] [@comment:            Output_Length := Output_Length + Input (I).Length + 1;                                                               ^ lz77.adb:224:63:VC_OVERFLOW_CHECK] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:224:63] [@GP_Shape:if__L_5_while__output_length_assign__add] (Standard__integer.range_check_((([#"lz77.adb" 224 0 0] ( [@comment:            Output_Length := Output_Length + Input (I).Length + 1;                                            ^ lz77.adb:224:44:VC_OVERFLOW_CHECK] [@GP_Shape:if__L_5_while__output_length_assign__add__add] [@GP_Sloc:lz77.adb:224:44] [@GP_Id:125] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] (Standard__integer.range_check_((Lz77__decode_fast__output_length.output_length.int__content + (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__decode_fast__input.input))) (Lz77__decode_fast__L_5__i.i.int__content)).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) + (1 : int)))) )) ))) );
-           () (* Check for the exit condition and loop statements appearing before the loop invariant of loop lz77.adb:218 *)
-           ;
-           (if ((Lz77__decode_fast__L_5__i.i.int__content = temp___405)) then (
-             raise Lz77__decode_fast__L_5.L_5));
-           ([#"lz77.adb" 218 0 0] [#"lz77.adb" 218 0 0] (Lz77__decode_fast__L_5__i.i.int__content <- ( (Lz77__decode_fast__L_5__i.i.int__content + (1 : int)) ))) )
-          done )))
-          )))
+           (if ((Boolean.andb((temp___406 <= Lz77__decode_fast__L_6__j.j.int__content)) ((Lz77__decode_fast__L_6__j.j.int__content <= temp___407)))) then (
+            [#"lz77.adb" 219 0 0] try
+             ( () (* First unroling of the loop statements appearing before the loop invariant of loop lz77.adb:219 *)
+             ;
+             () (* While loop translating the Ada loop from lz77.adb:219 *)
+             ;
+             [#"lz77.adb" 219 0 0] while True do
+              ( () (* Assume implicit invariants from the loop lz77.adb:219 *)
+              ;
+              [#"lz77.adb" 219 0 0] assume { [#"lz77.adb" 219 0 0] ( ((0 : int) <= Lz77__decode_fast__L_6__j.j.int__content) /\ (Lz77__decode_fast__L_6__j.j.int__content <= ((Standard__natural__rep.to_rep (Array__Int__Lz77__token.get (Lz77__token_array.to_array Lz77__decode_fast__input.input) Lz77__decode_fast__L_5__i.i.int__content).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length) - (1 : int))) ) };
+              () (* Check for absence of RTE in the invariant of loop lz77.adb:219 *)
+              ;
+              () (* Loop statements appearing after the loop invariant of loop lz77.adb:219 *)
+              ;
+              ();
+              ( [@GP_Sloc:lz77.adb:221:16] ([#"lz77.adb" 221 0 0] ()) );
+              () (* Check for the exit condition and loop statements appearing before the loop invariant of loop lz77.adb:219 *)
+              ;
+              (if ((Lz77__decode_fast__L_6__j.j.int__content = temp___407)) then (
+                raise Lz77__decode_fast__L_6.L_6));
+              ([#"lz77.adb" 219 0 0] [#"lz77.adb" 219 0 0] (Lz77__decode_fast__L_6__j.j.int__content <- ( (Lz77__decode_fast__L_6__j.j.int__content + (1 : int)) ))) )
+             done )
+            with
+             Lz77__decode_fast__L_6.L_6 -> ()
+            end)) )))
+          ))
+          ) );
+          ( [@GP_Sloc:lz77.adb:223:13] ([#"lz77.adb" 223 0 0] ()) );
+          ( [@GP_Sloc:lz77.adb:223:15] ([#"lz77.adb" 223 0 0] [#"lz77.adb" 223 0 0] (Lz77__decode_fast__k.k.int__content <- ( Lz77__decode_fast__output_length.output_length.int__content ))) );
+          ( [@GP_Sloc:lz77.adb:225:27] ([#"lz77.adb" 225 0 0] [#"lz77.adb" 225 0 0] (Lz77__decode_fast__output_length.output_length.int__content <- ( ([#"lz77.adb" 225 0 0] ( [@vc:annotation] [@GP_Id:113] [@GP_Reason:VC_OVERFLOW_CHECK] [@comment:            Output_Length := Output_Length + Input (I).Length + 1;                                                               ^ lz77.adb:225:63:VC_OVERFLOW_CHECK] [@GP_Shape:if__L_5_while__output_length_assign__add] [@GP_Sloc:lz77.adb:225:63] (Standard__integer.range_check_((([#"lz77.adb" 225 0 0] ( [@GP_Shape:if__L_5_while__output_length_assign__add__add] [@comment:            Output_Length := Output_Length + Input (I).Length + 1;                                            ^ lz77.adb:225:44:VC_OVERFLOW_CHECK] [@vc:annotation] [@GP_Id:112] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Sloc:lz77.adb:225:44] (Standard__integer.range_check_((Lz77__decode_fast__output_length.output_length.int__content + (Standard__natural__rep.to_rep((Array__Int__Lz77__token.get((Lz77__token_array.to_array(Lz77__decode_fast__input.input))) (Lz77__decode_fast__L_5__i.i.int__content)).Lz77__token.__split_fields.Lz77__token.rec__lz77__token__length))))) )) + (1 : int)))) )) ))) );
+          () (* Check for the exit condition and loop statements appearing before the loop invariant of loop lz77.adb:218 *)
+          ;
+          (if ((Lz77__decode_fast__L_5__i.i.int__content = temp___405)) then (
+            raise Lz77__decode_fast__L_5.L_5));
+          ([#"lz77.adb" 218 0 0] [#"lz77.adb" 218 0 0] (Lz77__decode_fast__L_5__i.i.int__content <- ( (Lz77__decode_fast__L_5__i.i.int__content + (1 : int)) ))) )
+         done )))
          )))
         )
       with
@@ -9006,7 +8948,7 @@ module Lz77__decode_fast__subprogram_def
   with
    Return__exc -> ()
   end;
-   begin ensures {true} let _ = (let _ = (Lz77__decode_fast__output_length.output_length.int__content = ([#"lz77.ads" 117 0 0] ( [@GP_Reason:VC_PRECONDITION] [@GP_Id:127] [@vc:annotation] [@comment:     Post => Output_Length = To_Integer(Decoded_Length(Input));                              ^ lz77.ads:117:30:VC_PRECONDITION] [@GP_Shape:pragargs__cmp__call_to_integer] [@GP_Sloc:lz77.ads:117:30] (Big_integers__to_integer.to_integer((Lz77__decoded_length___axiom.decoded_length(Lz77__decode_fast__input.input)))) ))) in (
+   begin ensures {true} let _ = (let _ = (Lz77__decode_fast__output_length.output_length.int__content = ([#"lz77.ads" 117 0 0] ( [@GP_Reason:VC_PRECONDITION] [@vc:annotation] [@GP_Id:114] [@comment:     Post => Output_Length = To_Integer(Decoded_Length(Input));                              ^ lz77.ads:117:30:VC_PRECONDITION] [@GP_Shape:pragargs__cmp__call_to_integer] [@GP_Sloc:lz77.ads:117:30] (Big_integers__to_integer.to_integer((Lz77__decoded_length___axiom.decoded_length(Lz77__decode_fast__input.input)))) ))) in (
    ()))
    in () end  )
 end

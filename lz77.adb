@@ -172,13 +172,13 @@ is
                     (I >= Input'First 
                      and I <= Input'Last + 1 
                      and k >= 1 
-                     and Input(I).Offset <= Last_Length 
-                     and Last_Length <= (Natural'Last - Input(I).Length - 1)
-                     and (if I = Input'First then Last_Length = 0)
-                     and (if I <= Input'Last 
-                       and (not (if Input(I).Offset = 0 then Input(I).Length = 0)
-                       or not (Input(I).Offset <= Last_Length and Last_Length <= (Natural'Last - Input(I).Length - 1))) 
-                       then k = Last_Length + Input (I).Length + 1))
+                     and (if (I <= Input'Last 
+                       and Last_Length <= (Natural'Last - Input(I).Length - 1)
+                       and (if I = Input'First then Last_Length = 0)
+                       and Input(I).Offset <= Last_Length
+                       and (if Input(I).Offset = 0 then Input(I).Length = 0)) 
+                     then k = Last_Length + Input (I).Length + 1) 
+                    )
                 else True);
                if I = Input'First then Last_Length:= 0; 
                else Last_Length := k;
@@ -211,18 +211,20 @@ is
    is
       k : Natural := 0;
    begin
-      Output_Length := k;
       if Input'Length = 0 then 
-         Output_Length         := 0;
+         Output_Length := k;
       else
          for I in Input'First..Input'Last loop
             for J in 0 .. Input (I).Length - 1 loop
---                 Output (Output'First + k + J) := Output (Output'First + k + J - Input (I).Offset);
+--          pragma Loop_Invariant (not Error and J >= 0 and J <= Input(I)'Length and k <= (Output'Length - Input(I).Length - 1) and  and (for ));
+--          Only here in the loop where Error = False
+               Output (Output'First + k + J) := Output (Output'First + k - Input (I).Offset + J);
             end loop;
-            k := Output_Length;
---              Output (Output'First + k + Input (I).Length) := Input (I).Next_C; 
-            Output_Length := Output_Length + Input (I).Length + 1;
+            -- here in the loop should be Error = False
+            Output (Output'First + k + Input (I).Length) := Input (I).Next_C;
+            k := k + Input (I).Length + 1;
          end loop;
+         Output_Length := k;
       end if;
    end Decode_Fast;
 
