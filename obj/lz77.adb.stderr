@@ -1,0 +1,2 @@
+lz77.adb:109:22: expected type universal integer
+lz77.adb:109:22: found type "Token" defined at lz77.ads:14

@@ -68,44 +68,45 @@ is
       -- Character'First represents ASCII NUL character
       k       : Natural := 0;  
       One_c: constant Natural := 1;
+      J : Natural := 0;
+      I : Natural;
    begin
       -- {True}
       Error         := False;
       -- {Not Error and True}   
       -- Check for empty Input or empty Output (Output array's buffer range) and Check their indexes not cause overflow
-      if Input'Length > 0 and Input'Length <= Natural'Last 
-         and Input'Last <= Natural'Last and Input'First <= Natural'Last
-         and Output'Length > 0 and Output'Length <= Natural'Last  
-         and Output'Last <= Natural'Last and Output'First <= Natural'Last
-      then
-         null;
-      else
-         Error         := True;
-      end if;
 
       -- {(if Error then True else True)=>(True)}
-      if Error then
+      if not (Input'Length > 0 and Input'Length <= Natural'Last 
+         and Input'Last <= (Natural'Last - 1) and Input'First <= Natural'Last
+         and Output'Length > 0 and Output'Length <= Natural'Last
+         and Input'Length <= Output'Length  
+         and Output'Last <= Natural'Last and Output'First <= Natural'Last) then
          -- {Error} and {if Error then True else True}
          -- {Error} and {if Error then 0=0 else True}
          k := 0;
          -- {Error} and {if Error then k=0 else True}
          Output_Length := k;
+         Error := True;
          return;
          -- {Error} and {if Error then Output_Length=0 else True}
       else
+         I := Input'First;
+         
       -------------------------------------------------loop--------------------------------------------
       -- If Input is not empty, then the each token in Input Array must be valid
          -- {I = Input'First and (if Error then k=0 else "True")}
-         for I in Input'First..Input'Last loop
+         while I >= Input'First and I <= Input'Last loop
             -- {I > Input'First and I <= Input'Last and (if Error then k=0 else "True")}
             -- Length_Acc(Input)(I) : Big_Integer
-            pragma Loop_Invariant (if Error then k=0 else True);
+            pragma Loop_Invariant ((if Error then k=0 else True) and I >= Input'First and I <= Input'Last and Input'Last <= Natural'Last - 1);
             
             if Error 
               or not (k <= (Natural'Last - 1) and Input(I).Length <= (Natural'Last - 1) 
                  and k <=  (Natural'Last - Input(I).Length - 1)  --Check the Additive not overflow
                  and k <= (Output'Length - Input(I).Length - 1)
                  and not (Input(I).Offset > 0 and Input(I).Length <= 0)
+                 and Input(I).Offset >= 0
                  and Input(I).Offset <= k
                  and Output'First <= (Natural'Last - Input(I).Length - k - 1)
                  and Output'Last <= Natural'Last
@@ -117,45 +118,28 @@ is
                -- {Error and (if Error then Output_Length=0 else True)}
                return;
             else
-               
-               if Output'First <= (Natural'Last - k + Input (I).Offset - Input(I).Length) 
-               and Output'First <= (Output'Last - k + Input (I).Offset - Input(I).Length) and Output'First <= (Output'Last - Input(I).Length - k) then
                   --  Byte-by-byte copying based on the current token
                   --  Token (o, l, c):
                   --  the bytes bk+1,. . . , bk+1+(l−1) are identical to the bytes bk+1−o,. . . , bk+1−o+(l−1),
                   --  the bytes bk+1,. . . , bk+l are identical to the bytes bk+1−o,. . . , bk+l−o,
                   --  byte bk+1+l is c
-                  for J in 0 .. Input (I).Length - 1 loop
+                  while J >= 0 and J <= Input (I).Length - 1 loop
+                     pragma Loop_Invariant (if Error then k = 0);
 --                       pragma Loop_Invariant (if Error then k=0 else (k = k + Input (I).Length + 1) and (J < Input(I).Length and Output (Output'First + k + J) = Output (Output'First + k - Input(I).Offset + J)) or (J = Input(I).Length and Output(Output'First - 1 + k + J + 1) = Input(I).Next_C));
 --                          pragma Loop_Invariant 
 --                             (if J >= 0 and J <= Input (I).Length - 1 and not Error   
 --                              then Output (Output'First - 1 + k + 1 + J) = Output (Output'First - 1 + k + 1 - Input (I).Offset + J));
 
-                     if J <= Output'Length 
-                        and Output'First <= (Natural'Last - k + Input (I).Offset - J) 
-                        and Output'First <= (Output'Last - k + Input (I).Offset - J) 
-                     then
-                        -- Only here in the loop where Error = False
-                        Output (Output'First - 1 + k + 1 + J) := Output (Output'First - 1 + k + 1 - Input (I).Offset + J);
-                     else 
-                        Error         := True;
-                        k := 0;
-                        Output_Length := k;
-                        return;
-                     end if;
+                     -- Only here in the loop where Error = False
+                     Output (Output'First + k + J) := Output (Output'First + k - Input (I).Offset + J);
+                     J := J+1;
                   end loop;
                   -- here in the loop should be Error = False
-                  Output (Output'First - 1 + k + Input (I).Length + 1) := Input (I).Next_C;
+                  Output (Output'First + k + Input (I).Length) := Input (I).Next_C;
                   k := k + Input (I).Length + 1;
                   -- {not Error and J = Input(I).Length and (if Error then k=0 else True)}
-               else
-                  k := 0;
-                  Output_Length := k;
-                  Error         := True;
-                  return;
-                  -- {Error and I > Input'First and I <= Input'Last and (if Error then k=0 else "True")}
-               end if;
             end if;
+            I := I+1; -- I >= Input'First
             -- {if Error then k=0 else True}
          end loop;
          -- {not Error and I = (Input'Last + 1) and (if Error then k=0 else "True")}

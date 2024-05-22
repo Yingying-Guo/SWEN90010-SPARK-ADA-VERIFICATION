@@ -19,6 +19,11 @@ is
      (others => 'X');  -- Output_Array's buffer should in the range of (1..100)
    BLen  : Natural;
 begin
+--     for i in 0..0 loop
+--        Put_Line("Loop works");
+--        --- the loop would npot work if index range is 0..-1
+--     end loop;
+
    -- T1: Input Array
    -- B: Output Array
    -- BLen: Output Array's length

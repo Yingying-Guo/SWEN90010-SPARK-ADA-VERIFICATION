@@ -54,7 +54,7 @@
   "proof": [
     {
       "file": "main.adb",
-      "line": 33,
+      "line": 38,
       "col": 42,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -81,7 +81,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 33,
+      "check_line": 38,
       "check_col": 42,
       "how_proved": "prover",
       "stats": {
@@ -94,7 +94,7 @@
     },
     {
       "file": "main.adb",
-      "line": 34,
+      "line": 39,
       "col": 29,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -132,7 +132,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 34,
+      "check_line": 39,
       "check_col": 29,
       "how_proved": "prover",
       "stats": {
@@ -145,7 +145,7 @@
     },
     {
       "file": "main.adb",
-      "line": 46,
+      "line": 50,
       "col": 7,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -163,7 +163,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 1555,
+              "steps": 1573,
               "time": 0
             }
           },
@@ -183,7 +183,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 46,
+      "check_line": 50,
       "check_col": 7,
       "how_proved": "prover",
       "stats": {
@@ -196,7 +196,7 @@
     },
     {
       "file": "main.adb",
-      "line": 50,
+      "line": 54,
       "col": 22,
       "rule": "VC_ASSERT",
       "severity": "info",
@@ -214,7 +214,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 1586,
+              "steps": 1604,
               "time": 0
             }
           },
@@ -223,7 +223,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 50,
+      "check_line": 54,
       "check_col": 22,
       "how_proved": "prover",
       "stats": {
@@ -236,7 +236,7 @@
     },
     {
       "file": "main.adb",
-      "line": 51,
+      "line": 55,
       "col": 39,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -263,7 +263,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 51,
+      "check_line": 55,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -276,7 +276,7 @@
     },
     {
       "file": "main.adb",
-      "line": 52,
+      "line": 56,
       "col": 26,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -314,7 +314,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 52,
+      "check_line": 56,
       "check_col": 26,
       "how_proved": "prover",
       "stats": {
@@ -713,14 +713,14 @@
     }
   ],
   "timings": {
-    "marking": 1.55309995170683E-03,
-    "globals (basic)": 1.42401996999979E-02,
-    "globals/properties (advanced)": 1.65704991668463E-02,
-    "flow analysis": 1.29573997110128E-02,
-    "codepeer results": 4.90000002173474E-06,
-    "init_why_sections": 3.27199988532811E-04,
-    "translation of standard": 1.57369999215007E-03,
-    "translation of compilation unit": 3.33261005580425E-02,
-    "proof": 4.78708207607269E-01
+    "marking": 9.48600005358458E-04,
+    "globals (basic)": 1.30537003278732E-02,
+    "globals/properties (advanced)": 1.63206998258829E-02,
+    "flow analysis": 1.26454997807741E-02,
+    "codepeer results": 4.09999984185561E-06,
+    "init_why_sections": 3.03700013319030E-04,
+    "translation of standard": 1.66599999647588E-03,
+    "translation of compilation unit": 3.31394001841545E-02,
+    "proof": 4.89718288183212E-01
   }
 }
