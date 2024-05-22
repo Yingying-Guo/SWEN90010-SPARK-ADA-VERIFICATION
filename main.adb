@@ -19,6 +19,11 @@ is
      (others => 'X');  -- Output_Array's buffer should in the range of (1..100)
    BLen  : Natural;
 begin
+--     for i in 0..0 loop
+--        Put_Line("Loop works");
+--        --- the loop would npot work if index range is 0..-1
+--     end loop;
+
    -- T1: Input Array
    -- B: Output Array
    -- BLen: Output Array's length
@@ -38,19 +43,20 @@ begin
          Put ("Indicated decompressed length must be wrong!");
          New_Line;
       end if;
-   else
-      Put ("Error reported.");
    end if;
 
    if Is_Valid (T1) then -- Check the validity of the input array
+      Put("Valid and run the Deode_Fast");
       Decode_Fast (T1, B, BLen);
       Put ("Got this many: ");
       Put (BLen);
       New_Line;
-      --pragma Assert (BLen = 5);
+      pragma Assert (BLen = 4);
       for Index in B'First .. B'First + BLen - 1 loop
          Put (Item => B (Index));
       end loop;
       New_Line;
+   else
+      Put ("Error reported.");
    end if;
 end Main;
