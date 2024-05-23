@@ -103,25 +103,6 @@
     },
     {
       "file": "lz77.adb",
-      "line": 64,
-      "col": 7,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "how_proved": "flow"
-    },
-    {
-      "file": "lz77.adb",
       "line": 65,
       "col": 7,
       "rule": "UNINITIALIZED",
@@ -179,7 +160,26 @@
     },
     {
       "file": "lz77.adb",
-      "line": 169,
+      "line": 61,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "lz77.adb",
+      "line": 192,
       "col": 7,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -198,7 +198,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 167,
+      "line": 190,
       "col": 7,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -217,7 +217,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 168,
+      "line": 191,
       "col": 7,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -255,7 +255,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 267,
+      "line": 313,
       "col": 7,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -274,7 +274,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 268,
+      "line": 314,
       "col": 7,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -511,7 +511,7 @@
     {
       "file": "lz77.adb",
       "line": 29,
-      "col": 14,
+      "col": 12,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -538,7 +538,7 @@
       ],
       "check_file": "lz77.adb",
       "check_line": 29,
-      "check_col": 14,
+      "check_col": 12,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -591,46 +591,6 @@
     {
       "file": "lz77.adb",
       "line": 29,
-      "col": 54,
-      "rule": "VC_PRECONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Length_Acc",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 41
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 29,
-      "check_col": 54,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 29,
       "col": 52,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -659,6 +619,46 @@
       "check_file": "lz77.adb",
       "check_line": 29,
       "check_col": 52,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 29,
+      "col": 50,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Length_Acc",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 41
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 29,
+      "check_col": 50,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -2971,8 +2971,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 85,
-      "col": 20,
+      "line": 87,
+      "col": 30,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -2998,8 +2998,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 85,
-      "check_col": 20,
+      "check_line": 87,
+      "check_col": 30,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -3011,7 +3011,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 98,
+      "line": 109,
       "col": 20,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -3030,7 +3030,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 20,
-              "time": 2.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -3038,20 +3038,20 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 98,
+      "check_line": 109,
       "check_col": 20,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 1,
           "max_steps": 1,
-          "max_time": 1.99999995529652E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 135,
+      "line": 161,
       "col": 73,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -3078,7 +3078,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 135,
+      "check_line": 161,
       "check_col": 73,
       "how_proved": "prover",
       "stats": {
@@ -3091,7 +3091,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 135,
+      "line": 161,
       "col": 88,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -3110,7 +3110,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 2.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -3129,20 +3129,20 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 135,
+      "check_line": 161,
       "check_col": 88,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 2,
           "max_steps": 1,
-          "max_time": 1.99999995529652E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 135,
+      "line": 161,
       "col": 77,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -3169,7 +3169,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 135,
+      "check_line": 161,
       "check_col": 77,
       "how_proved": "prover",
       "stats": {
@@ -3182,7 +3182,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 135,
+      "line": 161,
       "col": 100,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -3209,7 +3209,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 135,
+      "check_line": 161,
       "check_col": 100,
       "how_proved": "prover",
       "stats": {
@@ -3222,7 +3222,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 135,
+      "line": 161,
       "col": 100,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -3260,7 +3260,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 135,
+      "check_line": 161,
       "check_col": 100,
       "how_proved": "prover",
       "stats": {
@@ -3273,7 +3273,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 135,
+      "line": 161,
       "col": 40,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -3300,7 +3300,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 135,
+      "check_line": 161,
       "check_col": 40,
       "how_proved": "prover",
       "stats": {
@@ -3313,7 +3313,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 135,
+      "line": 161,
       "col": 44,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -3340,7 +3340,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 135,
+      "check_line": 161,
       "check_col": 44,
       "how_proved": "prover",
       "stats": {
@@ -3353,7 +3353,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 135,
+      "line": 161,
       "col": 44,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -3391,7 +3391,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 135,
+      "check_line": 161,
       "check_col": 44,
       "how_proved": "prover",
       "stats": {
@@ -3404,7 +3404,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 136,
+      "line": 162,
       "col": 26,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -3431,7 +3431,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 136,
+      "check_line": 162,
       "check_col": 26,
       "how_proved": "prover",
       "stats": {
@@ -3444,8 +3444,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 120,
-      "col": 46,
+      "line": 141,
+      "col": 27,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -3482,8 +3482,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 120,
-      "check_col": 46,
+      "check_line": 141,
+      "check_col": 27,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -3495,59 +3495,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 122,
-      "col": 54,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 5.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 122,
-      "check_col": 54,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 5.00000007450581E-02
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 127,
-      "col": 38,
+      "line": 144,
+      "col": 28,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -3584,8 +3533,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 127,
-      "check_col": 38,
+      "check_line": 144,
+      "check_col": 28,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -3597,8 +3546,59 @@
     },
     {
       "file": "lz77.adb",
-      "line": 127,
-      "col": 56,
+      "line": 150,
+      "col": 34,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 150,
+      "check_col": 34,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 150,
+      "col": 53,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -3657,8 +3657,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 127,
-      "check_col": 56,
+      "check_line": 150,
+      "check_col": 53,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -3670,8 +3670,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 127,
-      "col": 46,
+      "line": 150,
+      "col": 42,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -3708,8 +3708,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 127,
-      "check_col": 46,
+      "check_line": 150,
+      "check_col": 42,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -3721,8 +3721,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 127,
-      "col": 68,
+      "line": 150,
+      "col": 65,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -3759,8 +3759,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 127,
-      "check_col": 68,
+      "check_line": 150,
+      "check_col": 65,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -3772,153 +3772,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 128,
-      "col": 67,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 128,
-      "check_col": 67,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 4,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 128,
-      "col": 38,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 128,
-      "check_col": 38,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 4,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 129,
+      "line": 152,
       "col": 34,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -3978,7 +3832,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 129,
+      "check_line": 152,
       "check_col": 34,
       "how_proved": "prover",
       "stats": {
@@ -3991,8 +3845,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 130,
-      "col": 66,
+      "line": 151,
+      "col": 35,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -4051,8 +3905,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 130,
-      "check_col": 66,
+      "check_line": 151,
+      "check_col": 35,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4064,110 +3918,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 130,
-      "col": 56,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 13,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 13,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 130,
-      "check_col": 56,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 130,
-      "col": 78,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 13,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 13,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 130,
-      "check_col": 78,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 132,
-      "col": 50,
+      "line": 153,
+      "col": 31,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -4226,8 +3978,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 132,
-      "check_col": 50,
+      "check_line": 153,
+      "check_col": 31,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4239,9 +3991,184 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
+      "line": 155,
+      "col": 49,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 155,
+      "check_col": 49,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 155,
+      "col": 38,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 155,
+      "check_col": 38,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 155,
+      "col": 61,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 155,
+      "check_col": 61,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 157,
       "col": 48,
-      "rule": "VC_OVERFLOW_CHECK",
+      "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
         "name": "LZ77.Decode",
@@ -4257,7 +4184,29 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 13,
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
               "time": 0
             }
           },
@@ -4277,11 +4226,62 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
+      "check_line": 157,
       "check_col": 48,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 159,
+      "col": 46,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 159,
+      "check_col": 46,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
           "count": 2,
           "max_steps": 1,
           "max_time": 0.00000000000000E+00
@@ -4290,8 +4290,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
-      "col": 52,
+      "line": 159,
+      "col": 50,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -4328,8 +4328,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
-      "check_col": 52,
+      "check_line": 159,
+      "check_col": 50,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4341,8 +4341,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
-      "col": 56,
+      "line": 159,
+      "col": 54,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -4379,8 +4379,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
-      "check_col": 56,
+      "check_line": 159,
+      "check_col": 54,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4392,8 +4392,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
-      "col": 56,
+      "line": 159,
+      "col": 54,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -4452,8 +4452,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
-      "check_col": 56,
+      "check_line": 159,
+      "check_col": 54,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4465,8 +4465,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
-      "col": 84,
+      "line": 159,
+      "col": 81,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -4503,8 +4503,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
-      "check_col": 84,
+      "check_line": 159,
+      "check_col": 81,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4516,8 +4516,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
-      "col": 99,
+      "line": 159,
+      "col": 96,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -4576,8 +4576,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
-      "check_col": 99,
+      "check_line": 159,
+      "check_col": 96,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4589,8 +4589,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
-      "col": 88,
+      "line": 159,
+      "col": 85,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -4627,8 +4627,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
-      "check_col": 88,
+      "check_line": 159,
+      "check_col": 85,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4640,8 +4640,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
-      "col": 111,
+      "line": 159,
+      "col": 108,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -4678,8 +4678,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
-      "check_col": 111,
+      "check_line": 159,
+      "check_col": 108,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4691,8 +4691,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
-      "col": 115,
+      "line": 159,
+      "col": 112,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -4729,8 +4729,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
-      "check_col": 115,
+      "check_line": 159,
+      "check_col": 112,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4742,8 +4742,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 134,
-      "col": 115,
+      "line": 159,
+      "col": 112,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -4802,8 +4802,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 134,
-      "check_col": 115,
+      "check_line": 159,
+      "check_col": 112,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -4815,8 +4815,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 120,
-      "col": 20,
+      "line": 140,
+      "col": 22,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "info",
       "entity": {
@@ -5040,8 +5040,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 120,
-      "check_col": 20,
+      "check_line": 140,
+      "check_col": 22,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5053,8 +5053,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 120,
-      "col": 20,
+      "line": 140,
+      "col": 22,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
       "entity": {
@@ -5149,7 +5149,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 13,
-              "time": 0
+              "time": 1.10000000000000E-01
             }
           },
           "transformations": {
@@ -5278,20 +5278,20 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 120,
-      "check_col": 20,
+      "check_line": 140,
+      "check_col": 22,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 19,
           "max_steps": 1,
-          "max_time": 0.00000000000000E+00
+          "max_time": 1.09999999403954E-01
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 118,
+      "line": 137,
       "col": 47,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -5351,7 +5351,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 118,
+      "check_line": 137,
       "check_col": 47,
       "how_proved": "prover",
       "stats": {
@@ -5364,7 +5364,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 139,
+      "line": 165,
       "col": 77,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -5402,7 +5402,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 139,
+      "check_line": 165,
       "check_col": 77,
       "how_proved": "prover",
       "stats": {
@@ -5415,7 +5415,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 139,
+      "line": 165,
       "col": 37,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -5442,7 +5442,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 139,
+      "check_line": 165,
       "check_col": 37,
       "how_proved": "prover",
       "stats": {
@@ -5455,7 +5455,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 139,
+      "line": 165,
       "col": 52,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -5493,7 +5493,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 139,
+      "check_line": 165,
       "check_col": 52,
       "how_proved": "prover",
       "stats": {
@@ -5506,7 +5506,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 139,
+      "line": 165,
       "col": 41,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -5533,7 +5533,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 139,
+      "check_line": 165,
       "check_col": 41,
       "how_proved": "prover",
       "stats": {
@@ -5546,7 +5546,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 139,
+      "line": 165,
       "col": 41,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -5584,7 +5584,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 139,
+      "check_line": 165,
       "check_col": 41,
       "how_proved": "prover",
       "stats": {
@@ -5597,7 +5597,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 141,
+      "line": 168,
       "col": 44,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -5635,7 +5635,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 141,
+      "check_line": 168,
       "check_col": 44,
       "how_proved": "prover",
       "stats": {
@@ -5648,7 +5648,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 141,
+      "line": 168,
       "col": 33,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -5675,7 +5675,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 141,
+      "check_line": 168,
       "check_col": 33,
       "how_proved": "prover",
       "stats": {
@@ -5688,7 +5688,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 141,
+      "line": 168,
       "col": 56,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -5715,7 +5715,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 141,
+      "check_line": 168,
       "check_col": 56,
       "how_proved": "prover",
       "stats": {
@@ -5728,8 +5728,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 101,
-      "col": 30,
+      "line": 116,
+      "col": 28,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -5755,8 +5755,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 101,
-      "check_col": 30,
+      "check_line": 116,
+      "check_col": 28,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5768,8 +5768,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 101,
-      "col": 48,
+      "line": 116,
+      "col": 47,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -5806,8 +5806,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 101,
-      "check_col": 48,
+      "check_line": 116,
+      "check_col": 47,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5819,8 +5819,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 101,
-      "col": 38,
+      "line": 116,
+      "col": 36,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -5846,8 +5846,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 101,
-      "check_col": 38,
+      "check_line": 116,
+      "check_col": 36,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5859,8 +5859,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 101,
-      "col": 60,
+      "line": 116,
+      "col": 59,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -5886,8 +5886,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 101,
-      "check_col": 60,
+      "check_line": 116,
+      "check_col": 59,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -5899,7 +5899,138 @@
     },
     {
       "file": "lz77.adb",
-      "line": 102,
+      "line": 117,
+      "col": 61,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 117,
+      "check_col": 61,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 117,
+      "col": 50,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 120,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 117,
+      "check_col": 50,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 117,
+      "col": 73,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 136,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 117,
+      "check_col": 73,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 119,
       "col": 63,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -5937,7 +6068,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 102,
+      "check_line": 119,
       "check_col": 63,
       "how_proved": "prover",
       "stats": {
@@ -5950,8 +6081,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 102,
-      "col": 34,
+      "line": 119,
+      "col": 33,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -5988,8 +6119,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 102,
-      "check_col": 34,
+      "check_line": 119,
+      "check_col": 33,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -6001,8 +6132,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 103,
-      "col": 30,
+      "line": 120,
+      "col": 29,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -6039,8 +6170,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 103,
-      "check_col": 30,
+      "check_line": 120,
+      "check_col": 29,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -6052,138 +6183,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 104,
-      "col": 62,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 104,
-      "check_col": 62,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 104,
-      "col": 52,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 105,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 104,
-      "check_col": 52,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 104,
-      "col": 74,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 103,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 104,
-      "check_col": 74,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 90,
+      "line": 94,
       "col": 53,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -6221,7 +6221,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 90,
+      "check_line": 94,
       "check_col": 53,
       "how_proved": "prover",
       "stats": {
@@ -6234,8 +6234,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 91,
-      "col": 46,
+      "line": 95,
+      "col": 42,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -6253,7 +6253,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 3.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -6264,7 +6264,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 2.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -6272,21 +6272,21 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 91,
-      "check_col": 46,
+      "check_line": 95,
+      "check_col": 42,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 2,
           "max_steps": 1,
-          "max_time": 2.99999993294477E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 93,
-      "col": 48,
+      "line": 98,
+      "col": 22,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -6304,57 +6304,6 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 6.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 93,
-      "check_col": 48,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 5.99999986588955E-02
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 97,
-      "col": 70,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 13,
               "time": 0
             }
           },
@@ -6374,8 +6323,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 97,
-      "check_col": 70,
+      "check_line": 98,
+      "check_col": 22,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -6387,81 +6336,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 97,
-      "col": 95,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 5.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 2.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 97,
-      "check_col": 95,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 4,
-          "max_steps": 1,
-          "max_time": 5.00000007450581E-02
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 97,
-      "col": 84,
+      "line": 106,
+      "col": 39,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -6498,8 +6374,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 97,
-      "check_col": 84,
+      "check_line": 106,
+      "check_col": 39,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -6511,8 +6387,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 97,
-      "col": 84,
+      "line": 106,
+      "col": 64,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -6571,8 +6447,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 97,
-      "check_col": 84,
+      "check_line": 106,
+      "check_col": 64,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -6584,154 +6460,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 97,
-      "col": 119,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 2.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 97,
-      "check_col": 119,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 4,
-          "max_steps": 1,
-          "max_time": 1.99999995529652E-02
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 97,
-      "col": 162,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Decode",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 95
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 2.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 2.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 97,
-      "check_col": 162,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 4,
-          "max_steps": 1,
-          "max_time": 1.99999995529652E-02
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 97,
-      "col": 151,
+      "line": 106,
+      "col": 53,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -6760,7 +6490,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 2.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -6768,22 +6498,22 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 97,
-      "check_col": 151,
+      "check_line": 106,
+      "check_col": 53,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 2,
           "max_steps": 1,
-          "max_time": 1.99999995529652E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 97,
-      "col": 174,
-      "rule": "VC_OVERFLOW_CHECK",
+      "line": 106,
+      "col": 53,
+      "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
         "name": "LZ77.Decode",
@@ -6799,8 +6529,30 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 13,
-              "time": 6.00000000000000E-02
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
             }
           },
           "transformations": {
@@ -6819,20 +6571,268 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 97,
-      "check_col": 174,
+      "check_line": 106,
+      "check_col": 53,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
-          "count": 2,
+          "count": 4,
           "max_steps": 1,
-          "max_time": 5.99999986588955E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 90,
+      "line": 107,
+      "col": 32,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 107,
+      "check_col": 32,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 108,
+      "col": 50,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 108,
+      "check_col": 50,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 108,
+      "col": 39,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 108,
+      "check_col": 39,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 108,
+      "col": 62,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Decode",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 95
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 108,
+      "check_col": 62,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 94,
       "col": 16,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "info",
@@ -7013,7 +7013,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 90,
+      "check_line": 94,
       "check_col": 16,
       "how_proved": "prover",
       "stats": {
@@ -7026,7 +7026,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 90,
+      "line": 94,
       "col": 16,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
@@ -7078,7 +7078,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 5.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -7207,21 +7207,21 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 90,
+      "check_line": 94,
       "check_col": 16,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 15,
           "max_steps": 1,
-          "max_time": 5.00000007450581E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 72,
-      "col": 41,
+      "line": 73,
+      "col": 36,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -7247,8 +7247,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 72,
-      "check_col": 41,
+      "check_line": 73,
+      "check_col": 36,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -7260,7 +7260,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 74,
+      "line": 76,
       "col": 42,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -7287,7 +7287,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 74,
+      "check_line": 76,
       "check_col": 42,
       "how_proved": "prover",
       "stats": {
@@ -7330,7 +7330,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 13,
-              "time": 1.10000000000000E-01
+              "time": 1.60000000000000E-01
             }
           },
           "transformations": {
@@ -7345,14 +7345,14 @@
         "CVC4": {
           "count": 2,
           "max_steps": 1,
-          "max_time": 1.09999999403954E-01
+          "max_time": 1.59999996423721E-01
         }
       }
     },
     {
       "file": "lz77.adb",
-      "line": 182,
-      "col": 23,
+      "line": 205,
+      "col": 33,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -7378,8 +7378,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 182,
-      "check_col": 23,
+      "check_line": 205,
+      "check_col": 33,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -7391,8 +7391,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 183,
-      "col": 27,
+      "line": 206,
+      "col": 28,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -7429,8 +7429,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 183,
-      "check_col": 27,
+      "check_line": 206,
+      "check_col": 28,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -7442,8 +7442,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 183,
-      "col": 51,
+      "line": 206,
+      "col": 53,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -7480,8 +7480,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 183,
-      "check_col": 51,
+      "check_line": 206,
+      "check_col": 53,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -7493,8 +7493,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 184,
-      "col": 22,
+      "line": 210,
+      "col": 23,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -7531,8 +7531,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 184,
-      "check_col": 22,
+      "check_line": 210,
+      "check_col": 23,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -7544,8 +7544,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 186,
-      "col": 54,
+      "line": 216,
+      "col": 44,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -7582,8 +7582,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 186,
-      "check_col": 54,
+      "check_line": 216,
+      "check_col": 44,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -7595,8 +7595,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 186,
-      "col": 79,
+      "line": 217,
+      "col": 23,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -7633,8 +7633,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 186,
-      "check_col": 79,
+      "check_line": 217,
+      "check_col": 23,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -7646,8 +7646,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 186,
-      "col": 27,
+      "line": 216,
+      "col": 16,
       "rule": "VC_ASSERT",
       "severity": "info",
       "entity": {
@@ -7728,8 +7728,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 186,
-      "check_col": 27,
+      "check_line": 216,
+      "check_col": 16,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -7741,7 +7741,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 225,
+      "line": 269,
       "col": 23,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -7768,7 +7768,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 225,
+      "check_line": 269,
       "check_col": 23,
       "how_proved": "prover",
       "stats": {
@@ -7781,7 +7781,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 237,
+      "line": 285,
       "col": 47,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -7819,7 +7819,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 237,
+      "check_line": 285,
       "check_col": 47,
       "how_proved": "prover",
       "stats": {
@@ -7832,7 +7832,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 237,
+      "line": 285,
       "col": 36,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -7859,7 +7859,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 237,
+      "check_line": 285,
       "check_col": 36,
       "how_proved": "prover",
       "stats": {
@@ -7872,7 +7872,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 237,
+      "line": 285,
       "col": 59,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -7899,7 +7899,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 237,
+      "check_line": 285,
       "check_col": 59,
       "how_proved": "prover",
       "stats": {
@@ -7912,8 +7912,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 231,
-      "col": 64,
+      "line": 277,
+      "col": 61,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -7950,8 +7950,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 231,
-      "check_col": 64,
+      "check_line": 277,
+      "check_col": 61,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -7963,8 +7963,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 231,
-      "col": 35,
+      "line": 277,
+      "col": 31,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -8001,8 +8001,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 231,
-      "check_col": 35,
+      "check_line": 277,
+      "check_col": 31,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8014,8 +8014,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 232,
-      "col": 34,
+      "line": 279,
+      "col": 28,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -8052,8 +8052,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 232,
-      "check_col": 34,
+      "check_line": 279,
+      "check_col": 28,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8065,8 +8065,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 232,
-      "col": 104,
+      "line": 280,
+      "col": 59,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -8103,8 +8103,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 232,
-      "check_col": 104,
+      "check_line": 280,
+      "check_col": 59,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8116,8 +8116,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 232,
-      "col": 94,
+      "line": 280,
+      "col": 48,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -8143,8 +8143,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 232,
-      "check_col": 94,
+      "check_line": 280,
+      "check_col": 48,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8156,8 +8156,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 213,
-      "col": 125,
+      "line": 257,
+      "col": 59,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -8216,8 +8216,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 213,
-      "check_col": 125,
+      "check_line": 257,
+      "check_col": 59,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8229,8 +8229,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 213,
-      "col": 100,
+      "line": 257,
+      "col": 33,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -8289,8 +8289,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 213,
-      "check_col": 100,
+      "check_line": 257,
+      "check_col": 33,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8302,8 +8302,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 213,
-      "col": 119,
+      "line": 257,
+      "col": 52,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "medium",
       "entity": {
@@ -8336,8 +8336,8 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 104413,
-              "time": 7.80000000000000E-01
+              "steps": 93133,
+              "time": 5.60000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -8366,39 +8366,39 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 212,
-      "check_col": 39,
+      "check_line": 254,
+      "check_col": 19,
       "cntexmp": {
         "lz77.adb": {
-          "170": [
+          "193": [
             {
               "name": "Flag",
               "value": "True",
               "kind": "variable"
             }
           ],
-          "180": [
+          "203": [
             {
               "name": "k",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "181": [
+          "204": [
             {
               "name": "Last_Length",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "182": [
+          "205": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "213": [
+          "257": [
             {
               "name": "Input",
               "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), 2 => (Offset => 0, Length => -1, Next_C => 'NUL'), others => (Offset => -1, Length => -1, Next_C => 'NUL'))",
@@ -8446,8 +8446,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 212,
-      "col": 39,
+      "line": 254,
+      "col": 19,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
       "entity": {
@@ -8495,8 +8495,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 212,
-      "check_col": 39,
+      "check_line": 254,
+      "check_col": 19,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8508,8 +8508,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 210,
-      "col": 106,
+      "line": 250,
+      "col": 33,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -8546,8 +8546,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 210,
-      "check_col": 106,
+      "check_line": 250,
+      "check_col": 33,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8559,8 +8559,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 210,
-      "col": 124,
+      "line": 250,
+      "col": 53,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -8619,8 +8619,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 210,
-      "check_col": 124,
+      "check_line": 250,
+      "check_col": 53,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8632,8 +8632,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 211,
-      "col": 41,
+      "line": 251,
+      "col": 33,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -8670,8 +8670,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 211,
-      "check_col": 41,
+      "check_line": 251,
+      "check_col": 33,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8683,8 +8683,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 211,
-      "col": 70,
+      "line": 252,
+      "col": 33,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -8721,8 +8721,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 211,
-      "check_col": 70,
+      "check_line": 252,
+      "check_col": 33,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8734,8 +8734,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 210,
-      "col": 90,
+      "line": 249,
+      "col": 22,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -8772,8 +8772,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 210,
-      "check_col": 90,
+      "check_line": 249,
+      "check_col": 22,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8785,8 +8785,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 210,
-      "col": 90,
+      "line": 249,
+      "col": 22,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "medium",
       "entity": {
@@ -8808,8 +8808,8 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 39729,
-              "time": 6.70000000000000E-01
+              "steps": 39629,
+              "time": 4.40000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -8838,39 +8838,39 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 209,
-      "check_col": 39,
+      "check_line": 246,
+      "check_col": 19,
       "cntexmp": {
         "lz77.adb": {
-          "170": [
+          "193": [
             {
               "name": "Flag",
               "value": "True",
               "kind": "variable"
             }
           ],
-          "180": [
+          "203": [
             {
               "name": "k",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "181": [
+          "204": [
             {
               "name": "Last_Length",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "182": [
+          "205": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "210": [
+          "249": [
             {
               "name": "Input",
               "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), others => (Offset => 0, Length => 0, Next_C => 'NUL'))",
@@ -8918,8 +8918,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 209,
-      "col": 39,
+      "line": 246,
+      "col": 19,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
       "entity": {
@@ -8956,8 +8956,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 209,
-      "check_col": 39,
+      "check_line": 246,
+      "check_col": 19,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -8969,8 +8969,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 206,
-      "col": 67,
+      "line": 242,
+      "col": 45,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -9029,8 +9029,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 206,
-      "check_col": 67,
+      "check_line": 242,
+      "check_col": 45,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9042,8 +9042,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 206,
-      "col": 46,
+      "line": 242,
+      "col": 22,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -9080,8 +9080,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 206,
-      "check_col": 46,
+      "check_line": 242,
+      "check_col": 22,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9093,8 +9093,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 208,
-      "col": 52,
+      "line": 244,
+      "col": 28,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -9131,8 +9131,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 208,
-      "check_col": 52,
+      "check_line": 244,
+      "check_col": 28,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9144,8 +9144,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 208,
-      "col": 71,
+      "line": 244,
+      "col": 50,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -9182,8 +9182,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 208,
-      "check_col": 71,
+      "check_line": 244,
+      "check_col": 50,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9195,8 +9195,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 208,
-      "col": 71,
+      "line": 244,
+      "col": 50,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -9255,8 +9255,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 208,
-      "check_col": 71,
+      "check_line": 244,
+      "check_col": 50,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9268,8 +9268,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 206,
-      "col": 78,
+      "line": 242,
+      "col": 56,
       "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
@@ -9306,8 +9306,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 206,
-      "check_col": 78,
+      "check_line": 242,
+      "check_col": 56,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9319,8 +9319,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 206,
-      "col": 46,
+      "line": 242,
+      "col": 22,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "medium",
       "entity": {
@@ -9342,8 +9342,8 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 74391,
-              "time": 7.20000000000000E-01
+              "steps": 59407,
+              "time": 3.80000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -9372,39 +9372,39 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 204,
-      "check_col": 39,
+      "check_line": 239,
+      "check_col": 19,
       "cntexmp": {
         "lz77.adb": {
-          "170": [
+          "193": [
             {
               "name": "Flag",
               "value": "True",
               "kind": "variable"
             }
           ],
-          "180": [
+          "203": [
             {
               "name": "k",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "181": [
+          "204": [
             {
               "name": "Last_Length",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "182": [
+          "205": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "206": [
+          "242": [
             {
               "name": "Input",
               "value": "(1 => (Offset => 0, Length => 0, Next_C => 'NUL'), 2 => (Offset => 1, Length => 1, Next_C => 'NUL'), others => (Offset => 1, Length => 1, Next_C => 'NUL'))",
@@ -9452,8 +9452,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 204,
-      "col": 39,
+      "line": 239,
+      "col": 19,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
       "entity": {
@@ -9490,8 +9490,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 204,
-      "check_col": 39,
+      "check_line": 239,
+      "check_col": 19,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9503,7 +9503,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 203,
+      "line": 237,
       "col": 39,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "info",
@@ -9530,7 +9530,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 203,
+      "check_line": 237,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -9543,7 +9543,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 203,
+      "line": 237,
       "col": 39,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
@@ -9570,7 +9570,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 203,
+      "check_line": 237,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -9583,8 +9583,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 190,
-      "col": 28,
+      "line": 221,
+      "col": 45,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -9621,8 +9621,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 190,
-      "check_col": 28,
+      "check_line": 221,
+      "check_col": 45,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9634,8 +9634,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 193,
-      "col": 60,
+      "line": 226,
+      "col": 35,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -9672,8 +9672,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 193,
-      "check_col": 60,
+      "check_line": 226,
+      "check_col": 35,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9685,8 +9685,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 200,
-      "col": 54,
+      "line": 235,
+      "col": 55,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -9745,8 +9745,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 200,
-      "check_col": 54,
+      "check_line": 235,
+      "check_col": 55,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9758,8 +9758,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 200,
-      "col": 43,
+      "line": 235,
+      "col": 44,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -9796,8 +9796,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 200,
-      "check_col": 43,
+      "check_line": 235,
+      "check_col": 44,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9809,60 +9809,9 @@
     },
     {
       "file": "lz77.adb",
-      "line": 200,
-      "col": 66,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "LZ77.Is_Valid",
-        "sloc": [
-          {
-            "file": "lz77.ads",
-            "line": 101
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 14,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "lz77.adb",
-      "check_line": 200,
-      "check_col": 66,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "lz77.adb",
-      "line": 196,
+      "line": 235,
       "col": 67,
-      "rule": "VC_INDEX_CHECK",
+      "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
         "name": "LZ77.Is_Valid",
@@ -9878,29 +9827,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
+              "steps": 14,
               "time": 0
             }
           },
@@ -9920,11 +9847,84 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 196,
+      "check_line": 235,
       "check_col": 67,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "lz77.adb",
+      "line": 230,
+      "col": 51,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "LZ77.Is_Valid",
+        "sloc": [
+          {
+            "file": "lz77.ads",
+            "line": 101
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "lz77.adb",
+      "check_line": 230,
+      "check_col": 51,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
           "count": 4,
           "max_steps": 1,
           "max_time": 0.00000000000000E+00
@@ -9933,8 +9933,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 196,
-      "col": 57,
+      "line": 230,
+      "col": 40,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -9971,8 +9971,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 196,
-      "check_col": 57,
+      "check_line": 230,
+      "check_col": 40,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -9984,8 +9984,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 198,
-      "col": 36,
+      "line": 232,
+      "col": 35,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -10044,8 +10044,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 198,
-      "check_col": 36,
+      "check_line": 232,
+      "check_col": 35,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -10057,8 +10057,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 199,
-      "col": 69,
+      "line": 234,
+      "col": 38,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -10117,8 +10117,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 199,
-      "check_col": 69,
+      "check_line": 234,
+      "check_col": 38,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -10130,8 +10130,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 199,
-      "col": 40,
+      "line": 233,
+      "col": 39,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -10190,8 +10190,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 199,
-      "check_col": 40,
+      "check_line": 233,
+      "check_col": 39,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -10203,7 +10203,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 189,
+      "line": 221,
       "col": 19,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "info",
@@ -10329,7 +10329,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 189,
+      "check_line": 221,
       "check_col": 19,
       "how_proved": "prover",
       "stats": {
@@ -10342,7 +10342,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 189,
+      "line": 221,
       "col": 19,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
@@ -10468,7 +10468,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 189,
+      "check_line": 221,
       "check_col": 19,
       "how_proved": "prover",
       "stats": {
@@ -10481,8 +10481,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 174,
-      "col": 23,
+      "line": 197,
+      "col": 18,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -10508,8 +10508,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 174,
-      "check_col": 23,
+      "check_line": 197,
+      "check_col": 18,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -10544,12 +10544,12 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 119533,
-              "time": 7.00000000000000E-01
+              "steps": 98041,
+              "time": 5.30000000000000E-01
             },
             "Z3": {
               "result": "Unknown (unknown)",
-              "steps": 177044,
+              "steps": 177042,
               "time": 0
             },
             "altergo": {
@@ -10565,7 +10565,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 381,
+              "steps": 377,
               "time": 0
             }
           },
@@ -10578,14 +10578,14 @@
       "check_col": 14,
       "cntexmp": {
         "lz77.adb": {
-          "170": [
+          "193": [
             {
               "name": "Flag",
               "value": "True",
               "kind": "variable"
             }
           ],
-          "256": [
+          "303": [
             {
               "name": "Is_Valid'Result",
               "value": "False",
@@ -10635,7 +10635,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 275,
+      "line": 321,
       "col": 20,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -10662,7 +10662,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 275,
+      "check_line": 321,
       "check_col": 20,
       "how_proved": "prover",
       "stats": {
@@ -10675,7 +10675,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 277,
+      "line": 323,
       "col": 20,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "medium",
@@ -10698,8 +10698,8 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 39745,
-              "time": 6.60000000000000E-01
+              "steps": 34938,
+              "time": 6.30000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -10717,25 +10717,25 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 277,
+      "check_line": 323,
       "check_col": 20,
       "cntexmp": {
         "lz77.adb": {
-          "266": [
+          "312": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "275": [
+          "321": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "276": [
+          "322": [
             {
               "name": "I",
               "value": "Natural'Last",
@@ -10752,7 +10752,7 @@
               "kind": "variable"
             }
           ],
-          "277": [
+          "323": [
             {
               "name": "I",
               "value": "Natural'Last",
@@ -10795,8 +10795,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 280,
-      "col": 23,
+      "line": 326,
+      "col": 55,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -10822,8 +10822,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 280,
-      "check_col": 23,
+      "check_line": 326,
+      "check_col": 55,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -10835,8 +10835,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
-      "col": 74,
+      "line": 329,
+      "col": 39,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "medium",
       "entity": {
@@ -10857,9 +10857,9 @@
               "time": 0
             },
             "CVC4_CE": {
-              "result": "Timeout",
-              "steps": 31627,
-              "time": 1
+              "result": "Unknown (unknown)",
+              "steps": 27852,
+              "time": 5.30000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -10877,25 +10877,25 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
-      "check_col": 74,
+      "check_line": 329,
+      "check_col": 39,
       "cntexmp": {
         "lz77.adb": {
-          "266": [
+          "312": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "275": [
+          "321": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "276": [
+          "322": [
             {
               "name": "I",
               "value": "1",
@@ -10912,35 +10912,35 @@
               "kind": "variable"
             }
           ],
-          "277": [
+          "323": [
             {
               "name": "I",
               "value": "2",
               "kind": "variable"
             }
           ],
-          "278": [
+          "324": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "279": [
+          "325": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "280": [
+          "326": [
             {
               "name": "J",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "282": [
+          "329": [
             {
               "name": "Output'First",
               "value": "2147483647",
@@ -10988,8 +10988,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
-      "col": 89,
+      "line": 329,
+      "col": 54,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -11026,8 +11026,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
-      "check_col": 89,
+      "check_line": 329,
+      "check_col": 54,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -11039,8 +11039,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
-      "col": 78,
+      "line": 329,
+      "col": 43,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -11066,8 +11066,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
-      "check_col": 78,
+      "check_line": 329,
+      "check_col": 43,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -11079,8 +11079,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
-      "col": 101,
+      "line": 329,
+      "col": 66,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "medium",
       "entity": {
@@ -11102,8 +11102,8 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 35983,
-              "time": 7.50000000000000E-01
+              "steps": 32653,
+              "time": 5.80000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -11121,25 +11121,25 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
-      "check_col": 101,
+      "check_line": 329,
+      "check_col": 66,
       "cntexmp": {
         "lz77.adb": {
-          "266": [
+          "312": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "275": [
+          "321": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "276": [
+          "322": [
             {
               "name": "I",
               "value": "1",
@@ -11156,35 +11156,35 @@
               "kind": "variable"
             }
           ],
-          "277": [
+          "323": [
             {
               "name": "I",
               "value": "2",
               "kind": "variable"
             }
           ],
-          "278": [
+          "324": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "279": [
+          "325": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "280": [
+          "326": [
             {
               "name": "J",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "282": [
+          "329": [
             {
               "name": "I",
               "value": "2",
@@ -11257,8 +11257,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
-      "col": 105,
+      "line": 329,
+      "col": 70,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -11284,8 +11284,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
-      "check_col": 105,
+      "check_line": 329,
+      "check_col": 70,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -11297,8 +11297,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
-      "col": 105,
+      "line": 329,
+      "col": 70,
       "rule": "VC_INDEX_CHECK",
       "severity": "medium",
       "entity": {
@@ -11320,8 +11320,8 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 34644,
-              "time": 7.30000000000000E-01
+              "steps": 31513,
+              "time": 4.80000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -11360,25 +11360,25 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
-      "check_col": 105,
+      "check_line": 329,
+      "check_col": 70,
       "cntexmp": {
         "lz77.adb": {
-          "266": [
+          "312": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "275": [
+          "321": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "276": [
+          "322": [
             {
               "name": "I",
               "value": "1",
@@ -11395,35 +11395,35 @@
               "kind": "variable"
             }
           ],
-          "277": [
+          "323": [
             {
               "name": "I",
               "value": "2",
               "kind": "variable"
             }
           ],
-          "278": [
+          "324": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "279": [
+          "325": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "280": [
+          "326": [
             {
               "name": "J",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "282": [
+          "329": [
             {
               "name": "I",
               "value": "2",
@@ -11501,7 +11501,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
+      "line": 328,
       "col": 37,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -11528,7 +11528,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
+      "check_line": 328,
       "check_col": 37,
       "how_proved": "prover",
       "stats": {
@@ -11541,7 +11541,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
+      "line": 328,
       "col": 41,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "medium",
@@ -11564,8 +11564,8 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 32956,
-              "time": 6.70000000000000E-01
+              "steps": 32727,
+              "time": 5.80000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -11583,25 +11583,25 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
+      "check_line": 328,
       "check_col": 41,
       "cntexmp": {
         "lz77.adb": {
-          "266": [
+          "312": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "275": [
+          "321": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "276": [
+          "322": [
             {
               "name": "I",
               "value": "1",
@@ -11618,21 +11618,21 @@
               "kind": "variable"
             }
           ],
-          "277": [
+          "323": [
             {
               "name": "I",
               "value": "2",
               "kind": "variable"
             }
           ],
-          "278": [
+          "324": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "279": [
+          "325": [
             {
               "name": "J",
               "value": "0",
@@ -11644,14 +11644,14 @@
               "kind": "variable"
             }
           ],
-          "280": [
+          "326": [
             {
               "name": "J",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "282": [
+          "328": [
             {
               "name": "J",
               "value": "1",
@@ -11704,7 +11704,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
+      "line": 328,
       "col": 45,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -11731,7 +11731,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
+      "check_line": 328,
       "check_col": 45,
       "how_proved": "prover",
       "stats": {
@@ -11744,7 +11744,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 282,
+      "line": 328,
       "col": 45,
       "rule": "VC_INDEX_CHECK",
       "severity": "medium",
@@ -11767,8 +11767,8 @@
             },
             "CVC4_CE": {
               "result": "Unknown (unknown)",
-              "steps": 32406,
-              "time": 7.80000000000000E-01
+              "steps": 28399,
+              "time": 4.80000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -11797,25 +11797,25 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 282,
+      "check_line": 328,
       "check_col": 45,
       "cntexmp": {
         "lz77.adb": {
-          "266": [
+          "312": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "275": [
+          "321": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "276": [
+          "322": [
             {
               "name": "I",
               "value": "1",
@@ -11832,21 +11832,21 @@
               "kind": "variable"
             }
           ],
-          "277": [
+          "323": [
             {
               "name": "I",
               "value": "2",
               "kind": "variable"
             }
           ],
-          "278": [
+          "324": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "279": [
+          "325": [
             {
               "name": "J",
               "value": "1",
@@ -11858,14 +11858,14 @@
               "kind": "variable"
             }
           ],
-          "280": [
+          "326": [
             {
               "name": "J",
               "value": "2",
               "kind": "variable"
             }
           ],
-          "282": [
+          "328": [
             {
               "name": "J",
               "value": "2",
@@ -11923,7 +11923,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 279,
+      "line": 325,
       "col": 44,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -11983,7 +11983,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 279,
+      "check_line": 325,
       "check_col": 44,
       "how_proved": "prover",
       "stats": {
@@ -11996,8 +11996,8 @@
     },
     {
       "file": "lz77.adb",
-      "line": 284,
-      "col": 74,
+      "line": 332,
+      "col": 24,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -12034,8 +12034,8 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 284,
-      "check_col": 74,
+      "check_line": 332,
+      "check_col": 24,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -12047,7 +12047,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 284,
+      "line": 331,
       "col": 34,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "medium",
@@ -12069,9 +12069,9 @@
               "time": 0
             },
             "CVC4_CE": {
-              "result": "Timeout",
-              "steps": 39351,
-              "time": 1
+              "result": "Unknown (unknown)",
+              "steps": 36080,
+              "time": 5.60000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -12089,25 +12089,25 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 284,
+      "check_line": 331,
       "check_col": 34,
       "cntexmp": {
         "lz77.adb": {
-          "266": [
+          "312": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "275": [
+          "321": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "276": [
+          "322": [
             {
               "name": "I",
               "value": "1",
@@ -12129,21 +12129,21 @@
               "kind": "variable"
             }
           ],
-          "277": [
+          "323": [
             {
               "name": "I",
               "value": "2",
               "kind": "variable"
             }
           ],
-          "278": [
+          "324": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "279": [
+          "325": [
             {
               "name": "J",
               "value": "0",
@@ -12155,21 +12155,21 @@
               "kind": "variable"
             }
           ],
-          "280": [
+          "326": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "282": [
+          "328": [
             {
               "name": "Output",
               "value": "(others => 'NUL')",
               "kind": "variable"
             }
           ],
-          "284": [
+          "331": [
             {
               "name": "Output'First",
               "value": "1",
@@ -12217,7 +12217,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 284,
+      "line": 331,
       "col": 49,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -12255,7 +12255,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 284,
+      "check_line": 331,
       "check_col": 49,
       "how_proved": "prover",
       "stats": {
@@ -12268,7 +12268,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 284,
+      "line": 331,
       "col": 38,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -12295,7 +12295,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 284,
+      "check_line": 331,
       "check_col": 38,
       "how_proved": "prover",
       "stats": {
@@ -12308,7 +12308,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 284,
+      "line": 331,
       "col": 38,
       "rule": "VC_INDEX_CHECK",
       "severity": "medium",
@@ -12330,9 +12330,9 @@
               "time": 0
             },
             "CVC4_CE": {
-              "result": "Timeout",
-              "steps": 38314,
-              "time": 1
+              "result": "Unknown (unknown)",
+              "steps": 36187,
+              "time": 5.30000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -12361,25 +12361,25 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 284,
+      "check_line": 331,
       "check_col": 38,
       "cntexmp": {
         "lz77.adb": {
-          "266": [
+          "312": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "275": [
+          "321": [
             {
               "name": "I",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "276": [
+          "322": [
             {
               "name": "I",
               "value": "1",
@@ -12401,21 +12401,21 @@
               "kind": "variable"
             }
           ],
-          "277": [
+          "323": [
             {
               "name": "I",
               "value": "2",
               "kind": "variable"
             }
           ],
-          "278": [
+          "324": [
             {
               "name": "J",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "279": [
+          "325": [
             {
               "name": "J",
               "value": "0",
@@ -12427,21 +12427,21 @@
               "kind": "variable"
             }
           ],
-          "280": [
+          "326": [
             {
               "name": "J",
               "value": "1",
               "kind": "variable"
             }
           ],
-          "282": [
+          "328": [
             {
               "name": "Output",
               "value": "(others => 'NUL')",
               "kind": "variable"
             }
           ],
-          "284": [
+          "331": [
             {
               "name": "I",
               "value": "2",
@@ -12514,7 +12514,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 285,
+      "line": 333,
       "col": 31,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -12552,7 +12552,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 285,
+      "check_line": 333,
       "check_col": 31,
       "how_proved": "prover",
       "stats": {
@@ -12565,7 +12565,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 285,
+      "line": 333,
       "col": 20,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -12592,7 +12592,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 285,
+      "check_line": 333,
       "check_col": 20,
       "how_proved": "prover",
       "stats": {
@@ -12605,7 +12605,7 @@
     },
     {
       "file": "lz77.adb",
-      "line": 285,
+      "line": 333,
       "col": 43,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -12632,7 +12632,7 @@
         }
       ],
       "check_file": "lz77.adb",
-      "check_line": 285,
+      "check_line": 333,
       "check_col": 43,
       "how_proved": "prover",
       "stats": {
@@ -12787,9 +12787,9 @@
               "time": 0
             },
             "CVC4_CE": {
-              "result": "Timeout",
-              "steps": 27861,
-              "time": 1
+              "result": "Unknown (unknown)",
+              "steps": 28985,
+              "time": 7.20000000000000E-01
             },
             "Z3": {
               "result": "Unknown ()",
@@ -12811,21 +12811,21 @@
       "check_col": 14,
       "cntexmp": {
         "lz77.adb": {
-          "266": [
+          "312": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "272": [
+          "318": [
             {
               "name": "k",
               "value": "0",
               "kind": "variable"
             }
           ],
-          "273": [
+          "319": [
             {
               "name": "Output_Length",
               "value": "0",
@@ -12890,58 +12890,6 @@
     }
   ],
   "assumptions": [
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_POST",
-          "arg": {
-            "name": "LZ77.Length_Acc",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 41
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "LZ77.Length_Acc",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 41
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "LZ77.Length_Acc",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 41
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "LZ77.Decoded_Length",
-          "sloc": [
-            {
-              "file": "lz77.ads",
-              "line": 54
-            }
-          ]
-        }
-      }
-    },
     {
       "assumptions": [
         {
@@ -13877,17 +13825,69 @@
           ]
         }
       }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "LZ77.Length_Acc",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 41
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "LZ77.Length_Acc",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 41
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "LZ77.Length_Acc",
+            "sloc": [
+              {
+                "file": "lz77.ads",
+                "line": 41
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "LZ77.Decoded_Length",
+          "sloc": [
+            {
+              "file": "lz77.ads",
+              "line": 54
+            }
+          ]
+        }
+      }
     }
   ],
   "timings": {
-    "marking": 1.28099997527897E-03,
-    "globals (basic)": 1.27873001620173E-02,
-    "globals/properties (advanced)": 1.54255004599690E-02,
-    "flow analysis": 1.73550993204117E-02,
-    "codepeer results": 4.39999985246686E-06,
-    "init_why_sections": 2.79600004432723E-04,
-    "translation of standard": 1.55080005060881E-03,
-    "translation of compilation unit": 4.96973991394043E-02,
-    "proof": 2.23499813079834E+01
+    "marking": 1.23850000090897E-03,
+    "globals (basic)": 1.43862003460526E-02,
+    "globals/properties (advanced)": 1.72898005694151E-02,
+    "flow analysis": 1.89916007220745E-02,
+    "codepeer results": 5.59999989491189E-06,
+    "init_why_sections": 2.90299998596311E-04,
+    "translation of standard": 1.63139996584505E-03,
+    "translation of compilation unit": 5.52937984466553E-02,
+    "proof": 1.72366123199463E+01
   }
 }
