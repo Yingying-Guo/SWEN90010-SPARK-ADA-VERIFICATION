@@ -105,8 +105,7 @@ is
             then 
                k := 0;
                Output_Length := k;
-               Error := True;
-               -- {Error and (if Error then Output_Length=0 else True)}
+               Error := True;          
                return;
             else
                J := 0;
@@ -289,3 +288,58 @@ is
    end Decode_Fast;
 
 end LZ77;
+
+
+-- TASK 3:
+-- Guarantees offered by writing Decode in Ada: 
+-- 1. Strong typing: Ada being a strongly type checked language practically saves from many type-related errors prone in dangerous languages like C. 
+-- 2. Range checking: Ada does run time checking on array indexing and arithmetic operations hence preventing out of bound access 
+-- and overflow/underflow errors. It solves the buffer overflow vulnerabilities.
+-- 3. Safe handling of memory: Ada provides automatic memory management and discards manual
+-- memory handling, and thus enhances memory error bugs like null pointer, dangling
+-- pointer, and memory leaks. 
+-- These properties make Ada implementations much safer and more reliable than dangerous 
+-- languages like C, even when the implementation contains bugs. 
+-- An Ada implementation can be used where memory safety and error handling matters, 
+-- like embedded systems, aviation, and financial applications.
+
+-- Further guarantees offered by formal verification: 
+-- 1. Correctness: By formal verification, the implementation is proved to satisfy the specification and behave 
+-- correctly according to the pre-conditions and post-conditions stated in the contract. 
+-- 2. No runtime errors: Implementation is free from runtime errors as the formal verification proves, including 
+-- division by zero, index-out-of-bound, overflow/underflow errors. Hence the level of assurance -- is higher than that which is provided only by runtime checks. 
+-- 3. Functional correct solution: Formal verification proves an implementation to output in an expected way for every 
+-- valid form of inputs, according to the specified contract. This means the implementation is complete against all the functional requirements. 
+-- 4. Invariant preservation: The specification to the formal verification technique is structured so that the preservation of invariants during implementation is guaranteed and will lead to extra safety guarantees during runtime.
+
+
+
+
+-- TASK 6:
+-- The Decode_fast only restricts the postcondition of output length should be 
+-- equal to the decoded length of the input token array. 
+
+-- Missing condition:
+-- 1. Decompressed data should be in the output array and be consistent with
+-- the original uncompressed data.
+-- Output(Output'First .. Output'First + Output_Length - 1) are identical to 
+-- the original bytes b1, b2, ..., bn, where n is the length of the 
+-- uncompressed data.
+
+-- 2. For each input token, it should check the format, like the bytes 
+-- Output(Output'First + k .. Output'First + k + l - 1) are identical to the bytes 
+-- Output(Output'First + k - o .. Output'First + k - o + l - 1), where k is the number of bytes decompressed so far. The byte Output(Output'First + k + l) is equal to c
+
+-- Challenges:
+-- 1. Proving the equivalence between compressed and decompressed data: Verifying that the
+-- decompressed data matches the original uncompressed data can be challenging, 
+-- It may require additional annotations or assertions to establish the equivalence.
+-- 2. Dealing with loop invariants and variants: Verifying the correctness of the decompression
+-- algorithm often involves reasoning about loops and their invariants. Defining and
+-- proving the appropriate loop invariants and variants can be challenging, especially
+-- when dealing with complex data dependencies and copying operations.
+
+
+
+
+
