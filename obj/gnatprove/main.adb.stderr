@@ -1,6 +1,0 @@
-main.adb:11:04: warning: initialization of "T1" has no effect[#0]
-main.adb:15:04: warning: initialization of "T2" has no effect[#1]
-main.adb:20:04: warning: initialization of "T3" has no effect[#2]
-main.adb:39:12: high: "T4" is not initialized[#5]
-main.adb:56:17: high: "T4" is not initialized[#3]
-main.adb:58:20: high: "T4" is not initialized[#4]

@@ -76,7 +76,7 @@ is
              -- and also the calculation not cause Integer overflow
              if  not (k <= (Output'Length - Input (I).Length - 1)
                -- Check for the offset of the token is valid
-               and (if Input (I).Offset > 0 then Input (I).Length > 0) 
+--                 and (if Input (I).Offset > 0 then Input (I).Length > 0) 
                and Input (I).Offset <= k)
              then
                -- If any of the above conditions are not met, set k to 0, Output_Length to k and Error to True, then return
@@ -173,28 +173,16 @@ is
       Output_Length :    out Natural)
    is
       k : Natural := 0;
-      I : Natural;
-      J : Natural;
-      --        Last_Length : Natural;
    begin
-      if Input'Length <= 0 then
-         k             := 0;
-         Output_Length := k;
-      else
-         I := Input'First;
-         while I >= Input'First and I <= Input'Last loop         
-            J := 0;
-            while J >= 0 and J <= Input (I).Length - 1 loop
-               --                 pragma Loop_Invariant (J >= 0 and J <= Input(I - 1).Length and Output'First <= Natural'Last - k - J and To_Big_Integer(Input(I - 1).Offset) <= Length_Acc(Input)(I - 1));
-               Output (Output'First + k + J) :=  Output (Output'First + k - Input (I).Offset + J);
-               J := J + 1;
-            end loop;
-            Output (Output'First + k + Input (I).Length) := Input (I).Next_C;
-            k := k + Input (I).Length + 1;
-            I := I + 1;
+      for I in Input'First .. Input'Last loop
+         for J in 0 .. Input (I).Length - 1 loop
+            Output (Output'First + k + J) :=  Output (Output'First + k - Input (I).Offset + J);
          end loop;
-         Output_Length := k;
-      end if;
+         Output (Output'First + k + Input (I).Length) := Input (I).Next_C;
+         k := k + Input (I).Length + 1;
+         pragma Loop_Invariant (k = (if I = Input'First then 1 else To_Integer(Length_Acc(Input)(I))));
+      end loop;
+      Output_Length := k;
    end Decode_Fast;
 
 end LZ77;
