@@ -118,9 +118,9 @@ is
    function Is_Valid (Input : in Token_Array) return Boolean is
       k           : Natural;
       Last_Length : Natural;
---        I           : Natural;
       Flag        : Boolean := True;
    begin
+--    check the length of the input array
       if Input'Length = 0 then return Flag; end if;
 
       if Input'Length < 0 then Flag := False; return Flag; end if;
@@ -129,30 +129,33 @@ is
 
       -- If Input is not empty, then the each token in Input Array must be valid
       for I in Input'First ..  Input'Last loop
-
-         
+         -- update the cumulative length
          Last_Length := k;
---           exit when I > Input'Last;
-         
+         -- exit when I > Input'Last;
+         -- check the current token is valid -> won't cause integer overflow
          if Natural'Last - Input(I).Length - 1 < Last_Length then Flag := False; return Flag; 
          end if;
-            
+         -- update the length after decompress
          k := Last_Length + Input(I).Length + 1;
-            
+         -- check the k is valid
          if k < 1 or k <= Last_Length then Flag := False; return Flag; end if;
-         
+         -- check the offset of current token 
          if Input (I).Offset = 0 and Input (I).Length /= 0 then Flag := False; return Flag; end if;
-         
          if Input (I).Offset > Last_Length then Flag := False; return Flag; end if;
          
---           I := I + 1;
          pragma Loop_Invariant(k <= Natural'Last);
+         -- Loop Invariants to ensure that the structural properties of the Input array are correct and stable:
+         -- 1. Input'Length > 0 ensures the loop is processing a non-empty array.
+         -- 2. Input'Last <= Natural'Last and Input'First <= Natural'Last ensure that the indices of the array are within the valid range for the type Natural, preventing any range violation errors.
          pragma Loop_Invariant
             (Input'Length > 0 and
             Input'Last <= Natural'Last and
             Input'First <= Natural'Last);
          pragma Loop_Invariant (I >= Input'First); 
-         
+         -- Loop Invariant to ensure that:
+         -- 1. k is always greater than or equal to 1, ensuring that the cumulative length starts valid and grows.
+         -- 2. k does not exceed the maximum integer size to prevent overflow errors.            
+         -- 3. If I is not the first index, it checks whether the length from the previous token plus one (for the current token)
          pragma Loop_Invariant
             (k >= 1 and k <= Integer'Last and
             (if I > Input'First then
