@@ -14,7 +14,7 @@
   "flow": [
     {
       "file": "main.adb",
-      "line": 19,
+      "line": 25,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -33,7 +33,7 @@
     },
     {
       "file": "main.adb",
-      "line": 22,
+      "line": 28,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -54,7 +54,7 @@
   "proof": [
     {
       "file": "main.adb",
-      "line": 40,
+      "line": 46,
       "col": 42,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -81,7 +81,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 40,
+      "check_line": 46,
       "check_col": 42,
       "how_proved": "prover",
       "stats": {
@@ -94,7 +94,7 @@
     },
     {
       "file": "main.adb",
-      "line": 41,
+      "line": 47,
       "col": 29,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -132,7 +132,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 41,
+      "check_line": 47,
       "check_col": 29,
       "how_proved": "prover",
       "stats": {
@@ -145,59 +145,8 @@
     },
     {
       "file": "main.adb",
-      "line": 52,
-      "col": 7,
-      "rule": "VC_PRECONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Main",
-        "sloc": [
-          {
-            "file": "main.adb",
-            "line": 7
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 428,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 14,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "main.adb",
-      "check_line": 52,
-      "check_col": 7,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "main.adb",
-      "line": 57,
-      "col": 39,
+      "line": 63,
+      "col": 42,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -214,7 +163,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 435,
+              "steps": 16,
               "time": 0
             }
           },
@@ -223,8 +172,8 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 57,
-      "check_col": 39,
+      "check_line": 63,
+      "check_col": 42,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -236,8 +185,8 @@
     },
     {
       "file": "main.adb",
-      "line": 58,
-      "col": 26,
+      "line": 64,
+      "col": 29,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
@@ -254,7 +203,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 444,
+              "steps": 21,
               "time": 0
             }
           },
@@ -274,7 +223,331 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 58,
+      "check_line": 64,
+      "check_col": 29,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 80,
+      "col": 42,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 16,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 80,
+      "check_col": 42,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 81,
+      "col": 29,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 21,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 81,
+      "check_col": 29,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 97,
+      "col": 42,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 16,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 97,
+      "check_col": 42,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 98,
+      "col": 29,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 21,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 98,
+      "check_col": 29,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 109,
+      "col": 7,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 3798,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 14,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 109,
+      "check_col": 7,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 114,
+      "col": 39,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 3865,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 114,
+      "check_col": 39,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 115,
+      "col": 26,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 3902,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 115,
       "check_col": 26,
       "how_proved": "prover",
       "stats": {
@@ -673,14 +946,14 @@
     }
   ],
   "timings": {
-    "marking": 1.01290002930909E-03,
-    "globals (basic)": 1.44697995856404E-02,
-    "globals/properties (advanced)": 1.62371005862951E-02,
-    "flow analysis": 1.29557996988297E-02,
-    "codepeer results": 5.10000018039136E-06,
-    "init_why_sections": 3.00999992759898E-04,
-    "translation of standard": 1.59839994739741E-03,
-    "translation of compilation unit": 3.44680994749069E-02,
-    "proof": 4.92685794830322E-01
+    "marking": 9.47199994698167E-04,
+    "globals (basic)": 1.77283994853497E-02,
+    "globals/properties (advanced)": 1.64574999362230E-02,
+    "flow analysis": 3.07964999228716E-02,
+    "codepeer results": 4.99999987368938E-06,
+    "init_why_sections": 3.37800011038780E-04,
+    "translation of standard": 1.70569994952530E-03,
+    "translation of compilation unit": 4.10448014736176E-02,
+    "proof": 5.85069179534912E-01
   }
 }
