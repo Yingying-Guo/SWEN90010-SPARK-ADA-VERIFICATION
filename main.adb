@@ -15,7 +15,7 @@ is
       2 => (Offset => 1, Length => 2, Next_C => Character'Val (66)));
    --     T1    : Token_Array (1 .. 1)  := (2 => (Offset => 0, Length => 0, Next_C => Character'Val(0)));
    T2 : Token_Array (1 .. 1) :=
-     (1 => (Offset => 0, Length => 0, Next_C => Character'Val (65)));
+     (1 => (Offset => 0, Length => 0, Next_C => Character'Val (67)));
    Error : Boolean;
    B     : Byte_Array (1 .. 100) :=
      (others => 'X');  -- Output_Array's buffer should in the range of (1..100)

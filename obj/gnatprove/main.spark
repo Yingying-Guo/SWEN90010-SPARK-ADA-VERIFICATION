@@ -163,7 +163,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 428,
+              "steps": 437,
               "time": 0
             }
           },
@@ -214,7 +214,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 435,
+              "steps": 444,
               "time": 0
             }
           },
@@ -254,7 +254,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 444,
+              "steps": 453,
               "time": 0
             }
           },
@@ -673,14 +673,14 @@
     }
   ],
   "timings": {
-    "marking": 9.25700005609542E-04,
-    "globals (basic)": 1.35030997917056E-02,
-    "globals/properties (advanced)": 1.60895995795727E-02,
-    "flow analysis": 1.26211997121572E-02,
-    "codepeer results": 4.60000001112348E-06,
-    "init_why_sections": 3.34499985910952E-04,
-    "translation of standard": 1.61839998327196E-03,
-    "translation of compilation unit": 3.36197018623352E-02,
-    "proof": 5.88704407215118E-01
+    "marking": 1.08039996121079E-03,
+    "globals (basic)": 1.39813004061580E-02,
+    "globals/properties (advanced)": 1.71185992658138E-02,
+    "flow analysis": 1.26649001613259E-02,
+    "codepeer results": 4.80000016978011E-06,
+    "init_why_sections": 2.97899998258799E-04,
+    "translation of standard": 1.59410003107041E-03,
+    "translation of compilation unit": 3.27096991240978E-02,
+    "proof": 4.86855804920197E-01
   }
 }

@@ -6313,7 +6313,7 @@ module Main__t1__aggregate_def
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
 
  val function main__t1__aggregate_def 
-   (temp___318 : Lz77__token.token) (temp___319 : Lz77__token.token) : Array__Int__Lz77__token.map
+   (temp___321 : Lz77__token.token) (temp___322 : Lz77__token.token) : Array__Int__Lz77__token.map
 
 end
 
@@ -6325,7 +6325,7 @@ module Main__t2__aggregate_def
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
 
  val function main__t2__aggregate_def 
-   (temp___322 : Lz77__token.token) : Array__Int__Lz77__token.map
+   (temp___325 : Lz77__token.token) : Array__Int__Lz77__token.map
 
 end
 
@@ -6336,30 +6336,11 @@ module Main__b__aggregate_def
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
  val function main__b__aggregate_def 
-   (temp___325 : int) : Array__Int__Standard__character.map
+   (temp___328 : int) : Array__Int__Standard__character.map
 
 end
 
 (* Module for defining a value for string literal  defined at main.adb:35, created in Gnat2Why.Expr.Transform_String_Literal *)
-module Temp___String_Literal_328
- use        "_gnatprove_standard".Main
- use        "int".Int
- use        "int".Int
- use        Standard__character as Standard__character
- use        Standard__character__rep as Standard__character__rep
- use        Array__Int__Standard__character as Array__Int__Standard__character
- use        Array__Int__Standard__character as Array__Int__Standard__character
-
- val function temp___String_Literal_328 
-   (__void_param : unit) : Array__Int__Standard__character.map
- 
- axiom temp___String_Literal_328__def_axiom :
-  (forall __void_param   : unit [(temp___String_Literal_328 __void_param)].
-   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (1 : int))) = (78 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (2 : int))) = (111 : int)) )/\( ( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (3 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (4 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (5 : int))) = (114 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (6 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (7 : int))) = (111 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (8 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (9 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (10 : int))) = (114 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (11 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (12 : int))) = (112 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (13 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (14 : int))) = (114 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (15 : int))) = (116 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (16 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (17 : int))) = (100 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (18 : int))) = (46 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (19 : int))) = (32 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (20 : int))) = (71 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (21 : int))) = (111 : int)) ) ) ) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (22 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (23 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (24 : int))) = (116 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (25 : int))) = (104 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (26 : int))) = (105 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (27 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (28 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (29 : int))) = (109 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (30 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (31 : int))) = (110 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (32 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (33 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (34 : int))) = (98 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (35 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (36 : int))) = (116 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (37 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (38 : int))) = (115 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (39 : int))) = (58 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_328 __void_param) (40 : int))) = (32 : int)) ) ) ) ) ) ))
-
-end
-
-(* Module for defining a value for string literal  defined at main.adb:45, created in Gnat2Why.Expr.Transform_String_Literal *)
 module Temp___String_Literal_331
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6374,30 +6355,11 @@ module Temp___String_Literal_331
  
  axiom temp___String_Literal_331__def_axiom :
   (forall __void_param   : unit [(temp___String_Literal_331 __void_param)].
-   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (1 : int))) = (73 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (2 : int))) = (110 : int)) )/\( ( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (3 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (4 : int))) = (105 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (5 : int))) = (99 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (6 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (7 : int))) = (116 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (8 : int))) = (101 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (9 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (10 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (11 : int))) = (100 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (12 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (13 : int))) = (99 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (14 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (15 : int))) = (109 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (16 : int))) = (112 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (17 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (18 : int))) = (101 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (19 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (20 : int))) = (115 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (21 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (22 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (23 : int))) = (32 : int)) ) ) ) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (24 : int))) = (108 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (25 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (26 : int))) = (110 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (27 : int))) = (103 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (28 : int))) = (116 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (29 : int))) = (104 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (30 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (31 : int))) = (109 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (32 : int))) = (117 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (33 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (34 : int))) = (116 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (35 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (36 : int))) = (98 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (37 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (38 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (39 : int))) = (119 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (40 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (41 : int))) = (111 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (42 : int))) = (110 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (43 : int))) = (103 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (44 : int))) = (33 : int)) ) ) ) ) ) ))
+   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (1 : int))) = (78 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (2 : int))) = (111 : int)) )/\( ( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (3 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (4 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (5 : int))) = (114 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (6 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (7 : int))) = (111 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (8 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (9 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (10 : int))) = (114 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (11 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (12 : int))) = (112 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (13 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (14 : int))) = (114 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (15 : int))) = (116 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (16 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (17 : int))) = (100 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (18 : int))) = (46 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (19 : int))) = (32 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (20 : int))) = (71 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (21 : int))) = (111 : int)) ) ) ) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (22 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (23 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (24 : int))) = (116 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (25 : int))) = (104 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (26 : int))) = (105 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (27 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (28 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (29 : int))) = (109 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (30 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (31 : int))) = (110 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (32 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (33 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (34 : int))) = (98 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (35 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (36 : int))) = (116 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (37 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (38 : int))) = (115 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (39 : int))) = (58 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_331 __void_param) (40 : int))) = (32 : int)) ) ) ) ) ) ))
 
 end
 
-(* Module for defining a value for string literal  defined at main.adb:51, created in Gnat2Why.Expr.Transform_String_Literal *)
-module Temp___String_Literal_332
- use        "_gnatprove_standard".Main
- use        "int".Int
- use        "int".Int
- use        Standard__character as Standard__character
- use        Standard__character__rep as Standard__character__rep
- use        Array__Int__Standard__character as Array__Int__Standard__character
- use        Array__Int__Standard__character as Array__Int__Standard__character
-
- val function temp___String_Literal_332 
-   (__void_param : unit) : Array__Int__Standard__character.map
- 
- axiom temp___String_Literal_332__def_axiom :
-  (forall __void_param   : unit [(temp___String_Literal_332 __void_param)].
-   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (1 : int))) = (86 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (2 : int))) = (97 : int)) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (3 : int))) = (108 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (4 : int))) = (105 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (5 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (6 : int))) = (32 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (7 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (8 : int))) = (110 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (9 : int))) = (100 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (10 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (11 : int))) = (114 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (12 : int))) = (117 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (13 : int))) = (110 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (14 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (15 : int))) = (116 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (16 : int))) = (104 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (17 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (18 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (19 : int))) = (68 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (20 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (21 : int))) = (111 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (22 : int))) = (100 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (23 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (24 : int))) = (95 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (25 : int))) = (70 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (26 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (27 : int))) = (115 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_332 __void_param) (28 : int))) = (116 : int)) ) ) ) ) ))
-
-end
-
-(* Module for defining a value for string literal  defined at main.adb:53, created in Gnat2Why.Expr.Transform_String_Literal *)
+(* Module for defining a value for string literal  defined at main.adb:45, created in Gnat2Why.Expr.Transform_String_Literal *)
 module Temp___String_Literal_334
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6412,11 +6374,30 @@ module Temp___String_Literal_334
  
  axiom temp___String_Literal_334__def_axiom :
   (forall __void_param   : unit [(temp___String_Literal_334 __void_param)].
-   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (1 : int))) = (71 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (2 : int))) = (111 : int)) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (3 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (4 : int))) = (32 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (5 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (6 : int))) = (104 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (7 : int))) = (105 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (8 : int))) = (115 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (9 : int))) = (32 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (10 : int))) = (109 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (11 : int))) = (97 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (12 : int))) = (110 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (13 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (14 : int))) = (58 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (15 : int))) = (32 : int)) ) ) ) ))
+   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (1 : int))) = (73 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (2 : int))) = (110 : int)) )/\( ( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (3 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (4 : int))) = (105 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (5 : int))) = (99 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (6 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (7 : int))) = (116 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (8 : int))) = (101 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (9 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (10 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (11 : int))) = (100 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (12 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (13 : int))) = (99 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (14 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (15 : int))) = (109 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (16 : int))) = (112 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (17 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (18 : int))) = (101 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (19 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (20 : int))) = (115 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (21 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (22 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (23 : int))) = (32 : int)) ) ) ) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (24 : int))) = (108 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (25 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (26 : int))) = (110 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (27 : int))) = (103 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (28 : int))) = (116 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (29 : int))) = (104 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (30 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (31 : int))) = (109 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (32 : int))) = (117 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (33 : int))) = (115 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (34 : int))) = (116 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (35 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (36 : int))) = (98 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (37 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (38 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (39 : int))) = (119 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (40 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (41 : int))) = (111 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (42 : int))) = (110 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (43 : int))) = (103 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_334 __void_param) (44 : int))) = (33 : int)) ) ) ) ) ) ))
 
 end
 
-(* Module for defining a value for string literal  defined at main.adb:62, created in Gnat2Why.Expr.Transform_String_Literal *)
+(* Module for defining a value for string literal  defined at main.adb:51, created in Gnat2Why.Expr.Transform_String_Literal *)
+module Temp___String_Literal_335
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__character as Standard__character
+ use        Standard__character__rep as Standard__character__rep
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+
+ val function temp___String_Literal_335 
+   (__void_param : unit) : Array__Int__Standard__character.map
+ 
+ axiom temp___String_Literal_335__def_axiom :
+  (forall __void_param   : unit [(temp___String_Literal_335 __void_param)].
+   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (1 : int))) = (86 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (2 : int))) = (97 : int)) )/\( ( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (3 : int))) = (108 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (4 : int))) = (105 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (5 : int))) = (100 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (6 : int))) = (32 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (7 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (8 : int))) = (110 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (9 : int))) = (100 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (10 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (11 : int))) = (114 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (12 : int))) = (117 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (13 : int))) = (110 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (14 : int))) = (32 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (15 : int))) = (116 : int)) ) ) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (16 : int))) = (104 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (17 : int))) = (101 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (18 : int))) = (32 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (19 : int))) = (68 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (20 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (21 : int))) = (111 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (22 : int))) = (100 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (23 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (24 : int))) = (95 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (25 : int))) = (70 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (26 : int))) = (97 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (27 : int))) = (115 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_335 __void_param) (28 : int))) = (116 : int)) ) ) ) ) ))
+
+end
+
+(* Module for defining a value for string literal  defined at main.adb:53, created in Gnat2Why.Expr.Transform_String_Literal *)
 module Temp___String_Literal_337
  use        "_gnatprove_standard".Main
  use        "int".Int
@@ -6431,7 +6412,26 @@ module Temp___String_Literal_337
  
  axiom temp___String_Literal_337__def_axiom :
   (forall __void_param   : unit [(temp___String_Literal_337 __void_param)].
-   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (1 : int))) = (69 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (2 : int))) = (114 : int)) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (3 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (4 : int))) = (111 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (5 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (6 : int))) = (32 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (7 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (8 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (9 : int))) = (112 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (10 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (11 : int))) = (114 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (12 : int))) = (116 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (13 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (14 : int))) = (100 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (15 : int))) = (46 : int)) ) ) ) ))
+   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (1 : int))) = (71 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (2 : int))) = (111 : int)) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (3 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (4 : int))) = (32 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (5 : int))) = (116 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (6 : int))) = (104 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (7 : int))) = (105 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (8 : int))) = (115 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (9 : int))) = (32 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (10 : int))) = (109 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (11 : int))) = (97 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (12 : int))) = (110 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (13 : int))) = (121 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (14 : int))) = (58 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_337 __void_param) (15 : int))) = (32 : int)) ) ) ) ))
+
+end
+
+(* Module for defining a value for string literal  defined at main.adb:62, created in Gnat2Why.Expr.Transform_String_Literal *)
+module Temp___String_Literal_340
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__character as Standard__character
+ use        Standard__character__rep as Standard__character__rep
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+
+ val function temp___String_Literal_340 
+   (__void_param : unit) : Array__Int__Standard__character.map
+ 
+ axiom temp___String_Literal_340__def_axiom :
+  (forall __void_param   : unit [(temp___String_Literal_340 __void_param)].
+   ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (1 : int))) = (69 : int)) /\ ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (2 : int))) = (114 : int)) )/\( ( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (3 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (4 : int))) = (111 : int)) )/\( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (5 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (6 : int))) = (32 : int)) ) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (7 : int))) = (114 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (8 : int))) = (101 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (9 : int))) = (112 : int)) ) )/\( ( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (10 : int))) = (111 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (11 : int))) = (114 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (12 : int))) = (116 : int)) )/\( ( ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (13 : int))) = (101 : int))/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (14 : int))) = (100 : int)) )/\((Standard__character__rep.to_rep (Array__Int__Standard__character.get (temp___String_Literal_340 __void_param) (15 : int))) = (46 : int)) ) ) ) ))
 
 end
 (* Module for defining the value of constant "default_priority" defined at system.ads:104, created in Gnat2Why.Decls.Translate_Constant_Value *)
@@ -6975,6 +6975,7 @@ module Lz77__is_valid___axiom
  use        Lz77__token_array as Lz77__token_array
  use        Lz77__valid as Lz77__valid
  use        Lz77__is_valid as Lz77__is_valid
+ use        Lz77__token_array___axiom as Lz77__token_array___axiom
 
  val is_valid 
    (input : Lz77__token_array.token_array) : bool
@@ -6984,6 +6985,17 @@ module Lz77__is_valid___axiom
     ( (temp___result_301 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_301 input (Lz77__token_array.last input)) )) = True) )) else (
    ( [@GP_Pretty_Ada:3121] not ( ((epsilon temp___result_302 : bool.
     ( (temp___result_302 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_302 input (Lz77__token_array.last input)) )) = True) ) ))) ) }
+ 
+ axiom is_valid__post_axiom :
+  (forall input   : Lz77__token_array.token_array [(Lz77__is_valid.is_valid input)].
+   ( (Lz77__token_array___axiom.dynamic_invariant input True True True True) -> (let result = (Lz77__is_valid.is_valid input) in (
+    (if ((Lz77__is_valid.is_valid__function_guard result input)) then (
+     ( ( (if ((result = True)) then (
+      ( [@GP_Pretty_Ada:3120] ((epsilon temp___result_304 : bool.
+       ( (temp___result_304 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_304 input (Lz77__token_array.last input)) )) = True) )) else (
+      ( [@GP_Pretty_Ada:3121] not ( ((epsilon temp___result_305 : bool.
+       ( (temp___result_305 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_305 input (Lz77__token_array.last input)) )) = True) ) ))) /\ true )/\true )) else true)))
+    ))
 
 end
 
@@ -7009,9 +7021,9 @@ module Lz77__decoded_length___axiom
   requires {  true }
   ensures {  ( ( (result = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard result input) )/\( (Big_integers__big_integer.dynamic_invariant result True False True True) /\ (result = (if (((Lz77__token_array.length input) = (0 : int))) then (
    Big_integers__zero.zero) else (
-   (let temp___305 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_304 : Lz77__partial_length.partial_length.
-    ( (temp___result_304 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_304 input) )) in (
-    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___305) (Lz77__token_array.last input))))
+   (let temp___308 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_307 : Lz77__partial_length.partial_length.
+    ( (temp___result_307 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_307 input) )) in (
+    (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___308) (Lz77__token_array.last input))))
   ))) ) ) }
  
  axiom decoded_length__post_axiom :
@@ -7027,9 +7039,9 @@ module Lz77__decoded_length___axiom
     (Lz77__decoded_length.decoded_length__function_guard result input)))
     ) -> ((Lz77__decoded_length.decoded_length input) = (if (((Lz77__token_array.length input) = (0 : int))) then (
     Big_integers__zero.zero) else (
-    (let temp___309 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_308 : Lz77__partial_length.partial_length.
-     ( (temp___result_308 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_308 input) )) in (
-     (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___309) (Lz77__token_array.last input))))
+    (let temp___312 [@mlw:proxy_symbol] [@introduced] = (epsilon temp___result_311 : Lz77__partial_length.partial_length.
+     ( (temp___result_311 = (Lz77__length_acc.length_acc input)) /\ (Lz77__length_acc.length_acc__function_guard temp___result_311 input) )) in (
+     (Array__Int__Big_integers__big_integer.get (Lz77__partial_length.to_array temp___312) (Lz77__token_array.last input))))
    ))) ))
 
 end
@@ -7054,11 +7066,11 @@ module Lz77__decode_fast___axiom
 
  val decode_fast 
    (input : Lz77__token_array.token_array) (output : Array__Int__Standard__character.map__ref) (output__first : Standard__integer.integer) (output__last : Standard__integer.integer) (output_length : int__ref) : unit
-  requires {  ( ( [@GP_Pretty_Ada:3174] ((epsilon temp___result_310 : bool.
-   ( (temp___result_310 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_310 input (Lz77__token_array.last input)) )) = True) ) /\ ( [@GP_Pretty_Ada:3180] ((Integer.length (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_311 : Big_integers__big_integer.big_integer.
-   ( (temp___result_311 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_311 input) )))) ) ) }
-  ensures {  ( ( [@GP_Pretty_Ada:15440] (output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_312 : Big_integers__big_integer.big_integer.
-   ( (temp___result_312 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_312 input) )))) ) /\ ( (if (True) then (
+  requires {  ( ( [@GP_Pretty_Ada:3174] ((epsilon temp___result_313 : bool.
+   ( (temp___result_313 = (Lz77__valid.valid input (Lz77__token_array.last input))) /\ (Lz77__valid.valid__function_guard temp___result_313 input (Lz77__token_array.last input)) )) = True) ) /\ ( [@GP_Pretty_Ada:3180] ((Integer.length (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)) >= (Big_integers__to_integer.to_integer__logic (epsilon temp___result_314 : Big_integers__big_integer.big_integer.
+   ( (temp___result_314 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_314 input) )))) ) ) }
+  ensures {  ( ( [@GP_Pretty_Ada:15440] (output_length.int__content = (Big_integers__to_integer.to_integer__logic (epsilon temp___result_315 : Big_integers__big_integer.big_integer.
+   ( (temp___result_315 = (Lz77__decoded_length.decoded_length input)) /\ (Lz77__decoded_length.decoded_length__function_guard temp___result_315 input) )))) ) /\ ( (if (True) then (
    true) else (
    (Lz77__byte_array.dynamic_property Standard__positive.first Standard__positive.last (Standard__integer__rep.to_rep output__first) (Standard__integer__rep.to_rep output__last)))) /\ (Standard__natural___axiom.dynamic_invariant output_length.int__content True True True True) ) ) }
   writes {output, output_length}
@@ -7077,10 +7089,10 @@ module Main__t1__aggregate_def___axiom
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
 
  axiom def_axiom :
-  (forall temp___318   temp___319   : Lz77__token.token.
-   (let temp___317 [@mlw:proxy_symbol] [@introduced] = (Main__t1__aggregate_def.main__t1__aggregate_def temp___318 temp___319) in (
-    (if (( (Lz77__token___axiom.dynamic_invariant temp___318 True True True True) /\ (Lz77__token___axiom.dynamic_invariant temp___319 True True True True) )) then (
-     ( ((Array__Int__Lz77__token.get temp___317 (1 : int)) = temp___318) /\ ((Array__Int__Lz77__token.get temp___317 (2 : int)) = temp___319) )) else true)))
+  (forall temp___321   temp___322   : Lz77__token.token.
+   (let temp___320 [@mlw:proxy_symbol] [@introduced] = (Main__t1__aggregate_def.main__t1__aggregate_def temp___321 temp___322) in (
+    (if (( (Lz77__token___axiom.dynamic_invariant temp___321 True True True True) /\ (Lz77__token___axiom.dynamic_invariant temp___322 True True True True) )) then (
+     ( ((Array__Int__Lz77__token.get temp___320 (1 : int)) = temp___321) /\ ((Array__Int__Lz77__token.get temp___320 (2 : int)) = temp___322) )) else true)))
   )
 
 end
@@ -7097,10 +7109,10 @@ module Main__t2__aggregate_def___axiom
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
 
  axiom def_axiom :
-  (forall temp___322   : Lz77__token.token.
-   (let temp___321 [@mlw:proxy_symbol] [@introduced] = (Main__t2__aggregate_def.main__t2__aggregate_def temp___322) in (
-    (if ((Lz77__token___axiom.dynamic_invariant temp___322 True True True True)) then (
-     ((Array__Int__Lz77__token.get temp___321 (1 : int)) = temp___322)) else true)))
+  (forall temp___325   : Lz77__token.token.
+   (let temp___324 [@mlw:proxy_symbol] [@introduced] = (Main__t2__aggregate_def.main__t2__aggregate_def temp___325) in (
+    (if ((Lz77__token___axiom.dynamic_invariant temp___325 True True True True)) then (
+     ((Array__Int__Lz77__token.get temp___324 (1 : int)) = temp___325)) else true)))
   )
 
 end
@@ -7117,11 +7129,11 @@ module Main__b__aggregate_def___axiom
  use        Array__Int__Standard__character as Array__Int__Standard__character
 
  axiom def_axiom :
-  (forall temp___325   : int.
-   (let temp___324 [@mlw:proxy_symbol] [@introduced] = (Main__b__aggregate_def.main__b__aggregate_def temp___325) in (
-    (if ((Standard__character___axiom.dynamic_invariant temp___325 True True True True)) then (
-     (forall temp___326   : int.
-      ((Standard__character__rep.to_rep (Array__Int__Standard__character.get temp___324 temp___326)) = temp___325))) else true)))
+  (forall temp___328   : int.
+   (let temp___327 [@mlw:proxy_symbol] [@introduced] = (Main__b__aggregate_def.main__b__aggregate_def temp___328) in (
+    (if ((Standard__character___axiom.dynamic_invariant temp___328 True True True True)) then (
+     (forall temp___329   : int.
+      ((Standard__character__rep.to_rep (Array__Int__Standard__character.get temp___327 temp___329)) = temp___328))) else true)))
   )
 
 end
@@ -7189,23 +7201,23 @@ module Main__subprogram_def
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
- use        Temp___String_Literal_328 as Temp___String_Literal_328
- use        Array__Int__Standard__character as Array__Int__Standard__character
- use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Temp___String_Literal_331 as Temp___String_Literal_331
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
- use        Temp___String_Literal_332 as Temp___String_Literal_332
+ use        Temp___String_Literal_334 as Temp___String_Literal_334
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Temp___String_Literal_335 as Temp___String_Literal_335
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
- use        Temp___String_Literal_334 as Temp___String_Literal_334
- use        Array__Int__Standard__character as Array__Int__Standard__character
- use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Temp___String_Literal_337 as Temp___String_Literal_337
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Temp___String_Literal_340 as Temp___String_Literal_340
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Standard__character as Array__Int__Standard__character
  use        Array__Int__Lz77__token as Array__Int__Lz77__token
@@ -7290,7 +7302,7 @@ module Main__subprogram_def
    ([#"main.adb" 17 0 0] ( [#"main.adb" 17 0 0] (Main__t2.t2.Array__Int__Lz77__token.map__content <- ( ( [#"main.adb" 17 0 0] begin ensures {true} let _ = (let _ = ((0 : int) = (1 : int)) in (
     ()))
     in () end ;
-   (Main__t2__aggregate_def.main__t2__aggregate_def({ Lz77__token.__split_fields = { Lz77__token.rec__lz77__token__offset = ( 0 : Standard__natural.natural ); Lz77__token.rec__lz77__token__length = ( 0 : Standard__natural.natural ); Lz77__token.rec__lz77__token__next_c = (Standard__character__rep.of_rep((65 : int))) } })) ) ));
+   (Main__t2__aggregate_def.main__t2__aggregate_def({ Lz77__token.__split_fields = { Lz77__token.rec__lz77__token__offset = ( 0 : Standard__natural.natural ); Lz77__token.rec__lz77__token__length = ( 0 : Standard__natural.natural ); Lz77__token.rec__lz77__token__next_c = (Standard__character__rep.of_rep((67 : int))) } })) ) ));
    [#"main.adb" 17 0 0] assume { [#"main.adb" 17 0 0] (Main__Tt2S___axiom.dynamic_invariant Main__t2.t2.Array__Int__Lz77__token.map__content True False True True) } ));
    ([#"main.adb" 19 0 0] ());
    ([#"main.adb" 20 0 0] ());
@@ -7309,8 +7321,8 @@ module Main__subprogram_def
    ( [@GP_Sloc:main.adb:33:4] ([#"main.adb" 33 0 0] (let lz77__decode__output__compl = Main__b.b.Array__Int__Standard__character.map__content in (
     [#"main.adb" 33 0 0] let lz77__decode__output = { Array__Int__Standard__character.map__content = lz77__decode__output__compl } in 
      ( (Lz77__decode___axiom.decode((Lz77__token_array.of_array(Main__t1.t1.Array__Int__Lz77__token.map__content) (Main__TTt1SP1.first) (Main__TTt1SP1.last))) (lz77__decode__output) ((Standard__integer__rep.of_rep(Main__TTbSP1.first))) ((Standard__integer__rep.of_rep(Main__TTbSP1.last))) (Main__blen.blen) (Main__error.error));
-     [#"main.adb" 33 0 0] (Main__b.b.Array__Int__Standard__character.map__content <- ( (let temp___327 [@mlw:proxy_symbol] [@introduced] = (Lz77__byte_array.of_array(lz77__decode__output.Array__Int__Standard__character.map__content) (Main__TTbSP1.first) (Main__TTbSP1.last)) in (
-      (Array__Int__Standard__character.slide (Lz77__byte_array.to_array temp___327) (Lz77__byte_array.first temp___327) Main__TTbSP1.first)))
+     [#"main.adb" 33 0 0] (Main__b.b.Array__Int__Standard__character.map__content <- ( (let temp___330 [@mlw:proxy_symbol] [@introduced] = (Lz77__byte_array.of_array(lz77__decode__output.Array__Int__Standard__character.map__content) (Main__TTbSP1.first) (Main__TTbSP1.last)) in (
+      (Array__Int__Standard__character.slide (Lz77__byte_array.to_array temp___330) (Lz77__byte_array.first temp___330) Main__TTbSP1.first)))
       )) )))
    ) );
    ( [@GP_Sloc:main.adb:34:11] ([#"main.adb" 34 0 0] ()) );
@@ -7318,7 +7330,7 @@ module Main__subprogram_def
    ( [@branch_id=2446] Main.spark__branch ).bool__content )) then (
     ( ();
     ( [@GP_Sloc:main.adb:35:7] ([#"main.adb" 35 0 0] ()) );
-    ( [@GP_Sloc:main.adb:35:7] ([#"main.adb" 35 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_328.temp___String_Literal_328(()))) ((1 : int)) ((40 : int))))) )) );
+    ( [@GP_Sloc:main.adb:35:7] ([#"main.adb" 35 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_331.temp___String_Literal_331(()))) ((1 : int)) ((40 : int))))) )) );
     ( [@GP_Sloc:main.adb:36:12] ([#"main.adb" 36 0 0] ()) );
     ( [@GP_Sloc:main.adb:36:7] ([#"main.adb" 36 0 0] ()) );
     ( [@GP_Sloc:main.adb:36:7] ([#"main.adb" 36 0 0] ( (Ada__integer_text_io__put__2___axiom.put__2(Main__blen.blen.int__content) (Ada__integer_text_io__default_width.default_width.int__content) (Ada__integer_text_io__default_base.default_base.int__content)) )) );
@@ -7336,12 +7348,12 @@ module Main__subprogram_def
        assume {  (main__L_1__R8b__assume = Main__L_1__R8b.r8b) }))
      ;
       assume {  (Standard__integer___axiom.dynamic_invariant Main__L_1__R8b.r8b True False True True) } ))) );
-     ( [@GP_Sloc:main.adb:40:53] ([#"main.adb" 40 0 0] (let temp___329 [@mlw:proxy_symbol] [@introduced] = (1 : int) in (
-     (let temp___330 [@mlw:proxy_symbol] [@introduced] = Main__L_1__R8b.r8b in (
-      ( [#"main.adb" 40 0 0] (Main__L_1__index.index.int__content <- ( temp___329 ));
+     ( [@GP_Sloc:main.adb:40:53] ([#"main.adb" 40 0 0] (let temp___332 [@mlw:proxy_symbol] [@introduced] = (1 : int) in (
+     (let temp___333 [@mlw:proxy_symbol] [@introduced] = Main__L_1__R8b.r8b in (
+      ( [#"main.adb" 40 0 0] (Main__L_1__index.index.int__content <- ( temp___332 ));
       () (* Translation of an Ada loop from main.adb:40 *)
       ;
-      (if ((Boolean.andb((temp___329 <= Main__L_1__index.index.int__content)) ((Main__L_1__index.index.int__content <= temp___330)))) then (
+      (if ((Boolean.andb((temp___332 <= Main__L_1__index.index.int__content)) ((Main__L_1__index.index.int__content <= temp___333)))) then (
        [#"main.adb" 40 0 0] try
         ( () (* First unroling of the loop statements appearing before the loop invariant of loop main.adb:40 *)
         ;
@@ -7361,7 +7373,7 @@ module Main__subprogram_def
          Main__L_1__index.index.int__content ))))))) )) );
          () (* Check for the exit condition and loop statements appearing before the loop invariant of loop main.adb:40 *)
          ;
-         (if ((Main__L_1__index.index.int__content = temp___330)) then (
+         (if ((Main__L_1__index.index.int__content = temp___333)) then (
            raise Main__L_1.L_1));
          ([#"main.adb" 40 0 0] [#"main.adb" 40 0 0] (Main__L_1__index.index.int__content <- ( (Main__L_1__index.index.int__content + (1 : int)) ))) )
         done )
@@ -7374,7 +7386,7 @@ module Main__subprogram_def
      ( [@GP_Sloc:main.adb:43:10] ([#"main.adb" 43 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) ) )) else (
      ( ();
      ( [@GP_Sloc:main.adb:45:10] ([#"main.adb" 45 0 0] ()) );
-     ( [@GP_Sloc:main.adb:45:10] ([#"main.adb" 45 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_331.temp___String_Literal_331(()))) ((1 : int)) ((44 : int))))) )) );
+     ( [@GP_Sloc:main.adb:45:10] ([#"main.adb" 45 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_334.temp___String_Literal_334(()))) ((1 : int)) ((44 : int))))) )) );
      ( [@GP_Sloc:main.adb:46:10] ([#"main.adb" 46 0 0] ()) );
      ( [@GP_Sloc:main.adb:46:10] ([#"main.adb" 46 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) ) )))) ) )) else (
     ()))) );
@@ -7384,7 +7396,7 @@ module Main__subprogram_def
    ( [@branch_id=2501] Main.spark__branch ).bool__content )) then (
     ( ();
     ( [@GP_Sloc:main.adb:51:7] ([#"main.adb" 51 0 0] ()) );
-    ( [@GP_Sloc:main.adb:51:7] ([#"main.adb" 51 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_332.temp___String_Literal_332(()))) ((1 : int)) ((28 : int))))) )) );
+    ( [@GP_Sloc:main.adb:51:7] ([#"main.adb" 51 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_335.temp___String_Literal_335(()))) ((1 : int)) ((28 : int))))) )) );
     ( [@GP_Sloc:main.adb:52:20] ([#"main.adb" 52 0 0] ()) );
     ( [@GP_Sloc:main.adb:52:24] ([#"main.adb" 52 0 0] ()) );
     ( [@GP_Sloc:main.adb:52:27] ([#"main.adb" 52 0 0] ()) );
@@ -7392,12 +7404,12 @@ module Main__subprogram_def
     ( [@GP_Sloc:main.adb:52:7] ([#"main.adb" 52 0 0] (let lz77__decode_fast__output__compl = Main__b.b.Array__Int__Standard__character.map__content in (
      [#"main.adb" 52 0 0] let lz77__decode_fast__output = { Array__Int__Standard__character.map__content = lz77__decode_fast__output__compl } in 
       ( ([#"main.adb" 52 0 0] ( [@GP_Sloc:main.adb:52:7] [@GP_Shape:if__call_decode_fast] [@GP_Reason:VC_PRECONDITION] [@vc:annotation] [@comment:      Decode_Fast (T2, B, BLen);       ^ main.adb:52:7:VC_PRECONDITION] [@GP_Id:2] (Lz77__decode_fast___axiom.decode_fast((Lz77__token_array.of_array(Main__t2.t2.Array__Int__Lz77__token.map__content) (Main__TTt2SP1.first) (Main__TTt2SP1.last))) (lz77__decode_fast__output) ((Standard__integer__rep.of_rep(Main__TTbSP1.first))) ((Standard__integer__rep.of_rep(Main__TTbSP1.last))) (Main__blen.blen)) ));
-       (Main__b.b.Array__Int__Standard__character.map__content <- ( (let temp___333 [@mlw:proxy_symbol] [@introduced] = (Lz77__byte_array.of_array(lz77__decode_fast__output.Array__Int__Standard__character.map__content) (Main__TTbSP1.first) (Main__TTbSP1.last)) in (
-       (Array__Int__Standard__character.slide (Lz77__byte_array.to_array temp___333) (Lz77__byte_array.first temp___333) Main__TTbSP1.first)))
+       (Main__b.b.Array__Int__Standard__character.map__content <- ( (let temp___336 [@mlw:proxy_symbol] [@introduced] = (Lz77__byte_array.of_array(lz77__decode_fast__output.Array__Int__Standard__character.map__content) (Main__TTbSP1.first) (Main__TTbSP1.last)) in (
+       (Array__Int__Standard__character.slide (Lz77__byte_array.to_array temp___336) (Lz77__byte_array.first temp___336) Main__TTbSP1.first)))
        )) )))
     ) );
     ( [@GP_Sloc:main.adb:53:7] ([#"main.adb" 53 0 0] ()) );
-    ( [@GP_Sloc:main.adb:53:7] ([#"main.adb" 53 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_334.temp___String_Literal_334(()))) ((1 : int)) ((15 : int))))) )) );
+    ( [@GP_Sloc:main.adb:53:7] ([#"main.adb" 53 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_337.temp___String_Literal_337(()))) ((1 : int)) ((15 : int))))) )) );
     ( [@GP_Sloc:main.adb:54:12] ([#"main.adb" 54 0 0] ()) );
     ( [@GP_Sloc:main.adb:54:7] ([#"main.adb" 54 0 0] ()) );
     ( [@GP_Sloc:main.adb:54:7] ([#"main.adb" 54 0 0] ( (Ada__integer_text_io__put__2___axiom.put__2(Main__blen.blen.int__content) (Ada__integer_text_io__default_width.default_width.int__content) (Ada__integer_text_io__default_base.default_base.int__content)) )) );
@@ -7410,12 +7422,12 @@ module Main__subprogram_def
       assume {  (main__L_2__R13b__assume = Main__L_2__R13b.r13b) }))
     ;
      assume {  (Standard__integer___axiom.dynamic_invariant Main__L_2__R13b.r13b True False True True) } ))) );
-    ( [@GP_Sloc:main.adb:57:50] ([#"main.adb" 57 0 0] (let temp___335 [@mlw:proxy_symbol] [@introduced] = (1 : int) in (
-    (let temp___336 [@mlw:proxy_symbol] [@introduced] = Main__L_2__R13b.r13b in (
-     ( [#"main.adb" 57 0 0] (Main__L_2__index.index.int__content <- ( temp___335 ));
+    ( [@GP_Sloc:main.adb:57:50] ([#"main.adb" 57 0 0] (let temp___338 [@mlw:proxy_symbol] [@introduced] = (1 : int) in (
+    (let temp___339 [@mlw:proxy_symbol] [@introduced] = Main__L_2__R13b.r13b in (
+     ( [#"main.adb" 57 0 0] (Main__L_2__index.index.int__content <- ( temp___338 ));
      () (* Translation of an Ada loop from main.adb:57 *)
      ;
-     (if ((Boolean.andb((temp___335 <= Main__L_2__index.index.int__content)) ((Main__L_2__index.index.int__content <= temp___336)))) then (
+     (if ((Boolean.andb((temp___338 <= Main__L_2__index.index.int__content)) ((Main__L_2__index.index.int__content <= temp___339)))) then (
       [#"main.adb" 57 0 0] try
        ( () (* First unroling of the loop statements appearing before the loop invariant of loop main.adb:57 *)
        ;
@@ -7435,7 +7447,7 @@ module Main__subprogram_def
         Main__L_2__index.index.int__content ))))))) )) );
         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop main.adb:57 *)
         ;
-        (if ((Main__L_2__index.index.int__content = temp___336)) then (
+        (if ((Main__L_2__index.index.int__content = temp___339)) then (
           raise Main__L_2.L_2));
         ([#"main.adb" 57 0 0] [#"main.adb" 57 0 0] (Main__L_2__index.index.int__content <- ( (Main__L_2__index.index.int__content + (1 : int)) ))) )
        done )
@@ -7448,7 +7460,7 @@ module Main__subprogram_def
     ( [@GP_Sloc:main.adb:60:7] ([#"main.adb" 60 0 0] ( (Ada__text_io__new_line__2___axiom.new_line__2((1 : int))) )) ) )) else (
     ( ();
     ( [@GP_Sloc:main.adb:62:7] ([#"main.adb" 62 0 0] ()) );
-    ( [@GP_Sloc:main.adb:62:7] ([#"main.adb" 62 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_337.temp___String_Literal_337(()))) ((1 : int)) ((15 : int))))) )) ) )))) );
+    ( [@GP_Sloc:main.adb:62:7] ([#"main.adb" 62 0 0] ( (Ada__text_io__put__4___axiom.put__4((Standard__string.of_array((Temp___String_Literal_340.temp___String_Literal_340(()))) ((1 : int)) ((15 : int))))) )) ) )))) );
     raise Return__exc )
   with
    Return__exc -> ()

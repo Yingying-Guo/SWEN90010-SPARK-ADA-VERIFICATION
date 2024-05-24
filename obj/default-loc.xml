@@ -2,47 +2,111 @@
 <Locations >
   <Project>
     <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_file>
-    <file_marker column=" 1" line=" 10" >
+    <file_marker column=" 43" line=" 1" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 101" >
+    <file_marker column=" 32" line=" 71" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 10" >
+    <file_marker column=" 43" line=" 1" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 10" >
+    <file_marker column=" 60" line=" 222" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 10" >
+    <file_marker column=" 45" line=" 260" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 10" >
+    <file_marker column=" 1" line=" 194" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 10" >
+    <file_marker column=" 31" line=" 273" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 118" >
+    <file_marker column=" 22" line=" 240" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 72" line=" 97" >
+    <file_marker column=" 20" line=" 274" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 27" line=" 86" >
+    <file_marker column=" 22" line=" 240" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 46" line=" 206" >
+    <file_marker column=" 1" line=" 223" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 194" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 223" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 194" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 60" line=" 222" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 194" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 129" line=" 233" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 240" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 37" line=" 251" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 240" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 37" line=" 251" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 255" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 312" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 41" line=" 317" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 39" line=" 318" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 320" >
+      <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
+      <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 70" line=" 318" >
       <vfs_project>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\default.gpr</vfs_project>
       <vfs_file>F:\GitProject\SWEN90010-SPARK-ADA-VERIFICATION\lz77.adb</vfs_file>
     </file_marker>
