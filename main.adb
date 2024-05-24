@@ -8,14 +8,20 @@ procedure Main with
   SPARK_Mode
 is
    -- a trivial token sequence that encodes the string "AAAB"
-   --    T1    : Token_Array  (1..1):=
-   --      (others => (Offset => 0, Length => 0, Next_C => 'A'));
    T1 : Token_Array (1 .. 2) :=
      (1 => (Offset => 0, Length => 0, Next_C => Character'Val (65)),
       2 => (Offset => 1, Length => 2, Next_C => Character'Val (66)));
    --     T1    : Token_Array (1 .. 1)  := (2 => (Offset => 0, Length => 0, Next_C => Character'Val(0)));
-   T2 : Token_Array (1 .. 1) :=
-     (1 => (Offset => 0, Length => 0, Next_C => Character'Val (67)));
+   T2 : Token_Array (1 .. 3) :=
+     (1 => (Offset => 0, Length => 0, Next_C => Character'Val (67)),
+      2 => (Offset => 0, Length => 0, Next_C => Character'Val (66)),
+      3 => (Offset => 2, Length => 5, Next_C => Character'Val (65)));
+
+   T3 : Token_Array (1 .. 2) :=
+      (2 => (Offset => 0, Length => 0, Next_C => Character'Val (65)),
+      3 => (Offset => 1, Length => 0, Next_C => Character'Val (66)));
+
+   T4 : Token_Array (1 .. 0);
    Error : Boolean;
    B     : Byte_Array (1 .. 100) :=
      (others => 'X');  -- Output_Array's buffer should in the range of (1..100)
@@ -30,7 +36,7 @@ begin
    -- B: Output Array
    -- BLen: Output Array's length
    -- Error: Error flag
-   Decode (T1, B, BLen, Error);
+   Decode (T4, B, BLen, Error);
    if not Error then
       Put ("No error reported. Got this many bytes: ");
       Put (BLen);  -- print the length of the output array
@@ -47,9 +53,9 @@ begin
       end if;
    end if;
 
-   if Is_Valid (T2) then -- Check the validity of the input array
+   if Is_Valid (T4) then -- Check the validity of the input array
       Put("Valid and run the Deode_Fast");
-      Decode_Fast (T2, B, BLen);
+      Decode_Fast (T4, B, BLen);
       Put ("Got this many: ");
       Put (BLen);
       New_Line;

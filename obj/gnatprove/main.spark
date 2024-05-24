@@ -14,7 +14,130 @@
   "flow": [
     {
       "file": "main.adb",
-      "line": 19,
+      "line": 11,
+      "col": 4,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 0,
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 15,
+      "col": 4,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 1,
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 20,
+      "col": 4,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 2,
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 56,
+      "col": 17,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__0.trace",
+      "msg_id": 3,
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 58,
+      "col": 20,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__1.trace",
+      "msg_id": 4,
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 39,
+      "col": 12,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__2.trace",
+      "msg_id": 5,
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 25,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -33,7 +156,7 @@
     },
     {
       "file": "main.adb",
-      "line": 22,
+      "line": 28,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -54,7 +177,7 @@
   "proof": [
     {
       "file": "main.adb",
-      "line": 40,
+      "line": 46,
       "col": 42,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -81,7 +204,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 40,
+      "check_line": 46,
       "check_col": 42,
       "how_proved": "prover",
       "stats": {
@@ -94,7 +217,7 @@
     },
     {
       "file": "main.adb",
-      "line": 41,
+      "line": 47,
       "col": 29,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -132,7 +255,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 41,
+      "check_line": 47,
       "check_col": 29,
       "how_proved": "prover",
       "stats": {
@@ -145,7 +268,7 @@
     },
     {
       "file": "main.adb",
-      "line": 52,
+      "line": 58,
       "col": 7,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -163,7 +286,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 437,
+              "steps": 136,
               "time": 0
             }
           },
@@ -183,7 +306,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 52,
+      "check_line": 58,
       "check_col": 7,
       "how_proved": "prover",
       "stats": {
@@ -196,7 +319,7 @@
     },
     {
       "file": "main.adb",
-      "line": 57,
+      "line": 63,
       "col": 39,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -214,7 +337,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 444,
+              "steps": 125,
               "time": 0
             }
           },
@@ -223,7 +346,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 57,
+      "check_line": 63,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -236,7 +359,7 @@
     },
     {
       "file": "main.adb",
-      "line": 58,
+      "line": 64,
       "col": 26,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -254,7 +377,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 453,
+              "steps": 132,
               "time": 0
             }
           },
@@ -274,7 +397,7 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 58,
+      "check_line": 64,
       "check_col": 26,
       "how_proved": "prover",
       "stats": {
@@ -287,110 +410,6 @@
     }
   ],
   "assumptions": [
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Integer_Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-tiinio.ads",
-                "line": 80
-              },
-              {
-                "file": "a-inteio.ads",
-                "line": 18
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Text_IO.New_Line",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 264
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 392
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Ada.Text_IO.Put",
-            "sloc": [
-              {
-                "file": "a-textio.ads",
-                "line": 465
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "LZ77.Decode",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 95
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "LZ77.Decode_Fast",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 114
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "LZ77.Is_Valid",
-            "sloc": [
-              {
-                "file": "lz77.ads",
-                "line": 101
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Main",
-          "sloc": [
-            {
-              "file": "main.adb",
-              "line": 7
-            }
-          ]
-        }
-      }
-    },
     {
       "assumptions": [
         {
@@ -673,14 +692,14 @@
     }
   ],
   "timings": {
-    "marking": 1.08039996121079E-03,
-    "globals (basic)": 1.39813004061580E-02,
-    "globals/properties (advanced)": 1.71185992658138E-02,
-    "flow analysis": 1.26649001613259E-02,
-    "codepeer results": 4.80000016978011E-06,
-    "init_why_sections": 2.97899998258799E-04,
-    "translation of standard": 1.59410003107041E-03,
-    "translation of compilation unit": 3.27096991240978E-02,
-    "proof": 4.86855804920197E-01
+    "marking": 1.29949999973178E-03,
+    "globals (basic)": 1.36109003797174E-02,
+    "globals/properties (advanced)": 1.60764995962381E-02,
+    "flow analysis": 1.55418999493122E-02,
+    "codepeer results": 4.90000002173474E-06,
+    "init_why_sections": 3.22500010952353E-04,
+    "translation of standard": 5.77819999307394E-03,
+    "translation of compilation unit": 3.83277982473373E-02,
+    "proof": 8.17690908908844E-01
   }
 }
